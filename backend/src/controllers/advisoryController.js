@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import Advisory from '../models/Advisory.js';
 import User from '../models/User.js';
 import {
@@ -5,6 +6,8 @@ import {
     getForecast,
     generateWeatherAdvisories,
 } from '../services/weatherService.js';
+import { getLocationDetails, isValidCoordinates } from '../services/geolocationService.js';
+import { sendIrrigationAlert, sendSchemeAlert } from '../services/notificationService.js';
 
 /**
  * Fetches all advisories for the authenticated user.
@@ -153,7 +156,35 @@ const getWeatherAdvisory = async (req, res) => {
             });
         }
 
-        const [lat, lon] = user.location?.coordinates || [0, 0];
+        const [lon, lat] = user.location?.coordinates || [0, 0];
+
+        // Validate coordinates
+        if (!isValidCoordinates(lat, lon)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Location not set. Please enable location or search for your city in the dashboard.',
+            });
+        }
+
+        // Get location name (use stored or fetch via reverse geocoding)
+        let locationInfo = {
+            name: user.locationName || null,
+            state: user.state || null,
+            country: user.country || null,
+        };
+
+        if (!locationInfo.name) {
+            try {
+                const geoDetails = await getLocationDetails(lat, lon);
+                locationInfo = {
+                    name: geoDetails.name,
+                    state: geoDetails.state,
+                    country: geoDetails.country,
+                };
+            } catch (err) {
+                console.warn(`⚠️ Could not get location name: ${err.message}`);
+            }
+        }
 
         // Fetch weather data
         const [currentWeather, forecast] = await Promise.all([
@@ -168,10 +199,10 @@ const getWeatherAdvisory = async (req, res) => {
             user.cropType
         );
 
-        // Save advisories to database
+        // Save advisories to database and trigger notifications for critical ones
         const savedAdvisories = await Promise.all(
-            advisories.map(advisory =>
-                Advisory.create({
+            advisories.map(async (advisory) => {
+                const doc = await Advisory.create({
                     ...advisory,
                     userId,
                     source: 'weather_service',
@@ -179,8 +210,22 @@ const getWeatherAdvisory = async (req, res) => {
                         type: 'Point',
                         coordinates: [lon, lat],
                     },
-                })
-            )
+                });
+
+                // Trigger: Send notification if it's a high-severity irrigation advisory
+                if (advisory.type === 'irrigation' && advisory.severity === 'high') {
+                    try {
+                        await sendIrrigationAlert(user.phone, {
+                            crop: user.cropType || 'crops',
+                            status: advisory.message
+                        });
+                    } catch (err) {
+                        console.warn(`⚠️ Failed to send irrigation alert notification: ${err.message}`);
+                    }
+                }
+
+                return doc;
+            })
         );
 
         console.log(`🌤️ Generated ${savedAdvisories.length} weather advisories for user ${userId}`);
@@ -191,6 +236,10 @@ const getWeatherAdvisory = async (req, res) => {
                 weather: currentWeather,
                 forecast,
                 advisories: savedAdvisories,
+                location: {
+                    coordinates: { lat, lon },
+                    ...locationInfo,
+                },
             },
         });
 
@@ -301,6 +350,14 @@ const createAdvisory = async (req, res) => {
             });
         }
 
+        // Validate userId is a valid ObjectId
+        if (!mongoose.Types.ObjectId.isValid(userId)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Invalid userId format. Must be a valid MongoDB ObjectId.',
+            });
+        }
+
         const advisory = await Advisory.create({
             userId,
             type,
@@ -328,6 +385,59 @@ const createAdvisory = async (req, res) => {
     }
 };
 
+/**
+ * Manually triggers a government scheme alert via SMS for the user.
+ * 
+ * @async
+ * @param {import('express').Request} req - Express request object
+ * @param {import('express').Response} res - Express response object
+ * @returns {Promise<void>}
+ */
+const triggerSchemeAlert = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        const { schemeTitle } = req.body;
+
+        if (!schemeTitle) {
+            return res.status(400).json({
+                success: false,
+                message: 'schemeTitle is required',
+            });
+        }
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: 'User not found',
+            });
+        }
+
+        const result = await sendSchemeAlert(user.phone, { title: schemeTitle });
+
+        if (result.status === 'success') {
+            res.status(200).json({
+                success: true,
+                message: `Scheme alert for "${schemeTitle}" sent to ${user.phone}`,
+            });
+        } else {
+            res.status(500).json({
+                success: false,
+                message: 'Failed to send scheme alert notification',
+                details: result
+            });
+        }
+
+    } catch (error) {
+        console.error(`❌ Trigger scheme alert error: ${error.message}`);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to trigger scheme alert',
+            error: error.message,
+        });
+    }
+};
+
 export {
     getAdvisories,
     getAdvisoriesByLocation,
@@ -335,4 +445,5 @@ export {
     markAsRead,
     markAllAsRead,
     createAdvisory,
+    triggerSchemeAlert,
 };

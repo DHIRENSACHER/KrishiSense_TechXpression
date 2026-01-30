@@ -1,38 +1,7 @@
-import * as cheerio from 'cheerio';
+import puppeteer from 'puppeteer';
+import axios from 'axios';
+import { PDFParse } from 'pdf-parse';
 import Scheme from '../models/Scheme.js';
-
-/**
- * Mock HTML data simulating a government agricultural schemes page.
- */
-const MOCK_HTML = `
-<!DOCTYPE html>
-<html>
-<body>
-  <div class="schemes-container">
-    <div class="scheme-card" data-category="cereals">
-      <h3 class="scheme-title">PM-KISAN Samman Nidhi</h3>
-      <p class="scheme-description">Direct income support of Rs. 6000 per year to farmer families.</p>
-      <a class="scheme-link" href="https://pmkisan.gov.in">Apply Now</a>
-    </div>
-    <div class="scheme-card" data-category="all">
-      <h3 class="scheme-title">Pradhan Mantri Fasal Bima Yojana</h3>
-      <p class="scheme-description">Crop insurance providing financial support in case of crop failure.</p>
-      <a class="scheme-link" href="https://pmfby.gov.in">Apply Now</a>
-    </div>
-    <div class="scheme-card" data-category="horticulture">
-      <h3 class="scheme-title">Mission for Integrated Development of Horticulture</h3>
-      <p class="scheme-description">Subsidy up to 50% for horticulture farms and greenhouses.</p>
-      <a class="scheme-link" href="https://midh.gov.in">Apply Now</a>
-    </div>
-    <div class="scheme-card" data-category="organic">
-      <h3 class="scheme-title">Paramparagat Krishi Vikas Yojana</h3>
-      <p class="scheme-description">Rs. 50,000 per hectare assistance for organic farming.</p>
-      <a class="scheme-link" href="https://pgsindia-ncof.gov.in">Apply Now</a>
-    </div>
-  </div>
-</body>
-</html>
-`;
 
 /**
  * Generates a simple hash for content deduplication.
@@ -50,42 +19,183 @@ const generateContentHash = (content) => {
 };
 
 /**
- * Scrapes government agricultural scheme information.
- * Uses Cheerio for HTML parsing with mock data.
+ * Sanitizes text extracted from PDF by removing extra spaces and newlines.
+ * @param {string} text - Raw text
+ * @returns {string} Cleaned text
+ */
+const cleanText = (text) => {
+    if (!text) return "";
+    return text
+        .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, "") // Remove non-printable characters
+        .replace(/\s+/g, " ") // Collapse multiple spaces/newlines
+        .trim();
+};
+
+/**
+ * Extracts a description from PDF text using flexible header detection.
+ * @param {string} text - Cleaned PDF text
+ * @returns {string} Extracted description
+ */
+const extractDescription = (text) => {
+    // Noise removal: Remove markers like "-- 1 of 3 --", "Page X", and TOC dots
+    const noisePatterns = [
+        /-- \d+ of \d+ --/g,
+        /Page \d+/g,
+        /\[\d+\]/g,
+        /\.{3,}\s*\d+/g // Remove Table of Contents dots and page numbers (e.g. ".... 10")
+    ];
+    let sanitizedText = text;
+    noisePatterns.forEach(p => sanitizedText = sanitizedText.replace(p, " "));
+
+    const headers = [
+        "Introduction",
+        "Objectives",
+        "Background",
+        "Rationale",
+        "About the Scheme",
+        "About the program",
+        "Preface"
+    ];
+
+    let extractedText = "";
+
+    // Step 1: Header Search
+    for (const header of headers) {
+        const regex = new RegExp(`${header}[\\s:]*([\\s\\S]{50,2000}?)(?=\\s[2-9]\\.\\d|\\s[I-V]+\\.|Implementing|Administrative|Guidelines|Financial|\\n\\s*\\n)`, "i");
+        const match = sanitizedText.match(regex);
+        if (match && match[1].trim().length > 50) {
+            extractedText = cleanText(match[1]);
+            break;
+        }
+    }
+
+    // Step 2: Line-based Fallback
+    if (!extractedText || extractedText.length < 50) {
+        const lines = sanitizedText.split(/\r?\n/).filter(l => l.trim().length > 40);
+        if (lines.length > 0) {
+            extractedText = cleanText(lines.slice(0, 5).join(" "));
+        }
+    }
+
+    // Step 3: Raw Fragment Fallback
+    if (!extractedText || extractedText.length < 50) {
+        extractedText = cleanText(sanitizedText.substring(0, 1000));
+    }
+
+    // Final Post-processing: Shorten to ~200-250 chars for a cleaner UI
+    if (extractedText.length < 50) {
+        return "Government scheme information. View the official document for full details.";
+    }
+
+    // Target a very short summary (roughly 2-3 sentences)
+    const maxLength = 250;
+    let summary = extractedText;
+
+    // Try to break at a sentence boundary within the first 300 chars
+    const sentenceEnd = summary.indexOf('.', 150);
+    if (sentenceEnd !== -1 && sentenceEnd < 350) {
+        summary = summary.substring(0, sentenceEnd + 1);
+    }
+
+    if (summary.length > maxLength) {
+        return summary.substring(0, maxLength).trim() + "...";
+    }
+
+    return summary;
+};
+
+/**
+ * Extracts implementation period or date from PDF text.
+ * @param {string} text - Cleaned PDF text
+ * @returns {string} Extracted date info
+ */
+const extractDate = (text) => {
+    const datePatterns = [
+        /Implementation Period of Scheme([\s\S]*?)(?:\d|\n)/i,
+        /Effective from([\s\S]*?)(?:\d|\n)/i,
+        /Date of commencement([\s\S]*?)(?:\d|\n)/i
+    ];
+
+    for (const pattern of datePatterns) {
+        const match = text.match(pattern);
+        if (match) return cleanText(match[1]);
+    }
+    return "See document";
+};
+
+/**
+ * Scrapes government agricultural scheme information using Puppeteer.
+ * Fetches PDF links and parses content using pdf-parse.
  * @async
- * @param {string} [url] - URL to scrape (not used in mock mode)
  * @returns {Promise<Array<Object>>} Array of scheme objects
  */
-const scrapeSchemes = async (url = null) => {
+const scrapeSchemes = async () => {
+    let browser;
     try {
-        const html = MOCK_HTML;
-        const $ = cheerio.load(html);
-        const schemes = [];
+        console.log('🌐 Launching browser for scraping...');
+        browser = await puppeteer.launch({
+            headless: 'new',
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+        const page = await browser.newPage();
+        const url = 'https://agriwelfare.gov.in/en/Major';
 
-        $('.scheme-card').each((index, element) => {
-            const $card = $(element);
-            const title = $card.find('.scheme-title').text().trim();
-            const description = $card.find('.scheme-description').text().trim();
-            const link = $card.find('.scheme-link').attr('href');
-            const cropCategory = $card.attr('data-category') || 'all';
+        console.log(`📡 Navigating to ${url}...`);
+        await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
 
-            if (title) {
-                schemes.push({
-                    title,
-                    description,
-                    link,
-                    cropCategory,
-                    sourceUrl: url || 'mock://government-schemes',
-                    contentHash: generateContentHash(title + description),
-                });
-            }
+        console.log('📄 Extracting scheme links and publish dates from table...');
+        const schemeLinks = await page.evaluate(() => {
+            const rows = Array.from(document.querySelectorAll('table tr')).slice(1);
+            return rows.map(tr => {
+                const cols = tr.querySelectorAll('td');
+                if (cols.length < 4) return null;
+
+                const linkElement = cols[3].querySelector('a');
+                return {
+                    title: cols[1].innerText.trim(),
+                    publishDate: cols[2].innerText.trim(), // Extracting Publish Date from table
+                    pdfUrl: linkElement ? linkElement.href : null
+                };
+            }).filter(item => item && item.pdfUrl);
         });
 
-        console.log(`📋 Scraped ${schemes.length} schemes successfully`);
+        console.log(`🔍 Found ${schemeLinks.length} potential schemes. Starting PDF parsing...`);
+        const schemes = [];
+
+        for (const scheme of schemeLinks) {
+            try {
+                console.log(`📥 Downloading PDF for: ${scheme.title}`);
+                const response = await axios.get(scheme.pdfUrl, {
+                    responseType: 'arraybuffer',
+                    timeout: 25000 // Increased timeout for larger PDFs
+                });
+
+                const parser = new PDFParse({ data: response.data });
+                const data = await parser.getText();
+                const rawText = data.text;
+
+                const description = extractDescription(rawText);
+
+                schemes.push({
+                    title: scheme.title,
+                    description,
+                    link: scheme.pdfUrl,
+                    publishDate: scheme.publishDate,
+                    sourceUrl: url,
+                    contentHash: generateContentHash(scheme.title + description),
+                });
+            } catch (schemeError) {
+                console.warn(`⚠️ Failed to parse scheme "${scheme.title}": ${schemeError.message}`);
+            }
+        }
+
+        console.log(`✅ Scraped and parsed ${schemes.length} schemes successfully`);
         return schemes;
     } catch (error) {
         console.error(`❌ Scraping error: ${error.message}`);
         throw new Error(`Failed to scrape schemes: ${error.message}`);
+    } finally {
+        if (browser) await browser.close();
     }
 };
 
@@ -101,13 +211,21 @@ const updateSchemesInDB = async () => {
         let updatedCount = 0;
 
         for (const schemeData of schemes) {
-            const existing = await Scheme.findOne({ contentHash: schemeData.contentHash });
+            const existing = await Scheme.findOne({
+                $or: [
+                    { contentHash: schemeData.contentHash },
+                    { title: schemeData.title }
+                ]
+            });
 
             if (!existing) {
                 await Scheme.create(schemeData);
                 newCount++;
             } else {
-                await Scheme.findByIdAndUpdate(existing._id, { ...schemeData, updatedAt: new Date() });
+                await Scheme.findByIdAndUpdate(existing._id, {
+                    ...schemeData,
+                    updatedAt: new Date()
+                });
                 updatedCount++;
             }
         }

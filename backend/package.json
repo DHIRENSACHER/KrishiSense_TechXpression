@@ -28,6 +28,9 @@
         "mongoose": "^8.0.3",
         "morgan": "^1.10.0",
         "node-cron": "^3.0.3",
+        "notifme-sdk": "^1.16.25",
+        "pdf-parse": "^2.4.5",
+        "puppeteer": "^24.36.1",
         "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^5.0.0"
     },

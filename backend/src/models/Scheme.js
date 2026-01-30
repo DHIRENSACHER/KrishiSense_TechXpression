@@ -26,19 +26,14 @@ const schemeSchema = new mongoose.Schema(
             trim: true,
         },
 
-        /** Category of crops this scheme applies to */
-        cropCategory: {
-            type: String,
-            trim: true,
-            enum: ['all', 'cereals', 'pulses', 'oilseeds', 'cash_crops', 'horticulture', 'vegetables', 'fruits', 'organic', 'dairy', 'fisheries'],
-            default: 'all',
-        },
-
         /** Whether the scheme is currently active */
         isActive: { type: Boolean, default: true },
 
         /** Source URL where the scheme was scraped from */
         sourceUrl: { type: String, trim: true },
+
+        /** Date the scheme was published on the portal */
+        publishDate: { type: String, trim: true },
 
         /** Hash of content to detect duplicates */
         contentHash: { type: String, unique: true, sparse: true },
@@ -47,6 +42,5 @@ const schemeSchema = new mongoose.Schema(
 );
 
 schemeSchema.index({ title: 'text', description: 'text' });
-schemeSchema.index({ cropCategory: 1, isActive: 1 });
 
 export default mongoose.model('Scheme', schemeSchema);

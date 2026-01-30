@@ -1,5 +1,7 @@
 import User from '../models/User.js';
 import { generateToken, generateOTP, verifyOTP } from '../config/auth.js';
+import { findBestMatch, reverseGeocode, isValidCoordinates } from '../services/geolocationService.js';
+import { sendOTP as sendNotificationOTP } from '../services/notificationService.js';
 
 /**
  * In-memory OTP storage (for mock implementation).
@@ -60,10 +62,10 @@ const sendOTP = async (req, res) => {
             otpExpiry: expiry,
         });
 
-        // In production, send OTP via SMS gateway:
-        // await smsGateway.send(phone, `Your OTP is: ${otp}`);
+        // Send OTP via Notification Service
+        await sendNotificationOTP(phone, otp);
 
-        console.log(`📱 OTP sent to ${phone}: ${otp} (Mock - visible for testing)`);
+        console.log(`📱 OTP dispatched to ${phone}: ${otp}`);
 
         res.status(200).json({
             success: true,
@@ -192,21 +194,61 @@ const verifyOTPAndLogin = async (req, res) => {
  * @example
  * // PUT /api/auth/profile
  * // Body: { "name": "Farmer Name", "cropType": "rice", "location": { "coordinates": [72.87, 19.07] } }
+ * // OR: { "address": "Pune, Maharashtra" }
  */
 const updateProfile = async (req, res) => {
     try {
         const { userId } = req.user;
-        const { name, cropType, preferredLanguage, location } = req.body;
+        const { name, cropType, preferredLanguage, location, address } = req.body;
 
         const updateData = {};
         if (name) updateData.name = name;
         if (cropType) updateData.cropType = cropType;
         if (preferredLanguage) updateData.preferredLanguage = preferredLanguage;
-        if (location?.coordinates) {
+
+        // Handle location update - either by address or coordinates
+        if (address) {
+            // Geocode the address to get coordinates
+            console.log(`📍 Geocoding address for profile: "${address}"`);
+            const geoResult = await findBestMatch(address);
+
+            if (!geoResult) {
+                return res.status(400).json({
+                    success: false,
+                    message: `Could not find location for: "${address}". Try a different city or village name.`,
+                });
+            }
+
+            updateData.location = {
+                type: 'Point',
+                coordinates: [geoResult.lon, geoResult.lat], // GeoJSON: [lon, lat]
+            };
+            updateData.locationName = geoResult.name;
+            updateData.state = geoResult.state;
+            updateData.country = geoResult.country;
+
+        } else if (location?.coordinates) {
+            // User provided raw coordinates - reverse geocode to get name
+            const [lon, lat] = location.coordinates;
             updateData.location = {
                 type: 'Point',
                 coordinates: location.coordinates,
             };
+
+            // Try to get location name via reverse geocoding
+            if (isValidCoordinates(lat, lon)) {
+                try {
+                    const geoResult = await reverseGeocode(lat, lon);
+                    if (geoResult) {
+                        updateData.locationName = geoResult.name;
+                        updateData.state = geoResult.state;
+                        updateData.country = geoResult.country;
+                    }
+                } catch (err) {
+                    console.warn(`⚠️ Reverse geocoding failed: ${err.message}`);
+                    // Continue without location name
+                }
+            }
         }
 
         const user = await User.findByIdAndUpdate(userId, updateData, {
@@ -231,6 +273,9 @@ const updateProfile = async (req, res) => {
                 cropType: user.cropType,
                 preferredLanguage: user.preferredLanguage,
                 location: user.location,
+                locationName: user.locationName,
+                state: user.state,
+                country: user.country,
             },
         });
 
@@ -274,6 +319,9 @@ const getProfile = async (req, res) => {
                 cropType: user.cropType,
                 preferredLanguage: user.preferredLanguage,
                 location: user.location,
+                locationName: user.locationName,
+                state: user.state,
+                country: user.country,
                 isVerified: user.isVerified,
                 createdAt: user.createdAt,
             },
@@ -289,9 +337,107 @@ const getProfile = async (req, res) => {
     }
 };
 
+/**
+ * Adds a new crop to the user's inventory.
+ */
+const addCrop = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        const { name, area, season, note } = req.body;
+
+        if (!name || !area || !season) {
+            return res.status(400).json({
+                success: false,
+                message: 'Name, area, and season are required',
+            });
+        }
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        user.cropInventory.push({ name, area, season, note });
+        await user.save();
+
+        res.status(201).json({
+            success: true,
+            message: 'Crop added successfully',
+            cropInventory: user.cropInventory,
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
+/**
+ * Updates an existing crop in the inventory.
+ */
+const updateCrop = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        const { cropId } = req.params;
+        const { name, area, season, note } = req.body;
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        const crop = user.cropInventory.id(cropId);
+        if (!crop) {
+            return res.status(404).json({ success: false, message: 'Crop not found' });
+        }
+
+        if (name) crop.name = name;
+        if (area) crop.area = area;
+        if (season) crop.season = season;
+        if (note !== undefined) crop.note = note;
+
+        await user.save();
+
+        res.status(200).json({
+            success: true,
+            message: 'Crop updated successfully',
+            cropInventory: user.cropInventory,
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
+/**
+ * Deletes a crop from the inventory.
+ */
+const deleteCrop = async (req, res) => {
+    try {
+        const { userId } = req.user;
+        const { cropId } = req.params;
+
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
+        }
+
+        user.cropInventory.pull(cropId);
+        await user.save();
+
+        res.status(200).json({
+            success: true,
+            message: 'Crop deleted successfully',
+            cropInventory: user.cropInventory,
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
 export {
     sendOTP,
     verifyOTPAndLogin,
     updateProfile,
     getProfile,
+    addCrop,
+    updateCrop,
+    deleteCrop,
 };
