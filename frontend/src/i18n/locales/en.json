@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "solutions": "Solutions",
+    "features": "Features",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Smart Agriculture Advisory System",
+    "subtitle": "AI-powered insights for precision farming, crop recommendations, and sustainable agriculture",
+    "cta": "Explore Solutions",
+    "tagline": "Empowering farmers with intelligent agricultural solutions"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "Everything you need for smart farming",
+    "schemes": {
+      "title": "AI-Predicted Government Schemes",
+      "description": "Get personalized recommendations for government agricultural schemes based on your profile and location"
+    },
+    "cropRecommendation": {
+      "title": "Crop Recommendation",
+      "description": "Discover which crops to grow based on weather patterns, soil quality, and market demand"
+    },
+    "irrigation": {
+      "title": "Smart Irrigation Scheduling",
+      "description": "Optimize water usage with AI-driven irrigation schedules and precise water amount recommendations"
+    },
+    "sowing": {
+      "title": "Optimal Sowing Time",
+      "description": "Predict the best time window for seed sowing to maximize yield and minimize risks"
+    },
+    "market": {
+      "title": "Market Price Forecasting",
+      "description": "Get accurate price predictions to make informed decisions about when and where to sell your produce"
+    }
+  },
+  "stats": {
+    "fields": "Fields Monitored",
+    "farmers": "Active Farmers",
+    "regions": "Regions Covered",
+    "efficiency": "Water Efficiency Improvement"
+  },
+  "login": {
+    "title": "Farmer Login",
+    "phone": "Phone Number",
+    "otp": "OTP",
+    "sendOtp": "Send OTP",
+    "verify": "Verify & Login",
+    "enterPhone": "Enter your phone number",
+    "enterOtp": "Enter OTP sent to your phone"
+  },
+  "dashboard": {
+    "title": "Farm Overview",
+    "subtitle": "Quick view of farm health and weather",
+    "weather": "Weather",
+    "soilMoisture": "Soil Moisture",
+    "todayActivity": "Today's Activity",
+    "farmMap": "Farm Map",
+    "yieldAnalysis": "Monthly Yield Analysis"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
+
