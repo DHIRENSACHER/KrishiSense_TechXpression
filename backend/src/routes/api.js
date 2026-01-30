@@ -2,16 +2,19 @@ import { Router } from 'express';
 import { authenticateToken } from '../config/auth.js';
 
 // Auth Controllers
-import { sendOTP, verifyOTPAndLogin, updateProfile, getProfile } from '../controllers/authController.js';
+import { sendOTP, verifyOTPAndLogin, updateProfile, getProfile, addCrop, updateCrop, deleteCrop } from '../controllers/authController.js';
 
 // Advisory Controllers
-import { getAdvisories, getAdvisoriesByLocation, getWeatherAdvisory, markAsRead, markAllAsRead, createAdvisory } from '../controllers/advisoryController.js';
+import { getAdvisories, getAdvisoriesByLocation, getWeatherAdvisory, markAsRead, markAllAsRead, createAdvisory, triggerSchemeAlert } from '../controllers/advisoryController.js';
 
 // Sync Controllers
 import { syncBatch, pullChanges, getSyncStatus, resolveConflict } from '../controllers/syncController.js';
 
 // Market Controllers
 import { getMarketForecast, getPriceHistory, getSchemes, getSchemeById } from '../controllers/marketController.js';
+
+// Geolocation Service
+import { geocodeAddress, reverseGeocode } from '../services/geolocationService.js';
 
 const router = Router();
 
@@ -186,6 +189,13 @@ router.get('/auth/profile', authenticateToken, getProfile);
  *         description: Unauthorized
  */
 router.put('/auth/profile', authenticateToken, updateProfile);
+
+// ============================================================
+// Crop Inventory Routes
+// ============================================================
+router.post('/auth/profile/crops', authenticateToken, addCrop);
+router.put('/auth/profile/crops/:cropId', authenticateToken, updateCrop);
+router.delete('/auth/profile/crops/:cropId', authenticateToken, deleteCrop);
 
 // ============================================================
 // Advisory Routes
@@ -614,5 +624,186 @@ router.get('/schemes', getSchemes);
  *         description: Scheme not found
  */
 router.get('/schemes/:id', getSchemeById);
+
+// ============================================================
+// Geolocation Routes
+// ============================================================
+
+/**
+ * @swagger
+ * /api/geocode:
+ *   get:
+ *     summary: Search for locations by name
+ *     tags: [Geolocation]
+ *     parameters:
+ *       - in: query
+ *         name: q
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Location query (city, village, address)
+ *         example: "Mumbai, India"
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 5
+ *         description: Maximum number of results
+ *     responses:
+ *       200:
+ *         description: List of matching locations
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success: { type: boolean }
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       name: { type: string }
+ *                       lat: { type: number }
+ *                       lon: { type: number }
+ *                       country: { type: string }
+ *                       state: { type: string }
+ *                       displayName: { type: string }
+ *       400:
+ *         description: Query parameter missing
+ */
+router.get('/geocode', async (req, res) => {
+    try {
+        const { q, limit = 5 } = req.query;
+
+        if (!q) {
+            return res.status(400).json({
+                success: false,
+                message: 'Query parameter "q" is required',
+            });
+        }
+
+        const results = await geocodeAddress(q, parseInt(limit));
+
+        res.status(200).json({
+            success: true,
+            query: q,
+            count: results.length,
+            data: results,
+        });
+
+    } catch (error) {
+        console.error(`❌ Geocode error: ${error.message}`);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to geocode address',
+            error: error.message,
+        });
+    }
+});
+
+/**
+ * @swagger
+ * /api/geocode/reverse:
+ *   get:
+ *     summary: Get location name from coordinates
+ *     tags: [Geolocation]
+ *     parameters:
+ *       - in: query
+ *         name: lat
+ *         required: true
+ *         schema:
+ *           type: number
+ *         description: Latitude
+ *         example: 19.076
+ *       - in: query
+ *         name: lon
+ *         required: true
+ *         schema:
+ *           type: number
+ *         description: Longitude
+ *         example: 72.877
+ *     responses:
+ *       200:
+ *         description: Location details
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success: { type: boolean }
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     name: { type: string }
+ *                     state: { type: string }
+ *                     country: { type: string }
+ *                     displayName: { type: string }
+ *       400:
+ *         description: Missing lat or lon parameters
+ */
+router.get('/geocode/reverse', async (req, res) => {
+    try {
+        const { lat, lon } = req.query;
+
+        if (lat === undefined || lon === undefined) {
+            return res.status(400).json({
+                success: false,
+                message: 'Both "lat" and "lon" query parameters are required',
+            });
+        }
+
+        const result = await reverseGeocode(parseFloat(lat), parseFloat(lon));
+
+        if (!result) {
+            return res.status(404).json({
+                success: false,
+                message: 'No location found for the given coordinates',
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            data: result,
+        });
+
+    } catch (error) {
+        console.error(`❌ Reverse geocode error: ${error.message}`);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to reverse geocode',
+            error: error.message,
+        });
+    }
+});
+
+/**
+ * @swagger
+ * /api/advisories/trigger-scheme-alert:
+ *   post:
+ *     summary: Trigger a manual government scheme alert via notification service
+ *     tags: [Advisories]
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - schemeTitle
+ *             properties:
+ *               schemeTitle:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Alert triggered successfully
+ *       400:
+ *         description: Missing schemeTitle
+ *       404:
+ *         description: User not found
+ */
+router.post('/advisories/trigger-scheme-alert', authenticateToken, triggerSchemeAlert);
 
 export default router;

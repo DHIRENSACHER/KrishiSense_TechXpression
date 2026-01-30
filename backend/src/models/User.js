@@ -35,14 +35,37 @@ const userSchema = new mongoose.Schema(
             },
         },
 
-        /** Primary crop type the farmer cultivates */
-        cropType: {
+        /** Resolved location name (city/village) */
+        locationName: {
             type: String,
             trim: true,
-            enum: {
-                values: ['rice', 'wheat', 'maize', 'cotton', 'sugarcane', 'soybean', 'groundnut', 'vegetables', 'fruits', 'pulses', 'other'],
-                message: '{VALUE} is not a supported crop type',
-            },
+        },
+
+        /** State/Province of the location */
+        state: {
+            type: String,
+            trim: true,
+        },
+
+        /** Country code */
+        country: {
+            type: String,
+            trim: true,
+        },
+
+        /** Crop inventory of User */
+        cropInventory: {
+            type: [{
+                name: { type: String, required: true },
+                area: { type: Number, required: true },
+                season: {
+                    type: String,
+                    enum: ['kharif', 'rabi', 'zaid'], // Correct enum syntax
+                    required: true
+                },
+                note: String
+            }],
+            default: [] // Default for the entire array
         },
 
         /** Preferred language for advisories and notifications */

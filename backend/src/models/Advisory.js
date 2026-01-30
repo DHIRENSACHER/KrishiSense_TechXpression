@@ -46,10 +46,24 @@ const advisorySchema = new mongoose.Schema(
 
         /** Source of the advisory */
         source: { type: String, trim: true, default: 'system' },
+
+        /** Location for geo-targeted advisories */
+        location: {
+            type: {
+                type: String,
+                enum: ['Point'],
+                default: 'Point',
+            },
+            coordinates: {
+                type: [Number], // [longitude, latitude]
+                default: [0, 0],
+            },
+        },
     },
     { timestamps: true }
 );
 
+advisorySchema.index({ location: '2dsphere' });
 advisorySchema.index({ userId: 1, createdAt: -1 });
 advisorySchema.index({ userId: 1, isRead: 1 });
 

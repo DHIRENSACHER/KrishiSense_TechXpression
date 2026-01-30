@@ -1,45 +1,100 @@
 /**
  * Weather Service for OpenWeatherMap API integration.
  * Provides weather data and generates advisories for farmers.
- * 
- * NOTE: Current implementation uses hardcoded mock data.
- * For production, integrate with the actual OpenWeatherMap API.
  */
 
+import axios from 'axios';
+
+const OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
+
 /**
- * Mock weather data for different conditions.
- * Simulates various weather scenarios for testing.
+ * Gets the OpenWeatherMap API key from environment.
+ * @returns {string} API key
  */
-const MOCK_WEATHER_DATA = {
-    current: {
-        temp: 28,
-        humidity: 65,
-        windSpeed: 12,
-        condition: 'partly_cloudy',
-        description: 'Partly cloudy with moderate humidity',
-        uvIndex: 6,
-        visibility: 10,
-        pressure: 1015,
-    },
-    forecast: [
-        { day: 'Today', high: 32, low: 24, condition: 'sunny', rainChance: 10 },
-        { day: 'Tomorrow', high: 30, low: 23, condition: 'cloudy', rainChance: 40 },
-        { day: 'Day 3', high: 28, low: 22, condition: 'rain', rainChance: 80 },
-        { day: 'Day 4', high: 26, low: 21, condition: 'rain', rainChance: 70 },
-        { day: 'Day 5', high: 29, low: 22, condition: 'partly_cloudy', rainChance: 20 },
-    ],
-    alerts: [
-        {
-            type: 'rain',
-            severity: 'medium',
-            message: 'Heavy rainfall expected in the next 48-72 hours. Consider delaying fertilizer application.',
-        },
-    ],
+const getApiKey = () => process.env.OPENWEATHER_API_KEY;
+
+/**
+ * Maps OpenWeatherMap weather condition codes to simple condition names.
+ * @param {number} conditionCode - OpenWeatherMap condition code
+ * @returns {string} Simple condition name
+ */
+const mapWeatherCondition = (conditionCode) => {
+    if (conditionCode >= 200 && conditionCode < 300) return 'thunderstorm';
+    if (conditionCode >= 300 && conditionCode < 400) return 'drizzle';
+    if (conditionCode >= 500 && conditionCode < 600) return 'rain';
+    if (conditionCode >= 600 && conditionCode < 700) return 'snow';
+    if (conditionCode >= 700 && conditionCode < 800) return 'fog';
+    if (conditionCode === 800) return 'sunny';
+    if (conditionCode > 800) return 'partly_cloudy';
+    return 'unknown';
+};
+
+/**
+ * Transforms OpenWeatherMap current weather response to our format.
+ * @param {Object} data - Raw API response
+ * @returns {Object} Transformed weather data
+ */
+const transformCurrentWeatherResponse = (data) => {
+    return {
+        temp: Math.round(data.main.temp),
+        humidity: data.main.humidity,
+        windSpeed: Math.round(data.wind.speed * 3.6), // Convert m/s to km/h
+        condition: mapWeatherCondition(data.weather[0].id),
+        description: data.weather[0].description,
+        uvIndex: data.uvi || 0,
+        visibility: data.visibility ? data.visibility / 1000 : 10, // Convert to km
+        pressure: data.main.pressure,
+        feelsLike: Math.round(data.main.feels_like),
+        clouds: data.clouds?.all || 0,
+    };
+};
+
+/**
+ * Transforms OpenWeatherMap forecast response to our format.
+ * @param {Object} data - Raw API response
+ * @returns {Array} Transformed forecast data
+ */
+const transformForecastResponse = (data) => {
+    const dailyForecasts = {};
+
+    // Group by date and find high/low for each day
+    data.list.forEach((item) => {
+        const date = new Date(item.dt * 1000);
+        const dateKey = date.toISOString().split('T')[0];
+
+        if (!dailyForecasts[dateKey]) {
+            dailyForecasts[dateKey] = {
+                date: dateKey,
+                temps: [],
+                conditions: [],
+                rainChances: [],
+            };
+        }
+
+        dailyForecasts[dateKey].temps.push(item.main.temp);
+        dailyForecasts[dateKey].conditions.push(item.weather[0].id);
+        dailyForecasts[dateKey].rainChances.push(item.pop * 100); // Convert to percentage
+    });
+
+    // Convert to array and format
+    const days = Object.values(dailyForecasts).slice(0, 5);
+    const dayNames = ['Today', 'Tomorrow', 'Day 3', 'Day 4', 'Day 5'];
+
+    return days.map((day, index) => {
+        const avgConditionCode = day.conditions[Math.floor(day.conditions.length / 2)];
+        return {
+            day: dayNames[index] || `Day ${index + 1}`,
+            date: day.date,
+            high: Math.round(Math.max(...day.temps)),
+            low: Math.round(Math.min(...day.temps)),
+            condition: mapWeatherCondition(avgConditionCode),
+            rainChance: Math.round(Math.max(...day.rainChances)),
+        };
+    });
 };
 
 /**
  * Fetches current weather data for given coordinates.
- * Uses mock data - integrate with OpenWeatherMap API for production.
  * 
  * @async
  * @param {number} lat - Latitude coordinate
@@ -50,26 +105,31 @@ const MOCK_WEATHER_DATA = {
  */
 const getCurrentWeather = async (lat, lon) => {
     try {
-        // In production, use actual API:
-        // const apiKey = process.env.OPENWEATHER_API_KEY;
-        // const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-        // const response = await axios.get(url);
-        // return transformWeatherResponse(response.data);
+        const apiKey = getApiKey();
+        if (!apiKey) {
+            throw new Error('OpenWeatherMap API key is not configured');
+        }
 
-        // Mock implementation
         console.log(`🌤️ Fetching weather for coordinates: ${lat}, ${lon}`);
 
-        // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 100));
+        const url = `${OPENWEATHER_BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const response = await axios.get(url);
+
+        const transformedData = transformCurrentWeatherResponse(response.data);
 
         return {
-            ...MOCK_WEATHER_DATA.current,
+            ...transformedData,
             coordinates: { lat, lon },
+            location: response.data.name,
             timestamp: new Date().toISOString(),
         };
 
     } catch (error) {
         console.error(`❌ Weather fetch error: ${error.message}`);
+        if (error.response) {
+            console.error(`API Response Status: ${error.response.status}`);
+            console.error(`API Response Data: ${JSON.stringify(error.response.data)}`);
+        }
         throw new Error(`Failed to fetch weather: ${error.message}`);
     }
 };
@@ -84,18 +144,24 @@ const getCurrentWeather = async (lat, lon) => {
  */
 const getForecast = async (lat, lon) => {
     try {
-        // In production, use actual API:
-        // const apiKey = process.env.OPENWEATHER_API_KEY;
-        // const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const apiKey = getApiKey();
+        if (!apiKey) {
+            throw new Error('OpenWeatherMap API key is not configured');
+        }
 
         console.log(`📅 Fetching forecast for coordinates: ${lat}, ${lon}`);
 
-        await new Promise(resolve => setTimeout(resolve, 100));
+        const url = `${OPENWEATHER_BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const response = await axios.get(url);
 
-        return MOCK_WEATHER_DATA.forecast;
+        return transformForecastResponse(response.data);
 
     } catch (error) {
         console.error(`❌ Forecast fetch error: ${error.message}`);
+        if (error.response) {
+            console.error(`API Response Status: ${error.response.status}`);
+            console.error(`API Response Data: ${JSON.stringify(error.response.data)}`);
+        }
         throw new Error(`Failed to fetch forecast: ${error.message}`);
     }
 };
@@ -168,6 +234,17 @@ const generateWeatherAdvisories = (weather, forecast, cropType) => {
         });
     }
 
+    // Frost warning
+    if (weather.temp < 5) {
+        advisories.push({
+            type: 'weather',
+            message: `Frost warning! Temperature is ${weather.temp}°C. Protect sensitive crops with covers or move potted plants indoors.`,
+            severity: 'high',
+            metadata: { temp: weather.temp, condition: 'frost' },
+            expiresAt: new Date(now.getTime() + 12 * 60 * 60 * 1000),
+        });
+    }
+
     // Crop-specific advisories
     const cropAdvisory = getCropSpecificAdvisory(weather, cropType);
     if (cropAdvisory) {
@@ -208,9 +285,19 @@ const getCropSpecificAdvisory = (weather, cropType) => {
             message: 'High temperatures may affect vegetable quality. Consider shade nets and mulching.',
             severity: 'medium',
         },
+        sugarcane: {
+            condition: weather.temp > 35,
+            message: 'High temperature may stress sugarcane. Ensure adequate irrigation for optimal growth.',
+            severity: 'medium',
+        },
+        maize: {
+            condition: weather.temp > 32 && weather.humidity < 50,
+            message: 'Hot and dry conditions not ideal for maize. Increase irrigation frequency.',
+            severity: 'medium',
+        },
     };
 
-    const advisory = cropAdvisories[cropType];
+    const advisory = cropAdvisories[cropType?.toLowerCase()];
     if (advisory && advisory.condition) {
         return {
             type: 'general',
@@ -226,7 +313,8 @@ const getCropSpecificAdvisory = (weather, cropType) => {
 };
 
 /**
- * Gets weather alerts for a location.
+ * Gets weather alerts for a location using One Call API (requires subscription).
+ * Falls back to generating alerts from current weather and forecast data.
  * 
  * @async
  * @param {number} lat - Latitude
@@ -235,11 +323,94 @@ const getCropSpecificAdvisory = (weather, cropType) => {
  */
 const getWeatherAlerts = async (lat, lon) => {
     try {
-        // Mock implementation
-        return MOCK_WEATHER_DATA.alerts;
+        // Try to get current weather and forecast to generate alerts
+        const [currentWeather, forecast] = await Promise.all([
+            getCurrentWeather(lat, lon),
+            getForecast(lat, lon),
+        ]);
+
+        const alerts = [];
+
+        // Generate alerts based on current conditions
+        if (currentWeather.temp > 40) {
+            alerts.push({
+                type: 'extreme_heat',
+                severity: 'high',
+                message: `Extreme heat warning: Temperature is ${currentWeather.temp}°C. Take precautions to protect crops and livestock.`,
+            });
+        }
+
+        if (currentWeather.temp < 0) {
+            alerts.push({
+                type: 'freeze',
+                severity: 'high',
+                message: `Freeze warning: Temperature is ${currentWeather.temp}°C. Protect sensitive crops immediately.`,
+            });
+        }
+
+        // Check forecast for heavy rain
+        const heavyRainDays = forecast.filter(day => day.rainChance > 80);
+        if (heavyRainDays.length >= 2) {
+            alerts.push({
+                type: 'rain',
+                severity: 'medium',
+                message: `Heavy rainfall expected in the next ${heavyRainDays.length} days. Consider delaying fertilizer application and prepare for possible waterlogging.`,
+            });
+        }
+
+        // Strong wind alert
+        if (currentWeather.windSpeed > 50) {
+            alerts.push({
+                type: 'wind',
+                severity: 'high',
+                message: `Strong wind alert: Wind speed is ${currentWeather.windSpeed} km/h. Secure structures and protect crops.`,
+            });
+        }
+
+        return alerts;
+
     } catch (error) {
         console.error(`❌ Alert fetch error: ${error.message}`);
         return [];
+    }
+};
+
+/**
+ * Gets complete weather data including current, forecast, and alerts.
+ * 
+ * @async
+ * @param {number} lat - Latitude
+ * @param {number} lon - Longitude
+ * @param {string} cropType - Optional crop type for specific advisories
+ * @returns {Promise<Object>} Complete weather data object
+ */
+const getCompleteWeatherData = async (lat, lon, cropType = null) => {
+    try {
+        const [current, forecast] = await Promise.all([
+            getCurrentWeather(lat, lon),
+            getForecast(lat, lon),
+        ]);
+
+        const advisories = generateWeatherAdvisories(current, forecast, cropType);
+
+        // Generate alerts based on conditions
+        const alerts = [];
+        if (current.temp > 40 || current.temp < 0 || current.windSpeed > 50) {
+            const fetchedAlerts = await getWeatherAlerts(lat, lon);
+            alerts.push(...fetchedAlerts);
+        }
+
+        return {
+            current,
+            forecast,
+            advisories,
+            alerts,
+            fetchedAt: new Date().toISOString(),
+        };
+
+    } catch (error) {
+        console.error(`❌ Complete weather data fetch error: ${error.message}`);
+        throw error;
     }
 };
 
@@ -249,4 +420,5 @@ export {
     generateWeatherAdvisories,
     getCropSpecificAdvisory,
     getWeatherAlerts,
+    getCompleteWeatherData,
 };
