@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { authAPI } from '../utils/api';
 import { motion } from 'framer-motion';
 import { Phone, Lock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import logoImg from '../assets/images/logo.png';
 
 export default function Login() {
   const { t } = useTranslation();
@@ -101,9 +102,7 @@ export default function Login() {
         <div className="bg-white rounded-2xl shadow-xl p-8">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl mb-4">
-              <span className="text-white font-bold text-2xl">K</span>
-            </div>
+            <img src={logoImg} alt="KrishiSense logo" className="mx-auto w-20 h-20 mb-4 object-contain" />
             <h1 className="text-3xl font-bold text-gray-900">{t('login.title')}</h1>
             <p className="text-gray-600 mt-2">Welcome back! Please login to continue.</p>
           </div>

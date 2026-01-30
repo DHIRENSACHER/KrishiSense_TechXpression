@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { advisoryAPI, marketAPI } from '../utils/api';
+import { schemesAPI } from '../services/api';
 import { motion } from 'framer-motion';
 import {
   Home,
@@ -21,6 +22,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import Predict from './Predict';
 import Modal from '../components/Modal';
 import ProfileModal from '../components/ProfileModal';
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
   const { t } = useTranslation();
@@ -139,6 +141,51 @@ export default function Dashboard() {
       color: 'bg-gray-100 text-gray-700',
     },
   ];
+
+  // Schemes shown in dashboard
+  const [schemes, setSchemes] = useState([]);
+  const [schemesLoading, setSchemesLoading] = useState(true);
+  const [schemesError, setSchemesError] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+    const mockSchemes = [
+      { _id: '1', title: 'PM-KISAN Scheme', description: 'Direct income support to farmers', publishDate: '2025-01-15' },
+      { _id: '2', title: 'KCC Scheme', description: 'Credit card for farmers', publishDate: '2024-11-01' },
+    ];
+
+    const fetchSchemes = async () => {
+      if (!mounted) return;
+      setSchemesLoading(true);
+      try {
+        const base = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+        const res = await fetch(`${base}/schemes?limit=4`);
+        if (!res.ok) {
+          if (mounted) setSchemes(mockSchemes);
+          return;
+        }
+        const data = await res.json();
+        let fetched = [];
+        if (Array.isArray(data)) fetched = data;
+        else if (Array.isArray(data.schemes)) fetched = data.schemes;
+        else if (Array.isArray(data.data)) fetched = data.data;
+
+        if (fetched.length > 0) {
+          if (mounted) setSchemes(fetched);
+        } else {
+          if (mounted) setSchemes(mockSchemes);
+        }
+      } catch (err) {
+        console.error('Error fetching dashboard schemes:', err);
+        if (mounted) setSchemes(mockSchemes);
+        if (mounted) setSchemesError(err.message || 'Failed to load schemes');
+      } finally {
+        if (mounted) setSchemesLoading(false);
+      }
+    };
+    fetchSchemes();
+    return () => { mounted = false; };
+  }, []);
 
   if (loading) {
     return (
@@ -357,7 +404,7 @@ export default function Dashboard() {
                   </div>
                 </motion.div>
 
-                {/* Today Activity Card */}
+                {/* Available Government Schemes Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -365,25 +412,36 @@ export default function Dashboard() {
                   className="bg-white rounded-xl p-6 shadow-sm"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-gray-900">{t('dashboard.todayActivity')}</h3>
-                    <span className="text-sm text-gray-600">6 Activity</span>
+                    <h3 className="text-lg font-semibold text-gray-900">Available Government Schemes</h3>
+                    <Link to="/schemes" className="text-sm text-primary-600 hover:underline">View all</Link>
                   </div>
-                  <div className="space-y-4">
-                    {activities.map((activity, index) => (
-                      <div key={index} className="flex gap-3">
-                        <div className="w-12 h-12 bg-green-100 rounded-lg flex-shrink-0"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${activity.color}`}>
-                              {activity.status}
-                            </span>
-                            <span className="text-xs text-gray-500">{activity.time}</span>
+
+                  {schemesLoading ? (
+                    <div className="flex justify-center py-6">
+                      <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary-500"></div>
+                    </div>
+                  ) : schemes.length > 0 ? (
+                    <div className="space-y-3">
+                      {schemes.map((s, idx) => (
+                        <div key={s._id || idx} className="flex items-start gap-3">
+                          <div className="flex-1">
+                            <div className="font-semibold text-gray-900">{s.title}</div>
+                            <div className="text-sm text-gray-600 line-clamp-2">{s.description}</div>
+                            {(s.publishDate || s.publishedAt || s.createdAt || s.deadline) && (
+                              <div className="text-xs text-gray-500 mt-1">{new Date(s.publishDate || s.publishedAt || s.createdAt || s.deadline).toLocaleDateString()}</div>
+                            )}
                           </div>
-                          <p className="text-sm text-gray-700">{activity.description}</p>
+                          <div className="flex flex-col items-end">
+                            <Link to="/schemes" className="text-sm text-primary-600 hover:underline">Details</Link>
+                            <button className="mt-2 px-3 py-1 bg-primary-600 text-white rounded text-sm">Apply</button>
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-600">No schemes available right now.</div>
+                  )}
+
                 </motion.div>
               </div>
 

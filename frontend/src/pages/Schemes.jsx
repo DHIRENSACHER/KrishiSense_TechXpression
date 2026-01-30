@@ -14,9 +14,133 @@ const Schemes = () => {
 
   useEffect(() => {
     fetchSchemes();
-  }, [filter]);
+  }, [filter, searchTerm]);
 
   const fetchSchemes = async () => {
+    const mockSchemes = [
+  {
+    _id: '1',
+    title: 'Agriculture Infrastructure Fund',
+    description: 'Funding support for post-harvest and farm infrastructure projects',
+    publishDate: '2024-12-06',
+    benefits: 'Loans with interest subsidy',
+    link: 'https://agriinfra.dac.gov.in',
+  },
+  {
+    _id: '2',
+    title: 'PM-Kisan Samman Nidhi',
+    description: 'Direct income support scheme for farmers',
+    publishDate: '2023-12-28',
+    benefits: '₹6,000 per year',
+    link: 'https://pmkisan.gov.in/',
+  },
+  {
+    _id: '3',
+    title: 'ATMA',
+    description: 'Agricultural extension and farmer training program',
+    publishDate: '2025-04-04',
+    benefits: 'Training and technical support',
+    link: 'https://extensionreforms.da.gov.in/DashBoard_Statusatma.aspx',
+  },
+  {
+    _id: '4',
+    title: 'AGMARKNET',
+    description: 'Online system for agricultural market prices and info',
+    publishDate: '2014-03-14',
+    benefits: 'Access to real-time market data',
+    link: 'https://agmarknet.gov.in/PriceAndArrivals/arrivals1.aspx',
+  },
+  {
+    _id: '5',
+    title: 'Horticulture',
+    description: 'Development of fruits, vegetables, and flower crops',
+    publishDate: '2014-04-05',
+    benefits: 'Subsidies and assistance',
+    link: 'https://midh.gov.in/',
+  },
+  {
+    _id: '6',
+    title: 'Online Pesticide Registration',
+    description: 'Digital platform for pesticide approvals',
+    publishDate: '2009-09-23',
+    benefits: 'Faster registration process',
+    link: 'https://agriinfra.dac.gov.in',
+  },
+  {
+    _id: '7',
+    title: 'Plant Quarantine Clearance',
+    description: 'Regulation of plant imports and exports',
+    publishDate: '2011-01-05',
+    benefits: 'Safe agricultural trade',
+    link: 'https://pqms.cgg.gov.in/pqms-angular/home',
+  },
+  {
+    _id: '8',
+    title: 'DBT in Agriculture',
+    description: 'Direct transfer of subsidies to farmers',
+    publishDate: '2014-05-12',
+    benefits: 'Money directly into bank accounts',
+    link: 'https://www.dbtdacfw.gov.in/',
+  },
+  {
+    _id: '9',
+    title: 'Pradhan Mantri Krishi Sinchayee Yojana',
+    description: 'Improving irrigation and water efficiency',
+    publishDate: '2016-05-06',
+    benefits: 'Subsidy on irrigation systems',
+    link: 'https://pmksy.gov.in/mis/frmDashboard.aspx',
+  },
+  {
+    _id: '10',
+    title: 'Kisan Call Center',
+    description: '24x7 helpline for farmers’ queries',
+    publishDate: '2015-05-01',
+    benefits: 'Free expert advice',
+    link: 'https://mkisan.gov.in/Home/KCCDashboard',
+  },
+  {
+    _id: '11',
+    title: 'mKisan',
+    description: 'Mobile-based agricultural advisory service',
+    publishDate: '2015-05-06',
+    benefits: 'SMS alerts and updates',
+    link: 'https://mkisan.gov.in/',
+  },
+  {
+    _id: '12',
+    title: 'Jaivik Kheti',
+    description: 'Promotion of organic farming',
+    publishDate: '2015-05-18',
+    benefits: 'Support for organic practices',
+    link: 'https://pgsindia-ncof.gov.in/home.aspx',
+  },
+  {
+    _id: '13',
+    title: 'e-NAM',
+    description: 'Online national agricultural marketplace',
+    publishDate: '2016-10-04',
+    benefits: 'Better crop prices through online trading',
+    link: 'https://enam.gov.in/web/',
+  },
+  {
+    _id: '14',
+    title: 'Soil Health Card',
+    description: 'Soil testing and nutrient recommendations',
+    publishDate: '2016-09-01',
+    benefits: 'Improved soil productivity',
+    link: 'https://soilhealth.dac.gov.in/home',
+  },
+  {
+    _id: '15',
+    title: 'Pradhan Mantri Fasal Bima Yojana',
+    description: 'Crop insurance scheme for farmers',
+    publishDate: '2017-08-05',
+    benefits: 'Insurance against crop loss',
+    link: 'https://pmfby.gov.in/ext/rpt/ssfr_17',
+  },
+];
+
+
     try {
       setLoading(true);
       const params = {
@@ -25,32 +149,31 @@ const Schemes = () => {
         ...(searchTerm && { search: searchTerm }),
       };
       const response = await schemesAPI.getSchemes(params);
-      if (response.data.success) {
-        setSchemes(response.data.schemes || []);
+      const data = response?.data;
+
+      // Accept multiple response shapes: array, { schemes: [] }, or { success: true, schemes: [] }
+      let fetched = [];
+      if (Array.isArray(data)) {
+        fetched = data;
+      } else if (Array.isArray(data?.schemes)) {
+        fetched = data.schemes;
+      } else if (Array.isArray(data?.data)) {
+        fetched = data.data;
+      }
+
+      if (fetched.length > 0) {
+        setSchemes(fetched);
+      } else if (data && fetched.length === 0) {
+        // API returned but no schemes found -> show mock/demo data
+        setSchemes(mockSchemes);
+      } else {
+        // Unexpected shape -> fallback to mock
+        setSchemes(mockSchemes);
       }
     } catch (error) {
       console.error('Error fetching schemes:', error);
       // Mock data for demo
-      setSchemes([
-        {
-          _id: '1',
-          title: 'PM-KISAN Scheme',
-          description: 'Direct income support to farmers',
-          category: 'cereals',
-          eligibility: 'All farmers',
-          benefits: '₹6,000 per year',
-          deadline: '2025-12-31',
-        },
-        {
-          _id: '2',
-          title: 'KCC Scheme',
-          description: 'Credit card for farmers',
-          category: 'all',
-          eligibility: 'Farmers with land',
-          benefits: 'Up to ₹3 lakh credit',
-          deadline: '2025-12-31',
-        },
-      ]);
+      setSchemes(mockSchemes);
     } finally {
       setLoading(false);
     }
@@ -75,7 +198,7 @@ const Schemes = () => {
             className="text-center mb-12"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('nav.schemes')}
+              {t('Government Schemes')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover personalized government schemes tailored to your farming needs
@@ -133,7 +256,7 @@ const Schemes = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
@@ -145,34 +268,23 @@ const Schemes = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{scheme.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{scheme.description}</p>
-                  
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="text-primary-500" size={16} />
-                      <span className="text-gray-700">
-                        <strong>Eligibility:</strong> {scheme.eligibility}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="text-primary-500" size={16} />
-                      <span className="text-gray-700">
-                        <strong>Benefits:</strong> {scheme.benefits}
-                      </span>
-                    </div>
-                    {scheme.deadline && (
-                      <div className="flex items-center gap-2 text-sm">
-                        <Calendar className="text-primary-500" size={16} />
-                        <span className="text-gray-700">
-                          <strong>Deadline:</strong> {new Date(scheme.deadline).toLocaleDateString()}
-                        </span>
-                      </div>
+
+                  <div className="mt-auto flex flex-col gap-3">
+                    { (scheme.publishDate || scheme.publishedAt || scheme.createdAt || scheme.deadline) && (
+                      <div className="text-sm text-gray-500">{new Date(scheme.publishDate || scheme.publishedAt || scheme.createdAt || scheme.deadline).toLocaleDateString()}</div>
                     )}
+
+                    <a
+                      href={scheme.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                    >
+                      Apply Now
+                      <ArrowRight size={16} />
+                    </a>
                   </div>
 
-                  <button className="w-full mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center gap-2 font-medium">
-                    Apply Now
-                    <ArrowRight size={16} />
-                  </button>
                 </motion.div>
               ))}
             </div>

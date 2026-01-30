@@ -11,6 +11,7 @@ import About from './pages/About';
 import Solutions from './pages/Solutions';
 import Features from './pages/Features';
 import Contact from './pages/Contact';
+import Schemes from './pages/Schemes';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/features" element={<Features />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/schemes" element={<Schemes />} />
             <Route
               path="/dashboard"
               element={

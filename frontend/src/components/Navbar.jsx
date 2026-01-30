@@ -24,16 +24,16 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="w-full">
+        <div className="flex items-center h-16 justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src={logoImg} alt="KrishiSense logo" className="w-8 h-8 rounded-lg object-contain" />
             <span className="text-xl font-bold text-gray-900">KrishiSense</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          {/* Desktop Navigation - center aligned */}
+          <div className="hidden md:flex flex-1 items-center justify-center gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -54,7 +54,7 @@ export default function Navbar() {
             <LanguageSelector />
             
             {user ? (
-              <div className="hidden md:flex items-center gap-3">
+              <div className="flex items-center gap-3 min-w-fit ml-auto">
                 <Link
                   to="/dashboard"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition-colors"
@@ -75,9 +75,9 @@ export default function Navbar() {
                 to="/login"
                 className="hidden md:block px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium"
               >
-                {t('login.title')}
+                Farmer Login
               </Link>
-            )}
+            )} 
 
             {/* Mobile menu button */}
             <button
@@ -141,7 +141,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium"
                 >
-                  {t('login.title')}
+                  Farmer Login
                 </Link>
               )}
             </div>
