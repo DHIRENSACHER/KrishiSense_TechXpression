@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build / cache
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+coverage/
+
+# Misc
+.eslintcache
+.pnp.*
+Thumbs.db
+desktop.ini

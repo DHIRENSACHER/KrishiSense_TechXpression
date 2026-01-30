@@ -60,5 +60,9 @@ export const schemesAPI = {
   getSchemeById: (id) => api.get(`/schemes/${id}`),
 };
 
+export const modelAPI = {
+  predictCrop: (data) => api.post('/model/predict', data),
+};
+
 export default api;
 

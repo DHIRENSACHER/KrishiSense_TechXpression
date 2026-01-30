@@ -8,10 +8,9 @@ import {
   Calendar,
   DollarSign,
   ArrowRight,
-  CheckCircle2,
   Leaf,
-  BarChart3,
 } from 'lucide-react';
+import farmImg from '../assets/images/farm.webp';
 
 export default function Landing() {
   const { t } = useTranslation();
@@ -49,17 +48,19 @@ export default function Landing() {
     },
   ];
 
-  const stats = [
-    { value: '1000+', label: t('stats.fields') },
-    { value: '5000+', label: t('stats.farmers') },
-    { value: '50+', label: t('stats.regions') },
-    { value: '32%', label: t('stats.efficiency') },
-  ];
+  // stats removed
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 via-white to-green-50">
+      <section
+        className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 40%, rgba(255,255,255,0) 70%), url(${farmImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'right center',
+        }}
+      >
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -108,56 +109,11 @@ export default function Landing() {
                 </Link>
               </div>
 
-              {/* Stats */}
-              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                    className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md"
-                  >
-                    <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                    <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
+              {/* Stats removed */}
             </motion.div>
 
-            {/* Right Visual */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="relative"
-            >
-              <div className="relative bg-gradient-to-br from-green-400 to-emerald-600 rounded-3xl p-8 shadow-2xl">
-                <div className="bg-white rounded-2xl p-6 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                      <BarChart3 className="w-6 h-6 text-primary-600" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Crop Health</div>
-                      <div className="text-sm text-gray-600">Excellent</div>
-                    </div>
-                  </div>
-                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: '94%' }}
-                      transition={{ duration: 1, delay: 0.5 }}
-                      className="h-full bg-gradient-to-r from-green-500 to-emerald-500"
-                    />
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    <CheckCircle2 className="inline w-4 h-4 text-green-500 mr-1" />
-                    All fields monitored
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+
+
           </div>
         </div>
       </section>

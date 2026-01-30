@@ -5,6 +5,7 @@ import LanguageSelector from './LanguageSelector';
 import { Menu, X, User, LogOut } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import logoImg from '../assets/images/newlogo.png';
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -16,7 +17,6 @@ export default function Navbar() {
     { path: '/', label: t('nav.home') },
     { path: '/about', label: t('nav.about') },
     { path: '/solutions', label: t('nav.solutions') },
-    { path: '/features', label: t('nav.features') },
     { path: '/contact', label: t('nav.contact') },
   ];
 
@@ -28,9 +28,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">K</span>
-            </div>
+            <img src={logoImg} alt="KrishiSense logo" className="w-8 h-8 rounded-lg object-contain" />
             <span className="text-xl font-bold text-gray-900">KrishiSense</span>
           </Link>
 

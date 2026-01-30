@@ -124,7 +124,7 @@ export default function Solutions() {
               to="/login"
               className="inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg"
             >
-              Start Free Trial
+              Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </motion.div>

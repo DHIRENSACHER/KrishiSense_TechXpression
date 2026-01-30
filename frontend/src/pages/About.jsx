@@ -110,48 +110,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">5000+</div>
-              <div className="text-gray-600">Active Farmers</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">1000+</div>
-              <div className="text-gray-600">Fields Monitored</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">50+</div>
-              <div className="text-gray-600">Regions Covered</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">32%</div>
-              <div className="text-gray-600">Efficiency Gain</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Stats removed */}
     </div>
   );
 }

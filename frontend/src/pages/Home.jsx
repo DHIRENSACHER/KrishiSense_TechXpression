@@ -1,58 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  TrendingUp, 
-  Droplet, 
-  Calendar, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle2
-} from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const Home = () => {
   const { t } = useTranslation();
 
-  const features = [
-    {
-      icon: Sparkles,
-      title: t('features.schemes.title'),
-      description: t('features.schemes.description'),
-      color: 'bg-purple-100 text-purple-600',
-    },
-    {
-      icon: TrendingUp,
-      title: t('features.cropRecommendation.title'),
-      description: t('features.cropRecommendation.description'),
-      color: 'bg-blue-100 text-blue-600',
-    },
-    {
-      icon: Droplet,
-      title: t('features.irrigation.title'),
-      description: t('features.irrigation.description'),
-      color: 'bg-cyan-100 text-cyan-600',
-    },
-    {
-      icon: Calendar,
-      title: t('features.sowing.title'),
-      description: t('features.sowing.description'),
-      color: 'bg-orange-100 text-orange-600',
-    },
-    {
-      icon: DollarSign,
-      title: t('features.marketForecast.title'),
-      description: t('features.marketForecast.description'),
-      color: 'bg-green-100 text-green-600',
-    },
-  ];
+  // features removed
 
-  const stats = [
-    { value: '6', label: t('stats.fields'), suffix: '/day' },
-    { value: '9K+', label: t('stats.activeUsers') },
-    { value: '10', label: t('stats.regions') },
-    { value: '32%', label: t('stats.efficiency') },
-  ];
+  // stats removed
 
   return (
     <div className="min-h-screen">
@@ -128,76 +84,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-primary-50 to-white rounded-2xl border border-primary-100"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-                {stat.suffix && (
-                  <div className="text-xs text-gray-500 mt-1">{stat.suffix}</div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Stats removed */}
 
-      {/* Features Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {t('features.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('features.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary-200 group"
-                >
-                  <div className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* Features removed */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-900 text-white">
