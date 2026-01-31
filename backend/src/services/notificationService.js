@@ -114,78 +114,8 @@ const sendSMS = async (to, text) => {
     }
 };
 
-/**
- * Sends an OTP for authentication.
- * 
- * @async
- * @param {string} phone - Recipient phone number
- * @param {string} otp - The OTP code
- */
-const sendOTP = async (phone, otp) => {
-    const text = `Your KrushiSense verification code is: ${otp}. Valid for 5 minutes.`;
-    return await sendSMS(phone, text);
-};
-
-/**
- * Sends an irrigation alert.
- * 
- * @async
- * @param {string} phone - Recipient phone number
- * @param {Object} data - Alert data
- */
-const sendIrrigationAlert = async (phone, data) => {
-    const { crop, status } = data;
-    const text = `[KrushiSense Alert] Irrigation Notice for your ${crop}: ${status}. Check the app for details.`;
-    return await sendSMS(phone, text);
-};
-
-/**
- * Sends a government scheme alert.
- * 
- * @async
- * @param {string} phone - Recipient phone number
- * @param {Object} scheme - Scheme data
- */
-const sendSchemeAlert = async (phone, scheme) => {
-    const { title } = scheme;
-    const text = `[KrushiSense Scheme] New scheme available: ${title}. You may be eligible! Tap to view details.`;
-    return await sendSMS(phone, text);
-};
-
-/**
- * Sends an OTP using Twilio Verify API.
- * @param {string} phone - Recipient phone number
- * @returns {Promise<Object>} Twilio response
- */
-const sendTwilioVerifyOTP = async (phone) => {
-    if (!twilioClient || !verifyServiceSid) {
-        throw new Error('Twilio Verify service not configured');
-    }
-    const normalizedTo = formatToE164(phone);
-    return twilioClient.verify.v2.services(verifyServiceSid)
-        .verifications.create({ to: normalizedTo, channel: 'sms' });
-};
-
-/**
- * Checks an OTP using Twilio Verify API.
- * @param {string} phone - Recipient phone number
- * @param {string} code - The 6-digit code
- * @returns {Promise<Object>} Twilio response
- */
-const checkTwilioVerifyOTP = async (phone, code) => {
-    if (!twilioClient || !verifyServiceSid) {
-        throw new Error('Twilio Verify service not configured');
-    }
-    const normalizedTo = formatToE164(phone);
-    return twilioClient.verify.v2.services(verifyServiceSid)
-        .verificationChecks.create({ to: normalizedTo, code });
-};
-
 export {
     sendSMS,
-    sendOTP,
     sendIrrigationAlert,
     sendSchemeAlert,
-    sendTwilioVerifyOTP,
-    checkTwilioVerifyOTP
 };
