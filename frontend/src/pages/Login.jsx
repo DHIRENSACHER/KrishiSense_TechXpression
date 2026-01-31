@@ -56,10 +56,6 @@ export default function Login() {
         setOtpSent(true);
         setStep(2);
         setCountdown(60);
-        if (response.data.otp) {
-          // Development mode - show OTP
-          alert(`OTP (dev mode): ${response.data.otp}`);
-        }
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to send OTP');

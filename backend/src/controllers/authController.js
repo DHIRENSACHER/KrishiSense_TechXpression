@@ -70,8 +70,6 @@ const sendOTP = async (req, res) => {
         res.status(200).json({
             success: true,
             message: 'OTP sent successfully',
-            // Only include for development/testing
-            ...(process.env.NODE_ENV === 'development' && { otp }),
         });
 
     } catch (error) {

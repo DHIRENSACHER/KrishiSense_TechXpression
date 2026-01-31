@@ -6,7 +6,7 @@
 import NotifmeSdk from 'notifme-sdk';
 
 // Environment variables for Notifme
-const provider = process.env.NOTIFME_SMS_PROVIDER || 'infobip';
+const provider = process.env.NOTIFME_SMS_PROVIDER || 'twilio';
 const from = process.env.NOTIFME_TWILIO_PHONE_NUMBER || process.env.NOTIFME_SMS_FROM || 'KrushiSense';
 
 // Initialize Notifme SDK

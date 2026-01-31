@@ -30,6 +30,37 @@ export default function Dashboard() {
   const [weather, setWeather] = useState(null);
   const [advisories, setAdvisories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [locationName, setLocationName] = useState('Unknown');
+  const [showLocationModal, setShowLocationModal] = useState(false);
+  const [searchAddress, setSearchAddress] = useState('');
+  const [locationLoading, setLocationLoading] = useState(false);
+  const [locationError, setLocationError] = useState('');
+
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      const [weatherRes, advisoriesRes] = await Promise.all([
+        advisoryAPI.getWeatherAdvisory(),
+        advisoryAPI.getAdvisories({ limit: 10 }),
+      ]);
+
+      if (weatherRes.data.success) {
+        setWeather(weatherRes.data.data.weather);
+        setLocationName(weatherRes.data.data.location?.name || weatherRes.data.data.weather?.location || 'Your Farm');
+      }
+      if (advisoriesRes.data.success) {
+        setAdvisories(advisoriesRes.data.data.advisories || []);
+      }
+    } catch (error) {
+      console.error('Error fetching dashboard data:', error);
+      // Check if the error is due to missing location
+      if (error.response?.data?.message?.toLowerCase().includes('location not set')) {
+        setShowLocationModal(true);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // UI state for dashboard navigation and crops inventory
   const [activeSection, setActiveSection] = useState('Home');
@@ -79,26 +110,6 @@ export default function Dashboard() {
 
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [weatherRes, advisoriesRes] = await Promise.all([
-          advisoryAPI.getWeatherAdvisory(),
-          advisoryAPI.getAdvisories({ limit: 10 }),
-        ]);
-        
-        if (weatherRes.data.success) {
-          setWeather(weatherRes.data.data);
-        }
-        if (advisoriesRes.data.success) {
-          setAdvisories(advisoriesRes.data.advisories || []);
-        }
-      } catch (error) {
-        console.error('Error fetching dashboard data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchData();
   }, []);
 
@@ -208,11 +219,10 @@ export default function Dashboard() {
                   setActiveSection(item.label);
                   if (item.label === 'Profile') setProfileOpen(true);
                 }}
-                className={`p-3 rounded-lg transition-colors ${
-                  activeSection === item.label
+                className={`p-3 rounded-lg transition-colors ${activeSection === item.label
                     ? 'bg-primary-100 text-primary-600'
                     : 'text-gray-600 hover:bg-gray-100'
-                }`}
+                  }`}
                 title={item.label}
               >
                 <item.icon className="w-5 h-5" />
@@ -349,22 +359,20 @@ export default function Dashboard() {
                     <div className="flex items-center gap-2">
                       <div className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium flex items-center gap-1">
                         <MapPin className="w-3 h-3" />
-                        Salem
+                        {locationName}
                       </div>
                     </div>
-                    <div className="flex gap-1">
-                      <button className="px-2 py-1 bg-gray-100 rounded text-xs font-medium">C</button>
-                      <button className="px-2 py-1 rounded text-xs font-medium text-gray-400">F</button>
-                    </div>
                   </div>
-                  <div className="text-sm text-gray-600 mb-2">Monday, 16 Dec 2025</div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' })}
+                  </div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="text-5xl font-bold text-gray-900">24°C</div>
+                    <div className="text-5xl font-bold text-gray-900">{weather?.temp ?? '--'}°C</div>
                     <Sun className="w-16 h-16 text-yellow-400" />
                   </div>
-                  <div className="text-gray-600 mb-1">Cloudy</div>
-                  <div className="text-sm text-gray-500">High: 27 Low: 15</div>
-                  <div className="text-sm text-gray-500 mt-1">Feels like 26</div>
+                  <div className="text-gray-600 mb-1 capitalize">{weather?.condition?.replace('_', ' ') || 'Clear'}</div>
+                  <div className="text-sm text-gray-500">Humidity: {weather?.humidity ?? '--'}%</div>
+                  <div className="text-sm text-gray-500 mt-1">Wind: {weather?.windSpeed ?? '--'} km/h</div>
                 </motion.div>
 
                 {/* Soil Moisture Card */}
