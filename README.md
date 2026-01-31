@@ -24,7 +24,7 @@ Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with loc
 
 </td>
 <td width="40%">
-<img src="frontend\src\assets\images\logo.png" width="100%" alt="KrishiSense logo">
+<img src="frontend\src\assets\images\logo.png" width="80%" alt="KrishiSense logo">
 </td>
 </tr>
 </table>
@@ -50,36 +50,47 @@ Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with loc
   <table>
     <tr>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Pest+Intelligence" alt="Pest Intelligence" width="260" height="180" />
-        <h4>Pest & Disease Intelligence</h4>
+        <img src="https://via.placeholder.com/260x180.png?text=Crop+Prediction" alt="Crop Prediction" width="260" height="180" />
+        <h4>🌾 Smart Crop Recommendation</h4>
         <p>
-          AI-driven outbreak prediction that alerts farmers of potential threats
-          before they devastate crops.
+          ML-powered crop selection based on soil conditions, temperature, rainfall, and seasonal patterns for optimal yield.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Smart+Irrigation" alt="Irrigation Scheduling" width="260" height="180" />
-        <h4>Irrigation Prediction</h4>
+        <img src="https://via.placeholder.com/260x180.png?text=Yield+Prediction" alt="Yield Prediction" width="260" height="180" />
+        <h4>📊 Crop Yield Forecasting</h4>
         <p>
-          Predicts precise irrigation needs using weather and soil moisture data to maximize resource efficiency and save water.
+          Predicts expected harvest per hectare using soil moisture, pH levels, and environmental data to plan resources.
+        </p>
+      </td>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Scheme+Finder" alt="Scheme Finder" width="260" height="180" />
+        <h4>🎯 Government Scheme Finder</h4>
+        <p>
+          AI-powered matching system that identifies the most suitable agricultural schemes based on farm parameters.
         </p>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Market+Forecasting" alt="Market Price Forecasting" width="260" height="180" />
-        <h4>Market Price Forecasting</h4>
+        <img src="https://via.placeholder.com/260x180.png?text=Smart+Irrigation" alt="Irrigation Advisory" width="260" height="180" />
+        <h4>💧 Precision Irrigation Advisory</h4>
         <p>
-          Predicts future crop values to help farmers choose the most profitable
-          time to harvest and sell.
+          Real-time irrigation recommendations based on crop type, soil moisture, weather, and growth stage to conserve water.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Govt+Schemes" alt="Govt Notifications" width="260" height="180" />
-        <h4>Govt Scheme Scraping</h4>
+        <img src="https://via.placeholder.com/260x180.png?text=Market+AI" alt="Market Price AI" width="260" height="180" />
+        <h4>💰 AI Market Price Prediction</h4>
         <p>
-          Automated Puppeteer scripts scrape official portals to notify farmers 
-          of relevant subsidies and programs.
+          Google Gemini-powered commodity price forecasting with real-time market data for informed selling decisions.
+        </p>
+      </td>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Weather+Dashboard" alt="Weather Dashboard" width="260" height="180" />
+        <h4>🌤️ Real-Time Weather Intelligence</h4>
+        <p>
+          Comprehensive weather dashboard with farming advisories, UV index, and actionable insights for field operations.
         </p>
       </td>
     </tr>
@@ -90,24 +101,61 @@ Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with loc
 
 ## 🧠 AI Agriculture Intelligence
 
-This module transforms traditional farming into a **data-driven operation**. By merging real-time environmental data with historical patterns, the system offers precision advisories.
+This module transforms traditional farming into a **data-driven operation**. By merging real-time environmental data with historical patterns, the system offers precision advisories through **5 powerful ML models**.
 
-### 🚀 Key Capabilities
+### 🚀 Key ML Capabilities
 
-#### 1. Irrigation Prediction
-- Integrates Third-Party Weather APIs and soil moisture data to predict irrigation needs.
-- Provides actionable recommendations to prevent over-irrigation and save water and energy.
+#### 1. 🌾 Smart Crop Recommendation Engine
+- **Technology**: Rule-based ML with environmental parameter analysis
+- **Inputs**: Temperature, rainfall, soil pH, humidity, season
+- **Output**: Top 3 recommended crops with suitability scores
+- **Use Case**: Helps farmers select the most profitable crops for their soil and climate conditions
+- **Location**: `ml-service/models/crop_prediction/`
 
-#### 2. Resource Intelligence (Soil & Weather)
-- Uses historical and live weather data for broader agrometeorological insights.
-- Helps optimize inputs and field operations based on predicted risk and needs.
+#### 2. 📊 Crop Yield Prediction Model
+- **Technology**: Regression-based ML for yield forecasting
+- **Inputs**: Soil moisture, soil pH, crop type
+- **Output**: Expected yield per hectare with impact factor analysis
+- **Use Case**: Resource planning and harvest estimation
+- **Location**: `ml-service/models/crop_yield_prediction/`
 
-#### 3. Offline-First Architecture
+#### 3. 🎯 Government Scheme Recommendation System
+- **Technology**: Multi-parameter matching algorithm
+- **Inputs**: NPK values, pH, rainfall, temperature, humidity, soil type, crop type, farm size, location
+- **Output**: Most suitable government scheme with eligibility reasoning
+- **Use Case**: Connects farmers with agricultural subsidies and support programs
+- **Location**: `ml-service/models/government_scheme_predictor/`
+
+#### 4. 💧 Precision Irrigation Advisory
+- **Technology**: Decision tree model for water requirement calculation
+- **Inputs**: Crop type, soil moisture, weather conditions, growth stage, temperature, rainfall
+- **Output**: Irrigation need level (High/Medium/Low) with precise water amount in liters
+- **Use Case**: Water conservation and optimal irrigation scheduling
+- **Location**: `ml-service/models/irrigateAI/`
+
+#### 5. 💰 AI-Powered Market Price Forecasting
+- **Technology**: Google Gemini (gemini-1.5-flash) for real-time price intelligence
+- **Inputs**: State, district, commodity name
+- **Output**: Minimum, maximum, and modal prices with source and accuracy metrics
+- **Use Case**: Informed selling decisions and market trend analysis
+- **Location**: `ml-service/models/SmartMarket/`
+
+### 🌐 Additional Intelligence Features
+
+#### 6. Real-Time Weather Intelligence
+- Integrates OpenWeatherMap API for current conditions and forecasts
+- Provides farming-specific advisories (temperature alerts, humidity warnings, wind advisories)
+- UV index monitoring and visibility tracking
+- Sunrise/sunset times for optimal field operation planning
+
+#### 7. Offline-First Architecture
 - Uses **Capacitor** and local sync logic to ensure that if a farmer is in a "dead zone," the data caches and syncs as soon as they reach a 4G/LTE area.
+- Critical ML predictions cached for offline access
 
-#### 4. Automated Notifications
+#### 8. Automated Notifications
 - **Notifme-SDK** integration for a multi-channel alert system (SMS, Push, Email).
 - Alerts for sudden weather shifts, pest risks, or new government welfare schemes.
+- ML-driven threshold alerts for irrigation and market opportunities
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=divider">
 
@@ -117,11 +165,19 @@ This module transforms traditional farming into a **data-driven operation**. By 
 
 **Backend:** Node.js • Express • MongoDB • Mongoose • JWT Auth 
 
+**ML Service:** Python 3.13 • Flask • Flask-CORS • Google Generative AI (Gemini)
+
+**Machine Learning:** NumPy • Pandas • Scikit-learn • Decision Trees • Regression Models
+
+**AI Integration:** Google Gemini 1.5 Flash • Prompt Engineering • JSON Parsing
+
 **Scraping & Automation:** Puppeteer • Cheerio • PDF-Parse • Node-Cron
 
-**Frontend:** React • Tailwind CSS • Framer Motion • Recharts • Lucide Icons
+**Frontend:** React • Vite • Tailwind CSS • Framer Motion • Recharts • Lucide Icons • Axios
 
 **Mobile/PWA:** Capacitor • PWA Features • i18next (Multilingual)
+
+**APIs:** OpenWeatherMap • Google Gemini API • Custom REST Endpoints
 
 </div>
 
@@ -130,37 +186,84 @@ This module transforms traditional farming into a **data-driven operation**. By 
 ## 🛠️ Technical Workflow
 
 1. **Ingestion**: Weather APIs, Web Scrapers, and sensor data (mocked) feed into the **Express** backend.
-2. **Analysis**: **Node-Cron** jobs trigger ML inference cycles for pest prediction and price forecasting.
-3. **Storage**: User profiles and localized crop data are managed via **Mongoose** in a schema optimized for geospatial queries.
-4. **Communication**: **Notifme-SDK** dispatches critical alerts based on ML thresholds.
-5. **Consumption**: The **React PWA** provides a high-performance, responsive UI with **i18next** supporting regional languages.
+2. **ML Processing**: 
+   - **Flask ML Service** (Port 5001) hosts 5 independent prediction endpoints
+   - **Crop Predictor**: Environmental analysis using rule-based algorithms
+   - **Yield Predictor**: Regression models for harvest forecasting
+   - **Scheme Finder**: Multi-parameter matching with agricultural datasets
+   - **Irrigation Advisor**: Decision tree model for water optimization
+   - **Market Forecaster**: Real-time Gemini AI API calls for price intelligence
+3. **Analysis**: **Node-Cron** jobs trigger ML inference cycles and automated data syncing.
+4. **Storage**: User profiles, ML results, and localized crop data are managed via **Mongoose** in a schema optimized for geospatial queries.
+5. **Communication**: **Notifme-SDK** dispatches critical alerts based on ML thresholds and weather conditions.
+6. **Consumption**: The **React PWA** provides a high-performance, responsive UI with **i18next** supporting regional languages and seamless ML model integration.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=divider&text=How%20to%20Run&fontColor=ffffff&fontSize=28"/>
 
 ### Prerequisites
 - Node.js (v18+)
+- Python 3.13+
 - MongoDB (Local or Atlas)
+- Google Gemini API Key
+- OpenWeatherMap API Key (optional)
 - Twilio / Firebase (For notifications via Notifme)
 
 ### Installation & Setup
 
 1. **Clone Repository**
    ```bash
-   git clone [https://github.com/yourusername/KrishiSense.git](https://github.com/yourusername/KrishiSense.git)
+   git clone https://github.com/yourusername/KrishiSense.git
    cd KrishiSense
+   ```
 
-2. Backend Setup
-    ```bash
-    cd backend
-    npm install
-    Create .env with MONGODB_URI, JWT_SECRET, and API keys
-    npm start
+2. **ML Service Setup** (Port 5001)
+   ```bash
+   cd ml-service
+   pip3 install flask flask-cors python-dotenv google-generativeai
+   # Create .env file with:
+   # ML_PORT=5001
+   # GEMINI_API_KEY=your_gemini_api_key_here
+   python3 app.py
+   ```
 
-3. Frontend 
+3. **Backend Setup** (Port 3000)
+   ```bash
+   cd backend
+   npm install
+   # Create .env with:
+   # PORT=3000
+   # MONGODB_URI=your_mongodb_connection_string
+   # JWT_SECRET=your_jwt_secret
+   # OPENWEATHER_API_KEY=your_api_key (optional)
+   npm start
+   ```
+
+4. **Frontend Setup** (Port 5173)
+   ```bash
+   cd frontend
+   npm install
+   # Create .env with:
+   # VITE_API_URL=http://localhost:3000/api
+   # VITE_ML_URL=http://localhost:5001
+   npm run dev
+   ```
+
+### 🚀 Quick Start (All Services)
+
+Run all three services in separate terminals:
+
 ```bash
-    cd frontend
-    npm install
-    npm run dev
+# Terminal 1 - ML Service
+cd ml-service && python3 app.py
+
+# Terminal 2 - Backend
+cd backend && npm start
+
+# Terminal 3 - Frontend
+cd frontend && npm run dev
+```
+
+Access the application at `http://localhost:5173`
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="Divider">
 <div align="center"> <sub>Built with ❤️ to support Sustainable Development Goal 2: Zero Hunger</sub> </div>

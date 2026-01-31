@@ -9,6 +9,7 @@ import {
   DollarSign,
   ArrowRight,
   Leaf,
+  Cloud,
 } from 'lucide-react';
 import farmImg from '../assets/images/farm.webp';
 
@@ -45,6 +46,12 @@ export default function Landing() {
       title: t('features.market.title'),
       description: t('features.market.description'),
       color: 'from-yellow-500 to-amber-500',
+    },
+    {
+      icon: Cloud,
+      title: 'Live Weather Dashboard',
+      description: 'Real-time weather monitoring and agricultural advisories',
+      color: 'from-sky-500 to-blue-500',
     },
   ];
 

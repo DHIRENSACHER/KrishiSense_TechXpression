@@ -1,144 +1,202 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { BarChart3, Cloud, Droplets, Gauge, Sparkles, ThermometerSun } from 'lucide-react';
 import { modelAPI } from '../services/api';
 
-export default function CropYield() {
-  const [form, setForm] = useState({
-    soil_moisture: '',
-    soil_ph: '',
+const CropYield = () => {
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    moisture: '',
+    ph: '',
   });
-  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setForm((s) => ({ ...s, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
-    setResult(null);
+    
     try {
-      const payload = {
-        soil_moisture: parseFloat(form.soil_moisture) || 0,
-        soil_ph: parseFloat(form.soil_ph) || 0,
-      };
-      const res = await modelAPI.predictCropYield(payload);
-      setResult(res.data);
-    } catch (err) {
-      setError(err.response?.data?.message || err.message || 'Prediction failed');
+      const response = await modelAPI.predictCropYield({
+        moisture: parseFloat(formData.moisture),
+        ph: parseFloat(formData.ph),
+      });
+      setResult(response);
+    } catch (error) {
+      console.error('Error predicting crop yield:', error);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="pt-6 min-h-[60vh]">
-      <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
-        <div className="bg-white p-6 rounded shadow">
-          <h1 className="text-2xl font-bold mb-2">Crop Yield Predictor</h1>
-          <p className="text-gray-600 mb-4">
-            Enter soil parameters to predict expected crop yield per hectare.
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-24 pb-16">
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <BarChart3 className="w-10 h-10 text-white" />
+            </div>
+          </div>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Crop Yield Prediction
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Forecast your harvest yield using soil parameters and environmental data
           </p>
+        </div>
+      </motion.section>
 
-          <form onSubmit={handleSubmit} className="space-y-4 bg-white p-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <label className="flex flex-col">
-                <span className="text-sm text-gray-700">Soil Moisture (%)</span>
-                <input
-                  name="soil_moisture"
-                  type="number"
-                  step="0.1"
-                  value={form.soil_moisture}
-                  onChange={handleChange}
-                  className="mt-1 input"
-                  placeholder="e.g. 45.5"
-                  required
-                />
-                <span className="text-xs text-gray-500 mt-1">
-                  Optimal range: 40-60%
-                </span>
+      {/* Form Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-3xl p-8 shadow-lg border border-blue-100"
+        >
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Moisture Input */}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <Droplets size={18} className="text-blue-600" />
+                Soil Moisture (%)
               </label>
-
-              <label className="flex flex-col">
-                <span className="text-sm text-gray-700">Soil pH</span>
-                <input
-                  name="soil_ph"
-                  type="number"
-                  step="0.1"
-                  value={form.soil_ph}
-                  onChange={handleChange}
-                  className="mt-1 input"
-                  placeholder="e.g. 6.5"
-                  required
-                />
-                <span className="text-xs text-gray-500 mt-1">
-                  Optimal range: 6.0-7.5
-                </span>
-              </label>
+              <input
+                type="number"
+                name="moisture"
+                value={formData.moisture}
+                onChange={handleInputChange}
+                placeholder="e.g., 65"
+                step="0.1"
+                min="0"
+                max="100"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              />
+              <p className="text-xs text-gray-500 mt-2">Optimal: 50-70%</p>
             </div>
 
-            <div className="flex items-center gap-3">
-              <button type="submit" disabled={loading} className="btn-primary">
-                {loading ? 'Predicting…' : 'Predict Yield'}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setForm({ soil_moisture: '', soil_ph: '' });
-                  setResult(null);
-                  setError(null);
-                }}
-                className="btn-ghost"
-              >
-                Reset
-              </button>
+            {/* pH Input */}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <Gauge size={18} className="text-blue-600" />
+                Soil pH Level
+              </label>
+              <input
+                type="number"
+                name="ph"
+                value={formData.ph}
+                onChange={handleInputChange}
+                placeholder="e.g., 6.5"
+                step="0.1"
+                min="0"
+                max="14"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              />
+              <p className="text-xs text-gray-500 mt-2">Optimal: 6.0-7.0</p>
             </div>
-          </form>
+          </div>
 
-          <div className="mt-6">
-            {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded">
-                {error}
-              </div>
-            )}
-            {result && result.success && (
-              <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-green-900">
-                  Yield Prediction
-                </h3>
-                <div className="space-y-3">
-                  <div className="bg-white p-4 rounded shadow-sm">
-                    <p className="text-sm text-gray-600">Expected Yield</p>
-                    <p className="text-3xl font-bold text-green-700">
-                      {result.predicted_yield} {result.unit}
-                    </p>
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-4 px-8 rounded-xl hover:shadow-lg hover:scale-105 transform transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          >
+            <Sparkles size={20} />
+            {loading ? 'Predicting...' : 'Predict Yield'}
+          </button>
+        </form>
+      </motion.section>
+
+      {/* Results Section */}
+      {result && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200 shadow-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+              <BarChart3 size={32} className="text-blue-600" />
+              Predicted Yield
+            </h2>
+
+            {/* Main Result */}
+            <div className="mb-8 p-8 bg-white rounded-2xl border-2 border-blue-300 shadow-md">
+              <p className="text-gray-600 text-sm font-semibold uppercase tracking-wide mb-2">
+                Expected Harvest
+              </p>
+              <p className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                {result.yield_per_hectare?.toFixed(2)} kg/ha
+              </p>
+            </div>
+
+            {/* Impact Factors */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Moisture Impact */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Droplets size={24} className="text-blue-600" />
                   </div>
-                  
-                  {result.factors && (
-                    <div className="grid grid-cols-2 gap-3 mt-4">
-                      <div className="bg-white p-3 rounded shadow-sm">
-                        <p className="text-xs text-gray-600">Moisture Impact</p>
-                        <p className="text-lg font-semibold text-blue-700">
-                          {result.factors.moisture_impact}%
-                        </p>
-                      </div>
-                      <div className="bg-white p-3 rounded shadow-sm">
-                        <p className="text-xs text-gray-600">pH Impact</p>
-                        <p className="text-lg font-semibold text-purple-700">
-                          {result.factors.ph_impact}%
-                        </p>
-                      </div>
-                    </div>
-                  )}
+                  <h3 className="font-bold text-gray-900">Moisture Impact</h3>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-600">Current Level: {formData.moisture}%</p>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-blue-500 h-2 rounded-full"
+                      style={{ width: `${Math.min((parseFloat(formData.moisture) / 100) * 100, 100)}%` }}
+                    ></div>
+                  </div>
+                  <p className="text-xs text-gray-500">Optimal: 50-70%</p>
                 </div>
               </div>
-            )}
+
+              {/* pH Impact */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-md hover:shadow-lg transition">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <Gauge size={24} className="text-indigo-600" />
+                  </div>
+                  <h3 className="font-bold text-gray-900">pH Impact</h3>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-600">Current Level: {formData.ph}</p>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      className="bg-indigo-500 h-2 rounded-full"
+                      style={{ width: `${Math.min((parseFloat(formData.ph) / 14) * 100, 100)}%` }}
+                    ></div>
+                  </div>
+                  <p className="text-xs text-gray-500">Optimal: 6.0-7.0</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </motion.section>
+      )}
     </div>
   );
-}
+};
+
+export default CropYield;

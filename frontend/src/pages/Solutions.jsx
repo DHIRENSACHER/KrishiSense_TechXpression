@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Sparkles, Leaf, Droplets, Calendar, DollarSign, TrendingUp, ArrowRight } from 'lucide-react';
+import { Sparkles, Leaf, Droplets, Calendar, DollarSign, TrendingUp, Cloud, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Solutions() {
@@ -41,6 +41,13 @@ export default function Solutions() {
       description: t('features.market.description'),
       features: ['Price forecasting', 'Market trends', 'Selling recommendations'],
       color: 'from-yellow-500 to-amber-500',
+    },
+    {
+      icon: Cloud,
+      title: 'Live Weather Dashboard',
+      description: 'Real-time weather monitoring and agricultural advisories',
+      features: ['Weather forecasts', 'UV index tracking', 'Farming advisories'],
+      color: 'from-sky-500 to-blue-500',
     },
   ];
 

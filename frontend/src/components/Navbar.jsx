@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="w-full">
-        <div className="flex items-center h-16 justify-between px-4 sm:px-6 lg:px-8">
+        <div className="relative flex items-center h-16 justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src={logoImg} alt="KrishiSense logo" className="w-8 h-8 rounded-lg object-contain" />
@@ -33,7 +33,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation - center aligned */}
-          <div className="hidden md:flex flex-1 items-center justify-center gap-2">
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
