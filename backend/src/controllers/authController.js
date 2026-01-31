@@ -1,112 +1,23 @@
 import User from '../models/User.js';
-import { generateToken, generateOTP, verifyOTP } from '../config/auth.js';
+import { generateToken } from '../config/auth.js';
 import { findBestMatch, reverseGeocode, isValidCoordinates } from '../services/geolocationService.js';
-import { sendOTP as sendNotificationOTP, sendTwilioVerifyOTP, checkTwilioVerifyOTP } from '../services/notificationService.js';
 
-/**
- * In-memory OTP storage (for mock implementation).
- * In production, use Redis or database with TTL.
- * @type {Map<string, {otp: string, expiry: Date}>}
- */
-const otpStore = new Map();
 
-/**
- * Sends OTP to phone number for authentication.
- * This is a mock implementation - integrate with SMS gateway in production.
- * 
- * @async
- * @param {import('express').Request} req - Express request object
- * @param {import('express').Response} res - Express response object
- * @returns {Promise<void>}
- * 
- * @example
- * // POST /api/auth/send-otp
- * // Body: { "phone": "+919876543210" }
- */
-const sendOTP = async (req, res) => {
-    try {
-        const { phone } = req.body;
-
-        if (!phone) {
-            return res.status(400).json({
-                success: false,
-                message: 'Phone number is required',
-            });
-        }
-
-        // Validate phone format
-        const phoneRegex = /^\+?[1-9]\d{9,14}$/;
-        if (!phoneRegex.test(phone)) {
-            return res.status(400).json({
-                success: false,
-                message: 'Invalid phone number format',
-            });
-        }
-
-        // Find user
-        const user = await User.findOne({ phone });
-        if (!user) {
-            return res.status(404).json({
-                success: false,
-                message: 'User not found. Please sign up first.',
-            });
-        }
-
-        // Generate OTP
-        const otp = generateOTP();
-        const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
-
-        // Store OTP (in production, store in Redis/DB with TTL)
-        otpStore.set(phone, { otp, expiry });
-
-        // Update OTP in user document (for DB-based verification)
-        await User.findByIdAndUpdate(user._id, {
-            otp,
-            otpExpiry: expiry,
-        });
-
-        // Send OTP via Notification Service
-        try {
-            await sendNotificationOTP(phone, otp);
-            console.log(`📱 OTP dispatched via SMS to ${phone}`);
-        } catch (smsError) {
-            console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
-            if (process.env.NODE_ENV === 'development') {
-                console.log('\n' + '='.repeat(40));
-                console.log(`🛠️  DEVELOPMENT FALLBACK`);
-                console.log(`📱 OTP for ${phone}: ${otp}`);
-                console.log('='.repeat(40) + '\n');
-            } else {
-                throw smsError; // Re-throw in production
-            }
-        }
-
-        res.status(200).json({
-            success: true,
-            message: 'OTP sent successfully',
-        });
-
-    } catch (error) {
-        console.error(`❌ Send OTP error: ${error.message}`);
-        res.status(500).json({
-            success: false,
-            message: 'Failed to send OTP',
-            error: error.message,
-        });
-    }
-};
 
 /**
  * Registers a new user and sends OTP.
  */
+/**
+ * Registers a new user with password.
+ */
 const register = async (req, res) => {
     try {
-        const { name, phone } = req.body;
+        const { name, phone, password } = req.body;
 
-        if (!phone || !name) {
+        if (!phone || !name || !password) {
             return res.status(400).json({
                 success: false,
-                message: 'Name and phone number are required',
+                message: 'Name, phone, and password are required',
             });
         }
 
@@ -128,53 +39,32 @@ const register = async (req, res) => {
             });
         }
 
-        // Create new user
-        user = await User.create({ name, phone, isVerified: false });
+        // Create new user (password will be hashed by pre-save hook)
+        user = await User.create({ name, phone, password, isVerified: true });
 
-        // Generate OTP
-        const otp = generateOTP();
-        const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
-
-        // Store OTP
-        otpStore.set(phone, { otp, expiry });
-
-        // Update user with OTP
-        await User.findByIdAndUpdate(user._id, {
-            otp,
-            otpExpiry: expiry,
+        // Generate JWT token
+        const token = generateToken({
+            userId: user._id,
+            phone: user.phone,
         });
-
-        // Send OTP via Notification Service
-        try {
-            if (process.env.TWILIO_VERIFY_SERVICE_SID) {
-                await sendTwilioVerifyOTP(phone);
-                console.log(`📱 OTP dispatched via Twilio Verify to ${phone} (Register)`);
-            } else {
-                await sendNotificationOTP(phone, otp);
-                console.log(`📱 OTP dispatched via SMS to ${phone} (Register)`);
-            }
-        } catch (smsError) {
-            console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
-            if (process.env.NODE_ENV === 'development') {
-                console.log('\n' + '='.repeat(40));
-                console.log(`🛠️  DEVELOPMENT FALLBACK (Signup)`);
-                console.log(`📱 OTP for ${phone}: ${otp}`);
-                console.log('='.repeat(40) + '\n');
-            } else {
-                throw smsError;
-            }
-        }
 
         res.status(200).json({
             success: true,
-            message: 'Registration successful. OTP sent.',
+            message: 'Registration successful',
+            token,
+            user: {
+                id: user._id,
+                name: user.name,
+                phone: user.phone,
+                role: 'farmer'
+            }
         });
 
     } catch (error) {
         console.error(`❌ Register error: ${error.message}`);
         res.status(500).json({
             success: false,
-            message: 'Failed to register and send OTP',
+            message: 'Failed to register',
             error: error.message,
         });
     }
@@ -192,110 +82,63 @@ const register = async (req, res) => {
  * // POST /api/auth/verify-otp
  * // Body: { "phone": "+919876543210", "otp": "123456" }
  */
-const verifyOTPAndLogin = async (req, res) => {
+/**
+ * Logs in a user with phone and password.
+ */
+const login = async (req, res) => {
     try {
-        const { phone, otp } = req.body;
+        const { phone, password } = req.body;
 
-        if (!phone || !otp) {
+        if (!phone || !password) {
             return res.status(400).json({
                 success: false,
-                message: 'Phone number and OTP are required',
+                message: 'Phone and password are required',
             });
         }
 
-        // Universal Test OTP Bypass
-        if (otp === '123456') {
-            console.log(`🔓 Test OTP '123456' used for ${phone}. Bypassing verification.`);
-        } else if (process.env.TWILIO_VERIFY_SERVICE_SID) {
-            // Check if using Twilio Verify
-            try {
-                const check = await checkTwilioVerifyOTP(phone, otp);
-                if (check.status !== 'approved') {
-                    return res.status(400).json({
-                        success: false,
-                        message: 'Invalid or expired OTP',
-                    });
-                }
-            } catch (err) {
-                console.error(`❌ Twilio Verify Check Error: ${err.message}`);
-                // Fallback to manual check if configured (optional)
-                return res.status(500).json({ success: false, message: 'Verification error' });
-            }
-        } else {
-            // Get stored OTP
-            const stored = otpStore.get(phone);
-
-            if (!stored) {
-                return res.status(400).json({
-                    success: false,
-                    message: 'OTP not found. Please request a new OTP.',
-                });
-            }
-
-            // Check expiry
-            if (new Date() > stored.expiry) {
-                otpStore.delete(phone);
-                return res.status(400).json({
-                    success: false,
-                    message: 'OTP has expired. Please request a new OTP.',
-                });
-            }
-
-            // Verify OTP
-            if (!verifyOTP(otp, stored.otp)) {
-                return res.status(400).json({
-                    success: false,
-                    message: 'Invalid OTP',
-                });
-            }
-
-            // Clear OTP after successful verification
-            otpStore.delete(phone);
-        }
-
-        // Get user and update verification status
-
-        // Get user and update verification status
-        const user = await User.findOneAndUpdate(
-            { phone },
-            { isVerified: true, otp: null, otpExpiry: null },
-            { new: true }
-        );
-
+        // Check for user (select password explicitly)
+        const user = await User.findOne({ phone }).select('+password');
         if (!user) {
-            return res.status(404).json({
+            return res.status(401).json({
                 success: false,
-                message: 'User not found',
+                message: 'Invalid credentials',
             });
         }
 
-        // Generate JWT token
+        // Check password
+        const isMatch = await user.matchPassword(password);
+        if (!isMatch) {
+            return res.status(401).json({
+                success: false,
+                message: 'Invalid credentials',
+            });
+        }
+
+        // Generate Token
         const token = generateToken({
             userId: user._id,
             phone: user.phone,
         });
 
-        console.log(`✅ User verified and logged in: ${phone}`);
-
         res.status(200).json({
             success: true,
-            message: 'OTP verified successfully',
+            message: 'Login successful',
             token,
             user: {
                 id: user._id,
-                phone: user.phone,
                 name: user.name,
-                isVerified: user.isVerified,
+                phone: user.phone,
+                role: 'farmer',
                 cropType: user.cropType,
-                preferredLanguage: user.preferredLanguage,
-            },
+                location: user.location,
+            }
         });
 
     } catch (error) {
-        console.error(`❌ Verify OTP error: ${error.message}`);
+        console.error(`❌ Login error: ${error.message}`);
         res.status(500).json({
             success: false,
-            message: 'Failed to verify OTP',
+            message: 'Login failed',
             error: error.message,
         });
     }
@@ -551,8 +394,8 @@ const deleteCrop = async (req, res) => {
 };
 
 export {
-    sendOTP,
-    verifyOTPAndLogin,
+    register,
+    login,
     updateProfile,
     getProfile,
     addCrop,
