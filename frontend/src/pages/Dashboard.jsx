@@ -31,7 +31,6 @@ export default function Dashboard() {
   const [advisories, setAdvisories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [locationName, setLocationName] = useState('Unknown');
-  const [showLocationModal, setShowLocationModal] = useState(false);
   const [searchAddress, setSearchAddress] = useState('');
   const [locationLoading, setLocationLoading] = useState(false);
   const [locationError, setLocationError] = useState('');
