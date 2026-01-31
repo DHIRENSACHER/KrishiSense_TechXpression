@@ -1,0 +1,11 @@
+Soil_Type,Soil_pH,Soil_Moisture,Organic_Carbon,Electrical_Conductivity,Temperature_C,Humidity,Rainfall_mm,Sunlight_Hours,Wind_Speed_kmh,Crop_Type,Crop_Growth_Stage,Season,Irrigation_Type,Water_Source,Field_Area_hectare,Mulching_Used,Previous_Irrigation_mm,Region,Predicted_Irrigation_Need,Recommended_Irrigation_mm,Prediction_Confidence_%
+Silt,6.56,26.1,0.35,3.38,18.11,43.18,1416.9,9.44,12.15,Sugarcane,Flowering,Zaid,Sprinkler,River,7.25,No,51.55,North,Medium,110.0,77.43
+Sandy,6.41,46.46,1.54,1.69,29.0,61.17,64.11,10.31,11.02,Rice,Flowering,Kharif,Canal,Reservoir,2.11,No,32.89,West,Medium,110.0,79.23
+Clay,5.84,35.79,1.48,3.31,14.7,36.16,1626.18,8.94,12.04,Wheat,Flowering,Zaid,Rainfed,Rainwater,7.51,Yes,79.52,South,Low,32.93,92.58
+Clay,6.84,58.75,1.37,1.04,41.37,51.59,650.84,7.18,18.33,Cotton,Flowering,Rabi,Rainfed,Reservoir,14.18,No,20.98,Central,Medium,90.49,86.54
+Loamy,6.52,41.98,1.45,1.2,30.67,76.81,513.85,4.2,17.08,Maize,Vegetative,Rabi,Rainfed,Rainwater,7.15,Yes,19.48,East,Medium,96.98,58.69
+Sandy,6.82,62.39,0.84,0.39,41.48,85.16,1224.25,8.62,13.71,Wheat,Sowing,Kharif,Sprinkler,Groundwater,3.19,Yes,10.28,West,Low,33.45,89.29
+Clay,5.81,56.5,0.74,0.49,25.14,80.27,501.07,4.77,17.02,Sugarcane,Flowering,Rabi,Sprinkler,Groundwater,6.38,No,91.21,North,Medium,110.0,84.72
+Loamy,7.24,38.42,0.98,0.59,13.02,50.37,1254.93,7.8,16.03,Wheat,Harvest,Zaid,Drip,River,4.14,No,55.28,East,Low,15.0,94.05
+Loamy,6.27,21.0,1.23,1.73,38.25,91.32,635.01,9.06,14.49,Cotton,Vegetative,Kharif,Canal,River,7.85,Yes,3.76,Central,Medium,77.22,82.56
+Loamy,5.23,48.33,1.58,2.79,19.12,28.82,842.56,5.89,13.8,Maize,Sowing,Zaid,Drip,Reservoir,8.72,No,2.95,South,Low,39.04,92.15

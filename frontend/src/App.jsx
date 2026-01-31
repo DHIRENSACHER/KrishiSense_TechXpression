@@ -13,6 +13,10 @@ import Features from './pages/Features';
 import Contact from './pages/Contact';
 import Schemes from './pages/Schemes';
 import Signup from './pages/Signup';
+import Predict from './pages/Predict';
+import CropYield from './pages/CropYield';
+import SchemePredictor from './pages/SchemePredictor';
+import Irrigation from './pages/Irrigation';
 
 
 function App() {
@@ -31,6 +35,13 @@ function App() {
             <Route path="/features" element={<Features />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/schemes" element={<Schemes />} />
+            
+            {/* ML Model Routes */}
+            <Route path="/predict" element={<Predict />} />
+            <Route path="/crop-yield" element={<CropYield />} />
+            <Route path="/scheme-predictor" element={<SchemePredictor />} />
+            <Route path="/irrigation" element={<Irrigation />} />
+            
             <Route
               path="/dashboard"
               element={

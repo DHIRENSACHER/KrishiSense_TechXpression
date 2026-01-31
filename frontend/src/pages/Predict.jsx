@@ -95,6 +95,12 @@ export default function Predict() {
                 {result.confidence !== undefined && (
                   <p className="text-sm text-gray-600">Confidence: {Math.round((result.confidence || 0) * 100)}%</p>
                 )}
+                {result.alternatives && result.alternatives.length > 0 && (
+                  <div className="mt-3">
+                    <p className="text-sm text-gray-600">Alternative crops:</p>
+                    <p className="text-base text-gray-700">{result.alternatives.join(', ')}</p>
+                  </div>
+                )}
               </div>
             )}
           </div>

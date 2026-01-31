@@ -1,0 +1,2001 @@
+Crop,Nitrogen_N,Phosphorus_P,Potassium_K,pH,Rainfall_mm,Temperature_C,Humidity_percent,Land_Size_hectares,Scheme
+Orange,37.8,26.8,8.1,6.6,109.1,29.5,95.0,2.76,Paramparagat Krishi
+Maize,63.9,58.6,24.7,6.5,69.3,22.8,59.3,1.45,Kisan Credit Card
+Chickpea,49.2,64.5,79.3,6.4,69.8,20.1,19.6,2.44,Paramparagat Krishi
+Watermelon,105.2,22.3,49.4,6.4,50.9,24.8,86.1,4.95,Soil Health Card
+Maize,61.7,59.2,23.5,6.5,65.7,18.1,73.0,4.16,None
+Papaya,44.6,52.3,50.0,6.6,131.5,28.1,93.9,2.19,None
+Mungbean,22.1,52.0,23.7,7.0,59.1,29.1,83.7,2.14,State Subsidy A
+Mango,37.9,23.0,30.0,6.0,95.6,33.5,54.1,2.55,PM-Kisan
+Papaya,40.9,68.9,50.3,6.5,215.9,43.9,93.9,0.72,PM-Kisan
+Blackgram,56.1,67.3,19.2,7.4,61.3,27.4,64.4,3.02,PM-Kisan
+Mungbean,32.1,48.3,19.0,6.8,36.8,28.7,89.5,3.54,Fasal Bima Yojana
+Pigeonpeas,23.8,56.3,19.6,6.4,102.2,28.2,56.5,1.54,Paramparagat Krishi
+Mothbeans,31.6,37.7,21.6,6.7,40.8,28.0,49.4,1.42,PM-Kisan
+Muskmelon,104.1,17.5,51.9,6.1,29.7,28.1,93.2,1.27,PM-Kisan
+Lentil,16.7,66.7,23.5,7.1,38.2,21.2,61.0,2.38,Kisan Credit Card
+Orange,17.7,20.8,5.2,6.9,117.7,17.1,93.0,6.74,Kisan Credit Card
+Papaya,38.6,66.2,54.6,6.7,172.6,41.9,92.8,3.2,Soil Health Card
+Lentil,34.2,60.4,15.8,6.1,42.5,20.3,64.0,3.61,Paramparagat Krishi
+Mungbean,24.5,50.4,24.4,6.3,50.8,27.7,81.4,3.86,Fasal Bima Yojana
+Chickpea,30.5,78.8,75.1,7.0,85.5,20.9,24.4,1.7,PM-Kisan
+Kidneybeans,37.9,62.7,19.7,5.5,130.2,18.9,22.7,1.51,PM-Kisan
+Orange,26.8,27.0,14.5,6.4,114.2,31.4,92.6,2.83,Kisan Credit Card
+Rice,79.7,38.2,42.4,6.6,274.9,21.0,85.8,2.93,Kisan Credit Card
+Mungbean,16.3,43.9,23.9,6.3,49.7,29.5,83.2,2.3,None
+Banana,91.3,95.0,50.0,6.2,100.4,25.5,83.9,1.01,Fasal Bima Yojana
+Jute,61.1,59.2,41.2,6.7,182.4,23.8,79.3,3.76,PM-Kisan
+Chickpea,45.4,55.1,83.7,6.1,81.8,19.4,17.2,0.83,PM-Kisan
+Lentil,35.9,55.7,20.1,6.4,40.9,26.1,66.8,3.03,Paramparagat Krishi
+Cotton,121.0,36.0,20.0,6.2,77.0,25.8,55.4,2.42,Kisan Credit Card
+Papaya,47.0,56.2,54.1,6.7,203.1,26.7,94.8,3.21,State Subsidy A
+Cotton,132.5,36.4,21.2,6.9,82.0,25.8,56.2,1.8,PM-Kisan
+Coffee,84.3,26.3,31.7,6.9,149.5,25.4,64.5,2.56,Fasal Bima Yojana
+Lentil,18.0,57.2,23.3,7.3,41.1,25.3,69.4,3.33,None
+Maize,78.4,35.4,20.9,6.0,67.6,26.9,71.9,1.5,Kisan Credit Card
+Mothbeans,23.9,55.8,19.9,6.8,56.0,28.9,59.7,1.83,Paramparagat Krishi
+Maize,80.4,52.6,24.1,5.8,80.9,26.2,67.0,2.78,Fasal Bima Yojana
+Lentil,20.3,63.4,17.6,7.5,36.5,21.2,66.9,1.37,Fasal Bima Yojana
+Lentil,39.6,73.6,24.9,7.2,49.2,28.4,62.7,2.59,Fasal Bima Yojana
+Mothbeans,18.6,37.4,19.5,5.5,44.6,24.9,48.9,5.37,Paramparagat Krishi
+Banana,96.0,72.8,47.3,6.3,98.6,29.4,77.8,1.6,PM-Kisan
+Rice,82.7,53.6,38.2,6.4,187.3,26.9,83.9,0.67,Paramparagat Krishi
+Chickpea,28.5,64.2,77.1,7.4,77.3,17.1,17.6,3.78,Soil Health Card
+Pomegranate,34.4,28.3,38.9,6.4,104.4,18.8,89.6,0.81,Kisan Credit Card
+Apple,29.4,125.0,202.4,6.2,104.9,21.9,91.4,2.83,Fasal Bima Yojana
+Chickpea,22.8,68.5,83.6,6.8,71.8,20.9,17.8,1.57,Fasal Bima Yojana
+Apple,35.2,144.9,200.4,6.4,102.3,21.6,94.4,5.68,Soil Health Card
+Pigeonpeas,20.7,55.7,24.6,6.8,128.0,27.0,55.8,1.51,PM-Kisan
+Muskmelon,117.9,22.5,54.4,6.6,23.8,27.3,92.8,3.66,Paramparagat Krishi
+Mungbean,20.4,53.3,20.7,7.0,44.9,27.2,87.7,2.88,Kisan Credit Card
+Pomegranate,35.2,29.4,36.7,6.5,117.0,18.0,93.0,8.32,Kisan Credit Card
+Cotton,127.2,51.1,19.7,6.3,75.8,24.2,61.1,1.55,Kisan Credit Card
+Lentil,37.5,64.6,16.3,6.2,39.6,27.4,69.8,0.61,Kisan Credit Card
+Maize,76.2,35.3,17.0,6.1,76.2,18.8,65.2,4.31,State Subsidy A
+Kidneybeans,39.3,58.2,22.4,5.7,105.6,23.8,28.2,2.0,State Subsidy A
+Orange,29.4,26.3,12.0,6.0,111.4,14.4,94.7,1.89,PM-Kisan
+Pomegranate,25.3,20.1,40.0,6.6,103.9,18.5,90.1,1.14,Fasal Bima Yojana
+Kidneybeans,29.1,62.8,21.4,5.7,118.8,20.1,28.3,3.5,Soil Health Card
+Papaya,37.8,58.7,46.2,6.8,130.9,42.3,93.4,1.28,PM-Kisan
+Pomegranate,29.1,28.3,40.0,5.8,111.4,23.4,91.3,5.6,State Subsidy A
+Mungbean,24.7,44.0,23.0,6.6,42.2,27.0,88.3,3.01,State Subsidy A
+Orange,15.1,26.7,8.8,7.5,108.9,33.5,90.6,2.68,Fasal Bima Yojana
+Chickpea,57.4,59.7,78.7,6.5,76.8,19.8,22.1,3.96,None
+Mango,24.6,38.2,28.4,5.3,95.8,34.9,48.6,2.33,None
+Blackgram,43.6,59.3,18.7,6.5,65.1,27.1,63.4,6.19,Kisan Credit Card
+Kidneybeans,27.3,72.5,20.5,5.5,95.5,17.8,21.3,4.5,Kisan Credit Card
+Mothbeans,33.2,48.9,15.4,7.3,30.6,26.1,53.1,6.34,Soil Health Card
+Jute,86.0,55.5,43.6,6.4,153.6,25.3,86.7,2.5,Paramparagat Krishi
+Jute,62.1,43.4,43.3,6.7,170.9,25.7,82.4,5.33,Kisan Credit Card
+Mango,17.3,16.3,27.8,5.6,87.8,34.9,51.2,2.07,Soil Health Card
+Maize,68.5,39.6,22.2,6.2,74.8,26.0,63.1,2.88,Soil Health Card
+Banana,105.9,76.2,53.5,5.6,90.9,29.9,76.4,1.93,PM-Kisan
+Mothbeans,17.0,36.6,20.6,6.5,62.4,27.4,64.8,1.81,PM-Kisan
+Coffee,92.6,26.4,28.5,7.3,160.0,27.4,57.5,2.84,Fasal Bima Yojana
+Watermelon,82.8,22.8,53.9,7.0,45.2,26.1,83.4,2.9,None
+Cotton,131.1,56.0,15.4,7.4,81.4,23.7,56.2,1.43,Kisan Credit Card
+Muskmelon,107.5,18.5,45.7,6.7,29.9,28.1,92.1,0.66,Fasal Bima Yojana
+Apple,19.6,123.6,200.8,5.6,114.0,22.4,91.2,2.03,Paramparagat Krishi
+Papaya,35.2,64.3,46.0,6.8,206.2,24.1,93.1,2.35,Kisan Credit Card
+Coconut,37.2,17.4,30.7,6.2,194.4,26.9,96.4,1.36,Fasal Bima Yojana
+Banana,108.2,72.5,48.6,6.0,109.9,27.5,80.1,4.26,Kisan Credit Card
+Mungbean,37.0,59.8,17.2,6.9,57.9,29.9,85.2,4.03,State Subsidy A
+Cotton,136.4,59.9,16.5,6.2,61.1,24.8,59.8,1.32,PM-Kisan
+Chickpea,37.4,73.6,75.8,7.6,85.8,18.7,19.2,0.97,Fasal Bima Yojana
+Coffee,96.7,23.7,31.4,7.1,197.6,27.7,58.9,2.11,State Subsidy A
+Orange,36.6,19.6,13.4,7.0,118.7,19.3,93.3,4.32,PM-Kisan
+Kidneybeans,16.2,78.5,23.4,5.9,132.6,22.4,28.0,2.41,Soil Health Card
+Grapes,31.7,134.5,195.8,5.9,69.6,15.8,82.4,1.12,Kisan Credit Card
+Apple,18.2,135.0,203.1,5.7,110.6,22.6,95.0,3.01,Soil Health Card
+Cotton,131.7,59.5,17.9,7.5,65.5,23.1,69.1,2.96,Kisan Credit Card
+Lentil,36.7,70.0,15.0,7.2,39.0,21.6,61.6,4.47,Paramparagat Krishi
+Mothbeans,29.1,48.9,23.8,6.0,36.4,28.8,63.7,1.06,PM-Kisan
+Watermelon,82.1,15.5,53.3,6.8,41.3,24.7,82.6,4.26,Paramparagat Krishi
+Mothbeans,29.9,51.6,21.8,5.1,59.7,25.1,40.8,1.73,PM-Kisan
+Pomegranate,35.9,23.9,37.3,6.9,104.4,24.0,94.2,2.9,Kisan Credit Card
+Jute,60.8,53.4,44.0,7.2,171.5,24.7,80.6,2.88,PM-Kisan
+Rice,84.0,46.6,36.1,6.7,275.7,25.4,91.6,2.91,State Subsidy A
+Rice,69.6,52.4,41.1,7.2,256.4,24.1,85.3,2.56,Paramparagat Krishi
+Blackgram,49.6,55.8,24.7,6.6,71.7,27.0,63.1,1.8,Kisan Credit Card
+Chickpea,20.1,67.2,84.6,7.8,72.3,19.5,16.6,2.77,Soil Health Card
+Banana,103.7,85.9,45.1,6.4,96.5,26.8,84.9,1.04,Kisan Credit Card
+Pigeonpeas,25.6,65.1,17.0,6.2,151.4,24.8,40.9,2.72,Kisan Credit Card
+Muskmelon,103.5,19.9,50.9,6.4,22.1,28.2,90.5,1.05,PM-Kisan
+Chickpea,27.8,73.9,80.2,7.8,74.7,20.1,23.2,3.07,None
+Rice,87.5,57.1,41.4,6.0,216.9,25.3,86.6,3.77,Fasal Bima Yojana
+Coconut,18.1,20.4,25.0,6.0,210.1,25.6,92.2,3.43,None
+Mango,33.8,17.6,29.5,6.3,96.2,33.6,49.7,4.31,Paramparagat Krishi
+Chickpea,24.7,61.2,76.9,7.1,65.8,21.4,16.4,4.78,State Subsidy A
+Jute,69.3,53.6,36.0,6.4,159.4,25.3,80.1,5.15,Paramparagat Krishi
+Jute,72.8,51.2,36.5,7.4,187.5,23.9,81.0,1.17,Soil Health Card
+Muskmelon,84.5,28.0,47.9,6.2,25.3,28.1,92.8,2.09,None
+Orange,30.3,25.0,7.8,6.6,108.1,11.8,94.5,1.54,PM-Kisan
+Papaya,32.3,45.0,45.3,6.7,233.0,28.7,93.3,2.12,PM-Kisan
+Kidneybeans,28.7,80.0,24.3,5.5,114.6,24.0,23.4,3.7,Kisan Credit Card
+Rice,72.2,59.4,44.6,7.2,210.4,24.1,81.7,0.91,Kisan Credit Card
+Mothbeans,30.5,48.9,18.3,5.8,32.6,30.2,63.6,4.78,PM-Kisan
+Muskmelon,100.7,27.5,52.3,6.4,21.7,29.1,90.9,2.57,Kisan Credit Card
+Pomegranate,39.6,25.8,42.3,6.1,110.2,23.3,90.2,2.97,Soil Health Card
+Rice,85.2,40.1,39.1,6.5,203.2,25.0,85.0,4.58,Paramparagat Krishi
+Grapes,35.6,135.6,201.3,6.4,68.2,30.9,82.6,2.46,PM-Kisan
+Apple,39.2,142.2,202.9,6.2,112.3,23.4,93.1,4.53,Fasal Bima Yojana
+Blackgram,48.7,57.9,19.3,7.5,70.5,26.4,65.8,3.87,Soil Health Card
+Pomegranate,18.8,26.3,42.9,5.8,116.2,22.0,93.1,4.22,None
+Watermelon,114.9,21.2,52.6,6.6,40.6,26.9,86.8,3.09,None
+Pomegranate,37.9,15.7,42.1,7.1,104.7,23.0,93.7,0.7,Soil Health Card
+Pigeonpeas,18.0,68.8,20.5,5.1,103.9,29.6,41.3,3.28,PM-Kisan
+Papaya,55.1,62.2,46.0,6.7,134.6,37.4,90.3,0.36,Fasal Bima Yojana
+Maize,83.2,58.9,20.3,6.3,91.4,25.0,56.6,2.31,State Subsidy A
+Lentil,22.8,61.0,16.1,7.5,40.3,22.4,61.6,0.86,Paramparagat Krishi
+Watermelon,86.9,25.4,49.6,6.1,52.8,24.7,90.0,0.24,State Subsidy A
+Papaya,46.8,56.8,54.0,6.6,228.5,43.7,94.5,0.99,Fasal Bima Yojana
+Blackgram,54.0,72.3,16.5,6.9,67.4,29.1,63.1,1.12,State Subsidy A
+Pigeonpeas,23.4,68.4,16.9,5.7,104.3,19.0,47.3,3.13,PM-Kisan
+Orange,26.5,23.5,8.3,6.8,119.9,26.8,92.7,5.71,State Subsidy A
+Papaya,50.5,45.9,49.9,6.5,140.9,35.0,92.1,3.03,Soil Health Card
+Grapes,19.4,122.7,196.8,5.9,68.1,17.7,79.1,0.64,State Subsidy A
+Apple,35.4,131.3,195.9,5.8,114.9,22.3,93.3,1.79,Kisan Credit Card
+Blackgram,52.8,76.1,20.9,7.4,74.7,25.2,66.3,1.1,Kisan Credit Card
+Pomegranate,38.4,20.3,35.2,6.5,111.2,20.6,94.9,1.43,Kisan Credit Card
+Orange,25.8,18.3,10.0,7.1,110.5,28.3,93.2,2.56,Fasal Bima Yojana
+Chickpea,22.1,73.9,76.3,6.1,62.1,20.0,17.7,1.15,Fasal Bima Yojana
+Kidneybeans,29.6,71.1,19.6,5.6,139.7,23.3,29.3,1.43,State Subsidy A
+Pomegranate,38.8,23.2,41.6,6.2,115.1,19.7,87.2,1.79,Kisan Credit Card
+Cotton,114.4,37.9,18.2,6.6,75.5,23.5,64.2,4.98,Fasal Bima Yojana
+Rice,81.1,48.9,38.0,6.3,262.2,22.1,85.6,2.08,Paramparagat Krishi
+Muskmelon,80.2,26.3,54.3,6.3,23.4,28.0,91.0,0.35,PM-Kisan
+Pomegranate,16.9,25.9,44.7,7.0,106.9,24.7,89.8,0.87,PM-Kisan
+Papaya,42.8,63.5,47.0,6.9,185.1,26.7,94.6,1.65,Paramparagat Krishi
+Blackgram,40.3,73.2,23.6,6.9,64.5,26.8,64.7,2.62,Kisan Credit Card
+Chickpea,51.5,56.2,80.7,7.9,66.1,17.4,15.9,4.89,Kisan Credit Card
+Coconut,38.6,23.7,32.2,5.5,136.2,26.5,95.4,1.47,PM-Kisan
+Mungbean,17.7,52.0,21.7,6.9,57.2,29.3,82.6,2.87,State Subsidy A
+Mungbean,26.6,57.8,18.7,6.5,40.1,27.9,83.7,1.23,PM-Kisan
+Pomegranate,27.8,19.1,36.9,6.4,108.9,22.8,92.8,1.99,PM-Kisan
+Mothbeans,36.0,58.0,20.5,4.1,40.8,27.1,42.0,2.77,Paramparagat Krishi
+Lentil,15.1,64.5,21.9,6.8,49.9,23.3,64.6,0.49,State Subsidy A
+Mango,39.4,17.7,34.8,5.0,96.1,34.1,54.3,3.51,State Subsidy A
+Coffee,115.6,18.5,27.8,7.2,137.6,27.2,65.2,4.68,Kisan Credit Card
+Papaya,53.0,52.5,50.0,6.7,153.8,42.1,94.7,4.75,Fasal Bima Yojana
+Kidneybeans,35.7,55.4,17.4,5.8,123.3,19.5,21.3,6.49,Paramparagat Krishi
+Pomegranate,22.6,20.4,38.8,6.3,106.4,21.6,87.1,5.24,Soil Health Card
+Banana,108.9,70.1,49.1,6.1,108.4,26.8,84.1,1.76,Kisan Credit Card
+Papaya,54.5,57.8,52.8,6.7,171.8,28.9,94.9,1.67,Kisan Credit Card
+Pigeonpeas,28.9,67.1,16.2,5.4,131.5,23.3,56.2,3.29,Paramparagat Krishi
+Banana,80.5,77.1,53.9,6.5,104.4,27.7,76.5,3.09,Soil Health Card
+Pigeonpeas,33.2,74.3,18.5,5.8,111.9,27.5,52.2,6.82,Paramparagat Krishi
+Orange,23.1,26.4,8.7,7.1,106.3,29.6,94.4,1.58,Soil Health Card
+Muskmelon,105.5,21.1,53.0,6.3,22.7,27.9,94.0,4.97,Fasal Bima Yojana
+Kidneybeans,31.1,65.6,20.5,5.7,129.8,18.4,25.8,2.96,Kisan Credit Card
+Apple,25.7,122.8,201.1,5.9,113.7,22.5,94.4,1.36,Kisan Credit Card
+Watermelon,89.3,29.3,54.5,6.9,58.6,24.2,89.5,3.53,Kisan Credit Card
+Apple,34.0,130.4,197.5,5.8,118.7,23.6,94.5,2.58,PM-Kisan
+Orange,32.4,28.2,9.1,6.9,102.9,21.7,91.2,4.28,State Subsidy A
+Mango,22.6,39.0,31.1,5.0,95.2,30.3,52.6,2.37,Soil Health Card
+Lentil,19.2,67.6,19.7,6.7,42.0,22.9,60.1,1.66,State Subsidy A
+Banana,97.8,75.4,50.5,5.6,100.8,28.4,80.9,1.31,Kisan Credit Card
+Lentil,32.1,61.2,16.2,7.1,54.6,25.0,66.1,1.41,PM-Kisan
+Mungbean,36.2,46.9,23.1,6.9,46.5,27.3,88.8,1.54,Soil Health Card
+Banana,117.9,77.8,51.9,5.9,112.3,26.1,83.7,3.5,Paramparagat Krishi
+Coconut,26.6,25.5,30.0,6.1,223.1,28.6,91.8,1.21,PM-Kisan
+Grapes,30.9,140.9,203.0,5.6,69.4,28.7,82.6,1.38,Kisan Credit Card
+Grapes,38.3,127.1,195.3,6.3,71.7,11.8,78.0,0.95,Kisan Credit Card
+Rice,74.1,49.4,42.6,7.0,218.6,22.4,89.2,2.68,Paramparagat Krishi
+Rice,84.6,44.5,43.3,7.3,202.6,24.8,91.3,2.39,Fasal Bima Yojana
+Banana,104.9,91.7,51.6,6.4,111.5,27.8,81.1,5.04,Soil Health Card
+Grapes,28.8,123.6,204.4,5.8,74.8,28.4,80.5,0.27,PM-Kisan
+Mango,27.0,24.1,31.0,5.5,93.7,27.2,52.1,4.87,Fasal Bima Yojana
+Rice,65.5,36.8,38.1,6.6,216.1,20.5,86.3,3.58,Fasal Bima Yojana
+Mungbean,22.3,47.7,19.6,6.8,56.7,27.2,81.1,2.1,Kisan Credit Card
+Pigeonpeas,19.1,59.7,15.7,6.5,100.6,23.5,51.4,2.57,State Subsidy A
+Mango,25.0,34.9,32.5,6.2,92.2,28.5,47.4,3.17,Kisan Credit Card
+Pomegranate,26.6,28.7,40.9,6.1,100.9,22.5,88.6,1.12,PM-Kisan
+Pigeonpeas,15.7,60.2,19.2,5.3,159.5,21.5,48.8,3.12,Fasal Bima Yojana
+Blackgram,56.9,56.5,20.1,7.1,62.4,25.7,65.1,2.08,Kisan Credit Card
+Rice,65.2,42.5,42.3,6.1,221.9,22.4,86.9,1.25,Soil Health Card
+Mothbeans,33.3,42.7,23.1,7.9,69.9,24.7,50.7,2.85,PM-Kisan
+Rice,69.8,56.3,39.2,6.2,277.6,25.2,92.2,1.44,Fasal Bima Yojana
+Pigeonpeas,29.8,78.7,21.5,5.5,147.2,19.5,43.3,1.97,PM-Kisan
+Blackgram,44.5,72.7,24.8,7.3,73.1,28.6,61.6,3.57,Fasal Bima Yojana
+Orange,30.0,25.3,6.5,7.5,102.8,22.8,91.8,3.01,Soil Health Card
+Orange,18.7,15.0,12.6,6.5,112.6,21.6,91.7,5.12,Fasal Bima Yojana
+Pomegranate,36.4,20.1,41.3,5.9,112.8,20.7,88.5,5.28,Fasal Bima Yojana
+Blackgram,59.2,61.5,23.3,6.7,74.3,25.4,60.1,0.36,PM-Kisan
+Lentil,33.4,57.2,18.5,6.3,42.6,20.6,68.3,2.22,Paramparagat Krishi
+Lentil,35.6,59.4,22.9,7.1,54.0,21.6,60.2,3.68,Fasal Bima Yojana
+Blackgram,48.2,75.6,18.3,7.4,66.9,25.8,62.9,2.98,Fasal Bima Yojana
+Banana,113.3,92.9,46.0,6.1,109.9,27.2,84.3,1.82,Soil Health Card
+Pomegranate,39.7,20.7,35.3,7.1,116.6,22.7,90.9,3.83,Paramparagat Krishi
+Pomegranate,18.2,29.2,41.9,5.7,108.5,20.7,90.9,2.2,State Subsidy A
+Kidneybeans,30.0,76.1,24.1,6.0,125.1,19.2,23.4,5.29,Soil Health Card
+Orange,24.5,24.0,6.4,7.4,109.2,26.2,95.0,3.02,None
+Orange,33.9,20.0,11.2,6.6,107.0,26.9,92.0,1.85,Soil Health Card
+Blackgram,42.5,66.4,20.2,7.4,66.5,25.9,62.5,3.13,None
+Maize,67.2,52.5,22.5,6.0,74.9,19.1,74.9,3.74,PM-Kisan
+Kidneybeans,27.2,70.2,22.3,5.5,101.6,19.5,21.4,1.24,PM-Kisan
+Chickpea,30.7,66.6,80.6,7.1,78.5,20.8,20.3,1.15,Kisan Credit Card
+Mothbeans,18.9,46.3,23.4,8.0,56.3,29.5,57.8,1.55,Soil Health Card
+Blackgram,51.8,63.6,16.3,7.4,61.5,26.6,68.0,7.27,State Subsidy A
+Mothbeans,18.2,52.3,20.3,5.8,48.2,31.0,59.8,0.7,Paramparagat Krishi
+Coffee,108.9,28.9,30.6,7.4,122.9,27.5,65.3,0.86,Kisan Credit Card
+Lentil,31.6,63.1,23.8,6.7,46.8,22.7,67.0,1.9,PM-Kisan
+Mothbeans,33.2,41.2,21.2,4.5,68.2,24.9,45.4,1.58,Fasal Bima Yojana
+Kidneybeans,15.6,76.3,20.9,5.9,132.2,15.2,21.6,3.44,State Subsidy A
+Rice,80.1,56.2,39.4,6.1,219.1,24.8,80.9,3.44,Fasal Bima Yojana
+Orange,19.2,17.0,14.0,6.7,108.2,24.6,91.3,3.87,Kisan Credit Card
+Rice,64.0,40.6,36.6,7.2,200.8,22.5,92.2,2.18,State Subsidy A
+Kidneybeans,35.7,70.0,22.5,6.0,110.2,16.0,20.5,4.28,None
+Blackgram,57.6,56.6,17.4,7.2,63.4,28.9,64.6,1.96,Kisan Credit Card
+Mango,25.4,19.9,29.9,6.6,93.2,34.8,48.9,1.76,Kisan Credit Card
+Pigeonpeas,36.4,57.0,17.0,6.0,97.8,21.0,53.8,2.07,None
+Mungbean,27.0,58.9,17.0,6.7,44.4,29.2,87.1,5.21,Soil Health Card
+Rice,71.7,48.4,37.5,7.4,234.5,23.7,84.0,4.58,Paramparagat Krishi
+Rice,80.1,46.2,38.8,6.4,217.3,20.7,91.7,1.07,PM-Kisan
+Rice,84.1,38.7,40.8,6.3,209.6,25.0,84.0,1.63,PM-Kisan
+Mungbean,26.4,59.0,21.6,6.7,38.7,29.1,83.5,4.08,State Subsidy A
+Blackgram,49.5,78.7,22.0,7.3,69.3,29.9,60.2,3.24,Kisan Credit Card
+Apple,28.2,144.0,201.6,6.1,113.2,22.8,92.5,0.62,Kisan Credit Card
+Chickpea,47.4,59.2,84.4,6.7,84.0,19.7,22.6,2.81,Fasal Bima Yojana
+Mungbean,22.8,53.2,19.1,6.5,42.7,30.0,83.7,2.37,Fasal Bima Yojana
+Lentil,34.1,65.1,21.7,6.8,42.5,27.3,69.1,3.7,Fasal Bima Yojana
+Kidneybeans,15.7,60.7,15.6,5.9,94.0,19.8,24.2,3.77,Fasal Bima Yojana
+Grapes,30.9,141.8,198.8,6.3,72.6,21.3,82.6,2.13,Fasal Bima Yojana
+Orange,38.1,22.0,6.4,7.1,117.7,27.8,93.3,2.14,State Subsidy A
+Banana,92.7,93.7,48.6,6.0,97.7,25.4,77.1,2.71,Paramparagat Krishi
+Mango,15.0,30.4,25.9,5.3,87.2,29.6,52.6,0.31,Soil Health Card
+Blackgram,44.2,73.1,16.8,7.1,70.7,29.2,60.3,1.86,PM-Kisan
+Kidneybeans,20.4,66.3,17.3,5.7,117.4,21.8,25.4,1.2,Paramparagat Krishi
+Mungbean,18.9,44.2,22.6,6.5,51.1,27.6,81.0,4.14,PM-Kisan
+Kidneybeans,36.7,70.2,20.6,5.6,122.3,19.7,21.6,5.34,Paramparagat Krishi
+Maize,98.6,54.5,21.5,6.9,85.5,23.4,59.8,3.02,Soil Health Card
+Mango,33.9,23.1,34.7,4.7,88.0,29.2,46.3,5.31,Fasal Bima Yojana
+Pigeonpeas,25.6,72.0,23.0,5.3,107.4,18.2,53.4,3.86,Paramparagat Krishi
+Grapes,23.9,124.4,195.4,6.4,67.2,28.5,79.5,1.21,Soil Health Card
+Mungbean,35.3,36.4,16.8,6.2,48.2,28.0,85.7,0.28,Kisan Credit Card
+Banana,94.7,93.3,51.5,6.5,99.0,27.0,84.9,7.26,Fasal Bima Yojana
+Kidneybeans,16.2,77.8,16.6,5.7,130.4,18.9,24.1,2.46,None
+Grapes,24.2,131.5,199.4,5.6,68.2,30.7,80.0,2.45,State Subsidy A
+Coconut,21.5,15.8,27.2,5.7,134.8,27.8,92.8,1.26,PM-Kisan
+Papaya,59.2,54.9,52.5,6.6,226.7,24.1,92.2,1.02,Soil Health Card
+Rice,65.2,57.5,39.0,7.4,203.0,23.4,88.0,1.58,State Subsidy A
+Pigeonpeas,31.1,76.6,18.9,5.5,117.2,29.4,59.7,1.95,PM-Kisan
+Lentil,33.1,74.5,21.7,6.6,50.4,22.3,60.9,4.86,Paramparagat Krishi
+Watermelon,98.9,24.9,53.1,6.4,44.0,24.2,80.7,4.35,PM-Kisan
+Mango,25.9,36.4,31.9,4.9,99.1,32.0,45.9,1.33,Paramparagat Krishi
+Pomegranate,16.8,22.7,36.3,6.1,118.0,21.2,91.0,3.18,None
+Grapes,28.2,122.8,201.0,6.5,68.4,25.5,82.7,6.07,Paramparagat Krishi
+Blackgram,51.3,61.5,17.6,6.5,67.6,25.6,63.0,1.59,Kisan Credit Card
+Maize,84.8,47.3,19.2,5.8,94.2,19.7,58.8,1.8,Soil Health Card
+Cotton,115.3,57.9,17.4,7.4,74.1,23.7,59.8,0.77,PM-Kisan
+Papaya,55.3,61.6,49.1,6.6,200.6,40.5,94.9,5.35,Paramparagat Krishi
+Mothbeans,20.7,43.2,18.3,6.8,38.5,26.7,52.9,0.38,Kisan Credit Card
+Rice,84.7,57.9,43.0,6.2,245.7,21.4,89.2,3.33,Soil Health Card
+Cotton,136.1,37.7,24.6,6.5,89.9,25.9,66.7,2.85,Fasal Bima Yojana
+Watermelon,110.1,15.3,51.1,6.7,46.5,25.1,86.3,1.8,PM-Kisan
+Orange,35.0,23.9,12.2,7.1,109.1,15.4,90.4,2.38,State Subsidy A
+Coconut,34.0,24.3,31.9,6.3,147.3,25.2,90.7,3.56,Paramparagat Krishi
+Grapes,15.0,133.0,201.9,6.5,74.4,16.0,78.2,1.44,Paramparagat Krishi
+Kidneybeans,28.4,57.0,25.0,6.0,99.4,16.4,28.0,1.07,Kisan Credit Card
+Pomegranate,27.8,17.8,39.4,6.1,110.9,20.3,93.0,1.35,Soil Health Card
+Grapes,26.1,120.8,202.7,6.0,72.7,37.3,80.7,3.52,PM-Kisan
+Banana,115.5,73.8,45.1,5.8,105.4,25.7,83.3,4.48,Paramparagat Krishi
+Mango,29.2,20.6,25.8,6.7,93.7,33.2,46.6,3.93,PM-Kisan
+Jute,67.0,37.8,39.9,6.8,161.7,23.5,74.2,2.07,PM-Kisan
+Maize,72.4,36.7,19.9,6.9,68.0,20.3,57.5,3.0,PM-Kisan
+Apple,33.6,143.8,196.8,5.7,106.0,22.1,94.2,3.79,State Subsidy A
+Pigeonpeas,17.2,77.1,16.3,7.0,103.7,27.5,40.4,1.46,Kisan Credit Card
+Banana,106.4,82.6,52.8,6.5,115.2,27.4,82.3,2.94,Kisan Credit Card
+Watermelon,109.9,21.9,51.6,6.2,41.8,25.6,86.2,0.85,PM-Kisan
+Mungbean,36.3,38.4,18.0,7.0,38.5,30.0,86.4,2.95,Paramparagat Krishi
+Mungbean,19.2,40.4,15.9,7.1,48.0,29.8,85.8,2.19,Paramparagat Krishi
+Muskmelon,95.6,18.3,46.7,6.6,22.6,27.6,91.2,2.3,State Subsidy A
+Papaya,56.6,60.6,48.2,6.7,151.4,33.6,94.0,6.17,Fasal Bima Yojana
+Chickpea,36.2,76.2,75.5,7.1,68.5,18.4,23.0,2.37,PM-Kisan
+Mango,18.7,29.9,27.6,5.2,96.1,31.0,48.0,2.95,None
+Kidneybeans,33.9,60.2,17.7,6.0,147.5,17.2,22.9,2.79,Kisan Credit Card
+Banana,87.2,71.0,53.5,6.0,102.8,25.7,75.3,1.78,PM-Kisan
+Watermelon,92.7,25.9,47.7,6.3,57.1,25.3,84.3,0.98,PM-Kisan
+Blackgram,56.0,71.5,21.6,7.0,73.4,29.4,69.4,1.67,State Subsidy A
+Maize,65.1,47.5,18.6,5.7,70.9,21.7,57.5,2.98,State Subsidy A
+Cotton,123.8,36.0,18.8,7.3,70.9,24.1,66.2,0.57,Paramparagat Krishi
+Maize,75.8,57.8,23.6,6.4,69.8,26.5,65.8,2.62,State Subsidy A
+Mothbeans,20.8,52.9,23.6,7.6,46.3,24.4,41.2,1.15,PM-Kisan
+Papaya,47.4,56.2,53.3,6.5,204.3,36.6,90.4,1.47,Paramparagat Krishi
+Kidneybeans,37.8,64.2,15.7,5.8,141.3,17.4,21.4,1.62,PM-Kisan
+Mango,34.3,35.2,28.4,6.5,89.5,27.8,53.6,6.78,Paramparagat Krishi
+Pomegranate,16.8,27.8,36.4,5.5,109.2,18.0,87.3,4.61,Paramparagat Krishi
+Mungbean,34.8,41.2,20.0,6.9,51.7,28.7,87.5,5.93,Kisan Credit Card
+Grapes,23.5,136.8,204.6,5.7,72.0,11.3,81.6,2.4,State Subsidy A
+Mungbean,19.7,52.1,18.4,6.9,55.2,30.0,89.0,3.18,None
+Maize,78.0,48.6,23.1,6.0,62.0,20.0,73.1,2.3,PM-Kisan
+Cotton,109.5,40.1,24.8,6.5,76.6,22.9,59.3,4.41,PM-Kisan
+Apple,33.9,135.5,200.1,6.3,114.9,23.4,90.8,1.33,PM-Kisan
+Rice,83.0,53.8,44.1,6.7,207.3,23.5,87.1,5.81,State Subsidy A
+Kidneybeans,37.6,62.9,23.9,5.7,98.0,24.9,24.9,3.07,Soil Health Card
+Mothbeans,23.8,58.8,23.6,4.7,61.5,29.9,48.8,5.72,Kisan Credit Card
+Maize,76.4,51.1,22.3,6.2,92.1,19.1,57.2,0.8,PM-Kisan
+Watermelon,108.4,20.8,48.4,6.0,41.9,25.2,82.8,4.82,State Subsidy A
+Lentil,35.6,65.6,23.4,6.1,52.1,24.1,66.3,3.97,Soil Health Card
+Mothbeans,34.9,38.5,23.7,7.8,56.3,24.2,64.1,3.37,State Subsidy A
+Watermelon,114.5,29.5,47.2,6.3,43.2,25.8,89.3,2.36,State Subsidy A
+Coconut,36.5,27.7,32.7,6.0,186.3,26.9,97.4,2.51,Kisan Credit Card
+Blackgram,35.3,71.9,22.1,7.0,64.8,28.3,67.2,1.13,Fasal Bima Yojana
+Coconut,15.6,23.5,27.5,5.9,199.1,27.8,92.2,5.06,Paramparagat Krishi
+Coconut,30.5,24.2,26.6,6.3,185.1,27.0,95.8,2.49,State Subsidy A
+Muskmelon,117.5,23.9,51.8,6.4,28.7,28.4,91.6,0.21,PM-Kisan
+Mungbean,27.9,59.4,24.6,6.7,54.3,27.7,87.0,3.47,State Subsidy A
+Watermelon,112.8,28.5,54.8,6.4,59.9,24.5,82.6,6.21,Fasal Bima Yojana
+Cotton,125.1,52.2,21.1,7.2,79.8,25.2,65.0,1.53,PM-Kisan
+Pigeonpeas,15.7,65.8,17.3,6.4,98.7,24.3,47.1,1.5,Paramparagat Krishi
+Muskmelon,85.6,15.6,48.2,6.1,27.7,28.0,88.7,3.86,None
+Chickpea,33.4,55.5,83.9,6.4,78.2,18.8,17.2,1.37,PM-Kisan
+Rice,80.7,40.2,36.4,6.8,192.7,22.1,92.6,5.53,Fasal Bima Yojana
+Papaya,43.4,49.9,46.2,6.6,169.1,36.0,92.1,1.72,Paramparagat Krishi
+Mothbeans,39.7,43.5,15.6,7.0,46.0,25.8,57.5,1.74,PM-Kisan
+Grapes,15.8,139.1,202.2,5.5,74.7,18.9,78.8,1.02,State Subsidy A
+Mothbeans,22.9,46.7,23.7,5.6,60.2,26.9,43.2,1.29,Kisan Credit Card
+Apple,16.3,132.5,200.1,5.9,120.8,21.1,94.2,2.05,None
+Pigeonpeas,28.2,74.5,21.8,7.0,94.1,25.3,51.1,6.65,Kisan Credit Card
+Lentil,29.1,69.4,15.8,6.1,48.6,22.5,68.3,2.75,Paramparagat Krishi
+Cotton,107.0,58.9,24.5,7.6,67.4,23.7,60.2,4.24,Fasal Bima Yojana
+Grapes,15.8,122.8,200.6,5.7,67.3,23.9,78.1,3.86,Kisan Credit Card
+Lentil,38.4,58.9,16.1,6.4,52.1,18.9,67.6,1.46,Paramparagat Krishi
+Muskmelon,114.7,18.0,47.5,6.5,26.6,28.3,90.4,4.11,Kisan Credit Card
+Papaya,40.8,68.7,45.4,6.8,221.3,38.7,93.8,3.77,None
+Lentil,37.0,76.7,23.6,6.8,49.4,24.6,63.7,3.41,PM-Kisan
+Pigeonpeas,32.0,57.8,20.4,5.2,97.2,23.5,54.9,2.05,PM-Kisan
+Orange,25.1,21.5,13.9,7.0,117.7,19.5,92.4,0.83,PM-Kisan
+Coffee,102.1,22.0,28.0,6.0,131.3,24.9,61.0,1.74,Kisan Credit Card
+Kidneybeans,27.0,57.5,21.0,6.0,144.8,16.1,25.1,2.83,Paramparagat Krishi
+Papaya,45.6,66.3,48.6,6.5,235.1,23.7,94.6,1.31,State Subsidy A
+Maize,68.3,38.6,23.3,5.6,87.3,21.3,69.1,0.91,Paramparagat Krishi
+Jute,65.8,57.5,45.0,6.6,175.1,24.5,75.4,1.65,PM-Kisan
+Grapes,25.6,127.1,196.0,6.3,68.2,38.5,81.2,2.04,Fasal Bima Yojana
+Mango,33.7,31.4,30.1,5.6,93.1,27.3,45.2,0.44,Kisan Credit Card
+Orange,24.3,24.3,11.6,6.8,116.7,19.5,91.7,1.86,Paramparagat Krishi
+Jute,84.9,50.1,35.6,7.4,177.3,25.3,80.1,1.5,PM-Kisan
+Lentil,26.0,66.4,20.3,7.0,37.6,19.2,64.5,1.16,Paramparagat Krishi
+Kidneybeans,24.3,69.2,21.5,5.9,115.5,24.8,24.9,4.29,Fasal Bima Yojana
+Mothbeans,23.3,50.3,22.1,5.8,31.8,27.1,54.2,1.04,PM-Kisan
+Blackgram,44.3,67.6,25.0,6.8,61.8,26.5,61.9,1.11,State Subsidy A
+Chickpea,24.7,78.7,80.0,6.6,66.3,18.1,17.5,4.72,Fasal Bima Yojana
+Maize,77.7,45.9,24.4,6.7,84.3,19.7,67.0,3.76,Soil Health Card
+Muskmelon,108.7,24.0,50.9,6.4,24.3,28.0,92.4,2.11,Fasal Bima Yojana
+Rice,74.4,55.4,42.6,6.5,190.7,24.5,89.3,3.63,State Subsidy A
+Chickpea,52.9,55.4,76.4,6.4,67.6,20.6,18.6,5.17,State Subsidy A
+Muskmelon,112.6,17.4,45.9,6.5,22.4,29.0,93.2,3.87,Soil Health Card
+Pomegranate,34.2,16.2,35.9,6.2,118.2,24.4,85.7,2.22,Soil Health Card
+Rice,60.6,49.5,43.3,7.0,297.6,25.0,83.5,2.8,Paramparagat Krishi
+Kidneybeans,22.9,79.2,24.8,5.8,128.7,20.6,23.8,2.52,None
+Rice,77.9,38.0,35.1,7.1,293.0,22.5,94.2,0.73,Kisan Credit Card
+Lentil,36.9,76.3,20.2,6.5,48.0,18.8,62.0,2.18,State Subsidy A
+Maize,94.5,36.2,23.4,6.6,78.2,24.1,71.8,2.94,Kisan Credit Card
+Muskmelon,80.7,21.2,54.8,6.3,28.9,28.5,93.3,0.76,State Subsidy A
+Muskmelon,104.1,16.6,53.9,6.7,20.8,29.1,90.7,3.31,Fasal Bima Yojana
+Apple,32.4,140.3,200.7,5.8,122.2,22.7,91.7,0.8,PM-Kisan
+Kidneybeans,20.5,73.3,17.7,5.9,145.6,24.2,21.9,4.91,State Subsidy A
+Maize,77.6,59.1,20.3,7.0,71.4,20.6,70.2,2.65,Soil Health Card
+Muskmelon,119.8,20.3,45.2,6.7,24.4,27.3,88.5,0.57,State Subsidy A
+Papaya,38.9,47.4,46.7,6.7,143.4,42.9,94.5,3.43,None
+Maize,83.6,35.5,24.6,5.8,91.9,19.8,55.2,2.51,None
+Grapes,39.2,141.7,195.4,5.5,73.0,13.5,79.9,2.58,Fasal Bima Yojana
+Papaya,36.7,59.7,51.9,6.6,143.7,34.2,90.8,1.76,Paramparagat Krishi
+Coconut,20.9,23.7,32.0,6.2,153.8,26.0,91.6,2.65,Paramparagat Krishi
+Chickpea,47.3,76.3,81.8,7.8,77.7,17.5,18.4,1.37,Soil Health Card
+Banana,88.2,80.7,55.0,6.4,114.8,29.9,75.7,3.12,PM-Kisan
+Mango,22.4,39.4,29.0,4.6,95.3,28.2,46.8,1.21,PM-Kisan
+Apple,28.7,136.2,202.1,6.3,102.6,22.8,94.7,3.68,Fasal Bima Yojana
+Rice,71.8,37.7,40.3,6.2,222.3,25.3,82.3,1.98,PM-Kisan
+Rice,86.9,59.9,35.8,7.2,252.5,24.0,84.9,0.98,Paramparagat Krishi
+Lentil,33.4,72.1,17.6,6.2,35.5,20.2,70.0,4.36,State Subsidy A
+Lentil,21.1,72.0,21.9,6.9,35.6,19.7,64.3,2.87,PM-Kisan
+Rice,72.8,55.7,42.2,6.1,218.5,26.5,84.6,4.79,Paramparagat Krishi
+Kidneybeans,31.0,76.4,16.3,5.6,100.6,18.9,19.9,3.03,PM-Kisan
+Banana,90.4,85.4,51.4,6.4,91.9,29.1,81.1,2.79,Kisan Credit Card
+Mungbean,15.5,55.1,17.2,6.4,44.6,28.4,81.1,5.89,Paramparagat Krishi
+Coffee,87.8,19.6,30.5,7.1,161.0,23.7,54.7,6.19,PM-Kisan
+Maize,98.8,36.4,23.5,6.2,94.9,20.9,57.5,4.25,State Subsidy A
+Banana,97.6,90.8,49.7,5.7,90.3,29.7,81.1,5.75,PM-Kisan
+Pomegranate,24.6,20.6,38.1,7.0,109.1,22.2,93.5,3.71,Soil Health Card
+Pomegranate,34.6,29.3,38.4,6.8,116.9,24.1,89.8,4.73,PM-Kisan
+Chickpea,34.8,76.2,82.0,6.7,80.5,21.3,19.1,1.42,State Subsidy A
+Jute,72.7,46.1,35.0,6.5,161.6,23.9,70.4,2.89,Fasal Bima Yojana
+Apple,15.6,120.6,197.8,5.6,116.2,23.9,92.6,1.94,Kisan Credit Card
+Chickpea,37.2,67.5,84.8,7.9,74.1,18.0,15.6,2.96,State Subsidy A
+Banana,101.6,93.8,46.1,5.6,116.7,27.4,84.5,2.65,State Subsidy A
+Papaya,56.5,63.7,50.2,6.8,148.5,34.4,91.6,2.1,Soil Health Card
+Mothbeans,36.5,56.3,20.8,7.0,32.3,31.7,54.5,0.62,Fasal Bima Yojana
+Cotton,119.1,49.4,17.4,6.1,67.1,23.7,63.1,2.7,Kisan Credit Card
+Maize,78.5,38.8,20.1,6.8,98.6,20.4,65.7,2.57,State Subsidy A
+Banana,103.9,91.4,49.6,6.0,108.1,26.4,81.4,1.38,State Subsidy A
+Kidneybeans,38.6,75.0,22.4,5.8,100.6,22.8,21.7,2.74,Kisan Credit Card
+Grapes,22.9,125.1,196.6,6.5,72.2,34.4,82.3,1.05,Kisan Credit Card
+Papaya,50.0,45.8,47.6,6.7,195.8,24.5,92.3,1.55,PM-Kisan
+Orange,16.3,27.7,11.3,6.8,116.1,20.9,90.4,1.55,Fasal Bima Yojana
+Mothbeans,15.5,35.7,17.2,7.6,63.7,25.9,63.7,3.15,State Subsidy A
+Chickpea,23.3,77.7,80.8,6.4,87.8,21.4,17.5,1.22,PM-Kisan
+Chickpea,49.8,61.4,82.3,7.9,88.0,17.3,16.3,4.59,Soil Health Card
+Banana,94.8,72.9,51.3,5.7,110.1,28.2,81.0,3.14,None
+Watermelon,106.1,28.2,47.4,6.5,50.1,26.7,84.3,1.7,PM-Kisan
+Watermelon,110.3,28.7,47.6,6.7,44.9,26.4,85.0,2.96,PM-Kisan
+Coconut,23.5,24.8,30.4,5.7,137.7,28.6,92.0,1.68,State Subsidy A
+Pigeonpeas,33.1,74.7,16.3,6.6,154.5,23.2,40.8,4.33,State Subsidy A
+Muskmelon,101.7,28.1,49.8,6.5,20.5,29.5,93.4,3.14,Soil Health Card
+Blackgram,59.9,65.9,19.1,7.3,67.0,28.7,68.9,2.42,Paramparagat Krishi
+Pigeonpeas,33.5,61.0,21.3,6.2,143.6,27.7,55.0,2.59,State Subsidy A
+Pomegranate,29.2,26.4,42.7,7.2,112.6,24.2,86.9,1.85,Soil Health Card
+Mango,29.1,39.9,25.5,5.9,95.7,29.2,48.2,2.45,Soil Health Card
+Pigeonpeas,18.9,66.0,22.7,5.4,149.0,24.9,52.6,1.48,Fasal Bima Yojana
+Coconut,25.8,23.5,31.5,5.5,171.4,27.2,99.6,4.07,Soil Health Card
+Pigeonpeas,20.8,66.7,16.3,6.0,153.3,22.4,45.2,2.45,State Subsidy A
+Mango,15.8,37.9,32.5,4.7,94.6,30.2,52.3,3.52,Fasal Bima Yojana
+Maize,70.3,47.3,21.0,5.6,80.3,23.7,64.6,2.71,Kisan Credit Card
+Lentil,31.9,60.5,24.7,6.3,47.3,26.3,65.4,1.34,PM-Kisan
+Pomegranate,33.5,16.2,37.8,6.8,108.4,21.8,93.0,1.54,Kisan Credit Card
+Maize,88.6,38.3,24.0,6.4,71.4,26.7,70.3,0.78,Kisan Credit Card
+Pigeonpeas,33.9,71.8,16.7,5.0,123.2,28.8,40.2,2.59,None
+Maize,94.7,57.7,22.9,6.3,80.9,26.2,67.9,2.72,Kisan Credit Card
+Kidneybeans,21.2,77.1,22.1,5.9,130.9,19.7,25.4,5.96,Paramparagat Krishi
+Orange,20.3,18.8,13.6,6.6,115.7,32.2,94.9,2.93,Paramparagat Krishi
+Coffee,102.4,15.7,33.4,7.0,112.0,24.4,52.9,2.52,Fasal Bima Yojana
+Mango,21.0,17.4,28.3,6.6,98.6,34.7,51.6,0.73,PM-Kisan
+Blackgram,40.8,73.3,20.8,7.2,69.0,27.9,64.7,2.2,None
+Mungbean,21.8,50.9,15.1,7.2,57.0,27.9,82.9,0.46,PM-Kisan
+Watermelon,101.3,19.9,48.5,6.7,57.4,26.4,88.6,5.56,None
+Lentil,35.2,70.8,15.1,6.5,35.2,27.4,60.5,1.98,PM-Kisan
+Apple,35.9,139.2,196.7,6.2,121.3,21.3,92.3,1.05,Soil Health Card
+Banana,113.6,75.8,55.0,6.2,118.0,29.4,82.6,1.44,State Subsidy A
+Grapes,19.5,125.6,198.9,6.3,74.8,17.0,78.5,3.1,None
+Pomegranate,16.9,20.0,40.8,6.7,103.7,23.2,86.1,2.26,Kisan Credit Card
+Lentil,22.7,78.8,18.0,7.4,36.2,21.8,64.6,2.56,Fasal Bima Yojana
+Grapes,32.7,131.2,204.2,6.2,71.4,14.7,81.8,2.72,Paramparagat Krishi
+Lentil,31.5,56.0,20.9,7.1,41.3,24.9,67.4,3.31,PM-Kisan
+Muskmelon,105.8,19.7,53.4,6.5,29.3,28.6,90.2,1.75,State Subsidy A
+Coffee,108.3,28.7,29.6,6.1,158.8,25.4,61.8,1.19,PM-Kisan
+Jute,68.7,41.0,42.6,6.0,166.9,24.8,79.9,3.78,Fasal Bima Yojana
+Mothbeans,39.2,50.0,15.9,5.0,50.5,26.1,63.3,2.33,State Subsidy A
+Jute,64.9,35.5,44.6,6.3,161.5,25.3,71.4,5.28,PM-Kisan
+Rice,71.6,50.7,44.6,7.3,208.5,23.3,81.7,3.72,Paramparagat Krishi
+Grapes,25.3,128.0,202.8,5.7,72.0,27.6,79.4,2.17,Soil Health Card
+Blackgram,45.9,65.5,16.3,6.7,60.4,26.2,66.2,2.48,State Subsidy A
+Muskmelon,85.3,27.0,52.5,6.3,23.8,27.3,94.4,1.87,PM-Kisan
+Coffee,89.7,26.8,32.6,6.6,145.2,24.2,58.0,1.31,PM-Kisan
+Coconut,31.2,27.8,26.7,5.9,154.4,27.2,99.5,1.43,PM-Kisan
+Cotton,106.8,44.7,20.1,7.9,67.1,25.5,51.7,3.73,Kisan Credit Card
+Apple,23.9,133.2,200.5,6.3,103.2,22.7,91.5,6.8,Paramparagat Krishi
+Kidneybeans,23.2,69.6,18.4,5.7,91.3,19.4,23.1,3.48,Soil Health Card
+Cotton,129.6,52.5,19.6,7.1,68.9,25.4,62.6,2.16,State Subsidy A
+Muskmelon,114.6,17.7,46.1,6.1,26.8,29.0,91.4,2.1,State Subsidy A
+Kidneybeans,28.8,77.4,16.9,5.9,116.5,24.6,19.1,3.6,Paramparagat Krishi
+Banana,83.0,77.3,51.6,6.1,117.6,27.0,81.1,1.56,PM-Kisan
+Coffee,102.7,26.5,33.0,6.0,128.3,27.9,62.6,2.52,Fasal Bima Yojana
+Mothbeans,33.2,38.2,21.0,7.0,39.7,28.8,49.4,5.81,Fasal Bima Yojana
+Cotton,109.0,35.2,22.3,7.7,83.9,22.9,53.7,3.46,Fasal Bima Yojana
+Maize,62.4,39.0,24.8,6.5,81.4,22.7,74.0,0.88,PM-Kisan
+Papaya,55.7,58.9,46.1,6.7,238.0,33.8,91.0,4.2,None
+Lentil,27.6,72.7,19.1,6.7,53.7,25.6,68.1,1.1,PM-Kisan
+Chickpea,54.8,78.1,82.5,6.2,80.9,20.9,20.4,2.99,Paramparagat Krishi
+Pomegranate,19.3,16.7,36.1,6.0,105.8,18.9,85.1,0.86,PM-Kisan
+Cotton,122.1,53.5,16.4,7.8,88.4,25.8,58.6,2.41,Paramparagat Krishi
+Papaya,37.2,45.1,51.3,6.9,145.6,35.9,93.0,2.41,PM-Kisan
+Mothbeans,31.3,58.4,20.9,7.3,34.5,25.2,54.3,1.47,PM-Kisan
+Blackgram,51.0,66.6,20.0,6.9,65.1,28.4,63.2,3.07,PM-Kisan
+Mango,24.1,17.4,34.6,4.9,85.6,27.2,49.2,3.32,Paramparagat Krishi
+Lentil,17.7,71.7,22.1,7.3,35.6,26.5,65.4,4.19,PM-Kisan
+Grapes,15.5,126.2,196.3,6.3,71.1,20.3,78.4,4.42,None
+Coffee,83.6,25.5,30.0,6.5,113.0,24.2,61.2,2.67,State Subsidy A
+Blackgram,48.0,69.2,19.3,6.7,62.5,27.7,66.6,4.98,Paramparagat Krishi
+Blackgram,42.4,57.5,18.1,7.0,60.3,25.7,64.2,0.37,PM-Kisan
+Kidneybeans,25.8,62.0,15.1,5.6,122.0,17.3,26.8,2.45,Fasal Bima Yojana
+Mungbean,36.0,57.9,22.5,6.7,43.5,29.3,87.5,2.54,PM-Kisan
+Banana,87.1,71.4,50.3,6.3,98.6,26.1,77.2,4.56,None
+Chickpea,54.4,63.5,80.5,6.8,64.9,20.4,15.8,3.12,Fasal Bima Yojana
+Watermelon,100.2,24.3,52.5,6.8,50.1,25.0,89.9,2.34,None
+Papaya,52.2,59.1,54.9,6.9,206.7,43.1,93.8,5.46,State Subsidy A
+Coconut,18.6,15.4,29.5,5.6,226.7,26.6,91.2,4.86,None
+Maize,99.5,47.2,22.5,6.1,98.0,20.3,70.8,1.19,State Subsidy A
+Blackgram,41.6,61.8,19.9,7.2,61.3,26.6,62.3,3.33,Fasal Bima Yojana
+Apple,35.6,139.0,197.5,5.7,118.4,21.3,93.2,3.2,Paramparagat Krishi
+Pomegranate,26.8,15.4,43.8,6.3,116.4,18.1,90.2,3.74,Soil Health Card
+Watermelon,101.7,16.9,50.8,6.2,58.1,26.2,86.6,0.63,PM-Kisan
+Pomegranate,36.9,15.2,42.6,6.6,111.8,20.7,86.1,3.44,Kisan Credit Card
+Maize,99.5,45.9,15.2,6.6,73.9,19.3,58.0,1.49,PM-Kisan
+Lentil,29.8,74.6,16.9,7.1,44.6,24.6,62.6,0.7,Soil Health Card
+Jute,85.9,47.8,39.5,6.7,165.7,24.7,88.3,6.43,Soil Health Card
+Orange,28.4,17.7,7.7,7.3,101.4,25.0,92.5,3.99,Fasal Bima Yojana
+Pomegranate,18.9,23.1,40.0,5.9,109.9,23.9,87.2,6.07,Paramparagat Krishi
+Apple,23.9,123.1,200.2,6.1,102.0,21.4,94.4,2.0,Soil Health Card
+Pomegranate,26.3,22.1,40.5,7.2,103.2,22.6,90.7,5.04,PM-Kisan
+Coffee,114.0,17.8,34.6,6.7,165.2,25.8,55.7,3.94,Soil Health Card
+Blackgram,51.9,70.4,18.6,7.4,66.7,27.3,64.5,4.42,PM-Kisan
+Blackgram,58.9,64.9,16.6,6.6,61.1,26.0,68.8,2.86,Soil Health Card
+Pigeonpeas,36.2,76.2,17.5,6.7,113.6,19.1,42.9,4.09,Soil Health Card
+Mango,25.3,26.7,32.7,5.9,85.5,29.0,50.6,1.5,Fasal Bima Yojana
+Orange,27.0,17.0,5.5,6.3,118.1,18.8,91.7,4.79,State Subsidy A
+Rice,80.3,54.8,35.5,6.1,189.6,27.0,83.6,2.49,Soil Health Card
+Coffee,97.6,19.0,30.4,6.4,152.2,28.0,58.1,5.72,Soil Health Card
+Muskmelon,100.3,29.3,51.1,6.4,26.3,28.2,93.7,2.64,None
+Cotton,103.7,36.8,23.2,7.7,60.8,23.3,54.1,2.49,State Subsidy A
+Cotton,136.6,40.5,20.5,7.2,70.2,25.5,51.3,3.08,Fasal Bima Yojana
+Lentil,36.0,75.1,23.3,7.4,35.1,20.7,69.2,3.73,Kisan Credit Card
+Blackgram,43.1,67.5,17.3,7.0,63.5,25.7,63.8,2.17,State Subsidy A
+Lentil,25.0,58.0,15.1,7.5,38.5,23.8,68.2,4.71,Fasal Bima Yojana
+Mango,28.4,35.3,30.5,5.2,88.9,31.6,51.3,1.8,PM-Kisan
+Coconut,29.3,15.7,28.4,5.6,193.9,26.0,92.8,1.32,Soil Health Card
+Rice,63.4,35.6,37.3,6.2,186.1,24.8,93.6,4.03,Fasal Bima Yojana
+Kidneybeans,20.4,77.7,21.2,5.8,122.4,24.5,24.0,2.92,Fasal Bima Yojana
+Pomegranate,28.3,25.1,36.0,7.1,116.2,19.5,89.7,2.93,State Subsidy A
+Rice,66.0,52.6,43.6,6.4,295.2,22.4,88.7,1.92,Soil Health Card
+Rice,81.7,48.1,38.2,7.5,291.4,21.1,94.7,5.14,None
+Watermelon,82.1,22.5,51.5,6.5,59.4,24.4,89.7,7.27,State Subsidy A
+Cotton,122.7,35.1,16.9,7.2,65.6,25.9,64.5,1.01,PM-Kisan
+Mungbean,26.3,55.1,15.8,6.5,54.9,28.4,88.7,1.09,PM-Kisan
+Cotton,125.6,43.3,24.3,6.7,81.7,24.5,57.3,1.87,Fasal Bima Yojana
+Mungbean,33.1,50.9,17.5,6.6,56.6,29.2,82.9,1.15,Soil Health Card
+Lentil,20.2,61.5,16.3,6.8,44.2,20.7,63.7,3.5,Kisan Credit Card
+Pomegranate,22.6,25.0,36.9,6.7,110.9,19.9,88.9,0.49,PM-Kisan
+Mungbean,35.7,39.6,19.1,6.8,56.2,27.9,84.6,3.78,Soil Health Card
+Watermelon,111.7,28.2,54.2,6.7,49.0,25.0,82.8,2.66,PM-Kisan
+Rice,64.7,44.7,37.2,6.9,230.5,20.2,89.9,0.63,PM-Kisan
+Mothbeans,28.6,42.4,22.0,5.2,68.8,31.6,56.7,1.46,Fasal Bima Yojana
+Coffee,90.6,29.2,27.1,6.0,120.9,23.3,54.7,4.19,Paramparagat Krishi
+Grapes,22.4,130.8,200.2,5.8,66.2,28.8,79.6,3.98,Paramparagat Krishi
+Maize,62.3,44.2,20.8,5.8,70.4,25.7,63.2,3.61,Fasal Bima Yojana
+Chickpea,21.8,61.6,81.1,7.3,87.2,20.5,17.9,2.13,Paramparagat Krishi
+Cotton,108.7,44.0,17.7,7.2,72.7,22.5,66.2,3.69,Fasal Bima Yojana
+Mango,31.7,37.9,32.9,5.8,94.0,30.5,54.9,3.39,Soil Health Card
+Coconut,16.2,24.3,28.0,5.7,169.2,26.6,98.5,1.62,Paramparagat Krishi
+Mothbeans,17.9,47.1,16.4,8.4,33.0,27.7,44.1,3.47,Paramparagat Krishi
+Papaya,47.8,68.4,49.4,6.5,241.1,31.7,90.1,1.09,Kisan Credit Card
+Banana,116.7,86.8,50.3,6.1,111.3,27.1,85.0,0.97,Paramparagat Krishi
+Jute,68.9,42.9,43.0,7.5,184.4,25.2,79.6,2.53,State Subsidy A
+Pomegranate,29.5,25.3,44.8,6.6,106.9,18.2,90.0,6.18,Kisan Credit Card
+Grapes,24.6,144.4,201.8,6.0,67.3,33.1,81.9,0.99,PM-Kisan
+Grapes,39.1,122.5,203.1,5.7,73.0,37.5,78.2,2.62,Soil Health Card
+Chickpea,42.0,70.3,77.3,6.6,71.5,17.8,16.5,0.15,Kisan Credit Card
+Jute,72.0,58.9,35.6,6.2,183.7,25.3,87.6,3.09,Fasal Bima Yojana
+Blackgram,44.8,75.5,22.0,7.0,66.8,27.2,62.6,2.02,Kisan Credit Card
+Pomegranate,22.2,26.8,44.1,6.7,108.5,19.7,91.6,5.05,Paramparagat Krishi
+Apple,34.0,141.3,204.4,6.2,106.0,23.4,90.4,6.52,None
+Mango,19.6,21.4,26.4,5.9,91.2,28.3,47.5,3.71,Paramparagat Krishi
+Coffee,86.3,25.5,31.3,6.5,123.5,25.7,60.1,1.96,PM-Kisan
+Lentil,18.9,71.6,19.6,7.1,44.5,27.9,64.9,2.79,Kisan Credit Card
+Pigeonpeas,29.2,79.5,17.4,7.0,101.7,18.2,40.2,0.24,Fasal Bima Yojana
+Chickpea,23.0,58.4,83.8,7.4,67.1,20.9,18.1,0.69,Fasal Bima Yojana
+Pomegranate,39.0,21.4,35.4,6.4,115.3,18.3,93.8,1.72,Fasal Bima Yojana
+Kidneybeans,30.9,58.4,21.4,5.8,121.5,20.0,23.6,1.73,Kisan Credit Card
+Mothbeans,17.0,59.4,19.6,5.7,31.1,29.8,49.9,1.35,PM-Kisan
+Jute,82.5,40.1,40.0,6.9,151.5,23.9,80.0,1.2,Soil Health Card
+Papaya,37.6,63.9,48.2,6.5,139.9,35.3,90.5,1.64,Fasal Bima Yojana
+Mungbean,36.1,56.3,20.0,7.2,40.9,29.0,81.6,3.5,Paramparagat Krishi
+Lentil,15.6,55.5,21.0,6.2,41.8,28.4,69.0,6.12,State Subsidy A
+Mango,17.7,22.3,32.8,5.1,97.4,33.4,53.9,1.01,Kisan Credit Card
+Maize,96.1,48.0,21.1,6.3,97.0,23.9,66.9,5.57,Soil Health Card
+Mango,18.9,27.7,28.6,5.5,91.9,33.3,50.0,5.79,Paramparagat Krishi
+Coffee,94.1,19.5,32.2,6.5,192.7,26.3,52.3,1.9,PM-Kisan
+Chickpea,49.9,71.6,80.4,6.6,89.8,19.1,19.8,3.55,Kisan Credit Card
+Orange,39.5,18.8,5.6,7.1,108.8,14.3,92.6,0.75,PM-Kisan
+Mango,25.3,21.6,27.3,4.9,90.1,30.2,48.4,2.66,Paramparagat Krishi
+Kidneybeans,37.9,71.1,21.7,5.8,130.3,19.8,18.8,2.27,Kisan Credit Card
+Banana,116.3,79.9,46.5,5.9,110.3,28.5,78.1,4.32,Kisan Credit Card
+Coffee,109.4,18.2,32.6,6.4,195.1,26.9,52.2,3.84,Kisan Credit Card
+Jute,71.0,55.2,39.4,7.5,158.0,25.5,74.1,2.23,Paramparagat Krishi
+Mango,35.7,16.7,27.8,5.7,97.3,31.4,45.7,3.65,Kisan Credit Card
+Mothbeans,24.9,43.3,19.8,6.3,43.3,29.6,40.2,2.35,State Subsidy A
+Maize,82.6,46.6,15.9,5.6,76.0,19.1,59.9,4.72,Paramparagat Krishi
+Pomegranate,23.7,16.4,36.6,6.0,112.6,18.7,91.7,3.72,Kisan Credit Card
+Mungbean,38.3,37.2,24.2,6.7,48.1,30.0,82.1,2.78,PM-Kisan
+Coffee,94.9,21.2,32.2,6.6,193.0,24.9,56.9,1.09,Kisan Credit Card
+Pigeonpeas,39.4,74.7,19.0,5.0,114.6,19.7,47.6,2.88,Paramparagat Krishi
+Mungbean,34.1,51.7,16.5,6.8,57.1,28.1,81.1,0.34,PM-Kisan
+Apple,32.8,126.7,200.2,5.8,106.8,22.1,93.5,2.35,State Subsidy A
+Blackgram,53.6,59.8,19.3,6.5,65.5,29.6,65.6,3.81,None
+Lentil,18.5,69.9,22.7,7.5,54.8,28.7,60.1,3.58,Kisan Credit Card
+Rice,88.8,48.5,39.4,7.2,296.8,24.2,84.1,2.55,PM-Kisan
+Pomegranate,30.7,24.3,41.8,6.2,103.5,20.6,87.8,4.42,None
+Lentil,26.6,62.0,15.8,6.9,51.4,23.9,67.3,3.43,PM-Kisan
+Grapes,22.6,143.3,201.6,6.4,67.2,14.5,82.4,0.61,PM-Kisan
+Papaya,53.3,61.5,48.8,6.9,150.8,43.6,93.5,4.49,Soil Health Card
+Lentil,17.7,67.9,22.1,6.7,52.4,27.1,67.6,2.73,None
+Banana,112.6,77.1,53.8,6.4,95.4,26.6,75.2,1.24,Kisan Credit Card
+Rice,62.5,53.9,35.0,7.2,214.8,20.6,84.7,1.64,Fasal Bima Yojana
+Mothbeans,34.9,36.9,20.2,7.6,49.9,30.4,57.4,1.16,PM-Kisan
+Blackgram,41.9,70.1,21.7,6.8,68.1,25.4,60.4,2.09,Soil Health Card
+Blackgram,48.2,65.7,15.6,6.8,62.6,29.9,64.9,2.87,None
+Orange,24.3,24.5,11.9,6.2,109.2,18.5,91.9,5.92,Kisan Credit Card
+Pigeonpeas,30.5,61.8,20.4,6.3,143.3,25.0,53.9,6.96,None
+Blackgram,59.5,65.0,18.5,7.4,71.1,27.8,63.1,1.38,Fasal Bima Yojana
+Mango,21.2,17.7,25.8,4.9,86.7,31.4,53.6,2.06,None
+Pomegranate,23.6,25.1,38.5,6.0,108.0,24.1,87.8,2.99,Paramparagat Krishi
+Jute,61.8,54.2,37.1,6.1,196.3,23.0,79.5,2.98,Fasal Bima Yojana
+Cotton,128.2,40.8,19.5,6.2,77.6,26.0,54.8,3.78,Kisan Credit Card
+Chickpea,23.8,69.5,82.9,7.1,82.0,20.0,21.1,5.02,Soil Health Card
+Cotton,123.2,60.0,22.4,7.6,87.9,22.9,55.7,0.48,Soil Health Card
+Muskmelon,81.5,22.0,53.8,6.3,22.2,27.4,89.8,5.11,Fasal Bima Yojana
+Apple,30.8,133.4,200.6,5.7,103.4,23.7,93.4,2.34,PM-Kisan
+Pigeonpeas,30.0,69.1,16.2,6.0,120.0,26.3,59.4,2.26,PM-Kisan
+Mothbeans,33.7,54.9,20.7,7.3,44.2,30.4,53.2,1.78,Soil Health Card
+Grapes,34.1,121.8,199.6,5.6,69.7,29.8,81.6,5.0,Paramparagat Krishi
+Mango,27.1,26.4,27.8,5.6,86.5,29.2,51.5,1.73,Soil Health Card
+Banana,80.6,70.2,45.7,6.2,114.6,27.0,77.9,0.87,Fasal Bima Yojana
+Coffee,81.0,21.4,33.0,6.2,119.0,24.0,67.8,1.4,PM-Kisan
+Muskmelon,117.3,28.9,45.1,6.8,20.2,29.6,95.0,2.14,Paramparagat Krishi
+Mango,28.2,38.3,27.2,5.2,87.6,31.5,53.1,3.85,State Subsidy A
+Chickpea,34.2,59.2,81.1,6.2,89.5,18.8,15.4,1.82,Kisan Credit Card
+Orange,24.6,22.1,5.0,7.3,110.6,32.0,92.5,2.39,Paramparagat Krishi
+Apple,34.7,136.9,199.0,5.7,105.7,22.1,93.8,0.44,PM-Kisan
+Rice,64.6,51.8,35.3,7.2,210.3,25.2,92.5,3.71,None
+Orange,26.7,18.0,7.7,6.4,106.4,34.4,90.9,0.86,PM-Kisan
+Orange,17.7,24.4,12.8,6.8,110.6,22.8,92.2,0.39,Fasal Bima Yojana
+Coffee,109.7,22.3,27.3,6.7,111.1,23.6,55.8,4.77,Kisan Credit Card
+Blackgram,43.1,67.8,20.7,6.8,65.6,28.3,60.3,1.74,Kisan Credit Card
+Grapes,26.2,140.5,202.4,6.4,66.4,31.3,79.3,2.01,Fasal Bima Yojana
+Pigeonpeas,28.1,73.6,21.4,5.9,117.2,20.1,41.2,2.21,None
+Rice,66.7,38.6,38.0,6.4,268.5,25.1,86.4,1.81,PM-Kisan
+Mungbean,35.1,48.3,19.3,7.0,51.6,29.1,89.1,4.46,Fasal Bima Yojana
+Muskmelon,115.7,29.3,51.2,6.0,29.8,29.8,93.7,2.94,Fasal Bima Yojana
+Mango,37.6,22.0,30.7,5.7,97.3,28.4,51.5,1.16,PM-Kisan
+Watermelon,105.2,26.5,54.8,6.7,45.2,25.8,83.7,1.52,Soil Health Card
+Maize,75.7,52.5,16.6,6.4,74.1,21.2,56.1,3.86,State Subsidy A
+Orange,26.9,23.0,6.7,6.5,108.3,24.7,90.4,4.83,State Subsidy A
+Watermelon,86.9,16.5,50.2,6.3,41.5,25.5,80.9,1.62,Kisan Credit Card
+Mungbean,22.4,56.8,17.3,6.7,54.6,29.7,80.3,1.61,Paramparagat Krishi
+Mango,26.0,38.3,29.4,4.7,97.3,33.3,54.1,3.81,State Subsidy A
+Coffee,88.1,17.1,33.3,6.4,191.1,24.1,62.2,1.96,PM-Kisan
+Chickpea,27.9,56.7,82.5,6.7,66.7,21.9,20.1,3.04,None
+Lentil,21.0,70.8,22.2,6.6,40.9,28.0,60.7,1.1,PM-Kisan
+Mango,23.7,16.3,33.0,6.6,89.5,30.7,54.2,2.1,Fasal Bima Yojana
+Coconut,34.3,24.9,28.5,6.1,157.3,27.5,92.7,2.25,Fasal Bima Yojana
+Papaya,31.7,45.0,50.3,6.6,239.2,24.9,91.4,0.72,PM-Kisan
+Muskmelon,114.3,15.2,45.2,6.2,29.1,27.7,92.5,1.08,PM-Kisan
+Pomegranate,39.0,18.4,44.5,7.0,115.6,20.1,93.6,3.67,Kisan Credit Card
+Banana,115.3,72.5,51.0,6.2,102.9,26.8,82.2,1.9,Soil Health Card
+Pomegranate,33.5,25.0,36.2,7.0,110.3,24.8,85.9,2.62,Soil Health Card
+Mothbeans,17.7,57.9,19.3,6.7,54.2,30.1,46.8,5.03,Soil Health Card
+Pigeonpeas,24.8,74.2,16.4,5.7,137.3,25.6,44.4,2.14,Kisan Credit Card
+Pomegranate,31.6,25.1,44.8,7.0,113.7,19.5,87.9,3.45,Soil Health Card
+Pigeonpeas,39.0,56.5,20.0,5.6,123.7,20.7,42.1,2.49,PM-Kisan
+Papaya,43.0,62.2,53.6,7.0,220.8,34.2,92.6,1.33,PM-Kisan
+Orange,23.2,25.9,7.9,6.5,116.2,12.2,93.1,1.52,Kisan Credit Card
+Apple,36.2,134.1,197.3,5.6,122.3,23.0,90.1,1.28,Soil Health Card
+Muskmelon,102.3,23.7,49.5,6.6,27.7,27.5,90.1,3.98,Fasal Bima Yojana
+Pomegranate,17.4,15.3,44.2,6.3,117.7,23.2,90.1,2.13,State Subsidy A
+Rice,89.8,53.1,44.5,6.2,212.8,20.8,88.0,2.86,PM-Kisan
+Rice,86.2,53.0,41.1,6.3,216.7,22.0,82.5,4.81,Paramparagat Krishi
+Muskmelon,102.8,17.9,51.0,6.2,20.0,29.2,92.3,1.42,Kisan Credit Card
+Pomegranate,18.4,23.8,39.8,6.9,103.6,20.2,93.6,1.13,Kisan Credit Card
+Pomegranate,19.7,27.2,42.8,6.7,103.4,24.7,92.8,1.54,Kisan Credit Card
+Pigeonpeas,26.0,76.6,19.7,5.7,152.5,25.6,43.0,2.96,None
+Kidneybeans,37.8,71.9,21.5,5.9,127.8,19.8,25.9,0.75,Paramparagat Krishi
+Watermelon,90.5,27.4,53.9,6.7,58.8,24.6,84.6,2.86,State Subsidy A
+Apple,29.6,141.6,203.3,6.0,114.8,21.2,92.2,2.88,State Subsidy A
+Pomegranate,31.4,23.5,42.3,6.0,107.8,23.6,93.3,6.79,None
+Pomegranate,23.1,27.5,39.2,5.8,110.7,20.0,93.6,0.44,Kisan Credit Card
+Apple,18.2,134.7,201.8,5.7,110.9,23.5,91.6,1.09,PM-Kisan
+Muskmelon,96.3,16.4,51.8,6.2,27.0,28.2,88.2,4.57,State Subsidy A
+Grapes,19.1,129.5,200.6,5.8,70.1,24.1,82.2,3.33,Kisan Credit Card
+Mothbeans,19.6,57.4,20.8,6.0,64.5,25.4,48.5,1.19,PM-Kisan
+Blackgram,44.2,65.5,20.7,7.0,71.3,28.1,62.0,2.2,Fasal Bima Yojana
+Coffee,92.1,29.0,26.9,6.9,159.4,25.9,67.0,0.29,Fasal Bima Yojana
+Watermelon,111.8,15.2,45.3,6.9,48.9,26.7,88.2,1.44,Fasal Bima Yojana
+Papaya,55.9,65.2,48.9,6.6,148.4,28.0,91.8,4.24,Paramparagat Krishi
+Cotton,123.2,41.1,21.3,7.5,75.1,24.1,62.2,2.0,Fasal Bima Yojana
+Coconut,38.5,20.0,26.5,5.8,135.4,28.2,92.4,0.95,Kisan Credit Card
+Pomegranate,17.8,25.1,42.1,6.1,117.3,23.6,90.5,3.0,Kisan Credit Card
+Blackgram,44.1,57.9,24.0,6.7,68.8,25.8,65.4,5.67,State Subsidy A
+Mothbeans,15.9,37.5,17.4,6.9,54.1,29.4,44.0,4.21,Paramparagat Krishi
+Kidneybeans,28.2,78.5,16.5,5.7,115.2,16.3,23.7,1.92,State Subsidy A
+Maize,72.9,50.5,20.0,6.3,81.3,22.9,65.4,4.27,PM-Kisan
+Watermelon,80.0,15.8,49.9,6.1,59.2,25.2,83.1,7.45,Kisan Credit Card
+Banana,100.0,74.3,48.0,6.1,97.4,28.4,77.9,5.2,Fasal Bima Yojana
+Maize,98.8,47.0,19.1,6.4,79.8,20.7,65.0,1.33,PM-Kisan
+Coconut,25.0,21.1,27.6,6.4,154.4,26.3,98.1,2.12,State Subsidy A
+Blackgram,40.8,56.6,24.9,6.6,71.2,25.7,68.1,2.43,Paramparagat Krishi
+Orange,24.7,15.4,7.3,6.3,108.9,32.2,94.4,0.74,PM-Kisan
+Muskmelon,101.1,22.7,50.7,6.3,21.8,29.7,89.2,1.68,PM-Kisan
+Coffee,87.1,21.5,25.2,7.3,167.4,27.5,58.5,1.36,Fasal Bima Yojana
+Chickpea,46.3,64.4,77.7,6.3,84.5,17.6,19.8,1.59,PM-Kisan
+Lentil,18.4,77.5,18.1,6.4,47.7,18.3,68.1,1.08,Paramparagat Krishi
+Mango,26.8,36.8,26.3,5.0,94.9,29.9,52.5,3.05,PM-Kisan
+Papaya,45.0,66.6,49.7,6.9,147.8,29.7,91.2,3.06,Kisan Credit Card
+Apple,39.8,138.5,202.4,6.4,122.5,23.4,91.9,1.5,Soil Health Card
+Papaya,52.9,47.0,53.1,6.7,174.2,39.8,91.8,1.96,PM-Kisan
+Pomegranate,38.6,27.7,38.1,7.1,118.9,24.9,87.0,4.72,Fasal Bima Yojana
+Grapes,36.0,121.7,203.7,6.0,72.3,38.3,78.3,2.11,PM-Kisan
+Banana,89.9,90.7,50.5,5.9,103.0,26.1,76.8,1.67,PM-Kisan
+Lentil,24.5,62.2,23.8,7.4,49.3,21.2,67.1,0.75,PM-Kisan
+Coconut,22.3,24.3,29.0,6.2,148.6,25.5,99.7,3.67,Paramparagat Krishi
+Mango,35.3,37.5,25.3,5.0,86.0,34.0,50.1,1.57,PM-Kisan
+Chickpea,20.4,75.3,75.1,6.1,74.5,17.2,21.1,6.75,Fasal Bima Yojana
+Jute,85.3,47.6,43.3,6.6,188.7,23.9,72.9,3.75,PM-Kisan
+Pomegranate,21.6,27.9,38.8,6.2,105.1,24.0,85.8,4.17,Paramparagat Krishi
+Mango,20.4,35.8,26.6,4.5,97.2,31.6,51.4,3.35,Fasal Bima Yojana
+Pomegranate,34.0,27.7,35.9,6.1,112.5,20.3,92.4,2.01,PM-Kisan
+Jute,77.6,36.7,35.9,6.7,175.7,25.3,70.8,6.55,Kisan Credit Card
+Chickpea,47.0,69.1,75.9,7.3,74.2,21.6,23.5,1.76,Paramparagat Krishi
+Maize,89.0,36.2,21.9,5.8,80.0,19.2,71.1,0.55,Fasal Bima Yojana
+Mango,36.4,31.5,31.9,5.2,88.0,30.3,51.8,2.17,Paramparagat Krishi
+Mango,35.6,20.8,30.2,6.5,98.2,34.0,46.0,3.8,Soil Health Card
+Coconut,27.7,28.5,30.4,6.5,195.1,26.1,95.8,1.79,PM-Kisan
+Papaya,47.1,45.2,50.3,6.8,211.5,37.5,92.8,2.1,PM-Kisan
+Cotton,110.5,50.7,22.0,7.9,62.9,25.2,53.8,2.72,Fasal Bima Yojana
+Maize,68.6,37.0,22.6,6.6,82.6,25.6,63.7,3.42,PM-Kisan
+Mothbeans,31.5,46.2,22.8,5.1,66.1,30.1,45.7,0.92,Paramparagat Krishi
+Chickpea,40.5,67.8,78.0,7.4,80.8,20.6,24.3,3.93,None
+Mungbean,26.9,35.8,16.2,6.3,35.1,28.1,81.9,2.38,Kisan Credit Card
+Maize,76.2,39.9,21.1,6.9,99.9,22.6,61.6,1.95,Soil Health Card
+Blackgram,48.8,70.0,22.1,7.1,72.8,29.5,60.6,0.53,PM-Kisan
+Papaya,56.1,47.9,46.7,6.8,131.5,36.5,94.1,1.54,PM-Kisan
+Coconut,32.8,27.8,32.1,6.2,153.7,27.4,99.3,2.58,PM-Kisan
+Mango,34.2,16.6,33.3,5.8,94.3,30.5,54.3,0.79,Paramparagat Krishi
+Maize,88.4,58.7,17.7,6.4,80.4,23.4,61.4,0.64,Paramparagat Krishi
+Grapes,18.1,132.1,203.7,5.9,69.9,20.4,80.3,2.29,Fasal Bima Yojana
+Watermelon,93.1,18.4,50.7,6.4,54.1,25.4,86.1,1.82,PM-Kisan
+Jute,76.0,36.0,35.2,6.9,167.4,25.6,89.6,1.79,PM-Kisan
+Mothbeans,21.1,45.1,20.3,6.1,39.0,25.4,45.8,3.06,Paramparagat Krishi
+Mungbean,18.5,42.9,21.3,6.4,57.0,27.3,84.1,1.95,Kisan Credit Card
+Banana,116.9,85.7,47.6,6.0,99.0,26.8,79.8,0.31,Soil Health Card
+Orange,34.1,27.0,13.5,7.3,108.4,18.5,92.5,1.67,Fasal Bima Yojana
+Muskmelon,91.9,17.2,54.5,6.4,24.8,28.4,93.1,2.43,Kisan Credit Card
+Muskmelon,95.9,18.8,52.5,6.6,28.7,30.0,91.4,1.31,PM-Kisan
+Coffee,88.3,19.1,26.6,6.3,147.2,25.2,59.6,1.73,Fasal Bima Yojana
+Apple,40.0,125.9,203.7,6.0,115.6,23.0,93.5,1.05,Fasal Bima Yojana
+Mungbean,26.4,53.9,24.8,6.5,37.0,29.6,80.6,1.04,PM-Kisan
+Pigeonpeas,31.0,71.6,18.3,5.3,106.5,24.7,40.8,1.38,Fasal Bima Yojana
+Cotton,107.9,47.6,21.0,8.0,75.5,24.2,68.3,5.64,Fasal Bima Yojana
+Coffee,90.8,29.9,31.9,7.4,194.8,27.1,66.4,3.5,PM-Kisan
+Lentil,21.1,56.4,24.2,7.0,49.3,27.0,62.1,2.05,Fasal Bima Yojana
+Papaya,52.4,68.3,54.7,6.6,141.0,38.2,91.9,3.72,PM-Kisan
+Grapes,35.2,121.1,195.4,5.5,74.5,38.8,81.8,0.88,PM-Kisan
+Maize,86.5,56.4,20.0,5.6,67.7,23.9,59.5,2.01,Fasal Bima Yojana
+Apple,25.8,140.1,200.1,6.0,101.8,21.9,91.0,0.96,Kisan Credit Card
+Banana,111.9,76.0,52.2,5.8,94.2,25.6,79.9,1.57,PM-Kisan
+Kidneybeans,18.4,69.7,19.9,5.5,105.4,17.6,19.8,0.29,Kisan Credit Card
+Pigeonpeas,29.7,67.6,18.4,5.1,108.2,26.3,50.2,1.81,Kisan Credit Card
+Muskmelon,83.8,27.2,53.0,6.3,23.7,28.1,89.0,0.28,Fasal Bima Yojana
+Maize,72.1,55.4,17.9,5.6,81.6,23.1,68.5,1.98,Soil Health Card
+Rice,86.5,41.2,43.5,6.8,244.5,21.9,81.7,0.84,PM-Kisan
+Pomegranate,32.6,25.9,43.6,6.5,105.4,19.1,90.7,3.63,Kisan Credit Card
+Coffee,107.8,17.6,30.2,6.9,172.4,27.3,66.0,5.45,Kisan Credit Card
+Maize,90.6,39.1,24.7,6.8,75.9,26.1,67.6,1.79,State Subsidy A
+Mungbean,24.0,50.6,19.1,7.1,54.1,29.1,83.3,1.99,PM-Kisan
+Papaya,41.4,48.5,53.3,6.7,165.1,26.6,90.4,2.49,Paramparagat Krishi
+Orange,25.9,28.5,10.5,6.0,113.4,33.5,92.5,2.99,State Subsidy A
+Jute,70.8,37.0,39.3,6.3,185.1,24.9,85.8,0.82,Kisan Credit Card
+Chickpea,44.1,76.6,77.4,7.1,62.2,20.5,16.5,4.78,Paramparagat Krishi
+Lentil,33.1,66.9,16.5,6.6,47.3,18.7,61.0,4.21,Fasal Bima Yojana
+Blackgram,41.1,77.2,20.2,7.1,67.6,27.7,65.6,6.53,Soil Health Card
+Cotton,103.7,48.9,21.1,8.0,89.3,24.1,67.8,3.82,Soil Health Card
+Muskmelon,117.4,28.0,54.7,6.0,25.3,27.9,88.2,2.54,None
+Coconut,22.9,23.2,25.9,5.9,216.8,27.1,99.5,2.6,Fasal Bima Yojana
+Mungbean,36.2,42.7,20.4,6.7,48.3,29.7,82.6,1.36,Kisan Credit Card
+Lentil,20.6,61.5,23.1,7.4,35.2,19.3,69.9,2.59,Soil Health Card
+Mothbeans,25.6,51.0,15.1,6.6,67.1,27.0,43.8,5.92,Kisan Credit Card
+Orange,23.2,17.7,12.2,7.4,106.9,27.3,91.0,2.58,PM-Kisan
+Pomegranate,19.6,21.0,43.3,5.5,111.4,24.8,89.2,4.59,Paramparagat Krishi
+Coconut,20.3,27.5,28.6,6.0,151.1,26.4,90.5,2.73,State Subsidy A
+Coffee,107.5,27.5,34.9,7.4,153.8,27.9,67.4,6.46,Fasal Bima Yojana
+Muskmelon,104.8,28.5,49.4,6.6,29.1,28.0,91.4,2.84,None
+Kidneybeans,33.1,62.4,17.3,5.9,146.9,20.8,21.4,3.75,Paramparagat Krishi
+Kidneybeans,35.4,74.1,18.0,5.7,107.6,23.3,24.5,4.7,Paramparagat Krishi
+Coffee,82.8,16.4,28.1,7.4,168.5,26.6,69.5,4.12,Paramparagat Krishi
+Muskmelon,102.0,22.3,47.0,6.3,24.4,29.0,90.2,4.63,PM-Kisan
+Blackgram,57.5,62.8,22.0,6.6,66.9,28.7,60.4,1.79,PM-Kisan
+Kidneybeans,16.1,61.7,17.2,6.0,97.5,17.4,29.7,3.72,PM-Kisan
+Mungbean,26.1,57.3,20.4,6.6,54.0,27.2,83.3,1.1,Paramparagat Krishi
+Cotton,123.0,60.0,21.8,6.1,68.3,22.4,59.7,1.95,Soil Health Card
+Maize,68.4,40.6,21.2,6.4,105.1,18.5,72.1,0.79,Kisan Credit Card
+Grapes,37.0,121.4,197.6,5.5,71.5,29.2,82.9,0.81,Fasal Bima Yojana
+Jute,63.2,52.4,38.3,6.5,180.7,25.8,77.1,3.58,Fasal Bima Yojana
+Coconut,31.2,16.9,27.6,5.6,179.9,26.9,95.6,2.06,Kisan Credit Card
+Grapes,36.1,136.2,198.0,5.7,72.0,28.7,82.5,1.27,PM-Kisan
+Chickpea,42.2,61.8,78.2,7.5,69.4,18.8,23.3,6.11,State Subsidy A
+Pigeonpeas,23.6,73.2,18.0,5.9,134.8,18.9,47.9,1.65,Soil Health Card
+Kidneybeans,29.3,66.2,17.8,5.6,140.8,19.3,25.6,3.84,Kisan Credit Card
+Mango,38.9,20.7,27.1,5.7,85.9,30.9,45.5,3.7,Soil Health Card
+Mungbean,33.8,59.9,18.1,6.4,37.4,29.6,80.6,5.78,PM-Kisan
+Watermelon,119.6,27.4,54.5,6.4,46.6,24.3,85.4,1.45,Paramparagat Krishi
+Coconut,17.6,25.7,33.6,6.5,135.6,27.4,94.4,1.25,Paramparagat Krishi
+Lentil,39.3,74.5,19.8,6.9,48.4,27.7,62.9,2.52,Paramparagat Krishi
+Papaya,43.7,66.2,49.8,6.9,244.9,26.7,91.0,2.75,Kisan Credit Card
+Blackgram,56.1,71.0,21.2,6.8,72.6,26.5,61.3,2.97,Soil Health Card
+Papaya,48.7,56.2,53.0,6.8,183.8,42.3,92.0,0.58,Kisan Credit Card
+Papaya,47.5,64.3,51.9,7.0,192.3,37.1,92.0,4.4,Kisan Credit Card
+Muskmelon,99.7,18.0,49.7,6.4,22.1,28.2,88.2,1.01,PM-Kisan
+Papaya,49.6,55.5,52.0,6.6,201.0,38.2,94.0,0.95,Kisan Credit Card
+Rice,62.1,46.3,36.4,7.0,280.8,20.4,83.4,1.16,Soil Health Card
+Cotton,130.4,48.1,16.7,7.0,84.7,25.0,54.9,1.36,Soil Health Card
+Pigeonpeas,26.6,78.1,17.5,5.7,104.6,22.3,47.1,1.42,PM-Kisan
+Cotton,122.4,44.4,17.2,7.3,72.3,23.4,63.3,1.87,Kisan Credit Card
+Grapes,30.0,134.2,202.9,5.9,72.2,27.1,82.9,1.81,PM-Kisan
+Muskmelon,104.8,26.0,50.3,6.0,23.6,29.9,94.0,2.72,Kisan Credit Card
+Apple,21.9,137.5,203.7,5.8,104.6,22.1,91.0,2.91,Kisan Credit Card
+Pomegranate,15.4,15.8,40.9,7.1,105.8,19.4,87.6,3.35,Kisan Credit Card
+Rice,81.8,37.4,44.3,6.6,245.8,26.7,87.7,1.07,State Subsidy A
+Watermelon,114.9,20.4,47.7,6.0,58.3,24.3,88.7,0.17,Paramparagat Krishi
+Apple,18.3,127.1,203.3,6.2,111.2,21.8,93.4,3.7,None
+Pigeonpeas,22.1,77.4,19.7,6.5,100.6,21.5,47.7,3.01,Soil Health Card
+Pigeonpeas,38.8,68.9,15.1,6.2,134.1,25.2,56.3,6.86,PM-Kisan
+Chickpea,56.4,59.6,84.4,6.2,81.6,20.2,22.7,1.01,State Subsidy A
+Watermelon,82.5,15.9,51.4,6.7,59.5,25.3,82.2,4.48,State Subsidy A
+Rice,75.9,45.3,40.3,7.4,245.4,21.4,91.7,2.04,Kisan Credit Card
+Coconut,31.3,29.9,25.3,5.5,194.3,26.9,96.4,2.08,State Subsidy A
+Coffee,104.3,29.2,28.5,6.3,121.8,24.5,67.1,3.55,Paramparagat Krishi
+Kidneybeans,27.7,78.1,20.9,5.8,127.9,22.0,28.8,5.33,Soil Health Card
+Grapes,28.9,140.7,204.4,6.3,72.8,11.4,82.6,2.13,State Subsidy A
+Papaya,34.0,55.9,51.2,6.9,184.3,24.8,94.6,3.71,Fasal Bima Yojana
+Coconut,22.1,20.0,26.6,6.3,198.8,25.4,90.5,2.18,Kisan Credit Card
+Papaya,45.7,63.2,51.2,6.8,181.5,38.9,94.3,4.54,Kisan Credit Card
+Cotton,115.5,36.7,17.6,7.6,63.4,25.6,67.1,1.6,State Subsidy A
+Kidneybeans,23.2,65.7,15.6,5.7,106.9,18.7,20.1,6.96,Paramparagat Krishi
+Mungbean,23.0,59.3,18.0,6.3,54.1,28.3,81.7,3.72,PM-Kisan
+Kidneybeans,33.2,72.6,22.9,5.6,129.1,22.8,27.4,4.37,State Subsidy A
+Grapes,31.3,125.5,204.3,6.0,65.3,21.0,82.9,1.02,State Subsidy A
+Watermelon,108.3,19.6,54.1,6.9,48.5,24.8,80.4,3.24,Kisan Credit Card
+Chickpea,26.8,78.3,81.0,6.0,82.6,19.2,22.2,1.74,Paramparagat Krishi
+Maize,74.5,44.5,21.2,6.0,68.3,19.4,68.6,2.99,Fasal Bima Yojana
+Pomegranate,25.4,25.5,39.7,7.1,105.7,23.6,89.3,2.61,None
+Maize,98.9,37.1,19.0,6.9,101.9,23.9,66.4,2.85,Soil Health Card
+Mungbean,31.5,50.6,18.0,6.3,43.7,27.1,89.6,1.18,Kisan Credit Card
+Coffee,105.5,24.0,34.1,7.4,122.1,26.7,54.9,6.68,Fasal Bima Yojana
+Jute,77.9,47.7,37.7,6.5,161.5,24.1,77.2,2.6,Fasal Bima Yojana
+Cotton,126.2,50.3,16.2,7.3,67.3,25.1,62.5,3.92,Fasal Bima Yojana
+Watermelon,85.8,21.6,49.2,6.0,42.1,26.3,81.4,0.66,Soil Health Card
+Mango,22.4,17.8,34.6,6.4,99.8,33.7,49.5,3.61,State Subsidy A
+Coffee,88.4,15.8,25.5,6.4,164.4,25.9,55.1,0.95,PM-Kisan
+Jute,83.9,42.3,39.5,7.3,193.2,25.7,80.3,1.92,PM-Kisan
+Coconut,30.7,23.9,26.8,5.7,142.3,27.8,92.0,6.33,State Subsidy A
+Pigeonpeas,22.5,79.3,19.1,5.3,113.4,19.5,41.3,1.9,State Subsidy A
+Mungbean,36.5,49.1,18.7,6.9,38.0,29.3,82.4,1.83,Fasal Bima Yojana
+Kidneybeans,35.2,57.0,17.7,5.8,97.8,22.3,20.4,4.44,PM-Kisan
+Mungbean,36.6,46.2,24.4,6.6,46.0,29.9,88.0,4.05,None
+Coconut,23.6,22.1,30.5,5.5,220.1,25.7,96.2,0.45,PM-Kisan
+Coffee,101.1,15.5,29.5,6.3,193.7,26.8,62.7,3.74,Fasal Bima Yojana
+Coffee,89.7,26.9,26.6,6.5,114.3,23.1,52.4,3.28,State Subsidy A
+Cotton,134.3,35.4,20.6,6.8,82.4,24.7,66.4,2.26,Kisan Credit Card
+Banana,97.9,83.6,50.1,6.2,115.3,27.1,78.3,2.8,Fasal Bima Yojana
+Grapes,18.2,135.6,203.0,5.6,68.2,17.6,81.1,0.73,Paramparagat Krishi
+Mango,25.2,16.5,27.3,5.1,99.1,32.9,50.7,5.51,Kisan Credit Card
+Coconut,24.9,24.0,34.0,6.1,218.9,27.1,99.5,1.34,Kisan Credit Card
+Apple,21.1,129.8,196.1,5.7,105.4,23.5,94.5,0.23,State Subsidy A
+Mothbeans,35.6,38.5,23.7,8.4,66.6,28.0,50.9,3.06,State Subsidy A
+Lentil,21.5,76.1,19.0,6.9,51.8,21.5,64.9,2.72,PM-Kisan
+Rice,75.0,37.3,44.7,6.8,252.0,25.5,87.3,4.67,Paramparagat Krishi
+Mungbean,37.1,37.1,20.1,6.6,51.6,27.7,86.3,3.8,None
+Mango,26.0,18.5,25.1,4.6,85.6,28.5,47.6,1.81,State Subsidy A
+Pomegranate,34.1,27.4,42.0,6.3,110.0,18.5,88.8,3.61,None
+Jute,82.4,42.2,41.7,7.0,152.9,25.4,78.6,0.64,Kisan Credit Card
+Lentil,21.2,70.2,16.4,6.1,45.4,26.5,64.5,0.75,PM-Kisan
+Blackgram,41.1,56.5,19.0,7.0,64.3,25.7,62.6,1.68,Soil Health Card
+Papaya,41.7,64.4,51.5,6.6,235.7,40.9,90.8,1.38,PM-Kisan
+Kidneybeans,36.1,64.2,22.5,5.5,101.7,23.7,28.0,1.0,Kisan Credit Card
+Banana,97.5,89.3,54.3,6.3,113.8,27.3,82.3,1.28,PM-Kisan
+Chickpea,34.3,78.2,78.2,7.7,64.1,17.3,24.9,1.99,PM-Kisan
+Rice,71.3,51.6,40.1,7.2,188.5,24.4,93.1,1.58,Soil Health Card
+Cotton,136.5,58.0,21.2,8.0,78.4,22.2,58.3,1.4,State Subsidy A
+Lentil,24.4,59.3,18.3,6.5,52.0,25.7,65.5,5.1,Fasal Bima Yojana
+Muskmelon,106.3,22.0,50.8,6.3,26.7,29.9,92.0,2.42,None
+Watermelon,102.9,22.9,48.0,6.5,42.9,25.9,80.5,3.08,State Subsidy A
+Grapes,38.1,135.5,197.5,6.2,74.8,17.6,79.0,2.29,Soil Health Card
+Cotton,137.5,36.8,23.3,6.8,80.9,24.4,57.1,4.44,Kisan Credit Card
+Watermelon,115.2,22.3,47.1,6.3,58.6,25.3,87.6,4.27,Fasal Bima Yojana
+Mothbeans,16.8,54.7,21.9,8.0,48.3,26.5,59.2,3.47,None
+Grapes,37.9,134.7,195.6,5.5,75.0,19.8,82.8,1.94,PM-Kisan
+Lentil,15.4,73.3,18.1,6.9,41.7,25.3,67.4,0.99,PM-Kisan
+Coffee,102.3,23.4,30.1,7.0,179.5,23.5,65.7,4.74,Fasal Bima Yojana
+Rice,79.3,51.0,43.3,7.2,199.9,25.2,83.8,3.02,Paramparagat Krishi
+Pigeonpeas,15.5,62.4,16.3,5.4,98.9,23.6,56.1,1.99,Soil Health Card
+Grapes,22.1,131.1,199.4,6.4,72.4,8.9,80.4,3.69,Soil Health Card
+Jute,76.0,41.9,35.9,6.5,194.7,25.1,85.7,3.53,Fasal Bima Yojana
+Muskmelon,117.5,26.5,53.9,6.8,20.1,28.8,93.6,3.25,State Subsidy A
+Grapes,38.7,131.2,195.5,5.7,70.6,24.3,79.0,2.94,Kisan Credit Card
+Pomegranate,30.8,28.2,37.3,7.0,118.8,23.7,85.7,5.78,State Subsidy A
+Pigeonpeas,24.1,73.9,17.0,5.8,94.5,28.3,52.7,1.72,Kisan Credit Card
+Chickpea,23.0,79.2,82.2,7.6,79.5,21.8,16.9,4.3,Fasal Bima Yojana
+Coffee,99.3,17.9,29.9,6.5,119.9,25.9,60.2,2.31,Fasal Bima Yojana
+Mothbeans,36.9,44.6,23.4,6.5,34.0,26.3,63.0,1.6,PM-Kisan
+Chickpea,36.7,67.8,75.6,6.7,75.9,19.2,18.7,0.63,PM-Kisan
+Papaya,45.7,60.2,47.8,6.8,239.2,39.9,90.7,2.08,State Subsidy A
+Coffee,94.1,23.5,31.7,6.0,149.2,27.4,69.0,1.59,PM-Kisan
+Banana,96.6,86.5,48.1,5.9,108.4,27.2,75.7,2.86,Fasal Bima Yojana
+Watermelon,80.8,29.5,48.4,6.7,41.0,25.7,85.2,5.95,Fasal Bima Yojana
+Mango,15.9,28.2,25.6,4.8,92.0,27.2,49.0,1.1,Kisan Credit Card
+Coconut,15.4,17.9,30.2,6.0,227.5,27.2,94.4,2.98,Fasal Bima Yojana
+Jute,62.6,48.6,40.7,6.2,174.1,24.3,72.4,1.4,State Subsidy A
+Coffee,104.2,19.7,25.2,7.4,176.9,23.5,67.3,0.49,Soil Health Card
+Kidneybeans,23.9,63.3,23.4,5.6,140.9,16.7,21.0,4.8,Paramparagat Krishi
+Mothbeans,36.1,40.5,19.0,5.3,35.1,26.2,48.7,4.22,Kisan Credit Card
+Muskmelon,81.2,18.5,52.2,6.3,21.0,28.2,88.8,6.4,Fasal Bima Yojana
+Muskmelon,107.4,18.6,50.7,6.1,29.2,29.6,93.2,2.31,State Subsidy A
+Coconut,38.0,25.1,27.0,5.9,143.1,27.3,91.9,0.77,PM-Kisan
+Coffee,118.8,24.4,26.0,6.9,120.1,24.2,56.2,4.19,Fasal Bima Yojana
+Mango,39.0,35.2,27.6,5.2,89.8,33.7,46.2,5.43,Paramparagat Krishi
+Muskmelon,88.4,28.3,47.5,6.1,27.4,29.9,89.9,1.9,PM-Kisan
+Pigeonpeas,38.3,77.7,24.9,6.7,108.2,20.3,45.9,3.03,PM-Kisan
+Mungbean,29.7,53.5,16.0,6.8,56.0,27.7,87.8,3.94,None
+Maize,70.4,46.3,23.0,5.7,71.7,23.2,66.2,2.82,Paramparagat Krishi
+Watermelon,117.1,21.0,50.6,6.5,41.0,26.3,86.1,4.53,PM-Kisan
+Mothbeans,19.6,57.8,18.2,4.3,42.4,29.1,48.8,2.93,None
+Mothbeans,19.7,35.1,15.0,6.5,61.5,31.7,48.5,6.24,Soil Health Card
+Kidneybeans,35.9,75.4,18.9,5.5,140.3,17.1,23.4,3.89,Fasal Bima Yojana
+Maize,90.5,51.0,22.1,6.1,107.7,18.7,65.6,1.99,Paramparagat Krishi
+Muskmelon,88.2,29.1,54.5,6.3,27.1,29.9,92.1,0.17,Soil Health Card
+Blackgram,59.7,55.5,23.4,6.8,73.7,29.3,65.8,4.49,None
+Mango,31.5,16.6,34.2,4.6,96.0,33.6,45.9,1.61,PM-Kisan
+Cotton,112.7,39.1,18.6,7.9,82.2,25.3,65.6,4.23,Soil Health Card
+Mungbean,35.8,49.3,15.7,6.3,35.9,27.3,89.9,0.97,PM-Kisan
+Kidneybeans,33.3,66.5,19.9,5.5,109.8,16.8,20.1,1.16,Fasal Bima Yojana
+Mango,19.1,25.6,32.3,6.1,90.1,31.1,53.2,2.19,Paramparagat Krishi
+Rice,74.4,46.9,41.4,6.7,204.8,23.1,83.7,4.04,None
+Orange,20.7,25.7,6.7,6.7,102.5,29.1,94.2,2.45,Fasal Bima Yojana
+Jute,74.7,47.1,40.1,7.4,159.7,23.1,71.9,2.79,Fasal Bima Yojana
+Mungbean,34.2,36.2,20.0,6.3,54.9,28.2,86.6,1.77,State Subsidy A
+Papaya,55.3,61.4,45.1,6.6,233.7,31.1,90.2,3.06,None
+Pigeonpeas,28.5,55.3,22.5,6.4,104.5,26.7,43.9,1.69,Kisan Credit Card
+Rice,68.3,44.0,35.8,6.6,254.3,22.1,90.9,1.41,PM-Kisan
+Maize,87.4,49.7,16.4,5.6,62.3,19.1,61.6,4.37,Kisan Credit Card
+Maize,98.7,53.9,15.5,7.0,72.2,22.9,56.8,3.8,Fasal Bima Yojana
+Mothbeans,17.0,53.0,20.7,8.1,54.1,28.4,41.2,3.5,None
+Coconut,37.1,26.8,28.7,6.2,177.0,28.0,94.9,4.25,Fasal Bima Yojana
+Mothbeans,32.6,42.4,16.3,4.4,56.8,26.9,58.2,1.9,Paramparagat Krishi
+Mango,37.3,22.8,30.3,5.0,89.0,32.7,52.6,5.86,Soil Health Card
+Kidneybeans,16.3,59.0,15.8,6.0,107.3,24.1,22.0,0.29,Kisan Credit Card
+Pigeonpeas,25.2,70.9,15.3,5.8,128.1,29.5,56.2,6.0,Paramparagat Krishi
+Mungbean,37.1,56.7,18.4,7.0,41.8,27.6,80.2,1.51,Kisan Credit Card
+Jute,77.9,47.5,36.3,6.1,163.4,25.4,83.2,3.62,Paramparagat Krishi
+Coffee,116.3,28.5,34.3,6.8,167.9,26.3,60.3,6.69,Soil Health Card
+Cotton,124.5,57.3,20.8,6.4,79.7,23.6,58.6,1.74,Kisan Credit Card
+Muskmelon,91.7,17.5,48.6,6.5,27.0,29.8,91.0,3.85,Fasal Bima Yojana
+Coffee,119.7,19.5,25.0,7.1,175.4,27.9,64.7,2.96,State Subsidy A
+Chickpea,51.4,63.5,80.1,7.5,84.5,21.6,17.9,3.88,Paramparagat Krishi
+Muskmelon,80.1,20.9,49.7,6.7,28.9,27.6,93.1,2.1,PM-Kisan
+Grapes,31.3,131.4,196.6,6.1,69.7,29.0,78.9,1.68,PM-Kisan
+Pomegranate,27.3,25.2,38.9,7.0,106.3,20.6,90.0,1.95,PM-Kisan
+Papaya,51.5,48.0,47.1,6.9,174.2,32.1,92.0,3.77,Kisan Credit Card
+Mungbean,15.3,43.9,17.1,6.4,56.7,29.3,80.7,3.9,PM-Kisan
+Orange,32.4,17.1,10.3,7.3,116.0,19.7,93.3,2.32,Paramparagat Krishi
+Chickpea,28.6,71.2,77.4,6.6,78.5,18.9,15.5,5.5,Fasal Bima Yojana
+Orange,25.5,26.6,5.0,6.9,102.9,21.0,93.9,1.34,Kisan Credit Card
+Blackgram,47.9,59.9,18.7,6.7,61.0,26.3,67.1,2.37,Paramparagat Krishi
+Jute,86.4,58.1,40.8,7.1,161.2,23.2,87.9,0.47,PM-Kisan
+Coconut,16.9,21.6,33.1,6.3,132.2,25.4,92.2,3.46,State Subsidy A
+Cotton,120.9,53.0,20.7,6.7,68.7,23.4,69.7,2.95,Kisan Credit Card
+Apple,24.3,125.3,201.9,6.0,110.4,22.5,92.0,1.31,State Subsidy A
+Pigeonpeas,17.6,63.6,18.2,6.7,91.4,24.1,55.9,0.7,Fasal Bima Yojana
+Pigeonpeas,31.7,68.6,18.6,5.6,92.8,18.0,46.3,3.51,Soil Health Card
+Mango,15.8,21.6,28.8,6.1,92.9,27.7,45.9,3.45,None
+Orange,15.4,27.4,8.6,7.2,117.8,17.4,91.2,2.31,None
+Maize,62.4,56.3,24.3,6.9,65.6,25.4,65.9,1.63,PM-Kisan
+Chickpea,34.6,56.9,81.8,7.1,79.4,17.1,19.8,1.89,PM-Kisan
+Coconut,22.3,28.7,27.1,5.9,176.7,26.0,95.3,1.16,Soil Health Card
+Grapes,22.0,142.8,204.0,5.9,73.1,11.4,79.0,5.13,State Subsidy A
+Lentil,21.9,66.4,16.1,6.2,46.5,28.7,65.1,3.07,Paramparagat Krishi
+Rice,67.7,41.0,44.8,7.0,196.3,24.9,81.1,0.58,Fasal Bima Yojana
+Mothbeans,18.2,52.6,19.2,4.3,31.9,28.1,49.0,0.91,PM-Kisan
+Chickpea,39.5,72.2,76.7,7.5,80.9,18.1,16.9,2.59,Fasal Bima Yojana
+Mango,24.4,23.6,27.1,5.2,95.7,28.2,45.1,2.08,PM-Kisan
+Apple,19.7,125.4,200.0,6.4,122.1,21.4,94.5,7.5,Kisan Credit Card
+Watermelon,100.9,15.5,48.8,6.2,50.2,25.7,80.4,3.66,Soil Health Card
+Pigeonpeas,27.9,60.6,23.0,5.7,144.5,21.2,41.5,5.04,Kisan Credit Card
+Coffee,114.2,15.6,34.9,7.1,113.1,27.6,63.0,1.46,Paramparagat Krishi
+Jute,67.2,59.1,37.9,6.4,190.8,24.9,74.4,3.54,Fasal Bima Yojana
+Pomegranate,36.8,17.4,39.0,5.5,106.6,19.8,94.7,5.48,State Subsidy A
+Mungbean,15.1,59.3,21.1,6.5,46.2,28.6,84.5,3.78,PM-Kisan
+Blackgram,37.6,56.1,18.9,6.9,63.1,25.3,61.6,4.35,Soil Health Card
+Pomegranate,16.4,21.6,40.0,6.5,100.9,22.7,91.5,1.23,PM-Kisan
+Apple,21.4,142.7,199.3,6.5,110.8,22.8,91.7,0.77,Fasal Bima Yojana
+Pomegranate,17.3,23.9,36.1,7.2,110.3,21.5,93.3,3.07,Kisan Credit Card
+Pomegranate,29.2,17.5,40.8,6.0,103.7,18.0,87.4,3.54,PM-Kisan
+Orange,32.2,15.1,13.8,6.5,100.6,30.1,91.1,2.02,Kisan Credit Card
+Rice,87.1,41.0,37.4,6.7,230.3,25.8,90.9,2.18,PM-Kisan
+Chickpea,49.7,62.4,83.3,7.8,79.2,19.5,23.8,0.99,Paramparagat Krishi
+Grapes,39.7,122.3,197.3,6.3,73.0,31.4,82.5,2.12,None
+Banana,112.0,71.6,50.3,5.8,108.7,29.7,79.3,3.25,Paramparagat Krishi
+Mothbeans,19.4,47.9,18.2,4.2,65.3,28.0,56.8,5.2,Fasal Bima Yojana
+Mothbeans,18.4,42.1,22.5,7.8,33.0,31.9,52.1,1.21,Paramparagat Krishi
+Papaya,48.9,50.9,47.7,6.9,200.4,25.4,94.8,3.77,None
+Mothbeans,26.3,58.0,17.7,5.7,62.8,27.6,49.8,2.58,Soil Health Card
+Kidneybeans,29.0,79.1,19.4,5.5,113.0,15.9,19.8,1.19,PM-Kisan
+Chickpea,55.1,74.1,76.0,6.9,78.2,17.7,17.0,2.06,Fasal Bima Yojana
+Jute,83.8,49.8,39.0,6.9,186.5,23.7,76.7,0.91,Soil Health Card
+Orange,39.8,29.9,10.0,6.2,114.7,32.6,94.0,0.4,Kisan Credit Card
+Papaya,40.1,62.8,49.6,6.8,155.8,29.2,93.2,3.31,Fasal Bima Yojana
+Banana,119.9,81.6,52.6,6.3,92.5,28.9,80.7,1.46,PM-Kisan
+Pomegranate,22.8,15.4,35.1,6.5,119.8,19.7,91.5,2.38,Paramparagat Krishi
+Mungbean,29.6,43.1,16.9,6.8,40.3,27.7,88.4,1.35,Soil Health Card
+Orange,32.1,23.5,9.3,6.4,116.7,26.0,94.9,2.06,Fasal Bima Yojana
+Coconut,31.8,27.4,30.6,6.2,163.1,28.5,95.7,0.73,State Subsidy A
+Watermelon,82.0,22.1,53.9,6.2,44.2,26.7,83.4,0.9,Soil Health Card
+Rice,74.4,57.3,40.9,7.1,272.8,21.8,81.6,4.83,Fasal Bima Yojana
+Rice,66.0,43.5,43.6,7.2,287.7,23.0,87.1,4.77,Kisan Credit Card
+Jute,71.8,50.5,42.6,6.4,185.9,25.3,73.6,2.08,Fasal Bima Yojana
+Mothbeans,37.4,36.7,22.1,6.4,52.7,27.8,46.6,5.0,Paramparagat Krishi
+Rice,64.5,43.8,36.4,6.9,218.5,25.8,92.9,3.64,None
+Mothbeans,38.2,44.2,16.7,7.4,38.0,27.9,56.8,3.14,None
+Coffee,90.0,15.3,25.0,6.5,184.6,24.2,68.7,2.63,PM-Kisan
+Kidneybeans,38.1,74.2,20.7,5.9,124.5,24.3,18.1,1.44,Kisan Credit Card
+Orange,26.8,16.8,12.1,7.3,119.6,16.0,93.5,2.16,Soil Health Card
+Mungbean,34.1,43.6,23.7,7.0,56.8,29.8,83.6,3.78,Kisan Credit Card
+Muskmelon,117.8,30.0,45.8,6.2,21.2,29.0,94.7,3.15,Soil Health Card
+Banana,96.8,88.2,52.2,6.3,119.5,27.5,78.9,3.88,Kisan Credit Card
+Coconut,20.5,18.8,25.9,5.9,157.1,26.2,95.1,4.83,Soil Health Card
+Orange,25.9,26.0,14.2,6.9,103.3,24.9,92.1,1.84,Soil Health Card
+Mungbean,21.8,55.9,15.2,6.6,38.3,29.7,80.9,1.15,PM-Kisan
+Banana,119.9,89.9,47.7,6.2,93.4,28.4,82.0,3.05,State Subsidy A
+Apple,30.3,133.5,198.8,6.1,106.9,23.8,93.8,1.43,PM-Kisan
+Blackgram,59.1,78.8,16.4,7.3,74.7,27.6,67.9,3.74,None
+Pigeonpeas,36.0,60.1,20.6,5.0,108.2,22.3,45.1,1.36,PM-Kisan
+Jute,80.2,53.2,36.7,6.3,195.8,25.5,89.5,2.53,Fasal Bima Yojana
+Mango,33.4,15.1,26.2,6.6,99.2,30.8,53.0,3.73,Kisan Credit Card
+Pigeonpeas,16.4,76.8,21.6,6.4,126.0,21.7,53.2,0.97,Paramparagat Krishi
+Coffee,84.5,18.6,25.2,7.4,122.5,23.3,67.5,0.86,PM-Kisan
+Pomegranate,33.7,25.9,39.8,6.1,109.1,20.3,85.4,3.84,Paramparagat Krishi
+Pomegranate,16.0,28.1,38.1,6.3,111.1,19.2,85.9,3.51,PM-Kisan
+Banana,114.1,85.7,52.6,6.2,106.5,29.2,75.8,1.07,PM-Kisan
+Orange,25.9,20.7,14.2,7.2,106.2,30.7,92.4,3.57,Fasal Bima Yojana
+Muskmelon,108.7,27.7,46.1,6.5,29.4,27.2,92.8,2.71,Fasal Bima Yojana
+Chickpea,25.5,63.4,79.6,8.0,86.4,22.0,17.7,1.82,PM-Kisan
+Jute,84.1,46.4,35.1,7.2,197.1,25.3,85.3,2.24,Fasal Bima Yojana
+Lentil,29.7,56.0,24.0,6.4,44.0,24.5,66.5,4.36,Fasal Bima Yojana
+Orange,23.9,26.9,10.6,7.1,119.7,22.2,92.9,0.43,State Subsidy A
+Jute,87.9,48.5,42.2,6.8,171.1,25.0,75.8,1.61,Paramparagat Krishi
+Watermelon,112.6,15.1,50.3,6.7,41.1,24.4,80.9,2.21,Soil Health Card
+Muskmelon,97.0,22.9,52.2,6.1,23.1,29.4,89.0,0.46,Paramparagat Krishi
+Cotton,119.9,47.3,24.6,7.4,86.7,24.4,63.3,2.04,Fasal Bima Yojana
+Banana,84.4,71.7,53.8,5.6,113.2,29.6,84.5,2.55,Paramparagat Krishi
+Orange,33.5,28.1,10.3,6.4,104.0,18.5,93.5,2.11,Fasal Bima Yojana
+Watermelon,93.8,18.5,51.0,6.6,46.9,25.1,85.5,5.69,Paramparagat Krishi
+Mothbeans,22.3,55.4,23.9,7.4,57.5,28.6,45.4,1.39,PM-Kisan
+Orange,31.5,28.7,12.9,7.3,116.5,31.6,94.6,4.22,State Subsidy A
+Maize,96.9,52.0,24.7,6.4,96.9,23.1,73.0,2.65,Kisan Credit Card
+Pigeonpeas,25.8,56.8,15.2,6.1,107.9,23.4,48.7,2.36,Soil Health Card
+Blackgram,38.6,75.8,19.6,6.6,67.0,28.3,62.4,2.75,Fasal Bima Yojana
+Banana,119.6,80.4,47.4,6.0,91.8,26.1,78.6,1.7,Kisan Credit Card
+Blackgram,54.9,76.6,16.2,7.2,66.8,28.0,61.4,2.53,State Subsidy A
+Blackgram,38.0,58.8,23.7,6.8,70.2,29.9,66.6,4.46,Soil Health Card
+Coconut,21.6,15.9,32.8,5.8,168.0,26.7,96.6,3.13,Soil Health Card
+Apple,20.2,121.4,200.4,5.9,107.4,22.0,90.2,2.04,State Subsidy A
+Cotton,100.6,47.0,25.0,8.0,78.8,22.0,62.3,4.65,Soil Health Card
+Watermelon,103.5,27.7,54.6,6.8,45.3,26.7,80.6,2.55,None
+Rice,77.6,42.7,39.4,6.5,299.2,20.2,88.0,4.0,PM-Kisan
+Mango,26.4,21.2,26.7,6.7,98.2,32.2,45.9,0.51,PM-Kisan
+Orange,17.7,17.6,9.2,7.3,118.0,28.4,93.9,3.77,Paramparagat Krishi
+Grapes,22.3,140.8,202.3,6.2,66.8,33.7,80.8,1.67,Kisan Credit Card
+Kidneybeans,27.6,63.6,21.1,5.9,136.5,15.6,21.6,2.65,Soil Health Card
+Rice,77.3,44.4,44.5,7.0,267.6,21.0,91.6,1.91,PM-Kisan
+Papaya,31.5,61.1,46.0,6.6,179.4,33.5,93.4,2.56,Soil Health Card
+Cotton,131.6,54.9,19.4,7.3,61.3,24.9,62.4,5.47,PM-Kisan
+Orange,32.9,22.8,13.1,6.5,105.7,19.0,93.2,2.55,PM-Kisan
+Banana,104.1,79.9,49.2,6.2,119.4,28.1,84.7,2.5,PM-Kisan
+Coconut,28.7,24.1,26.7,5.7,164.8,25.2,98.9,3.54,Kisan Credit Card
+Watermelon,86.9,24.5,49.4,6.8,48.8,25.2,82.9,2.26,Soil Health Card
+Kidneybeans,22.1,59.5,20.1,5.7,93.4,17.3,18.3,3.48,PM-Kisan
+Mothbeans,36.5,54.5,15.5,6.2,60.2,29.9,64.6,5.47,Paramparagat Krishi
+Watermelon,114.1,17.1,52.3,6.9,52.9,24.4,82.9,6.46,PM-Kisan
+Grapes,35.5,136.5,199.0,6.2,66.3,26.3,80.8,5.5,PM-Kisan
+Pomegranate,17.9,18.7,43.6,6.6,103.6,23.2,85.4,2.94,Soil Health Card
+Kidneybeans,16.5,57.9,18.8,5.7,99.6,21.8,20.2,0.78,Soil Health Card
+Mungbean,32.4,38.2,15.2,6.9,40.3,29.6,80.3,6.98,Paramparagat Krishi
+Blackgram,35.2,67.3,23.7,7.3,69.6,25.4,63.9,4.05,State Subsidy A
+Blackgram,53.4,72.9,18.0,7.4,60.9,26.2,62.2,2.87,Kisan Credit Card
+Papaya,51.4,59.5,47.5,6.5,120.5,35.0,95.0,2.36,Fasal Bima Yojana
+Mothbeans,36.1,39.6,15.8,4.8,59.7,31.0,46.6,4.05,Paramparagat Krishi
+Banana,98.5,86.4,54.5,6.2,116.3,29.7,82.6,1.5,PM-Kisan
+Muskmelon,80.7,18.1,52.8,6.4,27.8,27.8,92.5,6.86,State Subsidy A
+Lentil,20.9,79.2,23.8,7.2,43.8,19.8,62.6,2.19,Fasal Bima Yojana
+Jute,84.0,40.5,39.1,6.1,194.1,24.0,74.9,3.71,Fasal Bima Yojana
+Lentil,38.3,70.8,21.8,6.5,48.7,22.0,67.0,2.63,Soil Health Card
+Pomegranate,17.5,17.9,43.4,6.9,110.3,23.1,88.7,2.67,Kisan Credit Card
+Papaya,33.7,64.2,54.3,6.6,138.7,25.1,90.1,1.73,PM-Kisan
+Mango,18.5,31.9,31.6,5.6,96.5,35.0,52.8,0.43,State Subsidy A
+Muskmelon,102.5,15.3,54.5,6.4,25.6,29.3,88.4,2.38,Fasal Bima Yojana
+Apple,33.3,125.2,198.3,5.7,120.1,21.4,94.8,4.93,Kisan Credit Card
+Lentil,20.9,75.6,21.7,6.9,40.2,23.0,65.1,0.98,Kisan Credit Card
+Mothbeans,25.7,44.0,16.5,7.6,35.3,28.3,42.1,1.73,Paramparagat Krishi
+Coffee,90.4,28.4,34.3,6.5,174.5,24.3,61.2,4.0,Kisan Credit Card
+Pigeonpeas,28.9,67.8,18.4,6.7,136.0,18.5,58.5,3.31,PM-Kisan
+Papaya,39.0,45.9,48.4,7.0,196.4,39.6,90.8,2.51,Paramparagat Krishi
+Maize,97.0,49.0,16.2,5.7,109.8,24.5,61.9,1.75,State Subsidy A
+Mungbean,36.1,38.2,21.0,6.4,40.8,27.4,80.1,1.13,PM-Kisan
+Mungbean,31.1,45.9,24.3,6.9,50.5,27.5,81.6,0.64,Paramparagat Krishi
+Lentil,24.6,67.0,24.1,7.2,42.0,28.3,68.9,1.79,PM-Kisan
+Watermelon,82.5,16.7,52.0,6.0,52.4,26.7,83.9,3.62,Soil Health Card
+Coffee,80.8,27.2,32.8,6.7,197.0,24.1,59.9,1.83,Kisan Credit Card
+Orange,30.4,20.0,13.4,6.5,104.1,11.8,91.3,3.88,Soil Health Card
+Maize,71.7,41.3,17.2,6.8,98.0,19.6,65.8,0.99,Kisan Credit Card
+Rice,83.6,54.2,43.7,7.5,234.1,22.6,90.0,1.49,Paramparagat Krishi
+Muskmelon,98.9,28.4,52.5,6.5,28.3,28.8,91.1,4.77,Fasal Bima Yojana
+Coconut,23.1,20.6,26.9,6.4,133.0,25.3,94.8,3.9,Soil Health Card
+Mungbean,21.9,49.4,21.6,6.9,54.1,29.9,86.3,2.23,State Subsidy A
+Grapes,32.6,126.9,198.3,6.4,74.2,20.1,79.9,3.18,None
+Rice,82.6,51.0,39.1,6.7,198.6,24.8,87.2,6.4,PM-Kisan
+Muskmelon,80.1,27.7,52.5,6.5,20.5,29.8,94.9,1.89,PM-Kisan
+Muskmelon,107.7,23.0,50.3,6.2,25.2,27.0,93.6,0.51,Paramparagat Krishi
+Pomegranate,35.5,15.8,35.6,7.1,112.7,20.5,91.7,3.86,Fasal Bima Yojana
+Pigeonpeas,21.6,70.9,20.8,6.5,98.1,18.9,50.3,0.99,PM-Kisan
+Apple,18.7,132.7,196.6,6.4,108.1,22.1,90.1,2.03,None
+Cotton,104.6,48.6,24.1,7.5,74.3,24.9,60.3,0.76,PM-Kisan
+Muskmelon,94.9,15.6,54.2,6.7,21.0,27.8,92.9,3.37,State Subsidy A
+Cotton,135.3,58.3,19.2,7.7,83.9,23.1,66.4,2.57,Fasal Bima Yojana
+Coconut,36.1,30.0,26.5,6.1,209.0,26.0,94.9,1.97,State Subsidy A
+Banana,108.6,71.3,48.0,6.1,94.3,27.5,77.1,1.93,Soil Health Card
+Watermelon,99.2,17.3,49.9,6.3,44.5,24.4,82.5,3.24,Kisan Credit Card
+Jute,69.6,44.3,44.1,7.5,200.0,23.7,74.3,0.21,State Subsidy A
+Cotton,106.2,51.6,15.3,7.5,60.8,24.6,57.9,2.88,Kisan Credit Card
+Grapes,32.6,138.6,204.1,5.8,72.2,21.5,79.8,2.62,State Subsidy A
+Pigeonpeas,21.2,72.6,22.3,5.9,94.2,25.3,41.6,4.3,Fasal Bima Yojana
+Blackgram,58.7,75.1,15.3,6.8,72.7,29.6,61.1,2.01,State Subsidy A
+Pomegranate,29.4,24.6,36.2,5.8,102.1,18.9,86.0,0.85,Soil Health Card
+Cotton,137.4,56.6,19.4,6.2,84.7,23.7,51.4,0.28,Kisan Credit Card
+Pigeonpeas,21.7,59.8,21.7,6.2,119.5,25.4,45.9,3.09,Fasal Bima Yojana
+Chickpea,32.0,71.2,82.9,6.2,65.8,19.9,19.6,0.97,Kisan Credit Card
+Chickpea,34.9,71.7,76.4,6.4,64.6,17.4,23.3,1.27,PM-Kisan
+Coconut,20.7,20.9,32.5,6.4,200.5,25.0,97.3,6.81,PM-Kisan
+Chickpea,52.5,71.0,84.7,7.3,76.6,20.9,24.3,1.69,PM-Kisan
+Mango,26.6,33.7,28.3,6.1,93.4,32.1,46.4,1.6,Kisan Credit Card
+Kidneybeans,31.6,78.5,23.1,5.9,147.5,15.1,21.2,6.46,PM-Kisan
+Chickpea,24.9,66.7,82.5,6.6,76.2,22.0,22.3,4.83,None
+Muskmelon,104.8,28.9,46.4,6.7,23.7,29.4,93.4,1.85,State Subsidy A
+Pomegranate,18.4,25.9,36.2,5.9,112.6,22.6,85.0,2.88,PM-Kisan
+Banana,94.8,78.1,47.6,6.3,104.5,27.4,81.0,1.26,Kisan Credit Card
+Grapes,18.3,135.1,200.4,5.5,71.9,23.4,78.7,2.59,Fasal Bima Yojana
+Coffee,88.6,19.6,25.8,6.9,174.5,25.5,64.8,2.24,PM-Kisan
+Pigeonpeas,18.3,57.1,21.8,6.2,132.4,23.4,49.4,3.03,None
+Lentil,19.5,71.3,20.0,6.2,45.4,24.1,68.7,4.35,Paramparagat Krishi
+Muskmelon,119.4,22.5,49.7,6.5,26.5,27.7,94.1,0.28,Paramparagat Krishi
+Coffee,111.5,20.0,28.9,7.5,139.6,25.9,66.3,0.38,Fasal Bima Yojana
+Mothbeans,34.1,37.4,23.4,6.7,65.3,29.2,52.7,3.44,State Subsidy A
+Orange,35.6,15.3,6.3,6.9,112.0,13.3,95.0,4.63,Fasal Bima Yojana
+Jute,63.6,48.1,43.8,6.7,177.2,23.6,76.5,1.98,Paramparagat Krishi
+Pomegranate,27.0,21.6,44.4,5.5,114.7,18.8,87.1,2.37,Fasal Bima Yojana
+Papaya,42.0,63.0,47.5,6.7,195.2,43.8,93.5,1.69,PM-Kisan
+Mothbeans,34.6,39.4,15.9,8.3,35.3,31.4,59.5,4.14,Kisan Credit Card
+Pigeonpeas,32.0,64.8,17.2,6.0,135.4,19.7,51.7,3.0,Paramparagat Krishi
+Maize,90.1,42.3,19.8,5.6,102.2,19.6,71.5,0.36,PM-Kisan
+Grapes,15.5,144.3,197.4,5.8,70.8,10.1,80.2,4.96,Fasal Bima Yojana
+Orange,25.3,24.7,8.9,6.6,118.7,12.3,91.8,5.85,Soil Health Card
+Rice,84.3,41.9,39.3,6.4,287.0,24.5,83.7,3.17,Paramparagat Krishi
+Maize,72.3,44.3,22.0,6.7,65.5,21.8,73.0,2.43,Kisan Credit Card
+Mungbean,36.3,48.3,17.2,6.4,42.7,27.3,86.5,2.81,PM-Kisan
+Apple,21.1,121.2,196.3,6.0,114.0,23.3,90.4,2.06,Kisan Credit Card
+Mango,35.2,30.2,33.5,6.9,98.3,30.8,51.3,3.79,None
+Cotton,138.6,40.7,18.4,6.7,73.6,22.7,62.3,1.23,Paramparagat Krishi
+Lentil,26.4,57.2,20.6,6.2,40.6,28.6,63.7,2.87,Paramparagat Krishi
+Pomegranate,20.5,20.5,36.0,6.6,111.6,20.1,87.7,0.78,PM-Kisan
+Watermelon,85.5,29.2,54.3,6.3,43.2,24.0,87.6,4.25,State Subsidy A
+Kidneybeans,18.2,73.7,22.1,5.6,127.9,21.0,20.1,2.43,Fasal Bima Yojana
+Jute,60.1,43.1,38.1,6.7,163.6,24.8,85.1,4.53,Fasal Bima Yojana
+Chickpea,53.1,76.0,80.7,7.4,86.3,20.0,23.6,3.57,Fasal Bima Yojana
+Maize,78.4,47.8,24.1,6.5,99.0,22.3,73.8,1.82,Fasal Bima Yojana
+Kidneybeans,30.4,60.7,24.3,5.7,140.7,22.6,22.9,2.86,Paramparagat Krishi
+Lentil,25.6,76.7,15.6,7.5,46.5,25.8,61.0,2.81,State Subsidy A
+Blackgram,58.9,66.6,19.7,6.9,67.1,25.5,64.2,4.43,Kisan Credit Card
+Rice,82.5,48.4,35.7,6.0,228.8,24.9,84.1,5.85,Paramparagat Krishi
+Blackgram,43.9,73.9,20.5,7.1,66.4,29.2,68.9,2.66,Kisan Credit Card
+Mothbeans,35.3,36.9,16.0,5.3,38.8,31.0,56.9,1.16,PM-Kisan
+Grapes,28.1,125.9,203.1,5.6,66.4,25.0,81.0,2.12,Kisan Credit Card
+Pomegranate,16.9,25.5,37.2,5.6,101.7,20.4,89.3,1.95,Soil Health Card
+Grapes,23.0,143.7,201.6,5.7,72.9,15.5,78.0,4.97,Soil Health Card
+Blackgram,51.3,56.7,18.6,6.8,70.0,28.0,63.9,2.18,None
+Kidneybeans,26.7,67.0,19.9,5.8,111.4,16.6,25.9,1.12,PM-Kisan
+Mango,25.1,22.3,32.5,6.1,98.0,28.9,52.7,0.62,Paramparagat Krishi
+Cotton,112.3,55.5,17.1,7.5,66.4,24.0,52.6,1.69,PM-Kisan
+Mothbeans,15.8,50.3,18.9,4.6,38.2,26.5,62.6,3.52,Kisan Credit Card
+Muskmelon,97.7,27.3,51.4,6.7,28.1,29.5,90.9,0.42,Soil Health Card
+Lentil,25.5,75.4,24.3,6.2,39.2,23.5,67.8,1.07,Soil Health Card
+Cotton,124.9,44.2,23.7,6.4,61.1,22.5,63.2,1.64,PM-Kisan
+Pomegranate,21.4,24.3,43.7,7.0,100.8,18.3,94.4,1.63,Soil Health Card
+Chickpea,51.0,65.7,78.2,7.1,84.1,18.2,20.5,5.07,Kisan Credit Card
+Orange,20.5,29.1,8.6,7.1,104.2,21.3,91.7,2.57,Fasal Bima Yojana
+Mango,30.5,25.3,33.6,6.6,85.7,33.9,50.7,2.25,Paramparagat Krishi
+Jute,68.0,53.2,35.4,7.2,175.2,24.2,86.0,0.95,Paramparagat Krishi
+Maize,77.1,35.1,17.6,5.7,77.8,24.9,63.4,0.96,Kisan Credit Card
+Coffee,80.2,23.7,34.0,7.3,166.8,23.2,52.8,0.73,PM-Kisan
+Lentil,19.6,77.1,21.0,6.1,48.9,27.0,69.2,1.13,Kisan Credit Card
+Mungbean,29.3,54.7,20.6,6.4,55.6,28.3,87.3,5.64,None
+Chickpea,22.2,56.5,77.5,6.2,71.9,20.5,20.4,1.46,PM-Kisan
+Muskmelon,86.2,21.2,47.5,6.2,26.9,27.4,94.0,1.26,Soil Health Card
+Coffee,93.6,29.4,31.5,6.2,141.2,27.9,59.6,1.78,Paramparagat Krishi
+Mango,23.3,16.4,30.4,5.2,94.3,31.3,54.1,0.78,Soil Health Card
+Mango,27.2,24.2,31.4,5.1,85.9,33.1,46.2,3.66,Fasal Bima Yojana
+Pigeonpeas,28.6,77.5,23.2,5.5,104.0,19.1,45.3,4.9,Soil Health Card
+Maize,79.2,53.2,16.1,6.2,89.8,23.2,62.0,0.46,Soil Health Card
+Apple,31.1,124.8,203.4,5.6,107.9,21.1,90.5,2.52,State Subsidy A
+Cotton,103.7,48.3,19.0,6.4,85.7,22.0,60.0,0.61,Soil Health Card
+Maize,90.6,55.0,15.6,6.7,87.7,18.8,60.7,1.32,Paramparagat Krishi
+Pomegranate,39.8,18.0,35.2,6.7,105.5,23.7,86.8,1.75,PM-Kisan
+Apple,17.0,144.6,195.3,5.6,103.4,22.9,92.5,2.36,Fasal Bima Yojana
+Watermelon,82.0,15.7,54.6,6.1,43.8,24.8,85.7,2.92,Soil Health Card
+Grapes,32.6,137.5,196.4,5.7,70.3,13.1,82.0,1.15,Fasal Bima Yojana
+Blackgram,38.4,68.7,22.4,7.4,64.4,29.6,63.4,3.35,State Subsidy A
+Grapes,23.1,134.5,204.5,6.3,65.6,13.9,79.6,0.74,Soil Health Card
+Maize,62.3,54.2,17.1,5.5,90.7,24.1,63.8,1.31,PM-Kisan
+Pigeonpeas,37.0,77.4,15.2,5.2,152.0,22.0,47.9,5.07,Paramparagat Krishi
+Jute,84.7,42.6,40.5,7.1,175.9,23.0,78.2,2.33,Paramparagat Krishi
+Jute,69.2,42.7,43.0,6.4,169.4,24.4,80.2,2.07,Fasal Bima Yojana
+Watermelon,109.1,22.5,53.1,6.8,57.7,25.5,84.4,3.9,PM-Kisan
+Papaya,42.0,52.5,48.1,6.6,162.5,36.1,90.7,2.33,Fasal Bima Yojana
+Watermelon,94.1,15.4,47.1,6.4,53.9,25.2,80.4,3.24,Soil Health Card
+Coffee,95.2,21.8,32.2,6.2,131.4,25.1,53.9,4.37,Fasal Bima Yojana
+Mungbean,23.5,58.2,22.8,6.6,57.9,27.6,84.8,3.25,Fasal Bima Yojana
+Kidneybeans,18.1,79.6,18.9,6.0,128.0,19.8,29.8,1.52,Kisan Credit Card
+Grapes,34.6,128.7,202.1,6.2,72.0,12.6,81.2,2.32,Fasal Bima Yojana
+Grapes,32.0,124.4,203.4,5.7,67.7,9.1,79.3,2.9,State Subsidy A
+Coffee,105.5,22.7,33.8,7.3,142.4,24.0,67.4,3.91,Soil Health Card
+Orange,28.4,24.4,7.8,6.9,119.5,10.8,90.3,2.06,Paramparagat Krishi
+Muskmelon,98.9,19.6,51.0,6.2,27.3,29.8,93.9,5.77,PM-Kisan
+Lentil,37.9,62.7,21.4,6.9,53.2,23.1,66.8,4.58,Fasal Bima Yojana
+Chickpea,53.9,63.8,85.0,7.5,71.9,18.1,21.1,2.22,Paramparagat Krishi
+Apple,17.4,121.4,196.3,6.3,121.6,21.1,93.9,3.66,Fasal Bima Yojana
+Maize,77.7,54.4,17.1,6.5,83.1,21.0,69.6,5.86,None
+Banana,111.4,82.2,46.2,5.7,103.4,25.6,77.8,1.92,State Subsidy A
+Orange,22.6,29.4,6.6,7.5,113.4,32.5,91.4,3.54,Fasal Bima Yojana
+Apple,26.4,127.5,203.8,5.7,115.5,23.8,90.0,2.47,PM-Kisan
+Banana,93.4,75.1,52.4,6.1,97.9,29.9,80.5,2.73,Soil Health Card
+Apple,18.9,120.6,198.0,6.3,113.9,22.0,94.1,3.32,Fasal Bima Yojana
+Banana,119.2,87.1,49.7,6.1,106.7,29.9,83.8,1.04,Kisan Credit Card
+Coffee,82.3,29.1,34.1,7.0,196.2,25.4,55.2,1.45,PM-Kisan
+Orange,26.6,19.0,5.4,6.7,118.4,24.0,91.7,1.01,Kisan Credit Card
+Mungbean,19.0,49.9,20.4,6.2,45.0,29.0,84.9,2.21,PM-Kisan
+Cotton,121.0,45.0,16.1,7.2,84.2,22.7,65.7,2.88,Fasal Bima Yojana
+Mungbean,17.9,55.0,18.5,6.4,55.7,28.7,89.8,1.52,State Subsidy A
+Cotton,112.2,55.5,18.3,6.0,76.3,22.6,64.2,6.42,Fasal Bima Yojana
+Grapes,28.8,131.5,202.3,6.5,73.3,16.4,81.7,3.25,None
+Orange,25.3,17.1,14.6,6.6,119.5,10.9,94.3,1.39,Soil Health Card
+Rice,65.9,44.3,36.0,6.9,282.2,23.7,90.3,4.34,Fasal Bima Yojana
+Coffee,91.9,29.6,32.0,6.5,128.7,24.4,57.6,2.48,Fasal Bima Yojana
+Mungbean,25.7,40.0,23.6,6.9,53.0,28.7,86.6,1.6,PM-Kisan
+Maize,82.7,51.5,21.2,6.1,69.6,22.1,61.9,2.05,Kisan Credit Card
+Kidneybeans,37.5,68.0,23.5,5.8,119.0,17.1,24.2,1.0,Kisan Credit Card
+Coconut,29.9,26.0,32.9,6.5,142.6,27.7,91.2,3.59,Fasal Bima Yojana
+Kidneybeans,28.3,77.7,15.8,5.9,134.3,15.9,25.1,4.59,Kisan Credit Card
+Maize,97.5,41.4,21.3,5.6,75.1,26.5,69.3,4.42,PM-Kisan
+Apple,21.8,134.3,196.6,5.9,118.5,22.3,93.6,1.32,PM-Kisan
+Coffee,86.0,21.8,26.6,7.1,198.4,25.8,63.4,4.11,Paramparagat Krishi
+Mungbean,18.5,54.4,22.9,6.5,40.5,27.4,83.2,2.47,State Subsidy A
+Kidneybeans,39.6,66.6,15.3,5.6,134.3,21.8,23.0,2.56,Fasal Bima Yojana
+Lentil,28.6,62.5,18.0,6.0,45.4,23.5,61.9,1.49,Fasal Bima Yojana
+Jute,88.6,55.8,41.3,7.2,152.0,25.6,80.0,1.6,Soil Health Card
+Mothbeans,33.9,39.1,22.9,5.8,53.9,32.0,55.1,3.23,Soil Health Card
+Banana,115.8,84.2,54.9,6.0,95.1,28.5,79.2,4.18,Kisan Credit Card
+Blackgram,60.0,69.4,23.8,6.7,71.3,27.7,62.9,2.97,Kisan Credit Card
+Jute,68.4,57.9,43.4,6.8,164.2,25.8,87.2,4.76,State Subsidy A
+Apple,17.9,125.1,195.7,6.3,118.1,23.3,92.8,5.49,Kisan Credit Card
+Orange,23.5,23.2,5.5,6.8,116.8,20.3,94.6,6.75,Kisan Credit Card
+Grapes,38.7,142.8,204.2,6.0,73.3,24.9,81.7,3.31,Fasal Bima Yojana
+Mungbean,30.5,37.4,17.5,6.7,50.2,29.2,82.5,2.05,Soil Health Card
+Orange,23.5,27.4,13.8,6.2,100.7,28.8,93.4,2.03,None
+Pomegranate,38.6,17.7,40.1,5.6,102.8,21.5,91.3,1.1,State Subsidy A
+Blackgram,58.3,57.8,18.5,7.5,71.1,25.8,62.0,1.52,Kisan Credit Card
+Coffee,90.9,15.2,31.0,6.2,142.0,24.4,50.7,2.8,Fasal Bima Yojana
+Maize,95.3,38.3,17.0,7.0,81.7,21.9,70.0,2.71,Paramparagat Krishi
+Blackgram,49.5,63.7,23.2,7.2,69.5,26.3,63.7,3.54,Soil Health Card
+Mothbeans,34.6,59.4,17.6,7.2,54.6,25.1,57.7,4.47,None
+Rice,61.1,59.1,44.2,6.0,292.5,24.2,88.6,4.27,Paramparagat Krishi
+Watermelon,113.8,22.5,45.6,6.2,43.8,25.1,81.9,1.93,State Subsidy A
+Lentil,39.0,55.2,19.9,7.0,51.3,21.3,69.7,1.41,Kisan Credit Card
+Lentil,25.3,55.9,20.1,6.3,47.6,22.9,63.8,3.24,Fasal Bima Yojana
+Grapes,34.0,135.0,196.4,6.5,73.4,20.3,81.7,3.59,Fasal Bima Yojana
+Lentil,20.8,79.8,20.5,6.6,50.5,21.9,67.7,3.82,Fasal Bima Yojana
+Grapes,23.8,130.0,198.5,6.2,70.6,23.2,82.8,2.69,Fasal Bima Yojana
+Kidneybeans,17.5,64.7,16.1,5.8,124.7,20.7,28.0,2.33,PM-Kisan
+Watermelon,111.1,22.3,54.4,6.1,51.7,26.9,85.9,3.46,Fasal Bima Yojana
+Watermelon,84.2,20.1,51.4,6.1,54.1,26.7,82.6,0.68,PM-Kisan
+Coconut,25.5,23.9,34.3,6.5,133.7,28.0,92.8,1.53,PM-Kisan
+Orange,24.6,29.0,10.7,7.0,104.1,28.2,93.7,6.27,State Subsidy A
+Coffee,86.5,19.7,27.8,6.4,199.6,24.1,64.0,2.27,Kisan Credit Card
+Mothbeans,28.0,40.2,23.1,4.7,37.0,28.9,64.5,4.48,None
+Watermelon,81.6,19.6,46.0,6.9,57.9,27.0,88.6,2.71,Soil Health Card
+Coconut,19.4,28.1,34.8,6.3,143.2,28.2,99.8,4.21,State Subsidy A
+Muskmelon,83.0,15.6,48.1,6.1,27.0,27.6,89.1,0.68,Soil Health Card
+Blackgram,43.2,67.5,19.9,7.4,71.4,27.8,62.2,2.96,PM-Kisan
+Mungbean,35.0,48.2,18.3,6.7,46.1,28.2,80.2,2.61,PM-Kisan
+Papaya,49.1,62.0,52.5,6.8,153.6,30.8,94.1,2.58,Kisan Credit Card
+Mungbean,17.5,49.5,19.9,6.9,35.5,29.0,86.7,2.56,State Subsidy A
+Jute,81.7,48.6,44.4,6.1,163.4,25.2,70.7,1.5,PM-Kisan
+Kidneybeans,36.3,73.4,20.7,5.9,101.5,22.0,21.0,0.39,Paramparagat Krishi
+Muskmelon,84.1,16.3,46.0,6.1,27.4,27.5,88.0,2.21,Kisan Credit Card
+Watermelon,81.4,23.0,46.7,6.5,48.7,26.8,89.9,1.06,PM-Kisan
+Kidneybeans,17.0,71.3,18.4,5.9,104.0,17.1,22.8,3.04,PM-Kisan
+Papaya,58.0,65.1,51.4,6.5,154.9,37.4,93.6,1.6,PM-Kisan
+Apple,15.8,122.1,205.0,5.8,109.3,22.6,92.8,2.31,PM-Kisan
+Papaya,41.1,61.2,54.1,6.8,224.6,43.8,90.7,1.05,State Subsidy A
+Banana,110.0,94.8,53.7,5.6,113.4,25.5,80.5,6.3,Soil Health Card
+Pomegranate,30.0,21.6,37.0,6.7,101.2,21.5,87.1,0.45,PM-Kisan
+Kidneybeans,17.2,69.3,19.1,5.7,142.6,18.4,19.3,5.27,Paramparagat Krishi
+Rice,73.7,53.1,36.7,6.4,245.5,23.0,81.6,3.44,None
+Cotton,108.5,43.2,19.1,8.0,67.2,24.1,54.9,1.41,Fasal Bima Yojana
+Kidneybeans,17.4,61.4,22.1,5.8,93.1,22.2,20.3,5.85,Fasal Bima Yojana
+Chickpea,34.5,59.5,84.3,7.2,61.4,18.3,21.9,3.32,Kisan Credit Card
+Mango,15.4,32.9,25.3,6.4,99.7,28.4,50.1,0.83,PM-Kisan
+Orange,23.7,15.7,7.7,7.2,102.3,11.0,90.5,1.69,PM-Kisan
+Muskmelon,113.6,18.1,49.4,6.4,22.3,29.1,89.9,1.31,Paramparagat Krishi
+Kidneybeans,28.2,59.0,17.2,5.7,99.0,16.6,20.4,2.01,Kisan Credit Card
+Pigeonpeas,38.5,67.7,18.8,6.2,145.9,24.0,60.0,2.72,Fasal Bima Yojana
+Muskmelon,100.0,29.9,47.4,6.0,22.1,27.7,93.3,2.01,PM-Kisan
+Maize,76.8,51.0,20.6,6.6,67.3,22.9,68.3,6.82,Paramparagat Krishi
+Orange,36.8,16.4,9.9,6.1,110.8,30.6,92.6,2.15,Paramparagat Krishi
+Rice,81.4,52.0,44.5,6.6,198.9,20.2,82.1,6.62,State Subsidy A
+Maize,90.6,48.6,19.3,6.1,83.1,19.5,70.6,2.31,Paramparagat Krishi
+Chickpea,32.7,73.1,82.7,7.1,76.1,20.4,21.2,4.22,None
+Coffee,113.1,17.7,32.6,6.2,133.3,26.5,50.5,0.78,PM-Kisan
+Kidneybeans,35.5,73.7,15.4,5.9,148.4,23.5,29.4,2.64,PM-Kisan
+Orange,38.7,21.4,8.4,7.2,109.8,16.5,93.3,1.99,PM-Kisan
+Apple,38.4,121.2,200.9,5.6,109.0,23.2,91.0,1.54,PM-Kisan
+Rice,74.4,54.0,38.2,7.3,219.8,24.7,80.9,2.04,State Subsidy A
+Jute,63.5,45.5,40.1,7.4,151.3,24.5,71.7,3.3,Fasal Bima Yojana
+Apple,20.6,120.3,198.4,5.9,124.0,23.4,93.7,3.28,None
+Maize,97.7,53.3,20.7,5.5,90.2,26.6,66.2,2.19,None
+Coffee,90.7,21.8,32.7,7.0,115.0,24.3,68.1,2.66,Soil Health Card
+Maize,71.8,45.1,16.6,6.7,71.9,26.4,73.6,2.41,None
+Jute,62.4,52.5,37.2,6.9,190.6,25.6,84.7,6.94,Paramparagat Krishi
+Banana,81.8,72.1,48.6,6.1,116.5,28.1,82.9,3.44,Paramparagat Krishi
+Mango,24.3,35.3,29.0,5.0,90.9,32.6,51.5,3.44,PM-Kisan
+Mothbeans,18.7,57.0,19.3,5.1,37.5,29.3,40.4,1.82,Kisan Credit Card
+Cotton,109.7,47.9,15.4,6.9,65.3,22.1,64.7,1.79,Kisan Credit Card
+Maize,83.1,39.4,19.9,6.0,66.1,25.3,61.0,2.05,PM-Kisan
+Apple,17.9,122.8,203.9,5.6,121.5,21.7,94.9,7.06,Paramparagat Krishi
+Chickpea,27.6,60.8,82.3,7.9,68.7,22.0,19.8,1.96,PM-Kisan
+Chickpea,22.9,79.3,82.8,7.7,75.9,20.6,17.0,3.27,PM-Kisan
+Kidneybeans,36.1,75.8,19.4,5.7,130.6,16.9,22.4,3.63,Paramparagat Krishi
+Muskmelon,105.5,15.5,46.4,6.7,29.5,28.6,92.5,2.27,None
+Chickpea,30.3,56.2,82.8,7.7,72.5,21.2,18.7,1.05,PM-Kisan
+Kidneybeans,21.2,57.1,17.2,5.7,131.3,22.2,19.5,1.63,PM-Kisan
+Maize,61.5,53.6,21.4,6.7,104.4,25.4,70.2,2.29,Kisan Credit Card
+Maize,63.7,38.7,15.1,5.6,105.5,19.8,67.8,1.98,Kisan Credit Card
+Watermelon,91.4,20.2,52.8,6.5,45.0,25.8,83.3,2.29,Fasal Bima Yojana
+Jute,62.3,50.7,43.9,6.7,176.5,23.1,82.1,2.58,Fasal Bima Yojana
+Banana,108.6,74.1,54.2,6.2,105.1,27.4,79.6,3.34,Kisan Credit Card
+Maize,92.4,58.7,18.6,6.8,101.9,19.0,58.3,3.37,PM-Kisan
+Pomegranate,22.3,29.3,38.1,6.2,104.8,18.1,86.3,3.42,PM-Kisan
+Pigeonpeas,19.1,63.6,17.2,6.4,111.8,22.9,49.5,3.19,Fasal Bima Yojana
+Cotton,124.4,50.8,19.9,7.9,73.3,24.4,61.1,2.71,Paramparagat Krishi
+Kidneybeans,39.1,73.3,15.8,6.0,138.5,24.1,18.3,1.13,PM-Kisan
+Watermelon,80.9,15.8,54.7,6.0,59.3,24.3,87.9,1.97,State Subsidy A
+Pomegranate,26.5,17.9,43.1,5.6,116.9,21.9,92.9,2.08,Fasal Bima Yojana
+Banana,80.5,85.5,52.6,6.2,102.7,26.9,82.5,2.54,Fasal Bima Yojana
+Papaya,53.9,53.0,52.4,6.7,226.9,23.6,90.9,1.46,Fasal Bima Yojana
+Orange,38.4,20.0,14.2,7.2,105.4,14.8,92.0,3.56,Fasal Bima Yojana
+Grapes,21.8,134.2,195.5,6.0,69.0,25.0,78.2,4.13,None
+Mothbeans,20.8,54.0,15.9,7.0,48.3,26.8,56.9,1.66,Soil Health Card
+Papaya,41.7,54.8,47.4,6.8,204.7,34.7,94.5,4.77,None
+Jute,62.4,52.9,42.1,6.5,193.5,25.0,87.2,3.22,Soil Health Card
+Coconut,26.3,26.7,29.0,5.7,191.5,28.9,98.2,4.06,Paramparagat Krishi
+Mungbean,34.5,54.1,22.8,6.6,58.7,28.9,81.8,1.1,Kisan Credit Card
+Coffee,105.4,19.4,31.2,7.5,182.7,27.2,50.5,1.61,Kisan Credit Card
+Mango,34.1,30.0,25.5,6.5,93.5,34.6,52.8,4.89,Kisan Credit Card
+Chickpea,42.3,66.9,80.5,6.4,80.8,19.4,21.9,3.41,Paramparagat Krishi
+Mungbean,37.5,38.0,15.2,6.7,42.9,28.8,85.7,1.62,Soil Health Card
+Papaya,45.2,51.3,47.8,6.7,223.7,29.3,91.3,3.94,Paramparagat Krishi
+Watermelon,90.8,19.0,53.8,6.2,41.9,24.7,80.0,0.69,Fasal Bima Yojana
+Maize,76.4,35.4,19.1,5.9,87.3,23.6,61.9,1.26,Kisan Credit Card
+Kidneybeans,21.3,68.7,20.1,5.8,136.5,23.4,22.7,1.77,PM-Kisan
+Papaya,57.0,51.2,48.3,6.8,237.6,23.6,91.5,6.99,Fasal Bima Yojana
+Maize,70.0,35.7,16.6,6.8,86.6,21.6,74.4,5.69,Paramparagat Krishi
+Mothbeans,33.3,48.2,17.3,5.1,59.6,31.5,41.5,3.35,Fasal Bima Yojana
+Muskmelon,90.2,23.5,50.6,6.0,25.7,27.5,92.3,0.54,PM-Kisan
+Cotton,115.2,57.5,24.9,6.4,82.7,24.1,60.0,1.21,Fasal Bima Yojana
+Mothbeans,25.5,49.0,16.1,5.1,57.4,31.9,54.4,1.29,PM-Kisan
+Kidneybeans,38.2,58.3,18.6,5.5,141.1,18.2,28.2,2.79,None
+Maize,63.4,56.0,24.7,5.7,68.1,23.7,70.8,1.67,Paramparagat Krishi
+Rice,78.1,50.9,41.8,6.5,185.4,22.1,90.6,2.24,Fasal Bima Yojana
+Papaya,56.0,48.0,45.2,6.8,246.2,23.3,91.1,4.89,Kisan Credit Card
+Jute,79.5,39.2,41.6,6.5,195.6,24.3,81.5,3.04,Fasal Bima Yojana
+Kidneybeans,33.1,69.5,23.7,5.7,94.9,17.9,18.7,2.85,Paramparagat Krishi
+Kidneybeans,26.1,66.4,18.9,5.7,122.9,19.0,23.1,3.56,Fasal Bima Yojana
+Maize,70.1,42.1,20.3,6.0,62.1,20.0,63.1,1.48,PM-Kisan
+Maize,82.9,51.1,19.0,5.9,66.5,18.9,71.9,0.76,State Subsidy A
+Mungbean,31.8,56.6,22.4,6.5,59.0,29.4,82.4,5.8,PM-Kisan
+Banana,111.7,82.4,46.4,5.7,97.6,27.0,84.4,1.64,PM-Kisan
+Maize,90.6,44.7,21.9,6.5,78.0,25.6,66.1,2.04,None
+Coconut,37.9,15.3,29.2,5.7,138.5,25.9,93.6,2.58,Soil Health Card
+Coffee,116.4,22.7,32.9,7.1,134.8,26.4,64.4,4.11,State Subsidy A
+Mothbeans,34.3,54.4,18.0,4.6,30.7,27.3,43.9,1.33,State Subsidy A
+Pigeonpeas,22.7,63.7,22.7,6.2,126.6,18.1,47.2,1.51,Paramparagat Krishi
+Mango,22.2,28.9,30.2,4.7,92.3,31.5,47.6,3.12,Fasal Bima Yojana
+Mothbeans,31.8,35.2,24.9,8.1,69.9,29.6,50.9,3.17,Kisan Credit Card
+Orange,34.3,23.6,5.8,6.1,106.1,27.7,91.6,2.2,Soil Health Card
+Watermelon,99.5,23.2,48.1,6.4,42.0,24.4,89.1,4.5,None
+Apple,21.3,120.4,201.3,5.8,114.5,23.6,93.5,2.74,None
+Pigeonpeas,29.4,64.1,22.2,5.1,130.3,29.5,49.5,2.82,PM-Kisan
+Grapes,29.2,141.7,202.2,6.2,71.5,12.6,82.9,1.07,Kisan Credit Card
+Jute,77.0,55.8,38.8,6.4,185.4,25.9,75.0,3.29,PM-Kisan
+Cotton,131.0,46.5,18.8,6.2,71.3,22.9,59.3,3.46,PM-Kisan
+Watermelon,87.0,19.5,51.4,6.8,46.7,25.1,87.2,2.95,Kisan Credit Card
+Rice,66.9,58.7,37.5,6.2,213.9,27.0,88.6,5.75,PM-Kisan
+Chickpea,24.2,78.2,80.0,7.0,74.3,18.8,20.5,2.03,State Subsidy A
+Rice,78.2,44.6,37.6,6.9,213.6,25.3,84.1,0.88,PM-Kisan
+Orange,34.8,21.7,13.4,7.3,119.7,21.4,91.1,5.83,PM-Kisan
+Papaya,37.0,50.6,49.9,6.7,237.1,29.9,92.9,1.83,PM-Kisan
+Banana,107.0,86.5,51.9,6.0,93.2,27.8,84.9,3.92,None
+Kidneybeans,39.3,71.7,20.0,5.6,99.1,20.5,19.3,4.57,Soil Health Card
+Lentil,18.7,65.5,19.8,7.3,36.3,26.6,67.9,3.36,Fasal Bima Yojana
+Papaya,43.6,68.5,53.0,6.7,220.7,38.4,90.0,4.95,PM-Kisan
+Jute,86.6,55.0,38.0,6.8,157.3,23.6,85.9,5.15,Kisan Credit Card
+Kidneybeans,36.4,74.5,20.6,5.8,144.8,17.8,22.0,0.97,PM-Kisan
+Mungbean,25.4,36.4,22.4,6.8,35.5,27.7,85.7,2.82,Paramparagat Krishi
+Pigeonpeas,17.3,71.4,18.7,6.9,156.9,18.7,52.1,5.0,PM-Kisan
+Rice,77.8,46.4,36.2,7.3,270.5,24.3,83.0,2.12,Kisan Credit Card
+Apple,20.7,121.3,201.7,5.8,105.7,24.0,94.3,3.65,Soil Health Card
+Pomegranate,23.9,21.7,40.3,5.9,113.4,19.2,91.2,3.91,PM-Kisan
+Lentil,32.6,69.0,15.7,6.4,43.9,25.9,63.5,4.38,PM-Kisan
+Mango,39.8,39.2,33.3,5.9,92.8,33.7,54.5,2.35,Kisan Credit Card
+Muskmelon,89.1,25.1,54.3,6.8,24.7,29.1,93.4,4.04,Soil Health Card
+Mungbean,21.5,52.3,24.8,6.6,40.4,29.6,89.5,1.36,PM-Kisan
+Grapes,26.9,139.1,197.2,5.9,74.2,36.7,79.9,2.37,Fasal Bima Yojana
+Kidneybeans,37.7,67.8,15.2,5.8,129.5,22.5,19.2,0.39,Kisan Credit Card
+Pigeonpeas,19.2,61.3,17.9,6.1,155.1,26.9,49.8,1.48,PM-Kisan
+Pigeonpeas,39.2,58.6,21.0,5.1,157.4,29.5,42.3,3.21,None
+Muskmelon,101.2,28.5,54.7,6.3,24.0,29.0,90.0,1.0,PM-Kisan
+Pomegranate,29.5,28.4,36.6,5.6,106.9,23.2,85.6,2.15,Paramparagat Krishi
+Coconut,29.5,28.5,27.5,6.3,155.7,28.9,98.8,5.44,Kisan Credit Card
+Coconut,16.5,17.1,34.4,5.7,176.2,27.9,98.3,0.64,State Subsidy A
+Mungbean,35.8,36.0,19.3,7.0,45.7,28.8,80.8,2.16,PM-Kisan
+Blackgram,60.0,79.5,15.7,7.1,69.7,28.1,63.2,1.14,PM-Kisan
+Grapes,33.5,134.2,198.9,6.5,72.4,28.4,80.4,0.89,Kisan Credit Card
+Coffee,87.3,19.7,34.0,7.0,160.3,27.9,51.0,4.46,Fasal Bima Yojana
+Chickpea,49.4,72.3,76.5,7.4,77.5,21.0,20.9,3.81,State Subsidy A
+Apple,29.9,143.7,196.5,6.1,106.0,23.6,90.6,3.37,Soil Health Card
+Lentil,20.2,72.7,23.6,7.0,48.2,22.2,66.4,0.29,PM-Kisan
+Orange,26.0,28.3,14.2,7.4,105.1,27.4,91.3,2.93,None
+Coconut,22.4,15.8,33.1,6.2,179.4,25.4,92.9,3.7,State Subsidy A
+Muskmelon,94.6,20.9,46.4,6.2,23.7,27.7,89.8,2.94,None
+Kidneybeans,34.4,62.2,17.6,6.0,142.9,20.4,29.0,1.62,Paramparagat Krishi
+Mungbean,15.7,54.9,15.9,6.3,56.9,27.1,88.8,6.26,Paramparagat Krishi
+Jute,66.6,39.3,40.2,6.7,160.6,24.1,79.8,3.2,Fasal Bima Yojana
+Grapes,23.4,138.7,203.9,5.5,67.8,32.4,82.1,3.42,Kisan Credit Card
+Maize,78.6,57.7,21.7,6.6,101.1,19.2,70.3,1.14,Soil Health Card
+Kidneybeans,39.4,63.7,22.8,5.7,124.9,20.3,18.9,1.96,Paramparagat Krishi
+Apple,37.9,131.3,201.1,6.2,109.7,22.9,91.6,4.99,PM-Kisan
+Cotton,107.9,56.9,23.1,6.9,77.3,22.3,51.8,0.95,Paramparagat Krishi
+Orange,32.2,27.3,13.5,7.1,108.8,22.0,93.5,3.64,None
+Banana,91.0,74.2,49.5,5.6,93.5,26.9,82.6,0.51,PM-Kisan
+Blackgram,37.3,67.4,18.1,6.6,71.0,27.7,65.9,0.87,Fasal Bima Yojana
+Watermelon,111.8,18.4,54.3,6.7,55.4,25.9,86.8,3.05,Fasal Bima Yojana
+Lentil,22.8,67.7,17.3,6.6,35.3,27.5,67.4,2.19,Kisan Credit Card
+Lentil,31.7,75.7,22.6,6.2,54.9,23.5,68.7,3.27,Fasal Bima Yojana
+Papaya,42.1,52.8,50.1,6.9,208.7,37.8,93.9,0.99,Soil Health Card
+Maize,89.6,59.3,19.7,6.7,91.9,25.0,67.1,3.9,Soil Health Card
+Orange,15.7,27.7,8.7,6.9,106.6,31.3,91.0,1.34,Paramparagat Krishi
+Blackgram,49.9,62.9,16.0,6.9,69.2,29.1,69.6,1.14,Paramparagat Krishi
+Papaya,31.4,61.6,51.0,7.0,133.3,25.2,95.0,1.7,PM-Kisan
+Apple,20.9,134.6,198.4,5.7,102.8,21.8,94.6,6.24,Fasal Bima Yojana
+Banana,82.1,76.9,45.7,5.6,112.5,27.6,77.7,1.68,Kisan Credit Card
+Pigeonpeas,23.4,64.9,15.0,5.0,117.0,27.3,48.2,4.45,Fasal Bima Yojana
+Apple,34.0,121.8,197.3,5.9,113.0,23.2,91.8,3.84,None
+Kidneybeans,37.7,78.5,15.6,6.0,104.7,17.1,20.2,1.66,PM-Kisan
+Blackgram,42.0,72.1,22.9,7.0,68.1,26.1,66.0,2.73,State Subsidy A
+Pigeonpeas,15.8,73.8,22.8,5.7,96.0,23.0,59.8,1.85,PM-Kisan
+Rice,75.6,36.7,44.9,6.2,253.8,24.8,90.4,2.22,Soil Health Card
+Pomegranate,33.9,21.9,42.1,6.1,103.7,24.8,91.5,1.56,Paramparagat Krishi
+Jute,61.9,42.2,44.5,6.4,175.5,23.9,78.2,2.91,Fasal Bima Yojana
+Mungbean,22.1,51.8,20.7,7.0,53.7,27.7,88.4,1.4,PM-Kisan
+Papaya,34.0,62.0,49.3,6.8,144.7,24.3,91.3,1.03,PM-Kisan
+Mungbean,18.6,41.0,24.0,6.2,48.9,28.0,87.4,0.93,Soil Health Card
+Apple,30.7,137.1,195.1,6.3,103.5,22.8,91.3,0.97,Kisan Credit Card
+Banana,89.2,90.7,50.5,6.4,96.1,28.3,82.6,2.05,Fasal Bima Yojana
+Lentil,28.3,62.6,24.9,6.1,46.7,25.2,64.2,1.9,Fasal Bima Yojana
+Orange,34.8,18.9,12.3,6.1,104.0,30.5,93.9,0.9,PM-Kisan
+Orange,21.2,15.6,14.5,6.8,115.9,12.6,93.0,1.16,Paramparagat Krishi
+Mango,24.6,22.1,26.3,5.1,89.3,27.2,48.1,1.06,PM-Kisan
+Coconut,33.6,25.1,34.0,6.1,165.7,27.0,96.2,1.19,PM-Kisan
+Mango,21.2,24.7,33.5,5.4,90.7,28.5,49.8,1.93,Paramparagat Krishi
+Lentil,17.9,58.2,20.0,6.8,45.3,25.3,64.7,2.6,Kisan Credit Card
+Apple,20.8,123.9,200.7,5.6,106.2,22.1,94.5,7.72,Paramparagat Krishi
+Banana,103.4,72.9,48.2,5.8,101.0,28.4,81.4,0.87,Kisan Credit Card
+Papaya,51.7,65.3,53.5,6.7,156.3,24.4,91.7,3.83,State Subsidy A
+Coffee,88.9,18.8,27.9,7.2,146.4,26.6,67.9,5.19,Kisan Credit Card
+Mothbeans,19.8,55.9,15.6,4.3,38.3,28.8,64.2,4.27,None
+Cotton,128.3,38.4,24.6,7.6,74.2,22.4,59.9,5.59,Fasal Bima Yojana
+Coconut,25.6,29.2,25.9,5.6,224.8,27.8,93.6,2.61,PM-Kisan
+Grapes,20.5,127.9,195.3,6.3,73.2,31.1,81.3,0.62,PM-Kisan
+Rice,60.1,40.0,44.9,6.8,280.7,25.5,88.7,0.84,Paramparagat Krishi
+Rice,80.1,37.1,35.1,6.6,264.0,20.0,91.6,2.24,Fasal Bima Yojana
+Chickpea,40.0,64.8,76.2,7.6,78.6,20.8,23.2,0.41,Paramparagat Krishi
+Muskmelon,90.1,22.8,46.6,6.2,23.5,27.3,90.6,3.87,Soil Health Card
+Lentil,15.7,59.7,23.0,7.3,52.9,26.0,65.1,3.33,State Subsidy A
+Banana,104.5,79.2,49.3,6.1,103.7,26.7,79.2,3.89,Kisan Credit Card
+Lentil,32.8,73.2,24.0,6.1,39.0,18.1,64.2,1.18,Kisan Credit Card
+Rice,67.5,47.9,37.7,7.0,267.2,24.2,93.3,2.23,Fasal Bima Yojana
+Mango,37.9,32.3,28.2,5.2,93.3,33.6,53.9,2.38,Kisan Credit Card
+Maize,62.6,55.1,21.4,6.1,64.6,22.5,61.9,5.19,Fasal Bima Yojana
+Coffee,114.7,17.7,33.3,7.0,126.7,23.5,57.9,1.44,State Subsidy A
+Apple,21.2,136.1,201.3,6.0,109.9,21.6,94.5,1.25,Paramparagat Krishi
+Coffee,81.3,21.5,26.9,6.6,183.7,24.7,53.4,0.68,Kisan Credit Card
+Grapes,19.3,133.5,200.2,5.9,73.6,27.1,81.5,2.63,Fasal Bima Yojana
+Maize,98.2,37.6,19.1,6.0,62.7,18.8,70.9,1.36,PM-Kisan
+Kidneybeans,37.8,71.8,24.7,5.7,137.2,22.0,20.0,1.48,PM-Kisan
+Pigeonpeas,31.1,59.4,23.2,5.0,155.6,29.1,56.7,3.13,Paramparagat Krishi
+Cotton,104.6,50.5,20.8,7.3,73.3,23.2,50.1,1.56,Paramparagat Krishi
+Banana,110.7,82.6,52.4,5.7,95.8,27.7,81.6,0.99,Kisan Credit Card
+Orange,26.4,15.6,7.2,6.4,105.7,13.3,93.5,1.71,PM-Kisan
+Pomegranate,34.7,23.0,40.1,7.2,113.5,22.5,89.6,3.88,Paramparagat Krishi
+Apple,38.1,144.4,198.2,6.0,118.9,21.8,90.3,2.12,Fasal Bima Yojana
+Pigeonpeas,27.0,69.0,20.2,5.7,149.5,21.6,42.1,5.45,State Subsidy A
+Chickpea,43.7,65.6,82.7,6.3,60.9,17.4,23.0,1.15,Kisan Credit Card
+Grapes,23.1,127.7,198.6,5.7,70.8,30.9,81.8,4.67,PM-Kisan
+Mothbeans,21.4,52.9,24.3,7.2,53.7,28.6,61.5,6.79,Kisan Credit Card
+Rice,74.8,35.2,41.0,6.1,275.1,21.5,84.6,1.32,Kisan Credit Card
+Rice,66.0,36.5,43.7,6.4,217.7,21.7,80.1,3.66,Paramparagat Krishi
+Chickpea,53.7,59.1,78.7,6.7,86.4,21.8,24.9,1.53,Fasal Bima Yojana
+Jute,86.3,48.1,35.3,7.2,187.5,23.4,80.4,2.16,State Subsidy A
+Banana,114.2,82.7,49.2,5.8,102.6,28.9,77.4,0.52,PM-Kisan
+Papaya,58.8,58.9,45.6,6.5,172.5,36.5,92.4,1.4,Kisan Credit Card
+Grapes,35.7,144.8,203.7,6.3,65.4,18.4,80.0,3.78,State Subsidy A
+Orange,19.3,15.2,14.7,6.5,108.3,25.6,94.7,2.92,State Subsidy A
+Mungbean,15.5,50.2,17.7,6.5,44.3,29.7,80.4,3.46,Soil Health Card
+Chickpea,51.3,60.3,82.4,6.7,84.3,17.4,16.1,3.64,State Subsidy A
+Cotton,116.8,46.5,22.7,7.4,70.8,25.9,68.4,0.72,PM-Kisan
+Muskmelon,82.7,16.7,53.7,6.6,24.0,28.4,91.5,0.5,PM-Kisan
+Banana,94.2,80.7,47.5,6.3,116.1,26.5,83.0,3.5,Fasal Bima Yojana
+Rice,69.6,52.2,37.7,7.4,180.7,26.4,91.1,3.69,Paramparagat Krishi
+Coconut,17.1,26.3,28.7,5.6,162.2,29.0,91.5,2.61,Paramparagat Krishi
+Pigeonpeas,15.9,65.9,17.6,5.1,103.8,23.8,56.9,3.71,Paramparagat Krishi
+Maize,64.2,55.0,24.2,6.5,69.2,25.4,71.8,4.0,Kisan Credit Card
+Mango,20.9,32.2,26.0,6.8,98.1,31.8,45.4,1.29,Soil Health Card
+Papaya,49.4,59.6,54.8,6.8,225.6,33.5,94.6,2.63,Paramparagat Krishi
+Grapes,38.0,143.7,200.5,6.1,73.9,28.8,82.1,0.64,State Subsidy A
+Kidneybeans,23.2,69.0,23.6,5.9,110.5,19.6,24.5,2.81,State Subsidy A
+Pigeonpeas,32.2,74.1,21.3,6.0,136.1,21.0,46.6,5.24,Kisan Credit Card
+Grapes,26.1,124.6,195.2,5.7,68.4,30.7,78.3,4.08,Fasal Bima Yojana
+Mango,15.0,33.9,26.3,5.8,92.4,29.3,46.3,1.29,Fasal Bima Yojana
+Coffee,113.1,26.7,28.6,7.5,169.0,24.1,51.4,1.44,PM-Kisan
+Banana,86.2,94.9,49.7,6.2,111.3,27.9,83.0,2.95,Fasal Bima Yojana
+Jute,60.6,57.9,44.9,6.8,155.3,24.5,81.3,1.16,Kisan Credit Card
+Watermelon,95.2,27.0,52.2,6.8,55.4,25.3,83.2,2.07,Paramparagat Krishi
+Muskmelon,85.1,21.0,45.4,6.5,23.8,28.2,93.9,0.21,PM-Kisan
+Lentil,19.7,74.8,23.6,7.1,44.6,23.2,64.8,1.18,PM-Kisan
+Mothbeans,19.6,44.1,17.3,5.3,64.7,28.4,51.2,2.6,State Subsidy A
+Jute,82.4,48.0,36.3,6.3,152.2,24.6,86.0,2.56,Fasal Bima Yojana
+Mothbeans,24.9,59.4,18.9,6.2,65.6,28.8,44.1,0.78,Kisan Credit Card
+Chickpea,41.3,77.9,83.1,7.0,62.1,17.3,20.1,2.52,Soil Health Card
+Apple,20.6,144.3,204.8,6.0,108.6,22.7,90.3,6.85,State Subsidy A
+Kidneybeans,38.7,57.2,15.9,6.0,121.5,19.8,18.1,2.87,None
+Orange,17.3,20.7,5.8,6.2,112.3,34.7,90.7,1.73,Fasal Bima Yojana
+Orange,30.0,20.2,5.3,7.0,112.1,21.1,94.7,1.99,Soil Health Card
+Lentil,37.1,64.9,19.9,6.9,42.8,21.4,69.2,4.06,Kisan Credit Card
+Apple,34.4,136.8,198.8,5.9,115.2,21.7,94.2,6.61,None
+Maize,71.7,42.5,20.3,6.4,93.8,22.2,74.6,6.6,PM-Kisan
+Blackgram,58.3,79.3,16.8,7.1,69.5,27.1,63.1,2.37,Paramparagat Krishi
+Papaya,43.3,63.6,46.2,6.8,123.1,43.1,91.6,1.38,Paramparagat Krishi
+Watermelon,118.0,20.1,50.4,6.5,56.7,24.6,86.5,3.27,State Subsidy A
+Pigeonpeas,24.0,61.6,19.4,5.7,151.7,25.7,56.9,4.08,Soil Health Card
+Jute,86.9,54.4,40.5,6.5,165.0,25.5,72.7,4.05,Fasal Bima Yojana
+Pomegranate,15.3,27.0,38.0,6.5,112.4,21.3,85.8,5.2,None
+Muskmelon,80.9,17.5,49.3,6.6,24.3,28.5,93.3,2.29,None
+Blackgram,45.8,55.6,23.2,7.4,66.6,29.2,69.5,1.66,PM-Kisan
+Rice,79.4,44.8,39.0,6.7,279.8,27.0,90.2,2.6,Soil Health Card
+Mango,15.7,19.5,26.8,5.2,92.7,34.5,53.4,1.73,Kisan Credit Card
+Mungbean,21.7,46.4,15.1,6.9,41.3,29.5,83.1,3.55,Soil Health Card
+Maize,70.7,51.3,19.0,6.6,83.7,21.6,67.0,1.87,Fasal Bima Yojana
+Kidneybeans,25.0,58.0,18.0,5.6,92.6,22.6,27.6,0.26,Kisan Credit Card
+Lentil,18.4,59.5,18.0,6.1,54.7,28.2,64.6,2.48,Paramparagat Krishi
+Coconut,39.8,17.9,32.9,6.4,138.4,25.4,92.7,1.59,PM-Kisan
+Orange,29.1,27.2,11.9,6.4,118.3,26.0,94.1,1.15,PM-Kisan
+Muskmelon,102.3,29.3,47.3,6.5,25.6,29.7,91.2,3.9,Fasal Bima Yojana
+Cotton,103.2,51.0,20.5,6.1,75.3,24.3,50.2,2.86,Kisan Credit Card
+Blackgram,43.3,63.1,16.9,7.0,70.0,25.9,69.5,0.59,PM-Kisan
+Pomegranate,16.8,23.9,36.7,6.4,113.1,18.5,88.2,1.59,Soil Health Card
+Orange,39.5,23.9,6.0,6.4,109.6,28.4,93.9,2.83,Fasal Bima Yojana
+Maize,66.2,41.1,16.4,6.4,77.5,22.5,72.4,1.9,Paramparagat Krishi
+Kidneybeans,22.1,68.7,18.1,5.7,145.9,21.8,20.7,3.42,None
+Mango,23.2,31.6,34.9,5.8,99.6,32.9,48.0,1.95,PM-Kisan
+Mungbean,38.2,47.7,24.5,6.2,38.9,29.8,84.4,3.63,None
+Watermelon,94.4,17.7,45.6,6.3,56.9,25.7,84.8,3.41,State Subsidy A
+Chickpea,23.2,65.5,79.6,7.2,84.7,19.7,20.0,3.08,Fasal Bima Yojana
+Watermelon,102.7,23.5,54.4,6.4,44.4,26.8,82.8,4.43,Fasal Bima Yojana
+Rice,64.3,56.9,37.4,7.1,230.1,23.0,93.3,1.73,PM-Kisan
+Blackgram,51.6,76.7,19.0,6.8,68.6,26.7,63.1,4.88,State Subsidy A
+Orange,18.5,19.0,12.7,6.8,102.2,25.8,90.2,2.88,Fasal Bima Yojana
+Banana,88.5,74.4,45.8,6.3,109.0,25.2,79.3,4.75,Fasal Bima Yojana
+Cotton,118.0,51.3,17.5,6.0,60.3,25.7,66.9,2.07,Fasal Bima Yojana
+Muskmelon,103.8,16.0,46.0,6.6,23.9,28.7,93.2,3.49,Kisan Credit Card
+Papaya,52.7,66.5,54.1,6.5,239.6,42.3,94.3,3.06,None
+Kidneybeans,29.0,71.6,21.0,6.0,108.7,16.3,19.3,6.08,Soil Health Card
+Pomegranate,22.3,21.7,38.4,7.0,118.0,24.5,86.8,6.55,State Subsidy A
+Papaya,33.1,66.0,54.8,6.7,242.8,42.8,91.2,3.19,State Subsidy A
+Blackgram,54.9,76.6,24.8,7.5,74.3,29.8,62.0,1.83,PM-Kisan
+Pomegranate,39.4,24.1,37.4,7.0,103.1,19.0,90.7,2.09,Soil Health Card
+Muskmelon,89.3,18.7,45.5,6.4,28.7,27.4,93.8,2.48,Paramparagat Krishi
+Papaya,36.6,52.8,52.9,6.6,209.6,36.7,92.8,3.22,None
+Pigeonpeas,25.2,72.5,21.3,6.9,140.4,27.5,43.3,2.07,Kisan Credit Card
+Mungbean,23.9,53.3,24.4,6.9,57.4,28.5,88.5,1.53,State Subsidy A
+Cotton,131.2,48.7,20.8,7.9,80.1,25.3,59.6,5.46,PM-Kisan
+Pomegranate,23.6,27.7,38.0,6.6,115.8,18.1,86.6,1.56,PM-Kisan
+Rice,79.8,51.8,36.6,7.0,299.5,24.4,90.9,0.09,Kisan Credit Card
+Blackgram,39.1,56.9,22.3,7.0,60.3,27.3,63.5,2.67,Paramparagat Krishi
+Kidneybeans,29.2,77.2,21.8,5.7,130.5,17.2,26.0,2.94,State Subsidy A
+Mungbean,37.0,43.4,20.7,7.2,36.6,29.0,82.6,2.49,Fasal Bima Yojana
+Coconut,15.7,23.6,28.7,6.0,187.6,28.3,95.6,2.72,None
+Mango,23.8,33.8,32.4,6.7,92.1,29.3,50.7,0.81,Kisan Credit Card
+Muskmelon,94.4,18.4,46.5,6.1,27.6,27.6,93.8,3.77,Soil Health Card
+Jute,65.6,37.9,36.8,7.1,154.8,24.1,76.3,0.9,Kisan Credit Card
+Mungbean,21.6,56.7,17.9,7.2,37.5,27.6,82.7,1.04,Soil Health Card
+Lentil,32.8,63.0,24.4,7.2,40.5,18.5,63.5,3.95,Paramparagat Krishi
+Watermelon,88.5,18.6,52.3,6.2,46.2,25.2,81.7,3.94,PM-Kisan
+Chickpea,49.6,75.6,79.1,7.4,60.5,19.2,16.4,0.4,PM-Kisan
+Orange,17.2,20.7,11.3,6.8,108.9,17.7,91.3,2.09,None
+Coconut,26.9,18.0,30.3,5.9,133.6,27.1,95.6,6.48,None
+Maize,80.6,52.3,18.3,6.8,109.2,19.9,72.7,1.44,Paramparagat Krishi
+Coffee,89.8,28.0,31.7,7.5,113.4,23.5,67.9,4.15,Kisan Credit Card
+Watermelon,111.8,20.4,49.4,6.9,47.3,24.7,82.8,2.19,Kisan Credit Card
+Coconut,15.7,21.8,32.6,5.9,148.9,27.9,91.8,3.04,State Subsidy A
+Maize,78.6,45.6,19.3,6.6,82.0,21.6,56.9,1.51,Fasal Bima Yojana
+Maize,88.4,58.1,17.4,6.2,65.1,23.5,64.5,4.03,PM-Kisan
+Coffee,93.7,22.0,29.6,7.0,148.3,26.0,57.1,2.4,Kisan Credit Card
+Blackgram,56.3,69.1,21.2,6.9,71.6,27.6,67.9,7.45,State Subsidy A
+Coffee,96.4,23.8,28.1,6.5,132.9,26.0,68.8,2.45,Fasal Bima Yojana
+Papaya,48.2,46.6,46.1,6.6,203.9,24.8,93.2,5.06,Paramparagat Krishi
+Orange,28.6,25.0,8.2,6.6,114.3,20.1,94.5,1.16,Fasal Bima Yojana
+Lentil,26.7,78.7,18.6,6.1,54.6,25.2,63.5,5.22,Kisan Credit Card
+Pigeonpeas,19.8,58.8,24.0,5.5,110.0,18.3,41.6,2.93,Soil Health Card
+Apple,32.1,141.0,202.4,5.7,116.6,23.9,90.9,5.39,Kisan Credit Card
+Maize,91.8,49.4,18.9,6.7,103.4,26.9,72.6,1.85,Paramparagat Krishi
+Mothbeans,35.9,59.4,18.4,4.7,47.9,31.4,61.2,0.69,PM-Kisan
+Lentil,33.8,60.9,20.5,6.7,36.8,28.3,66.7,0.64,PM-Kisan
+Mothbeans,29.3,57.2,20.8,5.2,34.6,24.3,44.1,3.59,Fasal Bima Yojana
+Kidneybeans,15.5,74.7,19.3,5.8,143.2,17.0,21.4,4.01,Soil Health Card
+Grapes,39.6,125.4,201.9,6.5,73.6,8.8,81.7,2.81,Soil Health Card
+Muskmelon,98.4,16.0,51.2,6.7,20.6,29.8,89.6,2.27,State Subsidy A
+Mothbeans,33.6,46.7,23.9,4.7,58.3,27.3,46.5,3.72,PM-Kisan
+Mango,34.2,19.0,32.4,6.1,89.0,32.3,47.8,1.04,Paramparagat Krishi
+Apple,37.5,141.7,196.6,6.3,109.8,22.2,90.4,1.19,PM-Kisan
+Grapes,31.0,141.7,198.4,5.6,74.2,25.3,80.3,1.89,Soil Health Card
+Muskmelon,100.2,23.6,47.1,6.3,29.4,29.5,89.7,4.01,Fasal Bima Yojana
+Papaya,46.5,69.1,53.8,7.0,193.5,39.3,94.9,2.53,State Subsidy A
+Lentil,25.9,71.1,20.8,6.5,50.5,22.4,69.3,3.33,Fasal Bima Yojana
+Pigeonpeas,39.9,77.7,23.8,5.0,106.2,28.5,43.7,2.4,Paramparagat Krishi
+Maize,71.2,49.2,16.7,6.4,79.5,25.2,71.4,3.25,Kisan Credit Card
+Mango,30.6,27.5,30.9,6.7,87.3,27.6,49.7,2.86,Fasal Bima Yojana
+Chickpea,54.4,78.2,80.5,7.4,66.6,17.7,20.5,0.49,PM-Kisan
+Banana,95.0,76.6,45.4,5.7,112.1,25.2,79.5,4.64,Paramparagat Krishi
+Coffee,90.2,17.8,30.6,6.9,190.8,26.3,59.3,2.51,Fasal Bima Yojana
+Coconut,17.6,24.5,25.9,5.7,209.5,28.8,92.3,3.13,Kisan Credit Card
+Papaya,39.4,66.3,54.6,7.0,180.5,31.1,94.8,3.68,State Subsidy A
+Rice,81.9,53.8,37.0,7.0,242.7,25.9,80.1,5.14,PM-Kisan
+Lentil,19.8,60.5,20.3,6.5,37.1,22.6,67.8,6.57,Paramparagat Krishi
+Papaya,46.9,69.0,46.1,6.7,126.5,27.1,91.7,4.44,None
+Apple,20.7,124.9,197.2,6.5,109.5,23.1,92.1,3.87,Soil Health Card
+Muskmelon,92.6,23.8,48.1,6.3,24.5,28.0,90.1,3.19,State Subsidy A
+Coconut,18.9,29.9,25.1,6.0,184.5,27.2,96.3,3.46,Fasal Bima Yojana
+Pomegranate,29.5,17.3,38.1,6.0,106.7,21.6,94.0,5.01,Fasal Bima Yojana
+Mothbeans,25.5,38.8,17.1,5.2,51.7,26.0,61.4,4.91,Soil Health Card
+Pigeonpeas,30.2,75.4,20.7,6.1,153.6,20.4,48.4,0.74,Fasal Bima Yojana
+Kidneybeans,21.3,73.9,23.0,6.0,110.5,22.3,21.9,6.51,Soil Health Card
+Kidneybeans,21.4,79.6,17.0,5.7,135.2,24.2,20.2,1.5,PM-Kisan
+Kidneybeans,18.2,64.6,22.1,5.6,139.8,17.7,26.2,4.61,Kisan Credit Card
+Banana,114.1,93.9,52.8,6.2,110.0,29.7,78.4,1.81,PM-Kisan
+Banana,111.8,90.6,50.9,6.1,95.6,26.5,75.4,4.24,Soil Health Card
+Cotton,127.5,40.4,21.3,8.0,70.1,24.6,64.3,5.92,Paramparagat Krishi
+Jute,88.6,37.1,36.9,6.8,156.6,24.1,79.3,2.75,Fasal Bima Yojana
+Mango,15.6,36.0,25.8,4.7,85.9,27.2,46.3,2.27,State Subsidy A
+Blackgram,55.7,58.5,19.2,7.1,65.6,26.3,62.7,5.08,Paramparagat Krishi
+Orange,22.6,15.8,14.5,6.6,101.8,23.6,91.8,2.79,None
+Pigeonpeas,26.2,58.0,21.3,5.5,114.0,21.1,42.7,4.06,State Subsidy A
+Muskmelon,93.6,28.6,53.3,6.7,29.5,27.2,93.6,6.1,Soil Health Card
+Mungbean,20.8,45.2,17.0,6.9,41.5,29.6,84.3,1.79,Soil Health Card
+Grapes,26.8,129.8,196.5,6.2,71.2,32.2,78.3,4.54,Fasal Bima Yojana
+Coconut,37.7,17.2,32.2,5.9,226.1,26.3,94.5,2.05,PM-Kisan
+Muskmelon,86.7,29.1,52.1,6.6,20.7,28.1,91.1,4.47,Paramparagat Krishi
+Papaya,57.6,58.1,53.9,6.7,204.1,24.6,90.4,1.95,Kisan Credit Card
+Banana,93.4,91.4,47.9,5.8,99.1,29.4,81.8,3.16,Kisan Credit Card
+Grapes,17.8,122.1,199.7,5.5,71.8,16.5,80.2,3.51,PM-Kisan
+Blackgram,55.0,77.4,15.4,6.7,68.0,25.8,60.8,2.26,Paramparagat Krishi
+Banana,91.8,76.4,48.0,5.7,90.1,27.6,75.7,6.59,Soil Health Card
+Muskmelon,98.4,21.7,50.7,6.5,22.7,27.5,91.4,1.19,Paramparagat Krishi
+Apple,15.2,121.0,196.3,6.1,117.9,23.8,90.3,2.79,Fasal Bima Yojana
+Coconut,21.5,18.8,33.9,6.2,218.0,28.5,94.9,2.73,Soil Health Card
+Banana,97.3,74.5,49.6,6.1,93.4,26.0,82.3,1.03,State Subsidy A
+Mothbeans,30.2,40.3,21.7,8.2,31.0,27.3,43.9,2.34,None
+Orange,15.1,27.8,6.7,6.7,103.8,18.1,92.2,3.69,Kisan Credit Card
+Kidneybeans,23.0,59.9,23.0,5.7,127.2,20.4,22.4,3.79,PM-Kisan
+Jute,85.4,51.4,35.5,6.3,160.7,24.9,81.8,6.46,Kisan Credit Card
+Papaya,49.7,56.9,51.5,6.9,176.2,42.9,93.9,2.79,None
+Chickpea,25.8,72.1,83.7,7.6,71.7,20.7,19.1,0.81,PM-Kisan
+Muskmelon,82.8,21.1,46.4,6.4,29.1,29.8,94.4,5.49,State Subsidy A
+Maize,66.0,58.3,24.9,6.5,74.0,21.2,68.7,1.36,Kisan Credit Card
+Maize,96.7,47.4,22.7,7.0,71.9,18.9,72.5,1.9,Soil Health Card
+Jute,74.7,41.4,40.6,7.5,178.5,24.3,83.6,5.48,Fasal Bima Yojana
+Watermelon,89.3,25.6,49.3,6.7,54.8,26.0,84.1,1.69,PM-Kisan
+Pomegranate,33.2,20.5,44.7,6.3,112.9,20.7,93.3,3.84,Fasal Bima Yojana
+Mothbeans,17.8,41.4,20.1,7.2,67.4,31.1,58.4,3.19,State Subsidy A
+Coffee,113.7,27.6,26.1,6.8,177.4,23.5,69.6,1.82,PM-Kisan
+Cotton,135.0,50.1,18.7,7.5,86.3,22.5,52.5,2.52,Fasal Bima Yojana
+Pigeonpeas,15.8,67.6,15.4,6.9,129.2,26.2,53.1,7.13,Fasal Bima Yojana
+Mothbeans,37.5,46.2,23.1,5.7,67.2,29.9,64.9,2.0,Paramparagat Krishi
+Papaya,50.4,45.4,45.7,7.0,149.2,33.8,91.5,3.9,Fasal Bima Yojana
+Watermelon,98.0,23.4,51.7,6.8,44.3,26.6,84.5,3.6,State Subsidy A
+Mango,17.2,26.3,30.5,6.3,91.3,33.3,46.7,2.58,None
+Maize,89.9,54.5,20.6,6.1,86.7,24.2,64.7,1.32,Kisan Credit Card
+Rice,88.8,47.0,41.8,7.3,275.3,23.5,91.7,1.12,PM-Kisan
+Muskmelon,117.9,18.1,48.3,6.5,21.2,29.8,94.3,2.18,State Subsidy A
+Mango,22.1,19.9,28.8,5.4,90.9,29.9,52.3,3.36,None
+Jute,60.5,54.8,36.4,6.8,168.6,23.7,84.9,6.39,Fasal Bima Yojana
+Watermelon,103.5,22.9,54.3,6.6,59.6,24.7,80.5,4.98,PM-Kisan
+Apple,29.2,120.9,198.3,5.7,114.2,24.0,93.5,4.67,PM-Kisan
+Chickpea,52.9,76.1,77.8,6.6,60.0,21.3,23.1,0.96,Soil Health Card
+Cotton,116.1,45.4,23.7,6.4,72.2,23.5,58.0,2.34,Fasal Bima Yojana
+Cotton,116.7,49.1,16.9,8.0,69.8,25.3,65.9,2.84,State Subsidy A
+Pigeonpeas,27.6,72.5,21.9,6.7,131.6,19.5,57.1,3.58,Paramparagat Krishi
+Banana,83.6,91.5,54.7,5.5,107.4,27.3,83.0,3.02,Kisan Credit Card
+Pomegranate,26.0,27.2,42.1,6.1,108.2,21.1,94.6,3.12,Fasal Bima Yojana
+Lentil,29.8,73.0,23.2,7.4,39.5,18.7,67.3,2.69,PM-Kisan
+Rice,64.7,48.5,42.7,6.6,193.3,20.4,82.8,1.29,PM-Kisan
+Lentil,23.5,55.2,19.8,6.0,48.5,22.0,68.7,4.6,Soil Health Card
+Coconut,39.9,27.9,26.6,5.6,213.2,25.5,95.4,1.52,Kisan Credit Card
+Rice,62.3,46.7,44.4,6.2,228.8,23.6,92.0,4.15,PM-Kisan
+Muskmelon,80.7,25.4,47.7,6.1,23.4,29.8,93.0,1.57,Kisan Credit Card
+Banana,118.5,89.1,46.8,6.5,107.0,25.5,84.5,2.53,None
+Blackgram,38.8,62.4,15.8,7.3,68.5,29.5,63.8,4.63,Fasal Bima Yojana
+Pomegranate,38.0,19.1,41.6,7.0,116.9,20.7,85.7,3.15,Paramparagat Krishi
+Apple,29.1,125.7,202.9,5.7,120.7,23.6,90.8,1.46,Kisan Credit Card
+Maize,88.2,55.2,24.1,6.9,87.3,18.1,68.1,6.8,Paramparagat Krishi
+Kidneybeans,21.0,72.1,24.8,5.8,97.8,17.8,23.0,0.86,Kisan Credit Card
+Jute,77.1,45.6,37.2,6.5,196.0,23.1,70.8,4.12,Paramparagat Krishi
+Muskmelon,96.6,21.6,47.2,6.4,24.5,28.5,94.4,5.16,Fasal Bima Yojana
+Mungbean,19.4,46.1,18.9,6.4,45.5,27.6,87.2,1.62,PM-Kisan
+Apple,24.0,127.6,197.3,5.8,119.2,22.5,94.8,1.05,Paramparagat Krishi
+Coconut,24.3,16.0,32.0,6.0,142.2,26.5,92.2,2.6,Kisan Credit Card
+Cotton,114.6,48.2,16.0,7.5,61.3,23.6,53.9,3.49,Paramparagat Krishi
+Cotton,138.1,36.1,23.1,6.4,78.6,23.9,53.8,2.47,State Subsidy A
+Jute,75.7,55.0,41.5,6.9,189.3,26.0,76.1,3.42,Kisan Credit Card
+Mungbean,37.0,47.7,23.8,6.4,59.7,27.8,83.0,1.11,Fasal Bima Yojana
+Apple,36.0,139.0,204.5,5.9,112.1,22.3,90.6,2.83,Soil Health Card
+Pomegranate,25.2,21.1,36.2,6.9,112.8,19.6,90.9,1.31,PM-Kisan
+Pomegranate,24.7,29.9,38.9,6.6,110.5,20.2,87.4,2.21,Fasal Bima Yojana
+Banana,80.0,72.0,51.7,6.3,94.0,28.7,80.1,1.78,PM-Kisan
+Coconut,39.5,27.3,27.7,6.2,164.5,28.5,97.4,3.96,State Subsidy A
+Mungbean,20.6,38.9,17.1,6.9,35.3,27.5,83.8,2.57,Soil Health Card
+Coconut,37.4,27.9,34.0,5.7,131.8,25.1,94.6,2.1,State Subsidy A
+Apple,15.5,144.8,201.2,6.4,121.5,22.0,90.3,3.06,Paramparagat Krishi
+Blackgram,44.6,58.7,19.4,6.7,61.0,28.2,67.2,2.9,PM-Kisan
+Apple,38.9,144.6,197.3,5.9,110.0,21.3,95.0,0.83,PM-Kisan
+Cotton,119.4,57.8,17.1,7.3,85.5,24.5,63.1,3.71,Kisan Credit Card
+Watermelon,85.5,16.9,54.4,6.7,47.1,24.8,89.9,4.47,Paramparagat Krishi
+Maize,75.6,52.5,22.4,5.6,71.3,20.4,55.5,3.05,Soil Health Card
+Muskmelon,85.3,22.8,47.1,6.5,28.1,29.5,93.9,1.43,State Subsidy A
+Watermelon,92.4,19.0,47.3,6.3,52.9,24.0,84.2,5.85,State Subsidy A
+Kidneybeans,18.7,60.1,19.4,5.6,108.0,19.5,18.1,2.08,State Subsidy A
+Pigeonpeas,27.1,58.3,18.6,5.5,101.8,21.4,42.0,2.71,Paramparagat Krishi
+Muskmelon,93.4,20.5,47.1,6.1,23.7,28.1,91.8,3.1,Kisan Credit Card
+Lentil,21.2,70.6,18.6,6.8,37.3,27.5,68.3,2.42,Soil Health Card
+Mango,16.4,33.8,26.6,5.4,97.2,27.7,45.5,5.96,None
+Apple,28.7,135.7,201.1,6.2,110.7,21.7,94.0,5.93,State Subsidy A
+Kidneybeans,17.3,57.0,15.1,5.6,141.7,20.7,18.3,6.6,Fasal Bima Yojana
+Lentil,35.6,72.9,24.2,6.3,35.5,18.7,62.9,4.33,Fasal Bima Yojana
+Muskmelon,97.3,20.0,48.9,6.3,21.7,27.7,91.8,3.23,PM-Kisan
+Cotton,137.3,39.9,21.4,6.9,82.4,22.1,60.2,3.26,State Subsidy A
+Lentil,36.6,57.2,15.6,7.0,42.0,22.3,62.3,5.28,Fasal Bima Yojana
+Watermelon,86.8,28.5,53.0,6.9,47.4,25.4,85.0,1.94,Paramparagat Krishi
+Mango,19.1,36.8,32.9,6.0,85.8,33.4,51.4,3.2,State Subsidy A
+Coffee,110.0,19.7,32.3,7.3,125.7,26.7,69.9,6.33,Paramparagat Krishi
+Muskmelon,115.3,25.1,48.4,6.0,20.7,29.8,88.6,5.33,Fasal Bima Yojana
+Muskmelon,97.7,28.0,46.8,6.6,27.2,28.9,94.2,4.03,Soil Health Card
+Blackgram,43.3,73.9,15.8,7.4,69.6,27.8,66.8,2.69,Paramparagat Krishi
+Jute,62.7,47.3,42.6,6.1,168.9,25.0,89.9,2.32,Fasal Bima Yojana
+Coconut,25.7,15.4,26.5,6.3,179.1,27.2,96.9,4.7,Kisan Credit Card
+Chickpea,57.1,70.7,83.3,7.4,86.2,19.2,19.6,2.65,Paramparagat Krishi
+Mothbeans,22.0,46.1,18.9,6.3,49.7,25.1,56.2,1.75,PM-Kisan
+Pigeonpeas,16.7,62.7,18.6,5.2,129.4,19.7,44.5,1.27,State Subsidy A
+Coconut,37.4,17.6,30.9,5.8,169.1,28.8,97.9,1.84,PM-Kisan
+Banana,103.1,90.5,49.3,6.4,101.6,25.9,82.2,1.56,PM-Kisan
+Rice,61.6,47.5,44.3,6.6,238.3,22.5,93.2,2.55,Paramparagat Krishi
+Banana,89.2,85.4,53.4,6.5,105.9,26.3,81.8,0.57,PM-Kisan
+Blackgram,41.1,58.9,21.8,6.6,73.8,28.3,65.7,1.78,State Subsidy A
+Muskmelon,106.1,21.8,47.4,6.3,20.3,29.9,91.4,2.86,Paramparagat Krishi
+Apple,35.1,144.6,197.0,5.9,110.4,23.9,93.7,6.1,Fasal Bima Yojana
+Cotton,109.0,43.8,18.9,6.9,64.3,22.0,63.9,2.39,Soil Health Card
+Coconut,17.7,22.5,29.8,6.4,161.2,25.8,90.1,5.69,None
+Watermelon,82.6,15.2,51.2,6.5,55.6,25.8,86.6,1.81,Kisan Credit Card
+Coffee,109.3,17.9,28.7,7.3,180.6,24.4,60.0,2.63,Paramparagat Krishi
+Muskmelon,119.3,18.6,46.9,6.2,25.2,27.6,89.0,2.31,Fasal Bima Yojana
+Muskmelon,83.7,25.8,49.1,6.3,22.5,28.2,88.0,1.67,Kisan Credit Card
+Apple,39.5,120.9,205.0,6.0,111.0,23.8,92.5,4.7,PM-Kisan
+Chickpea,28.0,60.5,77.0,8.0,75.6,18.1,16.8,4.15,Fasal Bima Yojana
+Mungbean,17.8,39.9,15.2,7.1,58.6,29.2,82.5,1.2,Soil Health Card
+Watermelon,95.7,15.3,47.0,6.3,54.5,25.6,88.6,1.79,Fasal Bima Yojana
+Coffee,85.7,29.5,34.9,6.5,131.5,23.9,57.0,2.05,State Subsidy A
+Banana,103.4,87.2,47.9,5.5,116.6,27.0,77.1,3.03,Fasal Bima Yojana
+Grapes,15.9,128.4,204.9,5.7,71.0,18.5,81.6,3.29,None
+Mothbeans,23.5,54.8,16.4,6.5,54.4,26.0,63.3,3.18,State Subsidy A
+Orange,29.6,21.5,10.5,7.1,100.8,15.5,92.4,1.87,State Subsidy A
+Maize,76.2,59.6,18.9,6.5,100.2,23.4,74.1,1.03,Paramparagat Krishi
+Mango,27.2,29.4,33.6,4.9,88.7,32.6,46.3,1.47,PM-Kisan
+Pomegranate,35.9,16.0,35.4,6.4,101.0,19.6,86.2,3.35,Paramparagat Krishi
+Banana,103.6,87.1,48.7,5.7,107.1,25.3,76.8,3.38,PM-Kisan
+Rice,77.1,45.3,36.5,7.4,228.3,20.5,88.0,2.36,None
+Pomegranate,24.4,15.4,35.6,5.7,110.3,18.6,87.6,1.87,PM-Kisan
+Muskmelon,94.8,27.1,48.2,6.6,26.1,29.6,93.8,5.1,Paramparagat Krishi
+Muskmelon,117.0,17.6,47.7,6.3,21.6,29.7,90.3,3.45,State Subsidy A
+Papaya,54.6,47.4,51.2,6.8,248.7,32.2,94.1,4.4,Kisan Credit Card
+Rice,77.6,43.8,38.1,6.3,296.0,22.9,93.1,2.31,Paramparagat Krishi
+Jute,65.5,40.1,41.5,7.1,180.8,23.3,72.8,3.35,Kisan Credit Card
+Coconut,24.3,21.2,34.1,6.2,165.6,25.4,99.5,2.23,Kisan Credit Card
+Mango,17.0,19.4,32.3,5.4,96.8,28.5,53.0,4.26,Fasal Bima Yojana
+Kidneybeans,38.1,56.3,16.5,5.8,133.4,16.0,18.3,1.93,State Subsidy A
+Rice,82.1,48.1,41.8,6.1,292.6,26.4,89.7,4.03,Paramparagat Krishi
+Mango,33.3,33.0,26.5,6.8,86.2,29.2,51.1,2.45,Fasal Bima Yojana
+Muskmelon,109.9,29.8,46.7,6.1,24.7,29.7,94.6,5.29,Paramparagat Krishi
+Banana,95.7,86.5,53.5,5.8,98.3,25.5,84.7,4.69,Paramparagat Krishi
+Papaya,44.6,45.5,53.7,6.7,183.6,27.8,93.4,3.47,Soil Health Card
+Mango,20.0,22.6,34.7,5.4,87.0,31.8,45.2,2.06,None
+Jute,82.2,54.4,36.5,6.3,159.8,25.2,81.5,3.94,Fasal Bima Yojana
+Banana,85.8,79.6,47.1,6.2,115.1,26.4,83.0,3.03,Soil Health Card
+Watermelon,92.8,21.9,52.5,6.1,58.1,25.1,87.8,0.96,PM-Kisan
+Papaya,40.3,47.1,51.7,6.6,242.1,42.9,94.7,3.33,Kisan Credit Card
+Lentil,15.5,64.9,18.2,6.0,48.3,20.7,66.9,4.85,Fasal Bima Yojana
+Apple,17.0,127.9,199.8,5.7,101.2,23.3,93.7,2.4,Kisan Credit Card
+Maize,85.1,54.0,16.0,6.8,106.9,19.4,58.6,0.47,Kisan Credit Card
+Orange,23.4,24.7,14.0,7.4,101.6,26.4,94.6,4.75,Paramparagat Krishi
+Apple,37.9,126.1,204.6,6.0,113.7,23.3,94.8,2.18,State Subsidy A
+Pigeonpeas,24.7,78.7,24.6,6.8,127.1,28.4,42.2,5.35,Kisan Credit Card
+Orange,33.1,19.3,8.4,6.9,118.9,17.4,94.5,0.98,Paramparagat Krishi
+Rice,79.5,42.4,43.2,6.4,294.0,23.6,92.9,0.82,Soil Health Card
+Chickpea,49.0,67.0,83.9,7.9,86.2,22.0,24.2,1.47,Paramparagat Krishi
+Blackgram,50.1,69.8,24.7,7.3,67.6,27.9,66.6,1.59,PM-Kisan
+Papaya,58.5,69.3,54.0,6.9,173.8,33.0,93.9,4.33,None
+Pigeonpeas,33.9,79.1,21.6,6.8,135.3,25.7,41.9,4.44,State Subsidy A
+Jute,80.4,51.7,35.1,6.5,183.4,24.4,77.4,3.29,Fasal Bima Yojana
+Pigeonpeas,29.0,71.8,15.6,6.1,111.2,23.0,48.5,2.76,Fasal Bima Yojana
+Coffee,82.8,24.9,27.9,6.0,176.3,26.8,51.1,3.93,Kisan Credit Card
+Rice,68.3,49.9,36.1,7.3,296.2,26.7,85.6,2.27,Paramparagat Krishi
+Apple,26.4,141.5,204.1,5.7,119.9,23.1,92.6,2.2,State Subsidy A
+Rice,60.3,58.2,37.6,6.2,232.4,21.9,91.1,1.52,State Subsidy A
+Apple,20.4,126.5,204.5,6.2,119.9,22.3,94.5,0.97,PM-Kisan
+Jute,62.9,37.2,42.9,6.3,163.3,23.1,84.7,1.38,PM-Kisan
+Papaya,38.0,46.4,54.3,6.8,171.7,27.2,93.3,2.29,State Subsidy A
+Maize,76.3,43.8,24.3,5.6,97.6,21.7,66.5,3.02,Paramparagat Krishi
+Orange,19.6,21.0,9.3,6.1,112.4,24.7,94.5,2.05,Kisan Credit Card
+Grapes,17.6,131.9,201.0,6.3,66.7,14.2,79.8,1.14,State Subsidy A
+Papaya,52.0,45.3,51.6,6.6,140.4,26.3,93.7,0.88,Kisan Credit Card
+Orange,28.8,21.1,10.8,6.1,111.0,34.6,91.8,7.67,Soil Health Card
+Coconut,31.8,23.0,28.7,5.5,190.8,25.3,93.7,1.21,Fasal Bima Yojana
+Papaya,35.8,52.6,45.8,6.9,227.5,39.2,94.0,2.98,State Subsidy A
+Orange,20.3,15.9,8.5,6.4,101.5,24.6,90.5,2.04,State Subsidy A
+Banana,100.1,92.8,45.0,6.4,96.3,25.4,79.9,2.98,Kisan Credit Card
+Kidneybeans,38.0,59.5,20.0,5.9,148.9,18.3,24.3,1.53,PM-Kisan
+Cotton,103.0,59.6,18.7,6.4,60.7,22.5,69.0,2.53,Fasal Bima Yojana
+Mango,20.2,26.7,31.3,4.8,95.2,32.9,51.2,4.35,PM-Kisan
+Papaya,32.2,62.8,54.5,7.0,165.3,27.1,92.8,1.29,Kisan Credit Card
+Papaya,50.7,64.7,46.8,6.9,181.4,25.0,92.3,3.44,None
+Mothbeans,15.3,47.3,15.8,8.2,57.4,25.4,63.2,0.31,PM-Kisan
+Mungbean,17.8,44.9,20.4,7.1,45.5,29.9,86.6,3.42,Soil Health Card
+Coffee,110.6,24.8,30.8,6.2,193.2,25.0,69.8,3.44,Fasal Bima Yojana
+Banana,118.2,71.4,45.8,5.5,94.5,29.7,84.7,1.61,Soil Health Card
+Cotton,136.7,47.8,23.5,6.2,60.1,22.6,60.4,5.99,Kisan Credit Card
+Watermelon,94.3,15.3,54.2,6.8,40.7,24.3,82.2,1.78,Paramparagat Krishi
+Lentil,30.3,61.2,17.1,6.4,52.3,20.9,67.7,2.19,PM-Kisan
+Blackgram,54.4,68.5,24.5,7.2,73.8,25.9,70.0,2.41,State Subsidy A
+Mango,30.5,17.4,33.6,6.7,85.6,34.1,50.4,2.87,None
+Banana,112.9,73.2,50.9,5.7,91.7,29.4,77.1,3.94,State Subsidy A
+Chickpea,32.7,64.3,78.1,7.1,61.5,20.5,15.5,3.56,Paramparagat Krishi
+Lentil,35.5,73.9,22.8,7.0,44.6,18.6,64.1,1.85,PM-Kisan
+Banana,90.2,84.1,54.2,6.5,119.8,26.7,80.9,3.55,Fasal Bima Yojana
+Cotton,120.5,36.1,16.2,7.8,64.3,25.5,51.3,1.1,Soil Health Card
+Maize,80.1,51.1,15.8,6.0,70.7,19.3,72.5,5.3,Kisan Credit Card
+Blackgram,56.8,79.5,18.3,7.4,62.8,25.8,64.4,3.17,Soil Health Card
+Watermelon,88.4,20.1,49.9,6.9,51.1,26.2,81.3,1.79,Paramparagat Krishi
+Mothbeans,24.8,42.5,20.8,5.5,46.1,26.3,42.9,4.58,Soil Health Card
+Orange,33.8,25.0,6.2,6.4,118.9,19.0,92.0,4.13,Soil Health Card
+Kidneybeans,20.6,78.9,22.8,5.9,100.6,15.6,28.7,2.35,Kisan Credit Card
+Pigeonpeas,39.7,73.0,23.8,5.8,112.8,19.4,41.1,5.23,State Subsidy A
+Jute,60.4,52.6,41.5,6.6,169.7,23.4,78.3,1.44,Kisan Credit Card
+Grapes,26.7,123.8,195.8,5.6,72.9,11.8,79.1,1.53,State Subsidy A
+Jute,71.0,42.6,41.2,6.3,186.3,23.7,86.2,0.92,Kisan Credit Card
+Orange,32.2,17.2,5.1,7.4,105.4,25.2,92.9,1.28,State Subsidy A
+Mothbeans,24.2,37.1,20.3,5.3,44.4,24.9,53.5,5.4,Paramparagat Krishi
+Mothbeans,39.5,47.2,20.2,6.4,63.9,25.3,58.3,5.15,Soil Health Card
+Chickpea,41.0,67.6,79.8,8.0,77.0,22.0,17.1,0.92,Paramparagat Krishi
+Pigeonpeas,36.0,79.9,21.8,5.5,146.8,21.2,54.3,2.18,Soil Health Card
+Papaya,45.5,47.4,54.1,6.8,236.3,42.1,92.7,4.78,Fasal Bima Yojana
+Mungbean,21.1,55.3,19.1,6.4,36.5,27.6,83.0,2.61,Kisan Credit Card
+Papaya,41.6,63.7,49.2,6.8,124.0,31.9,90.3,2.98,Soil Health Card
+Papaya,40.9,51.2,45.3,6.8,228.1,31.4,93.3,0.88,Kisan Credit Card
+Muskmelon,117.0,27.2,49.3,6.1,26.1,27.6,90.0,1.84,Soil Health Card
+Lentil,17.5,75.6,16.0,7.3,54.6,24.3,60.6,3.25,State Subsidy A
+Mango,25.0,16.6,32.1,6.7,99.1,29.5,48.3,1.77,PM-Kisan
+Lentil,17.6,61.5,17.8,6.4,50.6,25.7,62.1,1.61,Soil Health Card
+Papaya,54.4,55.3,54.0,6.6,127.0,38.6,90.5,4.8,Fasal Bima Yojana
+Chickpea,55.8,71.5,77.8,6.1,82.3,17.8,24.3,1.83,State Subsidy A
+Blackgram,52.9,64.8,21.8,6.9,70.8,26.1,61.2,3.48,Soil Health Card
+Apple,27.8,130.0,201.0,5.9,101.2,22.1,90.2,4.52,PM-Kisan
+Mothbeans,22.2,39.4,18.9,8.1,42.2,27.5,42.0,1.46,PM-Kisan
+Pomegranate,32.3,17.7,40.3,5.6,105.7,22.0,88.7,3.58,Paramparagat Krishi
+Mungbean,17.8,53.7,23.0,7.0,39.2,28.9,88.1,5.67,Kisan Credit Card
+Watermelon,111.7,23.7,51.5,6.7,57.2,25.3,88.0,5.28,PM-Kisan
+Coffee,111.2,25.2,35.0,7.3,188.7,28.0,59.9,4.6,Fasal Bima Yojana
+Grapes,17.0,134.9,198.4,5.9,73.5,19.6,79.5,2.41,Kisan Credit Card
+Orange,22.3,28.7,6.9,6.6,104.8,21.1,90.0,2.4,Fasal Bima Yojana
+Lentil,32.5,58.5,22.8,6.4,51.5,20.7,67.0,4.78,None
+Maize,70.1,54.5,18.4,6.1,100.8,22.0,65.3,3.22,PM-Kisan
+Chickpea,28.6,79.5,80.0,6.1,60.9,21.0,16.9,5.66,State Subsidy A
+Blackgram,49.6,73.5,17.7,7.5,60.5,27.5,64.8,0.91,PM-Kisan
+Mango,31.0,28.2,25.5,5.2,89.9,34.9,53.4,3.25,PM-Kisan
+Coffee,106.4,18.7,27.6,6.6,127.6,27.1,60.6,2.53,Fasal Bima Yojana
+Jute,83.9,45.4,38.2,6.6,193.6,25.3,78.7,1.99,PM-Kisan
+Pomegranate,33.8,24.3,41.6,5.7,117.5,19.0,88.6,6.0,PM-Kisan
+Jute,69.1,59.6,39.8,6.1,193.4,23.1,73.1,2.03,Fasal Bima Yojana
+Blackgram,37.8,57.5,16.4,7.2,70.3,25.1,62.8,2.43,PM-Kisan
+Watermelon,102.0,16.5,53.6,6.3,41.1,26.3,89.3,2.6,Fasal Bima Yojana
+Coffee,91.8,17.2,32.1,6.5,122.0,24.8,56.6,0.7,PM-Kisan
+Muskmelon,115.2,26.9,47.1,6.4,23.9,29.8,93.2,0.31,Kisan Credit Card
+Papaya,31.4,62.8,49.9,6.6,120.8,35.7,94.3,3.53,None
+Coffee,108.5,25.9,33.0,6.8,150.4,27.0,50.9,0.86,Paramparagat Krishi
+Pomegranate,37.9,15.4,44.7,6.7,115.4,23.7,85.3,0.97,PM-Kisan
+Jute,71.9,59.8,40.5,7.3,152.7,23.4,80.0,7.63,Kisan Credit Card
+Maize,97.7,39.2,17.4,5.9,85.2,22.9,56.4,2.75,Paramparagat Krishi
+Rice,78.6,42.9,40.9,7.5,278.5,21.9,92.7,2.69,Soil Health Card
+Banana,92.3,78.2,53.0,6.4,113.5,28.5,83.7,6.01,Paramparagat Krishi
+Cotton,123.4,49.7,18.2,6.1,63.3,25.4,61.6,1.37,Kisan Credit Card
+Cotton,131.9,37.6,18.8,6.5,60.7,22.6,67.7,7.23,Paramparagat Krishi
+Watermelon,110.2,29.1,51.3,6.5,43.5,25.8,85.7,1.85,Soil Health Card
+Mungbean,36.3,46.8,16.4,7.1,40.5,28.6,87.6,1.01,State Subsidy A
+Coffee,118.8,22.4,25.7,6.2,161.5,27.3,51.8,2.01,Paramparagat Krishi
+Coffee,95.4,18.4,26.0,6.1,110.1,23.2,63.4,1.39,PM-Kisan
+Mothbeans,23.1,47.8,17.3,6.8,64.5,29.8,51.8,4.04,Fasal Bima Yojana
+Cotton,132.1,53.6,21.1,7.7,70.5,23.8,51.9,2.01,Kisan Credit Card
+Muskmelon,108.0,26.4,54.8,6.1,21.3,29.2,90.3,1.24,PM-Kisan
+Rice,66.6,53.9,40.5,6.9,234.1,23.3,91.5,3.8,PM-Kisan
+Grapes,25.3,129.3,201.6,5.5,65.6,9.4,83.0,1.2,Kisan Credit Card
+Muskmelon,91.9,15.3,51.2,6.5,28.1,30.0,94.6,3.04,Soil Health Card
+Chickpea,20.9,60.1,84.1,7.4,83.9,18.7,15.4,4.5,None
+Mango,16.3,24.8,32.0,6.0,95.0,29.7,52.4,3.22,Soil Health Card
+Cotton,111.3,35.4,23.6,6.2,76.9,24.8,63.1,6.05,Fasal Bima Yojana
+Rice,82.7,38.6,40.6,7.1,285.8,25.9,88.5,1.17,Kisan Credit Card
+Maize,79.9,52.8,22.8,7.0,88.5,19.3,69.5,0.71,Kisan Credit Card
+Rice,72.1,58.8,39.6,7.5,223.5,25.4,93.5,2.84,None
+Orange,28.9,22.1,7.0,7.3,112.3,33.6,94.2,2.67,State Subsidy A
+Orange,16.4,29.3,13.6,7.2,102.2,20.0,90.2,3.01,State Subsidy A
+Mango,22.6,31.4,27.1,5.4,91.0,33.2,52.2,5.55,Soil Health Card
+Orange,18.0,26.1,9.4,6.7,100.3,20.1,90.1,1.04,Kisan Credit Card
+Kidneybeans,21.3,74.4,17.6,5.6,104.0,18.0,28.9,1.44,State Subsidy A
+Blackgram,37.8,74.3,15.0,7.3,68.4,29.7,69.0,5.78,Kisan Credit Card
+Mango,38.6,21.6,28.9,6.0,86.7,34.3,53.5,4.31,State Subsidy A
+Papaya,56.2,51.8,51.2,6.5,134.5,41.5,94.9,2.74,Paramparagat Krishi
+Mango,25.1,23.7,34.9,5.6,93.1,33.5,46.5,2.1,Fasal Bima Yojana
+Mothbeans,18.6,48.2,22.5,5.9,56.7,30.9,58.0,1.75,Fasal Bima Yojana
+Grapes,24.3,132.1,196.0,6.1,67.7,19.1,81.8,1.39,Paramparagat Krishi
+Chickpea,30.7,71.7,78.9,7.3,84.9,21.3,18.2,5.21,Kisan Credit Card
+Mothbeans,22.6,58.6,20.3,5.1,67.7,24.5,42.7,3.25,Paramparagat Krishi
+Banana,92.6,92.2,48.4,5.9,99.6,27.7,84.8,2.21,Kisan Credit Card
+Mango,19.2,29.8,33.9,5.8,98.9,27.1,54.5,3.94,Fasal Bima Yojana
+Jute,82.4,50.2,38.6,6.1,188.8,23.2,89.7,2.69,Fasal Bima Yojana
+Watermelon,108.9,16.3,50.4,6.1,59.6,25.6,87.2,3.5,PM-Kisan
+Papaya,56.8,49.6,46.9,6.7,181.3,32.8,93.0,1.77,PM-Kisan
+Cotton,132.9,45.4,21.4,7.4,70.8,23.1,50.4,1.94,PM-Kisan
+Blackgram,42.5,65.0,15.1,7.3,74.5,25.9,60.1,1.34,Fasal Bima Yojana
+Coffee,100.8,18.1,28.2,6.3,186.6,25.6,56.4,5.66,Fasal Bima Yojana
+Jute,61.1,43.5,44.8,6.1,186.7,23.8,72.7,3.15,PM-Kisan
+Chickpea,38.3,67.6,75.8,6.8,72.5,20.2,18.5,6.71,None
+Coffee,115.1,27.3,25.6,6.5,181.8,23.6,67.8,2.88,Fasal Bima Yojana
+Banana,111.0,76.2,51.0,6.1,115.4,25.0,78.3,1.24,Kisan Credit Card
+Banana,93.7,71.2,48.5,6.0,100.4,25.5,82.1,0.99,PM-Kisan
+Mango,35.5,38.9,30.4,5.1,96.5,27.0,52.2,0.97,PM-Kisan
+Mothbeans,18.8,58.4,24.5,8.3,65.8,24.3,53.6,0.96,State Subsidy A
+Orange,18.6,22.1,11.5,6.3,113.7,11.5,94.8,1.45,PM-Kisan
+Cotton,132.8,35.0,19.8,7.3,64.2,23.7,54.7,2.13,PM-Kisan
+Orange,26.1,27.3,10.4,7.1,113.3,27.7,91.5,4.75,Kisan Credit Card
+Mothbeans,32.1,41.0,24.3,4.4,63.1,27.1,50.2,2.57,Fasal Bima Yojana
+Pomegranate,20.9,15.6,44.9,5.8,115.9,22.2,92.5,3.5,State Subsidy A
+Watermelon,114.2,15.9,49.9,6.1,44.0,25.1,88.1,2.14,State Subsidy A
+Lentil,18.0,78.2,24.2,6.9,37.4,19.4,65.3,2.36,Soil Health Card
+Chickpea,54.4,64.6,77.5,6.2,61.0,21.1,23.6,2.03,Kisan Credit Card
+Banana,117.8,81.0,46.8,5.6,118.2,26.0,83.0,1.39,PM-Kisan
+Orange,35.8,20.5,10.1,7.1,111.5,28.6,90.6,5.32,None
+Banana,82.4,72.8,46.6,6.5,99.4,27.6,77.4,1.49,Fasal Bima Yojana
+Grapes,30.5,122.5,198.9,6.1,73.0,38.0,82.7,3.33,Paramparagat Krishi
+Pigeonpeas,19.9,55.6,22.5,5.7,115.8,27.2,49.7,3.51,Soil Health Card
+Rice,76.3,36.9,41.3,7.4,253.8,26.3,90.8,2.41,Fasal Bima Yojana
+Maize,62.2,58.4,17.8,6.0,96.9,23.6,60.6,2.24,PM-Kisan
+Maize,89.1,44.8,21.6,6.4,83.6,22.5,61.5,3.01,PM-Kisan
+Muskmelon,81.6,19.3,45.5,6.2,22.4,29.8,91.3,6.46,Soil Health Card
+Banana,113.0,72.6,46.0,5.9,92.1,27.1,75.8,6.14,Kisan Credit Card
+Mothbeans,15.6,53.3,15.3,4.6,45.5,31.7,61.6,3.42,Kisan Credit Card
+Banana,87.1,76.6,51.0,6.1,115.7,29.6,79.3,1.37,Fasal Bima Yojana
+Coconut,16.6,17.6,26.6,5.5,130.8,25.5,92.7,1.43,PM-Kisan
+Muskmelon,90.3,17.4,48.7,6.5,26.4,28.4,90.0,3.09,Paramparagat Krishi
+Mothbeans,16.4,36.0,19.3,5.1,42.0,28.3,52.5,1.86,Kisan Credit Card
+Pomegranate,37.0,19.3,40.6,6.7,119.0,24.2,87.8,4.96,State Subsidy A
+Jute,64.4,45.4,37.8,6.6,189.4,25.7,85.0,2.26,Paramparagat Krishi
+Cotton,125.6,53.1,24.4,7.1,82.8,23.7,57.9,2.28,PM-Kisan
+Coffee,99.4,29.6,25.5,7.0,136.5,24.0,69.5,1.88,PM-Kisan

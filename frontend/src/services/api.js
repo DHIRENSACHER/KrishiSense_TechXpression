@@ -61,7 +61,30 @@ export const schemesAPI = {
 };
 
 export const modelAPI = {
-  predictCrop: (data) => api.post('/model/predict', data),
+  predictCrop: (data) => {
+    const mlAPI = axios.create({
+      baseURL: import.meta.env.VITE_ML_URL || 'http://localhost:5001',
+    });
+    return mlAPI.post('/predict/crop', data);
+  },
+  predictCropYield: (data) => {
+    const mlAPI = axios.create({
+      baseURL: import.meta.env.VITE_ML_URL || 'http://localhost:5001',
+    });
+    return mlAPI.post('/predict/crop-yield', data);
+  },
+  predictScheme: (data) => {
+    const mlAPI = axios.create({
+      baseURL: import.meta.env.VITE_ML_URL || 'http://localhost:5001',
+    });
+    return mlAPI.post('/predict/scheme', data);
+  },
+  predictIrrigation: (data) => {
+    const mlAPI = axios.create({
+      baseURL: import.meta.env.VITE_ML_URL || 'http://localhost:5001',
+    });
+    return mlAPI.post('/predict/irrigation', data);
+  },
 };
 
 export default api;

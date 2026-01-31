@@ -17,6 +17,7 @@ import {
   Droplets,
   TrendingUp,
   Calendar,
+  Zap,
 } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import Predict from './Predict';
@@ -116,6 +117,7 @@ export default function Dashboard() {
   const sidebarItems = [
     { icon: Home, label: 'Home', active: true },
     { icon: Leaf, label: 'Crops' },
+    { icon: Zap, label: 'AI Tools' },
     { icon: Cloud, label: 'Weather' },
     { icon: Settings, label: 'Settings' },
     { icon: User, label: 'Profile' },
@@ -343,6 +345,128 @@ export default function Dashboard() {
 
               <div className="lg:col-span-2">
                 <Predict />
+              </div>
+            </div>
+          ) : activeSection === 'AI Tools' ? (
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">AI-Powered Tools</h2>
+                <p className="text-gray-600">
+                  Use our machine learning models to make smarter farming decisions
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Crop Predictor */}
+                <Link
+                  to="/predict"
+                  className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 bg-green-500 rounded-lg group-hover:scale-110 transition-transform">
+                      <Leaf className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-xs font-medium text-green-700 bg-green-200 px-2 py-1 rounded-full">
+                      ML Model
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Crop Predictor</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Get AI recommendations for the best crops based on temperature, rainfall, soil pH, and season.
+                  </p>
+                  <div className="flex items-center text-green-600 font-medium text-sm">
+                    Try it now
+                    <TrendingUp className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
+
+                {/* Crop Yield Predictor */}
+                <Link
+                  to="/crop-yield"
+                  className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 bg-blue-500 rounded-lg group-hover:scale-110 transition-transform">
+                      <TrendingUp className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-xs font-medium text-blue-700 bg-blue-200 px-2 py-1 rounded-full">
+                      ML Model
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Crop Yield Predictor</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Predict expected crop yield per hectare based on soil moisture and pH levels.
+                  </p>
+                  <div className="flex items-center text-blue-600 font-medium text-sm">
+                    Try it now
+                    <TrendingUp className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
+
+                {/* Government Scheme Predictor */}
+                <Link
+                  to="/scheme-predictor"
+                  className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 bg-purple-500 rounded-lg group-hover:scale-110 transition-transform">
+                      <AlertCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-xs font-medium text-purple-700 bg-purple-200 px-2 py-1 rounded-full">
+                      ML Model
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Scheme Finder</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Find the most suitable government agricultural scheme based on your farm parameters.
+                  </p>
+                  <div className="flex items-center text-purple-600 font-medium text-sm">
+                    Try it now
+                    <TrendingUp className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
+
+                {/* Irrigation Predictor */}
+                <Link
+                  to="/irrigation"
+                  className="bg-gradient-to-br from-cyan-50 to-cyan-100 border border-cyan-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 bg-cyan-500 rounded-lg group-hover:scale-110 transition-transform">
+                      <Droplets className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-xs font-medium text-cyan-700 bg-cyan-200 px-2 py-1 rounded-full">
+                      ML Model
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Irrigation Advisor</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Get precise irrigation recommendations based on crop type, soil moisture, and weather conditions.
+                  </p>
+                  <div className="flex items-center text-cyan-600 font-medium text-sm">
+                    Try it now
+                    <TrendingUp className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Why Use AI Tools?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-3xl font-bold text-green-600 mb-1">85%+</div>
+                    <div className="text-sm text-gray-600">Prediction Accuracy</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-3xl font-bold text-blue-600 mb-1">4</div>
+                    <div className="text-sm text-gray-600">ML Models Available</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-50 rounded-lg">
+                    <div className="text-3xl font-bold text-purple-600 mb-1">24/7</div>
+                    <div className="text-sm text-gray-600">Always Available</div>
+                  </div>
+                </div>
               </div>
             </div>
           ) : (
