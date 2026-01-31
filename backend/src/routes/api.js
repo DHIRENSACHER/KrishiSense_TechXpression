@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { authenticateToken } from '../config/auth.js';
 
 // Auth Controllers
-import { sendOTP, verifyOTPAndLogin, register, updateProfile, getProfile, addCrop, updateCrop, deleteCrop } from '../controllers/authController.js';
+import { register, login, updateProfile, getProfile, addCrop, updateCrop, deleteCrop } from '../controllers/authController.js';
 
 // Advisory Controllers
 import { getAdvisories, getAdvisoriesByLocation, getWeatherAdvisory, markAsRead, markAllAsRead, createAdvisory, triggerSchemeAlert } from '../controllers/advisoryController.js';
