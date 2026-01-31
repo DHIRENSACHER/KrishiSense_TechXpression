@@ -3,67 +3,6 @@ import { generateToken } from '../config/auth.js';
 import { findBestMatch, reverseGeocode, isValidCoordinates } from '../services/geolocationService.js';
 
 
-// Validate phone format
-const phoneRegex = /^\+?[1-9]\d{9,14}$/;
-if (!phoneRegex.test(phone)) {
-    return res.status(400).json({
-        success: false,
-        message: 'Invalid phone number format',
-    });
-}
-
-// Find user
-const user = await User.findOne({ phone });
-if (!user) {
-    return res.status(404).json({
-        success: false,
-        message: 'User not found. Please sign up first.',
-    });
-}
-
-// Generate OTP
-const otp = generateOTP();
-const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
-
-// Store OTP (in production, store in Redis/DB with TTL)
-otpStore.set(phone, { otp, expiry });
-
-// Update OTP in user document (for DB-based verification)
-await User.findByIdAndUpdate(user._id, {
-    otp,
-    otpExpiry: expiry,
-});
-
-// Send OTP via Notification Service
-try {
-    await sendNotificationOTP(phone, otp);
-    console.log(`📱 OTP dispatched via SMS to ${phone}`);
-} catch (smsError) {
-    console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
-    if (process.env.NODE_ENV === 'development') {
-        console.log('\n' + '='.repeat(40));
-        console.log(`🛠️  DEVELOPMENT FALLBACK`);
-        console.log(`📱 OTP for ${phone}: ${otp}`);
-        console.log('='.repeat(40) + '\n');
-    } else {
-        throw smsError; // Re-throw in production
-    }
-}
-
-res.status(200).json({
-    success: true,
-    message: 'OTP sent successfully',
-});
-
-    } catch (error) {
-    console.error(`❌ Send OTP error: ${error.message}`);
-    res.status(500).json({
-        success: false,
-        message: 'Failed to send OTP',
-        error: error.message,
-    });
-}
-};
 
 /**
  * Registers a new user and sends OTP.
