@@ -85,6 +85,12 @@ export const modelAPI = {
     });
     return mlAPI.post('/predict/irrigation', data);
   },
+  predictMarketPrice: (data) => {
+    const mlAPI = axios.create({
+      baseURL: import.meta.env.VITE_ML_URL || 'http://localhost:5001',
+    });
+    return mlAPI.post('/predict/market-price', data);
+  },
 };
 
 export default api;

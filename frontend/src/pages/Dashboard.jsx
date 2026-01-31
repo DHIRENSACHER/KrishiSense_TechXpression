@@ -18,6 +18,16 @@ import {
   TrendingUp,
   Calendar,
   Zap,
+  Wind,
+  Eye,
+  Gauge,
+  Thermometer,
+  CloudRain,
+  CloudSnow,
+  CloudDrizzle,
+  CloudFog,
+  Sunset,
+  Sunrise,
 } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import Predict from './Predict';
@@ -447,6 +457,29 @@ export default function Dashboard() {
                     <TrendingUp className="w-4 h-4 ml-2" />
                   </div>
                 </Link>
+
+                {/* Market Price Predictor */}
+                <Link
+                  to="/market"
+                  className="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="p-3 bg-amber-500 rounded-lg group-hover:scale-110 transition-transform">
+                      <TrendingUp className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-xs font-medium text-amber-700 bg-amber-200 px-2 py-1 rounded-full">
+                      AI Powered
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Market Price Forecast</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Get AI-powered commodity price predictions for informed selling decisions using real-time data.
+                  </p>
+                  <div className="flex items-center text-amber-600 font-medium text-sm">
+                    Try it now
+                    <TrendingUp className="w-4 h-4 ml-2" />
+                  </div>
+                </Link>
               </div>
 
               {/* Quick Stats */}
@@ -458,8 +491,8 @@ export default function Dashboard() {
                     <div className="text-sm text-gray-600">Prediction Accuracy</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">4</div>
-                    <div className="text-sm text-gray-600">ML Models Available</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">5</div>
+                    <div className="text-sm text-gray-600">AIML Models Available</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
                     <div className="text-3xl font-bold text-purple-600 mb-1">24/7</div>
@@ -467,6 +500,259 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
+            </div>
+          ) : activeSection === 'Weather' ? (
+            <div className="space-y-6">
+              {/* Weather Header */}
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">Weather Dashboard</h2>
+                <p className="text-gray-600">Real-time weather data for your farm location</p>
+              </div>
+
+              {/* Current Weather - Hero Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-2xl p-8 text-white shadow-xl"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Left: Main Weather */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <MapPin className="w-5 h-5" />
+                      <span className="text-lg font-medium">{locationName}</span>
+                    </div>
+                    <div className="text-sm mb-2 opacity-90">
+                      {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
+                    </div>
+                    <div className="text-sm mb-6 opacity-90">
+                      {new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
+                    </div>
+                    
+                    <div className="flex items-center gap-6 mb-6">
+                      <div className="text-7xl font-bold">{weather?.temp ?? '--'}°</div>
+                      {weather?.condition === 'sunny' && <Sun className="w-24 h-24 text-yellow-300" />}
+                      {weather?.condition === 'partly_cloudy' && <Cloud className="w-24 h-24 text-white/90" />}
+                      {weather?.condition === 'rain' && <CloudRain className="w-24 h-24 text-blue-200" />}
+                      {weather?.condition === 'thunderstorm' && <CloudRain className="w-24 h-24 text-yellow-200" />}
+                      {weather?.condition === 'fog' && <CloudFog className="w-24 h-24 text-gray-200" />}
+                      {(!weather?.condition || weather?.condition === 'clear') && <Sun className="w-24 h-24 text-yellow-300" />}
+                    </div>
+                    
+                    <div className="text-2xl font-medium capitalize mb-2">
+                      {weather?.description || weather?.condition?.replace('_', ' ') || 'Clear Sky'}
+                    </div>
+                    <div className="text-sm opacity-90">
+                      Feels like {weather?.feelsLike ?? weather?.temp ?? '--'}°C
+                    </div>
+                  </div>
+
+                  {/* Right: Weather Details Grid */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Droplets className="w-5 h-5" />
+                        <span className="text-sm opacity-90">Humidity</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.humidity ?? '--'}%</div>
+                    </div>
+
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Wind className="w-5 h-5" />
+                        <span className="text-sm opacity-90">Wind Speed</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.windSpeed ?? '--'}</div>
+                      <div className="text-xs opacity-75">km/h</div>
+                    </div>
+
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Gauge className="w-5 h-5" />
+                        <span className="text-sm opacity-90">Pressure</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.pressure ?? '--'}</div>
+                      <div className="text-xs opacity-75">hPa</div>
+                    </div>
+
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Eye className="w-5 h-5" />
+                        <span className="text-sm opacity-90">Visibility</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.visibility ?? '10'}</div>
+                      <div className="text-xs opacity-75">km</div>
+                    </div>
+
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Cloud className="w-5 h-5" />
+                        <span className="text-sm opacity-90">Cloud Cover</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.clouds ?? '0'}%</div>
+                    </div>
+
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Sun className="w-5 h-5" />
+                        <span className="text-sm opacity-90">UV Index</span>
+                      </div>
+                      <div className="text-3xl font-bold">{weather?.uvIndex ?? '0'}</div>
+                      <div className="text-xs opacity-75">
+                        {(weather?.uvIndex ?? 0) < 3 ? 'Low' : (weather?.uvIndex ?? 0) < 6 ? 'Moderate' : (weather?.uvIndex ?? 0) < 8 ? 'High' : 'Very High'}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Farming Advisory Section */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Weather Advisory */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                    <AlertCircle className="w-5 h-5 text-orange-500" />
+                    Farming Advisory
+                  </h3>
+                  <div className="space-y-4">
+                    {weather?.temp && weather.temp > 35 && (
+                      <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
+                        <div className="font-semibold text-orange-900 mb-1">High Temperature Alert</div>
+                        <div className="text-sm text-orange-800">
+                          Temperature is above 35°C. Increase irrigation frequency and provide shade for sensitive crops.
+                        </div>
+                      </div>
+                    )}
+                    {weather?.humidity && weather.humidity > 80 && (
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <div className="font-semibold text-blue-900 mb-1">High Humidity</div>
+                        <div className="text-sm text-blue-800">
+                          Humidity is above 80%. Monitor crops for fungal diseases and ensure good air circulation.
+                        </div>
+                      </div>
+                    )}
+                    {weather?.windSpeed && weather.windSpeed > 30 && (
+                      <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                        <div className="font-semibold text-purple-900 mb-1">Strong Winds</div>
+                        <div className="text-sm text-purple-800">
+                          Wind speed is high. Secure loose structures and delay spraying operations.
+                        </div>
+                      </div>
+                    )}
+                    {weather?.condition === 'rain' || weather?.condition === 'thunderstorm' && (
+                      <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                        <div className="font-semibold text-green-900 mb-1">Rain Expected</div>
+                        <div className="text-sm text-green-800">
+                          Rainfall detected. Delay irrigation and avoid fertilizer application until weather clears.
+                        </div>
+                      </div>
+                    )}
+                    {(!weather || (weather.temp <= 35 && weather.humidity <= 80 && weather.windSpeed <= 30)) && (
+                      <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                        <div className="font-semibold text-green-900 mb-1">Ideal Conditions</div>
+                        <div className="text-sm text-green-800">
+                          Weather conditions are favorable for farming activities. Good day for spraying, fertilizing, and field work.
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+
+                {/* Weather Stats */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Today's Highlights</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-amber-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Sunrise className="w-8 h-8 text-amber-600" />
+                        <div>
+                          <div className="text-sm text-gray-600">Sunrise</div>
+                          <div className="font-semibold text-gray-900">06:45 AM</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-gray-500">Best time for</div>
+                        <div className="text-sm font-medium">Early irrigation</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Sunset className="w-8 h-8 text-orange-600" />
+                        <div>
+                          <div className="text-sm text-gray-600">Sunset</div>
+                          <div className="font-semibold text-gray-900">05:30 PM</div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs text-gray-500">End of day</div>
+                        <div className="text-sm font-medium">11h daylight</div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-blue-50 rounded-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Thermometer className="w-5 h-5 text-blue-600" />
+                        <span className="font-medium text-gray-900">Temperature Range</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-xs text-gray-600">Low</div>
+                          <div className="text-lg font-bold text-blue-600">{(weather?.temp ?? 25) - 5}°C</div>
+                        </div>
+                        <div className="flex-1 mx-4">
+                          <div className="h-2 bg-gradient-to-r from-blue-400 to-red-400 rounded-full"></div>
+                        </div>
+                        <div>
+                          <div className="text-xs text-gray-600">High</div>
+                          <div className="text-lg font-bold text-red-600">{weather?.temp ?? 25}°C</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Recent Advisories */}
+              {advisories && advisories.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Weather Advisories</h3>
+                  <div className="space-y-3">
+                    {advisories.slice(0, 5).map((advisory, idx) => (
+                      <div key={idx} className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                        <Calendar className="w-5 h-5 text-gray-600 mt-0.5" />
+                        <div className="flex-1">
+                          <div className="font-medium text-gray-900">{advisory.title || 'Weather Update'}</div>
+                          <div className="text-sm text-gray-600 mt-1">{advisory.content || advisory.message}</div>
+                          <div className="text-xs text-gray-500 mt-2">
+                            {new Date(advisory.createdAt || advisory.date).toLocaleDateString('en-IN', { 
+                              day: 'numeric', 
+                              month: 'short',
+                              hour: '2-digit',
+                              minute: '2-digit'
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
             </div>
           ) : (
             <>

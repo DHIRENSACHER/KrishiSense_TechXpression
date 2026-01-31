@@ -262,6 +262,104 @@ def predict_irrigation():
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 400
 
+@app.route('/predict/market-price', methods=['POST'])
+def predict_market_price():
+    """Predict commodity market prices using AI"""
+    try:
+        data = request.json
+        
+        state = data.get('state', '')
+        district = data.get('district', '')
+        commodity = data.get('commodity', '')
+        
+        if not all([state, district, commodity]):
+            return jsonify({
+                'success': False,
+                'error': 'State, district, and commodity are required'
+            }), 400
+        
+        # Import and use the Gemini API function
+        try:
+            import google.generativeai as genai
+            
+            # Configure Gemini API
+            GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AIzaSyDniTSoytr_eKCmju04Brkt-wyMEpLw5Kg')
+            genai.configure(api_key=GEMINI_API_KEY)
+            
+            prompt = f"""Please provide current commodity pricing information for:
+            
+State: {state}
+District: {district}
+Commodity: {commodity}
+
+Please provide the following details in JSON format:
+1. minimum_price (per quintal)
+2. maximum_price (per quintal)
+3. modal_price (per quintal)
+4. unit (quintal/kg)
+5. source (e.g., Government Market Reports)
+6. accuracy (percentage as number)
+
+Return only valid JSON without any markdown formatting."""
+            
+            model = genai.GenerativeModel('models/gemini-2.5-flash')
+            response = model.generate_content(prompt)
+            
+            if response.text:
+                # Try to parse as JSON
+                import json
+                import re
+                
+                # Extract JSON from response
+                text = response.text.strip()
+                # Remove markdown code blocks if present
+                text = re.sub(r'```json\s*', '', text)
+                text = re.sub(r'```\s*', '', text)
+                text = text.strip()
+                
+                try:
+                    price_data = json.loads(text)
+                    return jsonify({
+                        'success': True,
+                        'state': state,
+                        'district': district,
+                        'commodity': commodity,
+                        'prices': price_data
+                    }), 200
+                except json.JSONDecodeError:
+                    # Fallback: return text response
+                    return jsonify({
+                        'success': True,
+                        'state': state,
+                        'district': district,
+                        'commodity': commodity,
+                        'prices': {
+                            'raw_response': response.text,
+                            'minimum_price': 'See raw response',
+                            'maximum_price': 'See raw response',
+                            'modal_price': 'See raw response'
+                        }
+                    }), 200
+            else:
+                return jsonify({
+                    'success': False,
+                    'error': 'No response from AI model'
+                }), 500
+                
+        except ImportError:
+            return jsonify({
+                'success': False,
+                'error': 'google-generativeai package not installed. Run: pip install google-generativeai'
+            }), 500
+        except Exception as e:
+            return jsonify({
+                'success': False,
+                'error': f'AI API error: {str(e)}'
+            }), 500
+        
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 400
+
 if __name__ == '__main__':
     PORT = int(os.getenv('ML_PORT', 5001))
     print(f"🚀 Starting ML Service on port {PORT}")

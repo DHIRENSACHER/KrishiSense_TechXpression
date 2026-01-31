@@ -1,15 +1,44 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, DollarSign, Calendar, ArrowRight } from 'lucide-react';
+import { TrendingUp, TrendingDown, DollarSign, Calendar, ArrowRight, MapPin } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Link } from 'react-router-dom';
+import { modelAPI } from '../services/api';
 
 const Market = () => {
   const { t } = useTranslation();
   const [selectedCrop, setSelectedCrop] = useState('rice');
+  const [form, setForm] = useState({
+    state: '',
+    district: '',
+    commodity: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
 
   const crops = ['rice', 'wheat', 'maize', 'cotton', 'sugarcane'];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((s) => ({ ...s, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setResult(null);
+    try {
+      const res = await modelAPI.predictMarketPrice(form);
+      setResult(res.data);
+    } catch (err) {
+      setError(err.response?.data?.error || err.message || 'Price prediction failed');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Mock data - replace with actual API call
   const priceData = [
@@ -40,7 +69,7 @@ const Market = () => {
             className="text-center mb-12"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('features.marketForecast.title')}
+              {t('Market Price Forcasting')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Make informed decisions with accurate market price predictions
@@ -52,6 +81,157 @@ const Market = () => {
       {/* Main Content */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* AI Price Prediction Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-2xl shadow-lg p-6 mb-8"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <DollarSign className="text-primary-600" size={28} />
+              <h2 className="text-2xl font-bold text-gray-900">AI-Powered Market Price Prediction</h2>
+            </div>
+            <p className="text-gray-600 mb-6">Get real-time commodity pricing information powered by AI</p>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <label className="flex flex-col">
+                  <span className="text-sm text-gray-700 mb-1 flex items-center gap-2">
+                    <MapPin size={16} />
+                    State
+                  </span>
+                  <input
+                    name="state"
+                    value={form.state}
+                    onChange={handleChange}
+                    className="mt-1 input"
+                    placeholder="e.g., West Bengal"
+                    required
+                  />
+                </label>
+
+                <label className="flex flex-col">
+                  <span className="text-sm text-gray-700 mb-1">District</span>
+                  <input
+                    name="district"
+                    value={form.district}
+                    onChange={handleChange}
+                    className="mt-1 input"
+                    placeholder="e.g., Hooghly"
+                    required
+                  />
+                </label>
+
+                <label className="flex flex-col">
+                  <span className="text-sm text-gray-700 mb-1">Commodity</span>
+                  <input
+                    name="commodity"
+                    value={form.commodity}
+                    onChange={handleChange}
+                    className="mt-1 input"
+                    placeholder="e.g., Rice"
+                    required
+                  />
+                </label>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button type="submit" disabled={loading} className="btn-primary">
+                  {loading ? 'Fetching Prices...' : 'Get Market Prices'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setForm({ state: '', district: '', commodity: '' });
+                    setResult(null);
+                    setError(null);
+                  }}
+                  className="btn-ghost"
+                >
+                  Reset
+                </button>
+              </div>
+            </form>
+
+            {/* Results Display */}
+            <div className="mt-6">
+              {error && (
+                <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg">
+                  {error}
+                </div>
+              )}
+              
+              {result && result.success && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 p-6 rounded-lg"
+                >
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <TrendingUp className="text-green-600" />
+                    Market Prices for {result.commodity}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    📍 {result.district}, {result.state}
+                  </p>
+
+                  {result.prices && (
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <p className="text-sm text-gray-600 mb-1">Minimum Price</p>
+                        <p className="text-2xl font-bold text-blue-700">
+                          {typeof result.prices.minimum_price === 'number' 
+                            ? `₹${result.prices.minimum_price}`
+                            : result.prices.minimum_price}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">per {result.prices.unit || 'quintal'}</p>
+                      </div>
+                      
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <p className="text-sm text-gray-600 mb-1">Maximum Price</p>
+                        <p className="text-2xl font-bold text-green-700">
+                          {typeof result.prices.maximum_price === 'number'
+                            ? `₹${result.prices.maximum_price}`
+                            : result.prices.maximum_price}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">per {result.prices.unit || 'quintal'}</p>
+                      </div>
+                      
+                      <div className="bg-white p-4 rounded-lg shadow-sm">
+                        <p className="text-sm text-gray-600 mb-1">Modal Price</p>
+                        <p className="text-2xl font-bold text-purple-700">
+                          {typeof result.prices.modal_price === 'number'
+                            ? `₹${result.prices.modal_price}`
+                            : result.prices.modal_price}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">per {result.prices.unit || 'quintal'}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {result.prices?.source && (
+                    <div className="mt-4 text-sm text-gray-600">
+                      <strong>Source:</strong> {result.prices.source}
+                    </div>
+                  )}
+
+                  {result.prices?.accuracy && (
+                    <div className="mt-2 text-sm text-gray-600">
+                      <strong>Accuracy:</strong> {result.prices.accuracy}%
+                    </div>
+                  )}
+
+                  {result.prices?.raw_response && (
+                    <div className="mt-4 bg-white p-4 rounded-lg text-sm text-gray-700 whitespace-pre-wrap">
+                      {result.prices.raw_response}
+                    </div>
+                  )}
+                </motion.div>
+              )}
+            </div>
+          </motion.div>
+
           {/* Crop Selector */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

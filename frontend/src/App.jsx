@@ -17,6 +17,7 @@ import Predict from './pages/Predict';
 import CropYield from './pages/CropYield';
 import SchemePredictor from './pages/SchemePredictor';
 import Irrigation from './pages/Irrigation';
+import Market from './pages/Market';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/crop-yield" element={<CropYield />} />
             <Route path="/scheme-predictor" element={<SchemePredictor />} />
             <Route path="/irrigation" element={<Irrigation />} />
+            <Route path="/market" element={<Market />} />
             
             <Route
               path="/dashboard"
