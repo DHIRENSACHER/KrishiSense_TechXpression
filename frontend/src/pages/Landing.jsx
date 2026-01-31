@@ -29,16 +29,16 @@ export default function Landing() {
       color: 'from-green-500 to-emerald-500',
     },
     {
+      icon: TrendingUp,
+      title: t('features.cropYield.title'),
+      description: t('features.cropYield.description'),
+      color: 'from-indigo-500 to-violet-500',
+    },
+    {
       icon: Droplets,
       title: t('features.irrigation.title'),
       description: t('features.irrigation.description'),
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: Calendar,
-      title: t('features.sowing.title'),
-      description: t('features.sowing.description'),
-      color: 'from-orange-500 to-red-500',
     },
     {
       icon: DollarSign,

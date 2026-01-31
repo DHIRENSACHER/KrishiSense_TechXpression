@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Sparkles, Leaf, Droplets, Calendar, DollarSign, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Leaf, Droplets, Calendar, DollarSign, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 export default function Features() {
   const { t } = useTranslation();
@@ -29,26 +29,26 @@ export default function Features() {
       color: 'from-green-500 to-emerald-500',
     },
     {
+      icon: TrendingUp,
+      title: t('features.cropYield.title'),
+      description: t('features.cropYield.description'),
+      benefits: [
+        'Predict yield from soil type and moisture',
+        'Helps plan harvesting and resource allocation',
+        'Supports seasonal forecasting and storage planning',
+      ],
+      color: 'from-indigo-500 to-violet-500',
+    },
+    {
       icon: Droplets,
       title: t('features.irrigation.title'),
       description: t('features.irrigation.description'),
       benefits: [
-        'Optimize water usage by up to 40%',
-        'Automated scheduling based on weather',
+        'Predict irrigation needs using weather and soil data',
         'Precise water amount recommendations',
+        'Reduce water waste and costs',
       ],
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: Calendar,
-      title: t('features.sowing.title'),
-      description: t('features.sowing.description'),
-      benefits: [
-        'Predict optimal sowing windows',
-        'Reduce crop failure risks',
-        'Maximize growing season efficiency',
-      ],
-      color: 'from-orange-500 to-red-500',
     },
     {
       icon: DollarSign,

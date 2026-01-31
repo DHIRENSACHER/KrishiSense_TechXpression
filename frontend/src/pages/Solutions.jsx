@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Sparkles, Leaf, Droplets, Calendar, DollarSign, ArrowRight } from 'lucide-react';
+import { Sparkles, Leaf, Droplets, Calendar, DollarSign, TrendingUp, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Solutions() {
@@ -25,15 +25,15 @@ export default function Solutions() {
       icon: Droplets,
       title: t('features.irrigation.title'),
       description: t('features.irrigation.description'),
-      features: ['Smart scheduling', 'Water amount optimization', 'Weather integration'],
+      features: ['Irrigation prediction', 'Water amount optimization', 'Weather integration'],
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      icon: Calendar,
-      title: t('features.sowing.title'),
-      description: t('features.sowing.description'),
-      features: ['Optimal timing prediction', 'Risk assessment', 'Yield maximization'],
-      color: 'from-orange-500 to-red-500',
+      icon: TrendingUp,
+      title: t('features.cropYield.title'),
+      description: t('features.cropYield.description'),
+      features: ['Soil & moisture inputs', 'Historical yields integration', 'Actionable harvest forecasts'],
+      color: 'from-indigo-500 to-violet-500',
     },
     {
       icon: DollarSign,

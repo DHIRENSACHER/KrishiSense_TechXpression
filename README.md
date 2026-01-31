@@ -1,249 +1,166 @@
-# KrishiSense - Smart Agriculture Advisory System
+<div align="center">
 
-A comprehensive smart agriculture advisory system that empowers farmers with AI-driven insights for precision farming, crop recommendations, and sustainable agriculture.
+  <h1 align="center">
+  KrishiSense
+</h1>
+  <h3><em>Precision intelligence, offline resilience, and sustainable growth for every acre</em></h3>
 
-## 🌾 Features
+</div>
 
-- **Personalized AI-Predicted Government Schemes** - Get matched with relevant government agricultural schemes based on your profile
-- **Crop Recommendation** - Discover which crops to grow based on weather patterns, soil quality, and market demand
-- **Smart Irrigation Scheduling** - Optimize water usage with AI-driven irrigation schedules and precise water amount recommendations
-- **Optimal Seed Sowing Time Prediction** - Predict the best time window for seed sowing to maximize yield
-- **Market Price Forecasting** - Get accurate price predictions to make informed decisions about when and where to sell
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com/?font=Anton&letterSpacing=0.044rem&pause=1000&color=488C5C&width=435&lines=Initializing+KrishiSense+OS...;Syncing+Weather+Data...;Analyzing+Soil+Patterns...;Predicting+Pest+Outbreaks...;Welcome+to+Smart+Agriculture." alt="Terminal Animation">
+</div>
 
-## 🚀 Tech Stack
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="Divider">
 
-### Backend
-- Node.js with Express
-- MongoDB with Mongoose
-- JWT Authentication
-- Swagger API Documentation
-- OpenWeatherMap Integration
+## 🎯 Summary
 
-### Frontend
-- React 18 with Vite
-- Tailwind CSS
-- React Router
-- i18next (Multi-language support)
-- Framer Motion
-- Recharts
+<table>
+<tr>
+<td>
 
-## 📋 Prerequisites
+KrishiSense is an AI-powered Smart Agriculture Advisory System designed to bridge the gap between traditional farming and modern data science. 
+Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with localized, real-time insights—even in low-connectivity zones—to optimize crop yields, reduce resource waste, and mitigate climate risks.
 
-- Node.js 16+ and npm/yarn
-- MongoDB (local or Atlas)
-- OpenWeatherMap API key (optional, for weather features)
+</td>
+<td width="40%">
+<img src="frontend\src\assets\images\logo.png" width="100%" alt="KrishiSense logo">
+</td>
+</tr>
+</table>
 
-## 🛠️ Installation
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=divider">
 
-### 1. Clone the repository
+## Platform Highlights
 
+- **Offline-First PWA** – Seamless operation in remote fields using Capacitor.
+- **Predictive Intelligence** – ML-driven pest alerts and irrigation prediction.
+- **Automated Governance** – Real-time scraping of government schemes and subsidies.
+- **Multilingual Support** – Localized interface for diverse farming communities.
+- **Sustainability Driven** – Precision irrigation to conserve water and energy.
+
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="Divider">
+
+## Landing Page
+<img src="frontend\src\assets\images\landing-page.png" alt="Dashboard Overview" width="100%">
+
+## 🧠 What It Does
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Pest+Intelligence" alt="Pest Intelligence" width="260" height="180" />
+        <h4>Pest & Disease Intelligence</h4>
+        <p>
+          AI-driven outbreak prediction that alerts farmers of potential threats
+          before they devastate crops.
+        </p>
+      </td>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Smart+Irrigation" alt="Irrigation Scheduling" width="260" height="180" />
+        <h4>Irrigation Prediction</h4>
+        <p>
+          Predicts precise irrigation needs using weather and soil moisture data to maximize resource efficiency and save water.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Market+Forecasting" alt="Market Price Forecasting" width="260" height="180" />
+        <h4>Market Price Forecasting</h4>
+        <p>
+          Predicts future crop values to help farmers choose the most profitable
+          time to harvest and sell.
+        </p>
+      </td>
+      <td align="center">
+        <img src="https://via.placeholder.com/260x180.png?text=Govt+Schemes" alt="Govt Notifications" width="260" height="180" />
+        <h4>Govt Scheme Scraping</h4>
+        <p>
+          Automated Puppeteer scripts scrape official portals to notify farmers 
+          of relevant subsidies and programs.
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+## 🧠 AI Agriculture Intelligence
+
+This module transforms traditional farming into a **data-driven operation**. By merging real-time environmental data with historical patterns, the system offers precision advisories.
+
+### 🚀 Key Capabilities
+
+#### 1. Irrigation Prediction
+- Integrates Third-Party Weather APIs and soil moisture data to predict irrigation needs.
+- Provides actionable recommendations to prevent over-irrigation and save water and energy.
+
+#### 2. Resource Intelligence (Soil & Weather)
+- Uses historical and live weather data for broader agrometeorological insights.
+- Helps optimize inputs and field operations based on predicted risk and needs.
+
+#### 3. Offline-First Architecture
+- Uses **Capacitor** and local sync logic to ensure that if a farmer is in a "dead zone," the data caches and syncs as soon as they reach a 4G/LTE area.
+
+#### 4. Automated Notifications
+- **Notifme-SDK** integration for a multi-channel alert system (SMS, Push, Email).
+- Alerts for sudden weather shifts, pest risks, or new government welfare schemes.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=divider">
+
+## ⚙️ Tech Stack
+
+<div align="center">
+
+**Backend:** Node.js • Express • MongoDB • Mongoose • JWT Auth 
+
+**Scraping & Automation:** Puppeteer • Cheerio • PDF-Parse • Node-Cron
+
+**Frontend:** React • Tailwind CSS • Framer Motion • Recharts • Lucide Icons
+
+**Mobile/PWA:** Capacitor • PWA Features • i18next (Multilingual)
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+
+## 🛠️ Technical Workflow
+
+1. **Ingestion**: Weather APIs, Web Scrapers, and sensor data (mocked) feed into the **Express** backend.
+2. **Analysis**: **Node-Cron** jobs trigger ML inference cycles for pest prediction and price forecasting.
+3. **Storage**: User profiles and localized crop data are managed via **Mongoose** in a schema optimized for geospatial queries.
+4. **Communication**: **Notifme-SDK** dispatches critical alerts based on ML thresholds.
+5. **Consumption**: The **React PWA** provides a high-performance, responsive UI with **i18next** supporting regional languages.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=divider&text=How%20to%20Run&fontColor=ffffff&fontSize=28"/>
+
+### Prerequisites
+- Node.js (v18+)
+- MongoDB (Local or Atlas)
+- Twilio / Firebase (For notifications via Notifme)
+
+### Installation & Setup
+
+1. **Clone Repository**
+   ```bash
+   git clone [https://github.com/yourusername/KrishiSense.git](https://github.com/yourusername/KrishiSense.git)
+   cd KrishiSense
+
+2. Backend Setup
+    ```bash
+    cd backend
+    npm install
+    Create .env with MONGODB_URI, JWT_SECRET, and API keys
+    npm start
+
+3. Frontend 
 ```bash
-git clone <repository-url>
-cd KrishiSense_TechXpression/eie
-```
+    cd frontend
+    npm install
+    npm run dev
 
-### 2. Backend Setup
-
-```bash
-cd backend
-npm install
-```
-
-Create a `.env` file in the `backend` directory:
-
-```env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/krushisense
-JWT_SECRET=your-secret-key-here
-CORS_ORIGIN=http://localhost:5173
-OPENWEATHER_API_KEY=your-openweather-api-key
-NODE_ENV=development
-```
-
-Start the backend server:
-
-```bash
-npm run dev
-```
-
-The backend API will be available at `http://localhost:3000`
-API documentation: `http://localhost:3000/api-docs`
-
-### 3. Frontend Setup
-
-Open a new terminal:
-
-```bash
-cd frontend
-npm install
-```
-
-Create a `.env` file in the `frontend` directory:
-
-```env
-VITE_API_URL=http://localhost:3000/api
-```
-
-Start the frontend development server:
-
-```bash
-npm run dev
-```
-
-The frontend will be available at `http://localhost:5173`
-
-## 🌐 Multi-Language Support
-
-The application supports 9 Indian languages:
-
-- English (en)
-- Hindi (hi)
-- Marathi (mr)
-- Tamil (ta)
-- Telugu (te)
-- Punjabi (pa)
-- Gujarati (gu)
-- Kannada (kn)
-- Bengali (bn)
-
-Users can switch languages using the language selector in the navbar.
-
-## 📱 Pages
-
-### Public Pages
-- **Landing Page** (`/`) - Main landing page with features and hero section
-- **About** (`/about`) - About KrishiSense
-- **Solutions** (`/solutions`) - Overview of solutions
-- **Features** (`/features`) - Detailed features
-- **Contact** (`/contact`) - Contact form
-
-### Protected Pages
-- **Login** (`/login`) - OTP-based authentication
-- **Dashboard** (`/dashboard`) - Farm overview with:
-  - Weather information
-  - Soil moisture levels
-  - Today's activities
-  - Farm map
-  - Monthly yield analysis
-
-## 🔐 Authentication
-
-The app uses OTP-based authentication:
-
-1. Enter your phone number
-2. Receive OTP via SMS
-3. Verify OTP to login
-4. Access personalized dashboard
-
-## 📊 API Endpoints
-
-### Authentication
-- `POST /api/auth/send-otp` - Send OTP to phone
-- `POST /api/auth/verify-otp` - Verify OTP and get token
-- `GET /api/auth/profile` - Get user profile
-- `PUT /api/auth/profile` - Update user profile
-
-### Advisories
-- `GET /api/advisories` - Get all advisories
-- `GET /api/advisories/weather` - Get weather advisory
-- `PATCH /api/advisories/:id/read` - Mark advisory as read
-
-### Market & Schemes
-- `POST /api/market/forecast` - Get market price forecast
-- `GET /api/market/history` - Get price history
-- `GET /api/schemes` - Get government schemes
-- `GET /api/schemes/:id` - Get scheme details
-
-Full API documentation available at `/api-docs` when backend is running.
-
-## 🏗️ Project Structure
-
-```
-eie/
-├── backend/
-│   ├── src/
-│   │   ├── config/       # Configuration files
-│   │   ├── controllers/  # Route controllers
-│   │   ├── models/       # MongoDB models
-│   │   ├── routes/       # API routes
-│   │   ├── services/     # Business logic services
-│   │   └── index.js      # Entry point
-│   └── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── context/      # React context
-│   │   ├── i18n/         # Translations
-│   │   ├── pages/        # Page components
-│   │   ├── utils/        # Utilities
-│   │   └── App.jsx       # Main app
-│   └── package.json
-└── README.md
-```
-
-## 🧪 Development
-
-### Backend Development
-
-```bash
-cd backend
-npm run dev  # Starts with nodemon for auto-reload
-```
-
-### Frontend Development
-
-```bash
-cd frontend
-npm run dev  # Starts Vite dev server
-```
-
-### Building for Production
-
-**Backend:**
-```bash
-cd backend
-npm start
-```
-
-**Frontend:**
-```bash
-cd frontend
-npm run build
-npm run preview  # Preview production build
-```
-
-## 📝 Environment Variables
-
-### Backend (.env)
-- `PORT` - Server port (default: 3000)
-- `MONGODB_URI` - MongoDB connection string
-- `JWT_SECRET` - Secret key for JWT tokens
-- `CORS_ORIGIN` - Allowed CORS origin
-- `OPENWEATHER_API_KEY` - OpenWeatherMap API key
-- `NODE_ENV` - Environment (development/production)
-
-### Frontend (.env)
-- `VITE_API_URL` - Backend API URL
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add translations for new text
-5. Test thoroughly
-6. Submit a pull request
-
-## 📄 License
-
-ISC
-
-## 🙏 Acknowledgments
-
-- OpenWeatherMap for weather data
-- MongoDB for database
-- All the open-source libraries that made this possible
-
-## 📞 Support
-
-For support, email hello@krushisense.ag or create an issue in the repository.
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="Divider">
+<div align="center"> <sub>Built with ❤️ to support Sustainable Development Goal 2: Zero Hunger</sub> </div>

@@ -23,13 +23,13 @@
       "title": "Crop Recommendation",
       "description": "Discover which crops to grow based on weather patterns, soil quality, and market demand"
     },
-    "irrigation": {
-      "title": "Smart Irrigation Scheduling",
-      "description": "Optimize water usage with AI-driven irrigation schedules and precise water amount recommendations"
+    "cropYield": {
+      "title": "Crop Yield Prediction",
+      "description": "Predict crop yield based on soil type, moisture, and historical data"
     },
-    "sowing": {
-      "title": "Optimal Sowing Time",
-      "description": "Predict the best time window for seed sowing to maximize yield and minimize risks"
+    "irrigation": {
+      "title": "Irrigation Prediction",
+      "description": "Predict irrigation needs using AI models and provide actionable recommendations to save water"
     },
     "market": {
       "title": "Market Price Forecasting",
