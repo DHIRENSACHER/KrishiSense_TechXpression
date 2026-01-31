@@ -27,10 +27,10 @@ const CropYield = () => {
     
     try {
       const response = await modelAPI.predictCropYield({
-        moisture: parseFloat(formData.moisture),
-        ph: parseFloat(formData.ph),
+        soil_moisture: parseFloat(formData.moisture),
+        soil_ph: parseFloat(formData.ph),
       });
-      setResult(response);
+      setResult(response.data);
     } catch (error) {
       console.error('Error predicting crop yield:', error);
     } finally {
@@ -146,7 +146,7 @@ const CropYield = () => {
                 Expected Harvest
               </p>
               <p className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                {result.yield_per_hectare?.toFixed(2)} kg/ha
+                {result.predicted_yield?.toFixed(2)} kg/ha
               </p>
             </div>
 
