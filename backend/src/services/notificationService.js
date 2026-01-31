@@ -110,8 +110,33 @@ const sendSMS = async (to, text) => {
         return result;
     } catch (error) {
         console.error(`❌ Notifme error sending to ${to}:`, error.message);
-        throw error;
     }
+};
+
+/**
+ * Sends an irrigation alert.
+ * 
+ * @async
+ * @param {string} phone - Recipient phone number
+ * @param {Object} data - Alert data
+ */
+const sendIrrigationAlert = async (phone, data) => {
+    const { crop, status } = data;
+    const text = `[KrushiSense Alert] Irrigation Notice for your ${crop}: ${status}. Check the app for details.`;
+    return await sendSMS(phone, text);
+};
+
+/**
+ * Sends a government scheme alert.
+ * 
+ * @async
+ * @param {string} phone - Recipient phone number
+ * @param {Object} scheme - Scheme data
+ */
+const sendSchemeAlert = async (phone, scheme) => {
+    const { title } = scheme;
+    const text = `[KrushiSense Scheme] New scheme available: ${title}. You may be eligible! Tap to view details.`;
+    return await sendSMS(phone, text);
 };
 
 export {

@@ -54,77 +54,8 @@ router.get('/health', (req, res) => {
 // Authentication Routes
 // ============================================================
 
-/**
- * @swagger
- * /api/auth/send-otp:
- *   post:
- *     summary: Send OTP to phone number
- *     tags: [Authentication]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - phone
- *             properties:
- *               phone:
- *                 type: string
- *                 example: "+919876543210"
- *     responses:
- *       200:
- *         description: OTP sent successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success: { type: boolean }
- *                 message: { type: string }
- *                 otp: { type: string, description: "Only in development mode" }
- *       400:
- *         description: Invalid phone number
- */
-router.post('/auth/send-otp', sendOTP);
-
-/**
- * @swagger
- * /api/auth/verify-otp:
- *   post:
- *     summary: Verify OTP and get JWT token
- *     tags: [Authentication]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - phone
- *               - otp
- *             properties:
- *               phone:
- *                 type: string
- *                 example: "+919876543210"
- *               otp:
- *                 type: string
- *                 example: "123456"
- *     responses:
- *       200:
- *         description: OTP verified, JWT token returned
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success: { type: boolean }
- *                 token: { type: string }
- *                 user: { $ref: '#/components/schemas/User' }
- *       400:
- *         description: Invalid or expired OTP
- */
-router.post('/auth/verify-otp', verifyOTPAndLogin);
+router.post('/auth/register', register);
+router.post('/auth/login', login);
 
 /**
  * @swagger

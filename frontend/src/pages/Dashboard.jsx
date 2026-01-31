@@ -55,7 +55,7 @@ export default function Dashboard() {
       console.error('Error fetching dashboard data:', error);
       // Check if the error is due to missing location
       if (error.response?.data?.message?.toLowerCase().includes('location not set')) {
-        setShowLocationModal(true);
+        setProfileOpen(true);
       }
     } finally {
       setLoading(false);
@@ -220,8 +220,8 @@ export default function Dashboard() {
                   if (item.label === 'Profile') setProfileOpen(true);
                 }}
                 className={`p-3 rounded-lg transition-colors ${activeSection === item.label
-                    ? 'bg-primary-100 text-primary-600'
-                    : 'text-gray-600 hover:bg-gray-100'
+                  ? 'bg-primary-100 text-primary-600'
+                  : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 title={item.label}
               >
