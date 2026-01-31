@@ -55,8 +55,8 @@ const authenticateToken = (req, res, next) => {
  * @returns {string} A 6-digit OTP string
  */
 const generateOTP = () => {
-    // Always returns '123456' for testing; in production use random generation
-    return '123456';
+    // Generate a random 6-digit OTP
+    return Math.floor(100000 + Math.random() * 900000).toString();
 };
 
 /**

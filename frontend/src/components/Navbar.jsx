@@ -38,11 +38,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isActive(link.path)
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(link.path)
                     ? 'bg-gray-900 text-white'
                     : 'text-gray-700 hover:bg-gray-100'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -52,7 +51,7 @@ export default function Navbar() {
           {/* Right side actions */}
           <div className="flex items-center gap-3">
             <LanguageSelector />
-            
+
             {user ? (
               <div className="flex items-center gap-3 min-w-fit ml-auto">
                 <Link
@@ -71,13 +70,21 @@ export default function Navbar() {
                 </button>
               </div>
             ) : (
-              <Link
-                to="/login"
-                className="hidden md:block px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium"
-              >
-                Farmer Login
-              </Link>
-            )} 
+              <div className="hidden md:flex items-center gap-2">
+                <Link
+                  to="/login"
+                  className="px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors text-sm font-medium"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="px-4 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors text-sm font-medium"
+                >
+                  Sign Up
+                </Link>
+              </div>
+            )}
 
             {/* Mobile menu button */}
             <button
@@ -107,11 +114,10 @@ export default function Navbar() {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
-                    isActive(link.path)
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${isActive(link.path)
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -136,13 +142,22 @@ export default function Navbar() {
                   </button>
                 </>
               ) : (
-                <Link
-                  to="/login"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium"
-                >
-                  Farmer Login
-                </Link>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    to="/login"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100 text-sm font-medium"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/signup"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm font-medium text-center"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
               )}
             </div>
           </motion.div>

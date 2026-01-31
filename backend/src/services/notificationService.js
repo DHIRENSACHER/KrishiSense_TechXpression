@@ -4,10 +4,34 @@
  */
 
 import NotifmeSdk from 'notifme-sdk';
+import twilio from 'twilio';
 
 // Environment variables for Notifme
 const provider = process.env.NOTIFME_SMS_PROVIDER || 'twilio';
 const from = process.env.NOTIFME_TWILIO_PHONE_NUMBER || process.env.NOTIFME_SMS_FROM || 'KrushiSense';
+
+// Initialize Twilio client
+const twilioClient = process.env.NOTIFME_TWILIO_ACCOUNT_SID && process.env.NOTIFME_TWILIO_AUTH_TOKEN
+    ? twilio(process.env.NOTIFME_TWILIO_ACCOUNT_SID, process.env.NOTIFME_TWILIO_AUTH_TOKEN)
+    : null;
+
+const verifyServiceSid = process.env.TWILIO_VERIFY_SERVICE_SID;
+
+/**
+ * Normalizes a phone number to E.164 format.
+ * @param {string} phone - The phone number to format
+ * @returns {string} E.164 formatted phone number
+ */
+const formatToE164 = (phone) => {
+    if (!phone) return '';
+    let cleaned = phone.replace(/\D/g, '');
+    // If 10 digits, assume India (+91)
+    if (cleaned.length === 10) return `+91${cleaned}`;
+    // If it starts with 91 and has 12 digits, just add +
+    if (cleaned.length === 12 && cleaned.startsWith('91')) return `+${cleaned}`;
+    // Otherwise return as is if it already has +
+    return phone.startsWith('+') ? phone : `+${cleaned}`;
+};
 
 // Initialize Notifme SDK
 // We use a getter to ensure environment variables are loaded and to allow mock fallback
@@ -64,14 +88,24 @@ const getNotifme = () => {
 const sendSMS = async (to, text) => {
     try {
         const sdk = getNotifme();
+        const normalizedTo = formatToE164(to);
+        const statusCallback = process.env.TWILIO_STATUS_CALLBACK_URL;
+
         const result = await sdk.send({
-            sms: { from, to, text }
+            sms: {
+                from,
+                to: normalizedTo,
+                text,
+                ...(provider === 'twilio' && statusCallback ? { statusCallback } : {})
+            }
         });
 
         if (result.status === 'success') {
-            console.log(`✅ Notification sent successfully to ${to}`);
+            console.log(`✅ Notification sent successfully to ${normalizedTo}`);
         } else {
-            console.warn(`⚠️ Notification failed for some providers to ${to}`);
+            const errorMsg = result.errors ? Object.values(result.errors).join(', ') : 'Unknown error';
+            console.error(`❌ Notification failed for ${normalizedTo}: ${errorMsg}`);
+            throw new Error(`SMS Provider Error: ${errorMsg}`);
         }
         return result;
     } catch (error) {
@@ -118,9 +152,40 @@ const sendSchemeAlert = async (phone, scheme) => {
     return await sendSMS(phone, text);
 };
 
+/**
+ * Sends an OTP using Twilio Verify API.
+ * @param {string} phone - Recipient phone number
+ * @returns {Promise<Object>} Twilio response
+ */
+const sendTwilioVerifyOTP = async (phone) => {
+    if (!twilioClient || !verifyServiceSid) {
+        throw new Error('Twilio Verify service not configured');
+    }
+    const normalizedTo = formatToE164(phone);
+    return twilioClient.verify.v2.services(verifyServiceSid)
+        .verifications.create({ to: normalizedTo, channel: 'sms' });
+};
+
+/**
+ * Checks an OTP using Twilio Verify API.
+ * @param {string} phone - Recipient phone number
+ * @param {string} code - The 6-digit code
+ * @returns {Promise<Object>} Twilio response
+ */
+const checkTwilioVerifyOTP = async (phone, code) => {
+    if (!twilioClient || !verifyServiceSid) {
+        throw new Error('Twilio Verify service not configured');
+    }
+    const normalizedTo = formatToE164(phone);
+    return twilioClient.verify.v2.services(verifyServiceSid)
+        .verificationChecks.create({ to: normalizedTo, code });
+};
+
 export {
     sendSMS,
     sendOTP,
     sendIrrigationAlert,
-    sendSchemeAlert
+    sendSchemeAlert,
+    sendTwilioVerifyOTP,
+    checkTwilioVerifyOTP
 };

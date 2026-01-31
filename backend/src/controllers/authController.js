@@ -1,7 +1,7 @@
 import User from '../models/User.js';
 import { generateToken, generateOTP, verifyOTP } from '../config/auth.js';
 import { findBestMatch, reverseGeocode, isValidCoordinates } from '../services/geolocationService.js';
-import { sendOTP as sendNotificationOTP } from '../services/notificationService.js';
+import { sendOTP as sendNotificationOTP, sendTwilioVerifyOTP, checkTwilioVerifyOTP } from '../services/notificationService.js';
 
 /**
  * In-memory OTP storage (for mock implementation).
@@ -43,6 +43,15 @@ const sendOTP = async (req, res) => {
             });
         }
 
+        // Find user
+        const user = await User.findOne({ phone });
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: 'User not found. Please sign up first.',
+            });
+        }
+
         // Generate OTP
         const otp = generateOTP();
         const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
@@ -50,22 +59,27 @@ const sendOTP = async (req, res) => {
         // Store OTP (in production, store in Redis/DB with TTL)
         otpStore.set(phone, { otp, expiry });
 
-        // Find or create user
-        let user = await User.findOne({ phone });
-        if (!user) {
-            user = await User.create({ phone });
-        }
-
-        // Update OTP in user document (optional, for DB-based verification)
+        // Update OTP in user document (for DB-based verification)
         await User.findByIdAndUpdate(user._id, {
             otp,
             otpExpiry: expiry,
         });
 
         // Send OTP via Notification Service
-        await sendNotificationOTP(phone, otp);
-
-        console.log(`📱 OTP dispatched to ${phone}: ${otp}`);
+        try {
+            await sendNotificationOTP(phone, otp);
+            console.log(`📱 OTP dispatched via SMS to ${phone}`);
+        } catch (smsError) {
+            console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
+            if (process.env.NODE_ENV === 'development') {
+                console.log('\n' + '='.repeat(40));
+                console.log(`🛠️  DEVELOPMENT FALLBACK`);
+                console.log(`📱 OTP for ${phone}: ${otp}`);
+                console.log('='.repeat(40) + '\n');
+            } else {
+                throw smsError; // Re-throw in production
+            }
+        }
 
         res.status(200).json({
             success: true,
@@ -77,6 +91,90 @@ const sendOTP = async (req, res) => {
         res.status(500).json({
             success: false,
             message: 'Failed to send OTP',
+            error: error.message,
+        });
+    }
+};
+
+/**
+ * Registers a new user and sends OTP.
+ */
+const register = async (req, res) => {
+    try {
+        const { name, phone } = req.body;
+
+        if (!phone || !name) {
+            return res.status(400).json({
+                success: false,
+                message: 'Name and phone number are required',
+            });
+        }
+
+        // Validate phone format
+        const phoneRegex = /^\+?[1-9]\d{9,14}$/;
+        if (!phoneRegex.test(phone)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Invalid phone number format',
+            });
+        }
+
+        // Check if user already exists
+        let user = await User.findOne({ phone });
+        if (user) {
+            return res.status(400).json({
+                success: false,
+                message: 'User already exists with this phone number. Please login instead.',
+            });
+        }
+
+        // Create new user
+        user = await User.create({ name, phone, isVerified: false });
+
+        // Generate OTP
+        const otp = generateOTP();
+        const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
+
+        // Store OTP
+        otpStore.set(phone, { otp, expiry });
+
+        // Update user with OTP
+        await User.findByIdAndUpdate(user._id, {
+            otp,
+            otpExpiry: expiry,
+        });
+
+        // Send OTP via Notification Service
+        try {
+            if (process.env.TWILIO_VERIFY_SERVICE_SID) {
+                await sendTwilioVerifyOTP(phone);
+                console.log(`📱 OTP dispatched via Twilio Verify to ${phone} (Register)`);
+            } else {
+                await sendNotificationOTP(phone, otp);
+                console.log(`📱 OTP dispatched via SMS to ${phone} (Register)`);
+            }
+        } catch (smsError) {
+            console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
+            if (process.env.NODE_ENV === 'development') {
+                console.log('\n' + '='.repeat(40));
+                console.log(`🛠️  DEVELOPMENT FALLBACK (Signup)`);
+                console.log(`📱 OTP for ${phone}: ${otp}`);
+                console.log('='.repeat(40) + '\n');
+            } else {
+                throw smsError;
+            }
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Registration successful. OTP sent.',
+        });
+
+    } catch (error) {
+        console.error(`❌ Register error: ${error.message}`);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to register and send OTP',
             error: error.message,
         });
     }
@@ -105,35 +203,53 @@ const verifyOTPAndLogin = async (req, res) => {
             });
         }
 
-        // Get stored OTP
-        const stored = otpStore.get(phone);
+        // Check if using Twilio Verify
+        if (process.env.TWILIO_VERIFY_SERVICE_SID) {
+            try {
+                const check = await checkTwilioVerifyOTP(phone, otp);
+                if (check.status !== 'approved') {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Invalid or expired OTP',
+                    });
+                }
+            } catch (err) {
+                console.error(`❌ Twilio Verify Check Error: ${err.message}`);
+                // Fallback to manual check if configured (optional)
+            }
+        } else {
+            // Get stored OTP
+            const stored = otpStore.get(phone);
 
-        if (!stored) {
-            return res.status(400).json({
-                success: false,
-                message: 'OTP not found. Please request a new OTP.',
-            });
-        }
+            if (!stored) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'OTP not found. Please request a new OTP.',
+                });
+            }
 
-        // Check expiry
-        if (new Date() > stored.expiry) {
+            // Check expiry
+            if (new Date() > stored.expiry) {
+                otpStore.delete(phone);
+                return res.status(400).json({
+                    success: false,
+                    message: 'OTP has expired. Please request a new OTP.',
+                });
+            }
+
+            // Verify OTP
+            if (!verifyOTP(otp, stored.otp)) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid OTP',
+                });
+            }
+
+            // Clear OTP after successful verification
             otpStore.delete(phone);
-            return res.status(400).json({
-                success: false,
-                message: 'OTP has expired. Please request a new OTP.',
-            });
         }
 
-        // Verify OTP
-        if (!verifyOTP(otp, stored.otp)) {
-            return res.status(400).json({
-                success: false,
-                message: 'Invalid OTP',
-            });
-        }
-
-        // Clear OTP after successful verification
-        otpStore.delete(phone);
+        // Get user and update verification status
 
         // Get user and update verification status
         const user = await User.findOneAndUpdate(

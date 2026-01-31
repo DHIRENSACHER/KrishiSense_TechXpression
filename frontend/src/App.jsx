@@ -12,6 +12,8 @@ import Solutions from './pages/Solutions';
 import Features from './pages/Features';
 import Contact from './pages/Contact';
 import Schemes from './pages/Schemes';
+import Signup from './pages/Signup';
+
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/features" element={<Features />} />

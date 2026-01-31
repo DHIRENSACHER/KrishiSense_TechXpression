@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { authenticateToken } from '../config/auth.js';
 
 // Auth Controllers
-import { sendOTP, verifyOTPAndLogin, updateProfile, getProfile, addCrop, updateCrop, deleteCrop } from '../controllers/authController.js';
+import { sendOTP, verifyOTPAndLogin, register, updateProfile, getProfile, addCrop, updateCrop, deleteCrop } from '../controllers/authController.js';
 
 // Advisory Controllers
 import { getAdvisories, getAdvisoriesByLocation, getWeatherAdvisory, markAsRead, markAllAsRead, createAdvisory, triggerSchemeAlert } from '../controllers/advisoryController.js';
@@ -125,6 +125,34 @@ router.post('/auth/send-otp', sendOTP);
  *         description: Invalid or expired OTP
  */
 router.post('/auth/verify-otp', verifyOTPAndLogin);
+
+/**
+ * @swagger
+ * /api/auth/register:
+ *   post:
+ *     summary: Register a new user and send OTP
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - phone
+ *             properties:
+ *               name:
+ *                 type: string
+ *               phone:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: OTP sent successfully
+ *       400:
+ *         description: Invalid input
+ */
+router.post('/auth/register', register);
 
 /**
  * @swagger

@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { authAPI } from '../utils/api';
 import { motion } from 'framer-motion';
 import { Phone, Lock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import logoImg from '../assets/images/logo.png';
+import logoImg from '../assets/images/newlogo.png';
 
 export default function Login() {
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ export default function Login() {
   const handleSendOTP = async (e) => {
     e.preventDefault();
     setError('');
-    
+
     // TEMPORARY: Direct login bypass for testing
     if (phone === '9999999999' || phone === '+919999999999') {
       const tempUser = {
@@ -43,7 +43,7 @@ export default function Login() {
       navigate('/dashboard');
       return;
     }
-    
+
     if (!phone.match(/^\+?[1-9]\d{9,14}$/)) {
       setError('Please enter a valid phone number');
       return;
@@ -147,6 +147,12 @@ export default function Login() {
                   </>
                 )}
               </button>
+
+              <div className="text-center mt-4">
+                <p className="text-sm text-gray-600">
+                  Don't have an account? <Link to="/signup" className="text-primary-600 font-semibold hover:underline">Sign Up</Link>
+                </p>
+              </div>
             </form>
           ) : (
             <form onSubmit={handleVerifyOTP} className="space-y-6">
@@ -219,7 +225,7 @@ export default function Login() {
                   type="button"
                   onClick={() => {
                     setCountdown(60);
-                    handleSendOTP({ preventDefault: () => {} });
+                    handleSendOTP({ preventDefault: () => { } });
                   }}
                   className="w-full text-sm text-primary-600 hover:text-primary-700 font-medium"
                 >
