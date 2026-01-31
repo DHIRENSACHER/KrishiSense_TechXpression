@@ -549,6 +549,7 @@ const deleteCrop = async (req, res) => {
 export {
     sendOTP,
     verifyOTPAndLogin,
+    register,
     updateProfile,
     getProfile,
     addCrop,
