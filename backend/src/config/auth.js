@@ -50,23 +50,4 @@ const authenticateToken = (req, res, next) => {
     next();
 };
 
-/**
- * Generates a mock OTP (for development purposes).
- * @returns {string} A 6-digit OTP string
- */
-const generateOTP = () => {
-    // Generate a random 6-digit OTP
-    return Math.floor(100000 + Math.random() * 900000).toString();
-};
-
-/**
- * Verifies an OTP.
- * @param {string} inputOTP - The OTP entered by the user
- * @param {string} storedOTP - The OTP stored in the system
- * @returns {boolean} True if OTP matches
- */
-const verifyOTP = (inputOTP, storedOTP) => {
-    return inputOTP === storedOTP;
-};
-
-export { generateToken, verifyToken, authenticateToken, generateOTP, verifyOTP };
+export { generateToken, verifyToken, authenticateToken };
