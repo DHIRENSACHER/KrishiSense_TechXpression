@@ -50,21 +50,21 @@ Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with loc
   <table>
     <tr>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Crop+Prediction" alt="Crop Prediction" width="260" height="180" />
+        <img src="frontend\src\assets\images\image.png" alt="Crop Prediction" width="260" height="180" />
         <h4>🌾 Smart Crop Recommendation</h4>
         <p>
           ML-powered crop selection based on soil conditions, temperature, rainfall, and seasonal patterns for optimal yield.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Yield+Prediction" alt="Yield Prediction" width="260" height="180" />
+        <img src="frontend\src\assets\images\cropyield.jpeg" alt="Yield Prediction" width="260" height="180" />
         <h4>📊 Crop Yield Forecasting</h4>
         <p>
           Predicts expected harvest per hectare using soil moisture, pH levels, and environmental data to plan resources.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Scheme+Finder" alt="Scheme Finder" width="260" height="180" />
+        <img src="frontend\src\assets\images\scheme.jpeg" alt="Scheme Finder" width="260" height="180" />
         <h4>🎯 Government Scheme Finder</h4>
         <p>
           AI-powered matching system that identifies the most suitable agricultural schemes based on farm parameters.
@@ -73,21 +73,21 @@ Built to support **SDG-2 (Zero Hunger)**, the platform empowers farmers with loc
     </tr>
     <tr>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Smart+Irrigation" alt="Irrigation Advisory" width="260" height="180" />
+        <img src="frontend\src\assets\images\irrigation.jpeg" alt="Irrigation Advisory" width="260" height="180" />
         <h4>💧 Precision Irrigation Advisory</h4>
         <p>
           Real-time irrigation recommendations based on crop type, soil moisture, weather, and growth stage to conserve water.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Market+AI" alt="Market Price AI" width="260" height="180" />
+        <img src="frontend\src\assets\images\market.jpeg" alt="Market Price AI" width="260" height="180" />
         <h4>💰 AI Market Price Prediction</h4>
         <p>
           Google Gemini-powered commodity price forecasting with real-time market data for informed selling decisions.
         </p>
       </td>
       <td align="center">
-        <img src="https://via.placeholder.com/260x180.png?text=Weather+Dashboard" alt="Weather Dashboard" width="260" height="180" />
+        <img src="frontend\src\assets\images\weather.jpeg" alt="Weather Dashboard" width="260" height="180" />
         <h4>🌤️ Real-Time Weather Intelligence</h4>
         <p>
           Comprehensive weather dashboard with farming advisories, UV index, and actionable insights for field operations.
@@ -264,6 +264,25 @@ cd frontend && npm run dev
 ```
 
 Access the application at `http://localhost:5173`
+
+
+## 🔗 Useful Links
+<div align="center">
+  <a href="https://www.linkedin.com/in/viraj-rathod-7a7857344/" target="_blank">
+    <img src="https://img.shields.io/badge/Viraj_Rathod-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Viraj Rathod">
+  </a>
+  <a href="https://www.linkedin.com/in/advait-panhalkar-280b30329/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAFG4OzEB0sb_rfikqAW2Jv0aBfi4AxXjvF0" target="_blank">
+    <img src="https://img.shields.io/badge/Advait_Panhalkar-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Advait Panhalkar">
+  </a>
+  <a href="https://www.linkedin.com/in/ayush-s-893324310/" target="_blank">
+    <img src="https://img.shields.io/badge/Ayush_Sahu-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Ayush Sahu">
+  </a>
+  <a href="https://www.linkedin.com/in/dhirensacher" target="_blank">
+    <img src="https://img.shields.io/badge/Dhiren_Sacher-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Dhiren Sacher">
+  </a>
+</div>
+
+<br>
 
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="Divider">
 <div align="center"> <sub>Built with ❤️ to support Sustainable Development Goal 2: Zero Hunger</sub> </div>
