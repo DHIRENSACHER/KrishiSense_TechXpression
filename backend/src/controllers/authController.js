@@ -1,99 +1,68 @@
 import User from '../models/User.js';
-import { generateToken, generateOTP, verifyOTP } from '../config/auth.js';
+import { generateToken } from '../config/auth.js';
 import { findBestMatch, reverseGeocode, isValidCoordinates } from '../services/geolocationService.js';
-import { sendOTP as sendNotificationOTP, sendTwilioVerifyOTP, checkTwilioVerifyOTP } from '../services/notificationService.js';
 
-/**
- * In-memory OTP storage (for mock implementation).
- * In production, use Redis or database with TTL.
- * @type {Map<string, {otp: string, expiry: Date}>}
- */
-const otpStore = new Map();
 
-/**
- * Sends OTP to phone number for authentication.
- * This is a mock implementation - integrate with SMS gateway in production.
- * 
- * @async
- * @param {import('express').Request} req - Express request object
- * @param {import('express').Response} res - Express response object
- * @returns {Promise<void>}
- * 
- * @example
- * // POST /api/auth/send-otp
- * // Body: { "phone": "+919876543210" }
- */
-const sendOTP = async (req, res) => {
-    try {
-        const { phone } = req.body;
+// Validate phone format
+const phoneRegex = /^\+?[1-9]\d{9,14}$/;
+if (!phoneRegex.test(phone)) {
+    return res.status(400).json({
+        success: false,
+        message: 'Invalid phone number format',
+    });
+}
 
-        if (!phone) {
-            return res.status(400).json({
-                success: false,
-                message: 'Phone number is required',
-            });
-        }
+// Find user
+const user = await User.findOne({ phone });
+if (!user) {
+    return res.status(404).json({
+        success: false,
+        message: 'User not found. Please sign up first.',
+    });
+}
 
-        // Validate phone format
-        const phoneRegex = /^\+?[1-9]\d{9,14}$/;
-        if (!phoneRegex.test(phone)) {
-            return res.status(400).json({
-                success: false,
-                message: 'Invalid phone number format',
-            });
-        }
+// Generate OTP
+const otp = generateOTP();
+const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
 
-        // Find user
-        const user = await User.findOne({ phone });
-        if (!user) {
-            return res.status(404).json({
-                success: false,
-                message: 'User not found. Please sign up first.',
-            });
-        }
+// Store OTP (in production, store in Redis/DB with TTL)
+otpStore.set(phone, { otp, expiry });
 
-        // Generate OTP
-        const otp = generateOTP();
-        const expiry = new Date(Date.now() + 5 * 60 * 1000); // 5 minutes validity
+// Update OTP in user document (for DB-based verification)
+await User.findByIdAndUpdate(user._id, {
+    otp,
+    otpExpiry: expiry,
+});
 
-        // Store OTP (in production, store in Redis/DB with TTL)
-        otpStore.set(phone, { otp, expiry });
+// Send OTP via Notification Service
+try {
+    await sendNotificationOTP(phone, otp);
+    console.log(`📱 OTP dispatched via SMS to ${phone}`);
+} catch (smsError) {
+    console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
+    if (process.env.NODE_ENV === 'development') {
+        console.log('\n' + '='.repeat(40));
+        console.log(`🛠️  DEVELOPMENT FALLBACK`);
+        console.log(`📱 OTP for ${phone}: ${otp}`);
+        console.log('='.repeat(40) + '\n');
+    } else {
+        throw smsError; // Re-throw in production
+    }
+}
 
-        // Update OTP in user document (for DB-based verification)
-        await User.findByIdAndUpdate(user._id, {
-            otp,
-            otpExpiry: expiry,
-        });
-
-        // Send OTP via Notification Service
-        try {
-            await sendNotificationOTP(phone, otp);
-            console.log(`📱 OTP dispatched via SMS to ${phone}`);
-        } catch (smsError) {
-            console.error(`❌ SMS Dispatch Failed: ${smsError.message}`);
-            if (process.env.NODE_ENV === 'development') {
-                console.log('\n' + '='.repeat(40));
-                console.log(`🛠️  DEVELOPMENT FALLBACK`);
-                console.log(`📱 OTP for ${phone}: ${otp}`);
-                console.log('='.repeat(40) + '\n');
-            } else {
-                throw smsError; // Re-throw in production
-            }
-        }
-
-        res.status(200).json({
-            success: true,
-            message: 'OTP sent successfully',
-        });
+res.status(200).json({
+    success: true,
+    message: 'OTP sent successfully',
+});
 
     } catch (error) {
-        console.error(`❌ Send OTP error: ${error.message}`);
-        res.status(500).json({
-            success: false,
-            message: 'Failed to send OTP',
-            error: error.message,
-        });
-    }
+    console.error(`❌ Send OTP error: ${error.message}`);
+    res.status(500).json({
+        success: false,
+        message: 'Failed to send OTP',
+        error: error.message,
+    });
+}
 };
 
 /**
@@ -551,8 +520,8 @@ const deleteCrop = async (req, res) => {
 };
 
 export {
-    sendOTP,
-    verifyOTPAndLogin,
+    register,
+    login,
     updateProfile,
     getProfile,
     addCrop,
