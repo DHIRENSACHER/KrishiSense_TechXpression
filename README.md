@@ -268,6 +268,10 @@ Access the application at `http://localhost:5173`
 
 ## 🔗 Useful Links
 <div align="center">
+  </a>
+  <a href="https://www.linkedin.com/in/dhirensacher" target="_blank">
+    <img src="https://img.shields.io/badge/Dhiren_Sacher-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Dhiren Sacher">
+  </a>
   <a href="https://www.linkedin.com/in/viraj-rathod-7a7857344/" target="_blank">
     <img src="https://img.shields.io/badge/Viraj_Rathod-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Viraj Rathod">
   </a>
@@ -276,10 +280,6 @@ Access the application at `http://localhost:5173`
   </a>
   <a href="https://www.linkedin.com/in/ayush-s-893324310/" target="_blank">
     <img src="https://img.shields.io/badge/Ayush_Sahu-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Ayush Sahu">
-  </a>
-  <a href="https://www.linkedin.com/in/dhirensacher" target="_blank">
-    <img src="https://img.shields.io/badge/Dhiren_Sacher-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="Dhiren Sacher">
-  </a>
 </div>
 
 <br>
